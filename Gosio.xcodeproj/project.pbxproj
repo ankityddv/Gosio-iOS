@@ -1,0 +1,615 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		362E737525EAAC4E00C06078 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 362E737425EAAC4E00C06078 /* AppDelegate.swift */; };
+		362E737725EAAC4E00C06078 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 362E737625EAAC4E00C06078 /* SceneDelegate.swift */; };
+		362E737925EAAC4E00C06078 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 362E737825EAAC4E00C06078 /* ViewController.swift */; };
+		362E737C25EAAC4E00C06078 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 362E737A25EAAC4E00C06078 /* Main.storyboard */; };
+		362E737F25EAAC4E00C06078 /* Gosio.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 362E737D25EAAC4E00C06078 /* Gosio.xcdatamodeld */; };
+		362E738125EAAC5100C06078 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 362E738025EAAC5100C06078 /* Assets.xcassets */; };
+		362E738425EAAC5100C06078 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 362E738225EAAC5100C06078 /* LaunchScreen.storyboard */; };
+		362E738F25EAAC5200C06078 /* GosioTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 362E738E25EAAC5200C06078 /* GosioTests.swift */; };
+		362E739A25EAAC5200C06078 /* GosioUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 362E739925EAAC5200C06078 /* GosioUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		362E738B25EAAC5200C06078 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 362E736925EAAC4E00C06078 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 362E737025EAAC4E00C06078;
+			remoteInfo = Gosio;
+		};
+		362E739625EAAC5200C06078 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 362E736925EAAC4E00C06078 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 362E737025EAAC4E00C06078;
+			remoteInfo = Gosio;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		362E737125EAAC4E00C06078 /* Gosio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Gosio.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		362E737425EAAC4E00C06078 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		362E737625EAAC4E00C06078 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		362E737825EAAC4E00C06078 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		362E737B25EAAC4E00C06078 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		362E737E25EAAC4E00C06078 /* Gosio.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Gosio.xcdatamodel; sourceTree = "<group>"; };
+		362E738025EAAC5100C06078 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		362E738325EAAC5100C06078 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		362E738525EAAC5100C06078 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		362E738A25EAAC5200C06078 /* GosioTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GosioTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		362E738E25EAAC5200C06078 /* GosioTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GosioTests.swift; sourceTree = "<group>"; };
+		362E739025EAAC5200C06078 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		362E739525EAAC5200C06078 /* GosioUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GosioUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		362E739925EAAC5200C06078 /* GosioUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GosioUITests.swift; sourceTree = "<group>"; };
+		362E739B25EAAC5200C06078 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		362E736E25EAAC4E00C06078 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		362E738725EAAC5200C06078 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		362E739225EAAC5200C06078 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		362E736825EAAC4E00C06078 = {
+			isa = PBXGroup;
+			children = (
+				362E737325EAAC4E00C06078 /* Gosio */,
+				362E738D25EAAC5200C06078 /* GosioTests */,
+				362E739825EAAC5200C06078 /* GosioUITests */,
+				362E737225EAAC4E00C06078 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		362E737225EAAC4E00C06078 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				362E737125EAAC4E00C06078 /* Gosio.app */,
+				362E738A25EAAC5200C06078 /* GosioTests.xctest */,
+				362E739525EAAC5200C06078 /* GosioUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		362E737325EAAC4E00C06078 /* Gosio */ = {
+			isa = PBXGroup;
+			children = (
+				362E737425EAAC4E00C06078 /* AppDelegate.swift */,
+				362E737625EAAC4E00C06078 /* SceneDelegate.swift */,
+				362E737825EAAC4E00C06078 /* ViewController.swift */,
+				362E737A25EAAC4E00C06078 /* Main.storyboard */,
+				362E738025EAAC5100C06078 /* Assets.xcassets */,
+				362E738225EAAC5100C06078 /* LaunchScreen.storyboard */,
+				362E738525EAAC5100C06078 /* Info.plist */,
+				362E737D25EAAC4E00C06078 /* Gosio.xcdatamodeld */,
+			);
+			path = Gosio;
+			sourceTree = "<group>";
+		};
+		362E738D25EAAC5200C06078 /* GosioTests */ = {
+			isa = PBXGroup;
+			children = (
+				362E738E25EAAC5200C06078 /* GosioTests.swift */,
+				362E739025EAAC5200C06078 /* Info.plist */,
+			);
+			path = GosioTests;
+			sourceTree = "<group>";
+		};
+		362E739825EAAC5200C06078 /* GosioUITests */ = {
+			isa = PBXGroup;
+			children = (
+				362E739925EAAC5200C06078 /* GosioUITests.swift */,
+				362E739B25EAAC5200C06078 /* Info.plist */,
+			);
+			path = GosioUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		362E737025EAAC4E00C06078 /* Gosio */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 362E739E25EAAC5200C06078 /* Build configuration list for PBXNativeTarget "Gosio" */;
+			buildPhases = (
+				362E736D25EAAC4E00C06078 /* Sources */,
+				362E736E25EAAC4E00C06078 /* Frameworks */,
+				362E736F25EAAC4E00C06078 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Gosio;
+			productName = Gosio;
+			productReference = 362E737125EAAC4E00C06078 /* Gosio.app */;
+			productType = "com.apple.product-type.application";
+		};
+		362E738925EAAC5200C06078 /* GosioTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 362E73A125EAAC5200C06078 /* Build configuration list for PBXNativeTarget "GosioTests" */;
+			buildPhases = (
+				362E738625EAAC5200C06078 /* Sources */,
+				362E738725EAAC5200C06078 /* Frameworks */,
+				362E738825EAAC5200C06078 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				362E738C25EAAC5200C06078 /* PBXTargetDependency */,
+			);
+			name = GosioTests;
+			productName = GosioTests;
+			productReference = 362E738A25EAAC5200C06078 /* GosioTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		362E739425EAAC5200C06078 /* GosioUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 362E73A425EAAC5200C06078 /* Build configuration list for PBXNativeTarget "GosioUITests" */;
+			buildPhases = (
+				362E739125EAAC5200C06078 /* Sources */,
+				362E739225EAAC5200C06078 /* Frameworks */,
+				362E739325EAAC5200C06078 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				362E739725EAAC5200C06078 /* PBXTargetDependency */,
+			);
+			name = GosioUITests;
+			productName = GosioUITests;
+			productReference = 362E739525EAAC5200C06078 /* GosioUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		362E736925EAAC4E00C06078 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1240;
+				LastUpgradeCheck = 1240;
+				TargetAttributes = {
+					362E737025EAAC4E00C06078 = {
+						CreatedOnToolsVersion = 12.4;
+					};
+					362E738925EAAC5200C06078 = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = 362E737025EAAC4E00C06078;
+					};
+					362E739425EAAC5200C06078 = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = 362E737025EAAC4E00C06078;
+					};
+				};
+			};
+			buildConfigurationList = 362E736C25EAAC4E00C06078 /* Build configuration list for PBXProject "Gosio" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 362E736825EAAC4E00C06078;
+			productRefGroup = 362E737225EAAC4E00C06078 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				362E737025EAAC4E00C06078 /* Gosio */,
+				362E738925EAAC5200C06078 /* GosioTests */,
+				362E739425EAAC5200C06078 /* GosioUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		362E736F25EAAC4E00C06078 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				362E738425EAAC5100C06078 /* LaunchScreen.storyboard in Resources */,
+				362E738125EAAC5100C06078 /* Assets.xcassets in Resources */,
+				362E737C25EAAC4E00C06078 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		362E738825EAAC5200C06078 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		362E739325EAAC5200C06078 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		362E736D25EAAC4E00C06078 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				362E737925EAAC4E00C06078 /* ViewController.swift in Sources */,
+				362E737525EAAC4E00C06078 /* AppDelegate.swift in Sources */,
+				362E737725EAAC4E00C06078 /* SceneDelegate.swift in Sources */,
+				362E737F25EAAC4E00C06078 /* Gosio.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		362E738625EAAC5200C06078 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				362E738F25EAAC5200C06078 /* GosioTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		362E739125EAAC5200C06078 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				362E739A25EAAC5200C06078 /* GosioUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		362E738C25EAAC5200C06078 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 362E737025EAAC4E00C06078 /* Gosio */;
+			targetProxy = 362E738B25EAAC5200C06078 /* PBXContainerItemProxy */;
+		};
+		362E739725EAAC5200C06078 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 362E737025EAAC4E00C06078 /* Gosio */;
+			targetProxy = 362E739625EAAC5200C06078 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		362E737A25EAAC4E00C06078 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				362E737B25EAAC4E00C06078 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		362E738225EAAC5100C06078 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				362E738325EAAC5100C06078 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		362E739C25EAAC5200C06078 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		362E739D25EAAC5200C06078 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		362E739F25EAAC5200C06078 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = JL7UZ93S3L;
+				INFOPLIST_FILE = Gosio/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = tdc.Gosio;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		362E73A025EAAC5200C06078 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = JL7UZ93S3L;
+				INFOPLIST_FILE = Gosio/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = tdc.Gosio;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		362E73A225EAAC5200C06078 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = JL7UZ93S3L;
+				INFOPLIST_FILE = GosioTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = tdc.GosioTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Gosio.app/Gosio";
+			};
+			name = Debug;
+		};
+		362E73A325EAAC5200C06078 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = JL7UZ93S3L;
+				INFOPLIST_FILE = GosioTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = tdc.GosioTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Gosio.app/Gosio";
+			};
+			name = Release;
+		};
+		362E73A525EAAC5200C06078 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = JL7UZ93S3L;
+				INFOPLIST_FILE = GosioUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = tdc.GosioUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Gosio;
+			};
+			name = Debug;
+		};
+		362E73A625EAAC5200C06078 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = JL7UZ93S3L;
+				INFOPLIST_FILE = GosioUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = tdc.GosioUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Gosio;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		362E736C25EAAC4E00C06078 /* Build configuration list for PBXProject "Gosio" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				362E739C25EAAC5200C06078 /* Debug */,
+				362E739D25EAAC5200C06078 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		362E739E25EAAC5200C06078 /* Build configuration list for PBXNativeTarget "Gosio" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				362E739F25EAAC5200C06078 /* Debug */,
+				362E73A025EAAC5200C06078 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		362E73A125EAAC5200C06078 /* Build configuration list for PBXNativeTarget "GosioTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				362E73A225EAAC5200C06078 /* Debug */,
+				362E73A325EAAC5200C06078 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		362E73A425EAAC5200C06078 /* Build configuration list for PBXNativeTarget "GosioUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				362E73A525EAAC5200C06078 /* Debug */,
+				362E73A625EAAC5200C06078 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		362E737D25EAAC4E00C06078 /* Gosio.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				362E737E25EAAC4E00C06078 /* Gosio.xcdatamodel */,
+			);
+			currentVersion = 362E737E25EAAC4E00C06078 /* Gosio.xcdatamodel */;
+			path = Gosio.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 362E736925EAAC4E00C06078 /* Project object */;
+}
