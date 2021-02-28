@@ -14,6 +14,12 @@ class DashboardVC: UIViewController, LoginViewControllerDelegate {
     }
     
 
+    @IBAction func showMenu(_ sender: Any) {
+        let slideVC = OverlayView()
+        slideVC.modalPresentationStyle = .custom
+        slideVC.transitioningDelegate = self
+        self.present(slideVC, animated: true, completion: nil)
+    }
     let label = UILabel()
     var userFirstName = ""
     var userEmail = ""
@@ -27,11 +33,18 @@ class DashboardVC: UIViewController, LoginViewControllerDelegate {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        validateTheme()
+//        validateTheme()
         vaildateOnboarding()
     }
 
 }
+
+extension DashboardVC: UIViewControllerTransitioningDelegate {
+    func presentationController(forPresented presented: UIViewController, presenting: UIViewController?, source: UIViewController) -> UIPresentationController? {
+        PresentationController(presentedViewController: presented, presenting: presenting)
+    }
+}
+
 
 
 //MARK:- functions()
@@ -76,11 +89,4 @@ extension DashboardVC {
         }
     }
     
-}
-
-
-extension UIView {
-    class func fromNib<T: UIView>() -> T {
-        return Bundle(for: T.self).loadNibNamed(String(describing: T.self), owner: nil, options: nil)![0] as! T
-    }
 }

@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="OverlayView" customModule="Gosio" customModuleProvider="target">
+            <connections>
+                <outlet property="profileButton" destination="AYs-qp-MRL" id="bhr-yG-fht"/>
+                <outlet property="profileButtonView" destination="hwk-nB-oX1" id="FCJ-MT-X9l"/>
+                <outlet property="settingButton" destination="KYN-n6-I3X" id="ex4-nE-chy"/>
+                <outlet property="settingsButtonView" destination="veH-sF-NXE" id="bfR-TD-GaW"/>
+                <outlet property="slideAssistColor" destination="BO7-3L-AeF" id="oz6-fE-0g8"/>
+                <outlet property="view" destination="iN0-l3-epB" id="NeA-7d-G2t"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="veH-sF-NXE">
+            <rect key="frame" x="0.0" y="0.0" width="366" height="60"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Settings" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2sZ-s9-DG5">
+                    <rect key="frame" x="151.5" y="19.5" width="63" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" name="TitleTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="jJQ-DP-FJo"/>
+            <color key="backgroundColor" name="ThirdBgColor"/>
+            <constraints>
+                <constraint firstItem="2sZ-s9-DG5" firstAttribute="centerX" secondItem="veH-sF-NXE" secondAttribute="centerX" id="IV0-wz-Lvq"/>
+                <constraint firstItem="2sZ-s9-DG5" firstAttribute="centerY" secondItem="veH-sF-NXE" secondAttribute="centerY" id="xK9-81-qLB"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                    <integer key="value" value="15"/>
+                </userDefinedRuntimeAttribute>
+            </userDefinedRuntimeAttributes>
+            <point key="canvasLocation" x="137.68115942028987" y="-256.47321428571428"/>
+        </view>
+        <view contentMode="scaleToFill" id="hwk-nB-oX1">
+            <rect key="frame" x="0.0" y="0.0" width="366" height="60"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ankit Yadav" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OSS-Ib-JW6">
+                    <rect key="frame" x="138.5" y="19.5" width="89" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" name="TitleTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="H9P-Ma-c5B"/>
+            <color key="backgroundColor" name="ThirdBgColor"/>
+            <constraints>
+                <constraint firstItem="OSS-Ib-JW6" firstAttribute="centerX" secondItem="hwk-nB-oX1" secondAttribute="centerX" id="NUe-6u-nDu"/>
+                <constraint firstItem="OSS-Ib-JW6" firstAttribute="centerY" secondItem="hwk-nB-oX1" secondAttribute="centerY" id="Rsu-YG-2nJ"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                    <integer key="value" value="15"/>
+                </userDefinedRuntimeAttribute>
+            </userDefinedRuntimeAttributes>
+            <point key="canvasLocation" x="138" y="-329"/>
+        </view>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="635"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BO7-3L-AeF">
+                    <rect key="frame" x="177" y="57" width="60" height="4"/>
+                    <color key="backgroundColor" name="SlideAssistColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="4" id="bjC-bY-JXC"/>
+                        <constraint firstAttribute="width" constant="60" id="xZE-Y8-nfj"/>
+                    </constraints>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AYs-qp-MRL">
+                    <rect key="frame" x="24" y="81" width="366" height="60"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="60" id="BQT-CN-PHH"/>
+                        <constraint firstAttribute="width" constant="366" id="q8O-I5-0Vt"/>
+                    </constraints>
+                    <connections>
+                        <action selector="profileButtonDidTap:" destination="-1" eventType="touchUpInside" id="e9S-wT-si9"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KYN-n6-I3X">
+                    <rect key="frame" x="24" y="163" width="366" height="60"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="60" id="CWB-hR-RT7"/>
+                        <constraint firstAttribute="width" constant="366" id="bH6-Ao-UZC"/>
+                    </constraints>
+                    <connections>
+                        <action selector="settingButtonDidTap:" destination="-1" eventType="touchUpInside" id="djM-hW-2ZI"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" name="BgColor"/>
+            <constraints>
+                <constraint firstItem="KYN-n6-I3X" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="4eB-Tb-FmS"/>
+                <constraint firstItem="BO7-3L-AeF" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="VyJ-FN-t0d"/>
+                <constraint firstItem="BO7-3L-AeF" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="13" id="XuF-j1-KxC"/>
+                <constraint firstItem="AYs-qp-MRL" firstAttribute="top" secondItem="BO7-3L-AeF" secondAttribute="bottom" constant="20" id="ZCs-Xi-Npq"/>
+                <constraint firstItem="KYN-n6-I3X" firstAttribute="top" secondItem="AYs-qp-MRL" secondAttribute="bottom" constant="22" id="dQJ-f1-QjZ"/>
+                <constraint firstItem="AYs-qp-MRL" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="oul-Ba-OlU"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="137.68115942028987" y="56.584821428571423"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="BgColor">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="SlideAssistColor">
+            <color red="0.20784313725490194" green="0.20784313725490194" blue="0.20784313725490194" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="ThirdBgColor">
+            <color red="0.93880901914654358" green="0.93880901914654358" blue="0.93880901914654358" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="TitleTextColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
