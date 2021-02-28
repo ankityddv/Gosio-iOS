@@ -5,6 +5,7 @@
 //  Created by ANKIT YADAV on 28/02/21.
 //
 
+import Hero
 import UIKit
 
 class DashboardVC: UIViewController, LoginViewControllerDelegate {
@@ -13,19 +14,22 @@ class DashboardVC: UIViewController, LoginViewControllerDelegate {
         label.text = "User identified: \(String(describing: userDefaults?.string(forKey: SignInWithAppleManager.userIdentifierKey)!))"
     }
     
-
     @IBAction func showMenu(_ sender: Any) {
-        let slideVC = OverlayView()
+        let slideVC = MenuView()
         slideVC.modalPresentationStyle = .custom
         slideVC.transitioningDelegate = self
         self.present(slideVC, animated: true, completion: nil)
     }
+    
     let label = UILabel()
     var userFirstName = ""
     var userEmail = ""
     
+    @IBOutlet weak var addNewGoalBttn: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
+        addNewGoalBttn.hero.id = HeroIDs.buttonKey
+        
 //        let userFirstNameSTr = (userDefaults?.string(forKey: SignInWithAppleManager.userFirstNameKey)!)!
 //        let userEmailSTr = (userDefaults?.string(forKey: SignInWithAppleManager.userEmailKey)!)!
         
@@ -33,7 +37,6 @@ class DashboardVC: UIViewController, LoginViewControllerDelegate {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-//        validateTheme()
         vaildateOnboarding()
     }
 
@@ -58,8 +61,8 @@ extension DashboardVC {
             break
         case .sendToOnboarding:
             print("sendToOnboarding")
-            let OnboardingVC = storyboard?.instantiateViewController(withIdentifier: "OnboardingVC") as! OnboardingVC
-            self.present(OnboardingVC, animated: true, completion: nil)
+            let vc = storyboard?.instantiateViewController(withIdentifier: VCIdentifierManager.onboardingKey) as! OnboardingVC
+            self.present(vc, animated: true, completion: nil)
             break
 //            userDefaults?.set(0, forKey: "onboardingState")
         }
@@ -69,9 +72,9 @@ extension DashboardVC {
         SignInWithAppleManager.checkUserAuth{ (authState) in
             switch authState {
             case .undefined:
-                let LoginVC = self.storyboard?.instantiateViewController(identifier: "LoginVC") as! LoginVC
-                LoginVC.delegate = self
-                self.present(LoginVC, animated: true, completion: nil)
+                let vc = self.storyboard?.instantiateViewController(identifier: VCIdentifierManager.loginKey) as! LoginVC
+                vc.delegate = self
+                self.present(vc, animated: true, completion: nil)
                 print("Send to LoginVC")
             case .signedIn:
                 self.userFirstName = (userDefaults?.string(forKey: SignInWithAppleManager.userFirstNameKey)!)!

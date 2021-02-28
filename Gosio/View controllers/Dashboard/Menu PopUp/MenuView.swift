@@ -7,7 +7,7 @@
 
 import UIKit
 
-class OverlayView: UIViewController {
+class MenuView: UIViewController {
     
     var hasSetPointOrigin = false
     var pointOrigin: CGPoint?

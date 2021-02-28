@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="OverlayView" customModule="Gosio" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MenuView" customModule="Gosio" customModuleProvider="target">
             <connections>
                 <outlet property="profileButton" destination="AYs-qp-MRL" id="bhr-yG-fht"/>
                 <outlet property="profileButtonView" destination="hwk-nB-oX1" id="FCJ-MT-X9l"/>
@@ -67,7 +67,7 @@
                     <integer key="value" value="15"/>
                 </userDefinedRuntimeAttribute>
             </userDefinedRuntimeAttributes>
-            <point key="canvasLocation" x="138" y="-329"/>
+            <point key="canvasLocation" x="137.68115942028987" y="-329.46428571428572"/>
         </view>
         <view contentMode="scaleToFill" id="iN0-l3-epB">
             <rect key="frame" x="0.0" y="0.0" width="414" height="635"/>
@@ -103,7 +103,7 @@
                 </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
-            <color key="backgroundColor" name="BgColor"/>
+            <color key="backgroundColor" name="PopupBgColor"/>
             <constraints>
                 <constraint firstItem="KYN-n6-I3X" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="4eB-Tb-FmS"/>
                 <constraint firstItem="BO7-3L-AeF" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="VyJ-FN-t0d"/>
@@ -117,14 +117,14 @@
         </view>
     </objects>
     <resources>
-        <namedColor name="BgColor">
+        <namedColor name="PopupBgColor">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="SlideAssistColor">
-            <color red="0.20784313725490194" green="0.20784313725490194" blue="0.20784313725490194" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.20800000429153442" green="0.20800000429153442" blue="0.20800000429153442" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="ThirdBgColor">
-            <color red="0.93880901914654358" green="0.93880901914654358" blue="0.93880901914654358" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.93900001049041748" green="0.93900001049041748" blue="0.93900001049041748" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="TitleTextColor">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

@@ -33,22 +33,22 @@ extension LoginVC: ASAuthorizationControllerDelegate {
     private func registerNewAccount(credential: ASAuthorizationAppleIDCredential) {
         print("Registering new account with user: \(credential.user)")
         delegate?.didFinishAuth()
-        let DashboardVC = storyboard?.instantiateViewController(withIdentifier: "DashboardVC") as! DashboardVC
-        self.present(DashboardVC, animated: true, completion: nil)
+        let vc = storyboard?.instantiateViewController(withIdentifier: VCIdentifierManager.dashboardKey) as! DashboardVC
+        self.present(vc, animated: true, completion: nil)
     }
     
     private func signInWithExistingAccount(credential: ASAuthorizationAppleIDCredential) {
         print("Signing in with existing account with user: \(credential.user)")
         delegate?.didFinishAuth()
-        let DashboardVC = storyboard?.instantiateViewController(withIdentifier: "DashboardVC") as! DashboardVC
-        self.present(DashboardVC, animated: true, completion: nil)
+        let vc = storyboard?.instantiateViewController(withIdentifier: VCIdentifierManager.dashboardKey) as! DashboardVC
+        self.present(vc, animated: true, completion: nil)
     }
     
     private func signInWithUserAndPassword(credential: ASAuthorizationAppleIDCredential) {
         print("Signing in using an existing icloud Keychain credential with user:: \(credential.user)")
         delegate?.didFinishAuth()
-        let DashboardVC = storyboard?.instantiateViewController(withIdentifier: "DashboardVC") as! DashboardVC
-        self.present(DashboardVC, animated: true, completion: nil)
+        let vc = storyboard?.instantiateViewController(withIdentifier: VCIdentifierManager.dashboardKey) as! DashboardVC
+        self.present(vc, animated: true, completion: nil)
     }
     
     func authorizationController(controller: ASAuthorizationController, didCompleteWithAuthorization authorization: ASAuthorization) {

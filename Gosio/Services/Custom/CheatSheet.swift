@@ -21,7 +21,6 @@ let screenSize = UIScreen.main.bounds
 let screenWidth = screenSize.width
 let screenHeight = screenSize.height
 
-
 //MARK:- Heptic Generators
 let generator = UINotificationFeedbackGenerator()
 func warningHeptic(){

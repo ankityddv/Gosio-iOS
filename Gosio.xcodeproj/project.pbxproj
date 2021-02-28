@@ -8,11 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		0B042827C90CFACA6A674EFD /* Pods_Gosio_GosioUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 427612BCCF6048BB813A12DD /* Pods_Gosio_GosioUITests.framework */; };
+		3602BEA825EBD0600014DD16 /* GoalNameVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3602BEA725EBD0600014DD16 /* GoalNameVC.swift */; };
+		3602BEB425EBD07E0014DD16 /* GoalAmountVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3602BEB325EBD07E0014DD16 /* GoalAmountVC.swift */; };
+		3602BEB925EBD0890014DD16 /* GoalDeadlineVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3602BEB825EBD0890014DD16 /* GoalDeadlineVC.swift */; };
+		3602BEBE25EBD7120014DD16 /* HeroIDs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3602BEBD25EBD7120014DD16 /* HeroIDs.swift */; };
+		3602BECD25EBDB0B0014DD16 /* VCIdeantifierManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3602BECC25EBDB0B0014DD16 /* VCIdeantifierManager.swift */; };
 		360DD6F025EB66D700636EBD /* DashboardVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 360DD6EF25EB66D700636EBD /* DashboardVC.swift */; };
 		360DD6F925EB67DC00636EBD /* OnboardingState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 360DD6F825EB67DB00636EBD /* OnboardingState.swift */; };
 		360DD73125EB815400636EBD /* PresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 360DD73025EB815400636EBD /* PresentationController.swift */; };
-		360DD73925EB817A00636EBD /* OverlayView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 360DD73825EB817A00636EBD /* OverlayView.xib */; };
-		360DD73E25EB81F700636EBD /* OverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 360DD73D25EB81F700636EBD /* OverlayView.swift */; };
+		360DD73925EB817A00636EBD /* MenuView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 360DD73825EB817A00636EBD /* MenuView.xib */; };
+		360DD73E25EB81F700636EBD /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 360DD73D25EB81F700636EBD /* MenuView.swift */; };
 		362E737525EAAC4E00C06078 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 362E737425EAAC4E00C06078 /* AppDelegate.swift */; };
 		362E737725EAAC4E00C06078 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 362E737625EAAC4E00C06078 /* SceneDelegate.swift */; };
 		362E737925EAAC4E00C06078 /* OnboardingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 362E737825EAAC4E00C06078 /* OnboardingVC.swift */; };
@@ -50,12 +55,17 @@
 
 /* Begin PBXFileReference section */
 		24FAC72EC543397B7F4A08AB /* Pods_GosioTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GosioTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3602BEA725EBD0600014DD16 /* GoalNameVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalNameVC.swift; sourceTree = "<group>"; };
+		3602BEB325EBD07E0014DD16 /* GoalAmountVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalAmountVC.swift; sourceTree = "<group>"; };
+		3602BEB825EBD0890014DD16 /* GoalDeadlineVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalDeadlineVC.swift; sourceTree = "<group>"; };
+		3602BEBD25EBD7120014DD16 /* HeroIDs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroIDs.swift; sourceTree = "<group>"; };
+		3602BECC25EBDB0B0014DD16 /* VCIdeantifierManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCIdeantifierManager.swift; sourceTree = "<group>"; };
 		360DD6EB25EB65D200636EBD /* Gosio.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Gosio.entitlements; sourceTree = "<group>"; };
 		360DD6EF25EB66D700636EBD /* DashboardVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardVC.swift; sourceTree = "<group>"; };
 		360DD6F825EB67DB00636EBD /* OnboardingState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingState.swift; sourceTree = "<group>"; };
 		360DD73025EB815400636EBD /* PresentationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentationController.swift; sourceTree = "<group>"; };
-		360DD73825EB817A00636EBD /* OverlayView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OverlayView.xib; sourceTree = "<group>"; };
-		360DD73D25EB81F700636EBD /* OverlayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverlayView.swift; sourceTree = "<group>"; };
+		360DD73825EB817A00636EBD /* MenuView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuView.xib; sourceTree = "<group>"; };
+		360DD73D25EB81F700636EBD /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
 		362E737125EAAC4E00C06078 /* Gosio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Gosio.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		362E737425EAAC4E00C06078 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		362E737625EAAC4E00C06078 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -114,6 +124,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3602BEAC25EBD0660014DD16 /* New Goal */ = {
+			isa = PBXGroup;
+			children = (
+				3602BEC225EBD7170014DD16 /* Services */,
+				3602BEA725EBD0600014DD16 /* GoalNameVC.swift */,
+				3602BEB325EBD07E0014DD16 /* GoalAmountVC.swift */,
+				3602BEB825EBD0890014DD16 /* GoalDeadlineVC.swift */,
+			);
+			path = "New Goal";
+			sourceTree = "<group>";
+		};
+		3602BEC225EBD7170014DD16 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				3602BEBD25EBD7120014DD16 /* HeroIDs.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		360DD6E725EB633B00636EBD /* Services */ = {
 			isa = PBXGroup;
 			children = (
@@ -145,8 +174,29 @@
 			children = (
 				364F35BD25EB5ECB007E7996 /* UserDefaults.swift */,
 				364F35C225EB5F39007E7996 /* CheatSheet.swift */,
+				3602BECC25EBDB0B0014DD16 /* VCIdeantifierManager.swift */,
 			);
 			path = Custom;
+			sourceTree = "<group>";
+		};
+		360DD74525EB8FB700636EBD /* Dashboard */ = {
+			isa = PBXGroup;
+			children = (
+				360DD74625EB8FC600636EBD /* Menu PopUp */,
+				360DD6EF25EB66D700636EBD /* DashboardVC.swift */,
+				3602BEAC25EBD0660014DD16 /* New Goal */,
+			);
+			path = Dashboard;
+			sourceTree = "<group>";
+		};
+		360DD74625EB8FC600636EBD /* Menu PopUp */ = {
+			isa = PBXGroup;
+			children = (
+				360DD73825EB817A00636EBD /* MenuView.xib */,
+				360DD73D25EB81F700636EBD /* MenuView.swift */,
+				360DD73025EB815400636EBD /* PresentationController.swift */,
+			);
+			path = "Menu PopUp";
 			sourceTree = "<group>";
 		};
 		362E736825EAAC4E00C06078 = {
@@ -214,8 +264,8 @@
 		364F359C25EB5DF2007E7996 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				362E737425EAAC4E00C06078 /* AppDelegate.swift */,
 				360DD70125EB766900636EBD /* Custom */,
+				362E737425EAAC4E00C06078 /* AppDelegate.swift */,
 				362E737625EAAC4E00C06078 /* SceneDelegate.swift */,
 				362E738025EAAC5100C06078 /* Assets.xcassets */,
 			);
@@ -227,10 +277,7 @@
 			children = (
 				360DD6F425EB67C700636EBD /* Onboarding */,
 				364F35AF25EB5E71007E7996 /* Auth */,
-				360DD6EF25EB66D700636EBD /* DashboardVC.swift */,
-				360DD73025EB815400636EBD /* PresentationController.swift */,
-				360DD73825EB817A00636EBD /* OverlayView.xib */,
-				360DD73D25EB81F700636EBD /* OverlayView.swift */,
+				360DD74525EB8FB700636EBD /* Dashboard */,
 			);
 			path = "View controllers";
 			sourceTree = "<group>";
@@ -376,7 +423,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				362E738425EAAC5100C06078 /* LaunchScreen.storyboard in Resources */,
-				360DD73925EB817A00636EBD /* OverlayView.xib in Resources */,
+				360DD73925EB817A00636EBD /* MenuView.xib in Resources */,
 				362E738125EAAC5100C06078 /* Assets.xcassets in Resources */,
 				362E737C25EAAC4E00C06078 /* Main.storyboard in Resources */,
 			);
@@ -506,16 +553,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3602BEBE25EBD7120014DD16 /* HeroIDs.swift in Sources */,
 				362E737925EAAC4E00C06078 /* OnboardingVC.swift in Sources */,
+				3602BEB925EBD0890014DD16 /* GoalDeadlineVC.swift in Sources */,
+				3602BECD25EBDB0B0014DD16 /* VCIdeantifierManager.swift in Sources */,
 				360DD6F025EB66D700636EBD /* DashboardVC.swift in Sources */,
 				364F35B425EB5E84007E7996 /* AuthState.swift in Sources */,
 				362E737525EAAC4E00C06078 /* AppDelegate.swift in Sources */,
 				364F35B925EB5E96007E7996 /* SignInWithAppleManager.swift in Sources */,
 				364F35BE25EB5ECB007E7996 /* UserDefaults.swift in Sources */,
+				3602BEB425EBD07E0014DD16 /* GoalAmountVC.swift in Sources */,
 				362E737725EAAC4E00C06078 /* SceneDelegate.swift in Sources */,
 				364F35C325EB5F39007E7996 /* CheatSheet.swift in Sources */,
 				360DD6F925EB67DC00636EBD /* OnboardingState.swift in Sources */,
-				360DD73E25EB81F700636EBD /* OverlayView.swift in Sources */,
+				360DD73E25EB81F700636EBD /* MenuView.swift in Sources */,
+				3602BEA825EBD0600014DD16 /* GoalNameVC.swift in Sources */,
 				362E737F25EAAC4E00C06078 /* Gosio.xcdatamodeld in Sources */,
 				364F35AB25EB5E6E007E7996 /* LoginVC.swift in Sources */,
 				360DD73125EB815400636EBD /* PresentationController.swift in Sources */,
