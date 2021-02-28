@@ -1,0 +1,20 @@
+PODS:
+  - Hero (1.5.0)
+  - SPAlert (3.0.3)
+
+DEPENDENCIES:
+  - Hero
+  - SPAlert
+
+SPEC REPOS:
+  trunk:
+    - Hero
+    - SPAlert
+
+SPEC CHECKSUMS:
+  Hero: b7385b75e7259da62f4f85462f59a5082d66b058
+  SPAlert: f01599d5224e93547cbb9364b2c42e88074644b9
+
+PODFILE CHECKSUM: 8d3d9387ced2a5f6258aac3ad51744510f096efa
+
+COCOAPODS: 1.10.0

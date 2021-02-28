@@ -1,0 +1,1399 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		000FB9EDA233684DCE3C0D776F682440 /* Array+HeroModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE3DF31EDDD2AFC3DE27900B6B52782 /* Array+HeroModifier.swift */; };
+		02225125CE79606D1F8B383F761EF346 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8C830FF7C3F0EB792F7F0D41B08BE65 /* QuartzCore.framework */; };
+		03D6158DD18C87BE5E65C85AA6F002DF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6B4A357A9E84FBAC4505EFF2873D26B /* Foundation.framework */; };
+		04DFFB22C868531CA29015601F8C2C4A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6B4A357A9E84FBAC4505EFF2873D26B /* Foundation.framework */; };
+		0703CE26B7245672B91E0B78E1281E44 /* HeroTransition+UIViewControllerTransitioningDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E67BF158D95E57DB8202D1524823A904 /* HeroTransition+UIViewControllerTransitioningDelegate.swift */; };
+		0A3AA2E0FDAF8A8858240069811996EA /* Lexer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413A3213C152010E51E76FE8E4576248 /* Lexer.swift */; };
+		0A77FAC238D4DDB69E2813F3662A9BB2 /* Pods-Gosio-GosioUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 695B1D0D7CCDB729984F89E1020920A3 /* Pods-Gosio-GosioUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0C8C91A946F029E0110E06480F600A47 /* HeroTransition+CustomTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B99C08A52533E7801F8909F239E0F0 /* HeroTransition+CustomTransition.swift */; };
+		0E2025F3049EB290C9C701EB7697FD83 /* HeroTransition+Animate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 334F925B96DC23628D22D8B8058BBDEF /* HeroTransition+Animate.swift */; };
+		0F8EBAADA80C6AF2C62DAAC68A8FD8AB /* SPAlertHaptic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EBC046B0EBAAC7DAF7EE02659AF6B1C /* SPAlertHaptic.swift */; };
+		143BC48EA7B427B9F43FBF38C1209904 /* HeroViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 065B1519A4A4EBC38A5D67C23C28CF7C /* HeroViewControllerDelegate.swift */; };
+		28ED22D50E807703BDE53652BDB3BDA0 /* Hero-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 98ADF2BD30A3886C3664963FA2244BF2 /* Hero-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2F24C371BA4C2962F44ACC8E17667583 /* HeroCompatible.swift in Sources */ = {isa = PBXBuildFile; fileRef = A94F8E22B2B7B9093EE434ECECCBD316 /* HeroCompatible.swift */; };
+		30825F9E57DF4E095F0F3928E59C7758 /* SPAlert-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E11C4A892EED1B04F5296D158D1971CA /* SPAlert-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3328507A953D6D7B316F896EEC87FD72 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAD9AC0426072933256DCBD071CD50BA /* UIKit.framework */; };
+		373C718EFB554E6DB53B8108C10AF901 /* Pods-GosioTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B0FBB680D0A5C8F78042C0CD1DDDADC1 /* Pods-GosioTests-dummy.m */; };
+		38406719BDA0D1C99B94A33EB1BF2AA1 /* HeroTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE19D482F4F4EA49316D7C89B217288 /* HeroTransition.swift */; };
+		3F8E3626B6A6A75B8040D4474196F0CE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6B4A357A9E84FBAC4505EFF2873D26B /* Foundation.framework */; };
+		4C0109B9064995D017EF8BA9471065BD /* HeroPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09478CADC2E35207C6DEF19C2640C274 /* HeroPlugin.swift */; };
+		4DD18CA1B0628DA289B294D2106D55A3 /* HeroTransition+Interactive.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0F8EF7448C5AF8C4B3D38893E2ABE5 /* HeroTransition+Interactive.swift */; };
+		55FCB84E644087E86E3E3BC031FC2B8F /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95568154064CE960195D45B95A17D3E7 /* CoreMedia.framework */; };
+		561B43E02C4CC483EEAC28AE2C961D3D /* HeroStringConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975337F2C18A2302AA0D1103484A1EC1 /* HeroStringConvertible.swift */; };
+		565C22E5071430F1DB95C884B2CF9D00 /* HeroViewPropertyViewContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29DD605C9A35B9C33ADBB4A1B0854CCF /* HeroViewPropertyViewContext.swift */; };
+		570C57E2F7EB5A594868402D3C830391 /* SPAlertIconDoneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D346922F7681B27E55D32FC2ED58F6E2 /* SPAlertIconDoneView.swift */; };
+		596395B6FA3AB7BE5E2986C1057FFB51 /* CAMediaTimingFunction+Hero.swift in Sources */ = {isa = PBXBuildFile; fileRef = 419FF823086F7D85E75E36BD31C2A342 /* CAMediaTimingFunction+Hero.swift */; };
+		598A7DCAC2225E95352E1E7927615B6D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6B4A357A9E84FBAC4505EFF2873D26B /* Foundation.framework */; };
+		5D561331EDDD8446C2C74304EF534F0B /* HeroTransitionState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0851B570651A3D513BBAA932CB39E3BB /* HeroTransitionState.swift */; };
+		5F8C5665FEB194DA51EB48EE12F70A36 /* SPAlert-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 83A548AA79A21175760585755063C48C /* SPAlert-dummy.m */; };
+		603A44B0C00347070B5B2D9862663F70 /* SPAlertIconAnimatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117DEC4DFD7DFD265DC5B4F658C8005D /* SPAlertIconAnimatable.swift */; };
+		611B67BEEBA7FB3983E8D9AC3796A551 /* HeroDefaultAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60C3F13D35B3E31E1ECF0EF16B94CC52 /* HeroDefaultAnimator.swift */; };
+		63D62B669C1B1D76B8FA2AEE51AF2863 /* HeroTransition+UITabBarControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10998A7A302622A02FCFCD50F410F49D /* HeroTransition+UITabBarControllerDelegate.swift */; };
+		653E29D807C62277D9B446EAE3E7A780 /* Pods-Gosio-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EB417BC3E83F7EEEF34F506BD9D43A8 /* Pods-Gosio-dummy.m */; };
+		6DA116A3729AD06FE4965D7FFA9FE63B /* SPAlertLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8E7C7BF93FFFEABA7D76DC9517AF27E /* SPAlertLayout.swift */; };
+		7077E7A72EB1E524F2EF25029B712F2F /* MatchPreprocessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E22B511AA02154F01E9364A2DE81388 /* MatchPreprocessor.swift */; };
+		76259741C02A8C73A3015C5D2DA496CA /* HeroModifier+HeroStringConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E7E5019C898756A369A08E89256F276 /* HeroModifier+HeroStringConvertible.swift */; };
+		783190536DC8297B50B399D8250F2032 /* HeroTransition+UINavigationControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8D42E3C245E6CD6FC519121E94F2400 /* HeroTransition+UINavigationControllerDelegate.swift */; };
+		7C4C78FFA7E61ACB1E47C87AA28DCD32 /* Pods-Gosio-GosioUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D6F84B7C566A4FE09FD92CC3323CDE64 /* Pods-Gosio-GosioUITests-dummy.m */; };
+		80538854F50E894E283C87058249C10C /* SourcePreprocessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA64444CE0D83FF8C77B13FAE14C54B1 /* SourcePreprocessor.swift */; };
+		8267702DC8728FA8827B0E9F5850D564 /* HeroModifier+Advanced.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B716605CB47EAEEF0A939E77E99D6A /* HeroModifier+Advanced.swift */; };
+		85908A69CE5A0C54998A6D597BDB062F /* UIColor+HexString.swift in Sources */ = {isa = PBXBuildFile; fileRef = C382C505CA880DCD8DD5AFB2F12FF5A3 /* UIColor+HexString.swift */; };
+		8675FAF0C389A827D865B4231B097350 /* CG+Hero.swift in Sources */ = {isa = PBXBuildFile; fileRef = 756C30CB29ED5D661105507983B3F425 /* CG+Hero.swift */; };
+		86F6100A3164708D9449C570776E4A53 /* HeroDebugView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D23D61EA5E667CE427BA6F2EE6FF218 /* HeroDebugView.swift */; };
+		88C124CBB1C2CF3C74537ABB507A2713 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6B4A357A9E84FBAC4505EFF2873D26B /* Foundation.framework */; };
+		9271FC6E06F4AB333A37B8AADB7571F7 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47C1F7D15DF1E2C8B980BC1B49D38419 /* CoreGraphics.framework */; };
+		92D72E2B335A6BDD963963DB32EB976B /* SPAlertIconHeartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 396757D0958334F521C3B7A9CF6118E4 /* SPAlertIconHeartView.swift */; };
+		971DE19A2425C011DEA7F234EF9DFB3D /* BasePreprocessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D7D31C2B967CE3FB7E6574114943205 /* BasePreprocessor.swift */; };
+		981E678C694BD6CB6E47750023C41356 /* CascadePreprocessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC3BC6F05C74CDC2071259D7996B8DD /* CascadePreprocessor.swift */; };
+		9BF3A86AFAFDA9B4C5150324F3DFD0D3 /* Nodes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76530ADC9F4ADD395C7C9CFB473D4D2E /* Nodes.swift */; };
+		A7EA1BA19DDD7C4C829D4E8BCB133B5D /* SwiftSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68998A9B7348E71E0B6EF3FC1E807A77 /* SwiftSupport.swift */; };
+		AB333ACA619804B14FDACD4892AD0F33 /* DispatchQueue+Hero.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A447743B21439C9A5238CA8F10EDD05 /* DispatchQueue+Hero.swift */; };
+		AEDEEFE01BDC994BB676D0C6C4EA0B4F /* HeroAnimatorViewContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 934A2BFA3886539E46583234DF2C8B0A /* HeroAnimatorViewContext.swift */; };
+		B10383851652EA26BE371D5BD0648452 /* Pods-Gosio-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1DCEE939588896094E589AE332F24913 /* Pods-Gosio-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B4A5070619398ABCE3153716A8B1FD39 /* DefaultAnimationPreprocessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9D1C81D77637E32B06E17128707120 /* DefaultAnimationPreprocessor.swift */; };
+		B6461FC455E76D6427B298A059694C5D /* SPAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C029A61D5C84A20C77DB8E268A8937 /* SPAlert.swift */; };
+		B6A307601C54492B96394E278F095E92 /* SPAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06D39F415F38D0BC8AC165A30A65C2E0 /* SPAlertView.swift */; };
+		B6AE25C51BED9621BBA67FE397452160 /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8C87F10351A47A25944E37D1A94CBA2 /* Parser.swift */; };
+		B761609304C53DD165E21D6979C187FA /* HeroModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A19E0744337C0C38FFC54C64D79DE4E /* HeroModifier.swift */; };
+		BAA6B8A757D1C7D80877064966A6F57D /* HeroContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C70C535A686DC84CEFF6CD0B58FC1B /* HeroContext.swift */; };
+		BE63C2C8EC7B15BE0848D01ED7125E86 /* Hero-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CE35D5051B7683113E6573F66D953FE /* Hero-dummy.m */; };
+		BEE284660B09671376D429849DDD085B /* Pods-GosioTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F36CF400282C3AD24D208A795547A7AE /* Pods-GosioTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C404ABC8391D8C5678272EA2B7149664 /* HeroProgressRunner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D0B8FD7DCD884053C086D07AC0ED019 /* HeroProgressRunner.swift */; };
+		C6EEAC88D46661939CEC80B9C757D646 /* HeroCoreAnimationViewContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = E60B533BE2B346A92B26753107D8BCB7 /* HeroCoreAnimationViewContext.swift */; };
+		D0F527FECD9CDE6E33868A911863F3A2 /* HeroTransition+Complete.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98D308DA00EB9AA37FB047A50715E97C /* HeroTransition+Complete.swift */; };
+		D5B6C3D9C30E853925EDFD6F6B2F735A /* UIViewController+Hero.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC72FB7278DA731E123B0F205AD5F301 /* UIViewController+Hero.swift */; };
+		D99F7D4FA69590F4F4DE4234BC19616A /* UIView+Hero.swift in Sources */ = {isa = PBXBuildFile; fileRef = 360DD43DA3C258AA822601F8832817FD /* UIView+Hero.swift */; };
+		DB289656E21B490DA80311AD52DBA5C0 /* HeroTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = D442F81F78D36388BD43BEB616EFECC3 /* HeroTypes.swift */; };
+		DC2F67DD3163291EB40DC85B0D8BFD12 /* HeroTransition+Start.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BB4207E51348361D418185C5383BA56 /* HeroTransition+Start.swift */; };
+		DCEB1D1D97936446FFCC775B87820D76 /* CALayer+Hero.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9C4780F0EDAD6CBF5855D6EE37A14D /* CALayer+Hero.swift */; };
+		E05D3E5962B58A2AE76850E534A24C7B /* UIKit+Hero.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70C17B0EC248C9A0669EFB3285A599FB /* UIKit+Hero.swift */; };
+		E14591ACB8E8B67FA53C24B992997EB6 /* ConditionalPreprocessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AF8E681A250FE8EC2AE0179B2F9A906 /* ConditionalPreprocessor.swift */; };
+		E259639E8D936042ECD20840FBBD4EC8 /* HeroTargetState.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD69D73AD7E63119310CED4765DCBC8 /* HeroTargetState.swift */; };
+		E547D1E609A0486FBC2C386A14C44B51 /* SPAlertIconPreset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B309F5CD598629262FCC025B9B74E05 /* SPAlertIconPreset.swift */; };
+		E65E75D9FF3AD6FD21154DE84D1AE4FA /* IgnoreSubviewModifiersPreprocessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11FAB6B6323236EAF6F69A8B9D587005 /* IgnoreSubviewModifiersPreprocessor.swift */; };
+		E710EAB54B8983AD48B1965D564ED8A3 /* SPAlertIconErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 462A5E54B378750D8385DFA2CCFEBEE2 /* SPAlertIconErrorView.swift */; };
+		F4DD189E36C289688DD2187E0A38D96F /* Regex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6945C0D791737B8F70C362F7275BADF7 /* Regex.swift */; };
+		F67D13F1DF0DD6F7271E3B94CCA8AC22 /* HeroDebugPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC84DEF943ADACFDB7725AC797199A2 /* HeroDebugPlugin.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2AA21BD32DFB2A51A1F838BCE8ABBAAB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B3893AEA4D7DBB9A086E889FC469132D;
+			remoteInfo = Hero;
+		};
+		6272D5A9B72A4CC831E7A531341E190C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D729DB05211BE1B61302788E85BDAC74;
+			remoteInfo = "Pods-Gosio";
+		};
+		A6B59E6E9472AA02A9519730280428FB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B4652B2924FE3B941944F77DA8477ABD;
+			remoteInfo = SPAlert;
+		};
+		CE5E174C5FAD578F1B38A7BE8C443EA0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B4652B2924FE3B941944F77DA8477ABD;
+			remoteInfo = SPAlert;
+		};
+		DA050CFDE46FAF3F542796CA6CE8A247 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B3893AEA4D7DBB9A086E889FC469132D;
+			remoteInfo = Hero;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		065B1519A4A4EBC38A5D67C23C28CF7C /* HeroViewControllerDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HeroViewControllerDelegate.swift; path = Sources/HeroViewControllerDelegate.swift; sourceTree = "<group>"; };
+		06D39F415F38D0BC8AC165A30A65C2E0 /* SPAlertView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SPAlertView.swift; path = Sources/SPAlert/SPAlertView.swift; sourceTree = "<group>"; };
+		0851B570651A3D513BBAA932CB39E3BB /* HeroTransitionState.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HeroTransitionState.swift; path = Sources/Transition/HeroTransitionState.swift; sourceTree = "<group>"; };
+		09478CADC2E35207C6DEF19C2640C274 /* HeroPlugin.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HeroPlugin.swift; path = Sources/HeroPlugin.swift; sourceTree = "<group>"; };
+		0BB4207E51348361D418185C5383BA56 /* HeroTransition+Start.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "HeroTransition+Start.swift"; path = "Sources/Transition/HeroTransition+Start.swift"; sourceTree = "<group>"; };
+		0D3885BC166B2FD737CFA510F7E4127E /* Pods-Gosio-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Gosio-frameworks.sh"; sourceTree = "<group>"; };
+		10998A7A302622A02FCFCD50F410F49D /* HeroTransition+UITabBarControllerDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "HeroTransition+UITabBarControllerDelegate.swift"; path = "Sources/Transition/HeroTransition+UITabBarControllerDelegate.swift"; sourceTree = "<group>"; };
+		10B99C08A52533E7801F8909F239E0F0 /* HeroTransition+CustomTransition.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "HeroTransition+CustomTransition.swift"; path = "Sources/Transition/HeroTransition+CustomTransition.swift"; sourceTree = "<group>"; };
+		114F809B23B7B2A24D7CFFC827E4A985 /* Hero.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Hero.modulemap; sourceTree = "<group>"; };
+		117DEC4DFD7DFD265DC5B4F658C8005D /* SPAlertIconAnimatable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SPAlertIconAnimatable.swift; path = Sources/SPAlert/Models/SPAlertIconAnimatable.swift; sourceTree = "<group>"; };
+		11FAB6B6323236EAF6F69A8B9D587005 /* IgnoreSubviewModifiersPreprocessor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IgnoreSubviewModifiersPreprocessor.swift; path = Sources/Preprocessors/IgnoreSubviewModifiersPreprocessor.swift; sourceTree = "<group>"; };
+		13E778F4B833EE5D7ABE882406A8215E /* Hero.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Hero.framework; path = Hero.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		18F93B2550911993E86B3BD9045B1AFE /* Hero-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Hero-prefix.pch"; sourceTree = "<group>"; };
+		1DCEE939588896094E589AE332F24913 /* Pods-Gosio-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Gosio-umbrella.h"; sourceTree = "<group>"; };
+		234362E9E8A7CCFC5F3374C8292713B3 /* Pods-GosioTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-GosioTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		29DD605C9A35B9C33ADBB4A1B0854CCF /* HeroViewPropertyViewContext.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HeroViewPropertyViewContext.swift; path = Sources/Animator/HeroViewPropertyViewContext.swift; sourceTree = "<group>"; };
+		2AE3DF31EDDD2AFC3DE27900B6B52782 /* Array+HeroModifier.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Array+HeroModifier.swift"; path = "Sources/Extensions/Array+HeroModifier.swift"; sourceTree = "<group>"; };
+		2D23D61EA5E667CE427BA6F2EE6FF218 /* HeroDebugView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HeroDebugView.swift; path = "Sources/Debug Plugin/HeroDebugView.swift"; sourceTree = "<group>"; };
+		3045AAB6859F874834E3932745DB6006 /* Pods-Gosio-GosioUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Gosio-GosioUITests.modulemap"; sourceTree = "<group>"; };
+		334F925B96DC23628D22D8B8058BBDEF /* HeroTransition+Animate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "HeroTransition+Animate.swift"; path = "Sources/Transition/HeroTransition+Animate.swift"; sourceTree = "<group>"; };
+		35FB13A42C9020C19A018357B75EF1C0 /* Pods_Gosio.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Gosio.framework; path = "Pods-Gosio.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		360DD43DA3C258AA822601F8832817FD /* UIView+Hero.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIView+Hero.swift"; path = "Sources/Extensions/UIView+Hero.swift"; sourceTree = "<group>"; };
+		396757D0958334F521C3B7A9CF6118E4 /* SPAlertIconHeartView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SPAlertIconHeartView.swift; path = Sources/SPAlert/Icons/SPAlertIconHeartView.swift; sourceTree = "<group>"; };
+		3B309F5CD598629262FCC025B9B74E05 /* SPAlertIconPreset.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SPAlertIconPreset.swift; path = Sources/SPAlert/SPAlertIconPreset.swift; sourceTree = "<group>"; };
+		3E22B511AA02154F01E9364A2DE81388 /* MatchPreprocessor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MatchPreprocessor.swift; path = Sources/Preprocessors/MatchPreprocessor.swift; sourceTree = "<group>"; };
+		3EB417BC3E83F7EEEF34F506BD9D43A8 /* Pods-Gosio-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Gosio-dummy.m"; sourceTree = "<group>"; };
+		3F5660FC77BB6E457B528D8DA94B4D5B /* Pods-Gosio-GosioUITests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Gosio-GosioUITests-Info.plist"; sourceTree = "<group>"; };
+		413A3213C152010E51E76FE8E4576248 /* Lexer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Lexer.swift; path = Sources/Parser/Lexer.swift; sourceTree = "<group>"; };
+		419FF823086F7D85E75E36BD31C2A342 /* CAMediaTimingFunction+Hero.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "CAMediaTimingFunction+Hero.swift"; path = "Sources/Extensions/CAMediaTimingFunction+Hero.swift"; sourceTree = "<group>"; };
+		41CDEBF6CC812BE9E71CB97DD2F1E390 /* Pods-Gosio-GosioUITests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Gosio-GosioUITests-frameworks.sh"; sourceTree = "<group>"; };
+		42B716605CB47EAEEF0A939E77E99D6A /* HeroModifier+Advanced.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "HeroModifier+Advanced.swift"; path = "Sources/HeroModifier+Advanced.swift"; sourceTree = "<group>"; };
+		462A5E54B378750D8385DFA2CCFEBEE2 /* SPAlertIconErrorView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SPAlertIconErrorView.swift; path = Sources/SPAlert/Icons/SPAlertIconErrorView.swift; sourceTree = "<group>"; };
+		47C1F7D15DF1E2C8B980BC1B49D38419 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
+		4A447743B21439C9A5238CA8F10EDD05 /* DispatchQueue+Hero.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "DispatchQueue+Hero.swift"; path = "Sources/Extensions/DispatchQueue+Hero.swift"; sourceTree = "<group>"; };
+		4CE35D5051B7683113E6573F66D953FE /* Hero-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Hero-dummy.m"; sourceTree = "<group>"; };
+		4E7E5019C898756A369A08E89256F276 /* HeroModifier+HeroStringConvertible.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "HeroModifier+HeroStringConvertible.swift"; path = "Sources/HeroModifier+HeroStringConvertible.swift"; sourceTree = "<group>"; };
+		60C3F13D35B3E31E1ECF0EF16B94CC52 /* HeroDefaultAnimator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HeroDefaultAnimator.swift; path = Sources/Animator/HeroDefaultAnimator.swift; sourceTree = "<group>"; };
+		66C70C535A686DC84CEFF6CD0B58FC1B /* HeroContext.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HeroContext.swift; path = Sources/HeroContext.swift; sourceTree = "<group>"; };
+		68998A9B7348E71E0B6EF3FC1E807A77 /* SwiftSupport.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwiftSupport.swift; path = Sources/SwiftSupport.swift; sourceTree = "<group>"; };
+		6945C0D791737B8F70C362F7275BADF7 /* Regex.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Regex.swift; path = Sources/Parser/Regex.swift; sourceTree = "<group>"; };
+		695B1D0D7CCDB729984F89E1020920A3 /* Pods-Gosio-GosioUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Gosio-GosioUITests-umbrella.h"; sourceTree = "<group>"; };
+		6D7D31C2B967CE3FB7E6574114943205 /* BasePreprocessor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BasePreprocessor.swift; path = Sources/Preprocessors/BasePreprocessor.swift; sourceTree = "<group>"; };
+		70C17B0EC248C9A0669EFB3285A599FB /* UIKit+Hero.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIKit+Hero.swift"; path = "Sources/Extensions/UIKit+Hero.swift"; sourceTree = "<group>"; };
+		756C30CB29ED5D661105507983B3F425 /* CG+Hero.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "CG+Hero.swift"; path = "Sources/Extensions/CG+Hero.swift"; sourceTree = "<group>"; };
+		76530ADC9F4ADD395C7C9CFB473D4D2E /* Nodes.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Nodes.swift; path = Sources/Parser/Nodes.swift; sourceTree = "<group>"; };
+		7C56D35A22E551DCD271A4DFC9B4D5F4 /* Pods-Gosio-GosioUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Gosio-GosioUITests-acknowledgements.plist"; sourceTree = "<group>"; };
+		7D0B8FD7DCD884053C086D07AC0ED019 /* HeroProgressRunner.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HeroProgressRunner.swift; path = Sources/Transition/HeroProgressRunner.swift; sourceTree = "<group>"; };
+		7F7473ED67CCAF21225ED7827A76550F /* Hero-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Hero-Info.plist"; sourceTree = "<group>"; };
+		7FC84DEF943ADACFDB7725AC797199A2 /* HeroDebugPlugin.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HeroDebugPlugin.swift; path = "Sources/Debug Plugin/HeroDebugPlugin.swift"; sourceTree = "<group>"; };
+		8206F14E1849AC03B7FDEFA5C26EF711 /* Pods_Gosio_GosioUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Gosio_GosioUITests.framework; path = "Pods-Gosio-GosioUITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		83A548AA79A21175760585755063C48C /* SPAlert-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SPAlert-dummy.m"; sourceTree = "<group>"; };
+		8DE19D482F4F4EA49316D7C89B217288 /* HeroTransition.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HeroTransition.swift; path = Sources/Transition/HeroTransition.swift; sourceTree = "<group>"; };
+		8EED7257B27FB505DF8DC9E9F6C0ED78 /* Hero.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Hero.release.xcconfig; sourceTree = "<group>"; };
+		8FC547BD46874DBF6310F53C3469F50D /* Pods-GosioTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-GosioTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		90BBCFD0304972BCBAA20569D45FE2EF /* Pods-GosioTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GosioTests.debug.xcconfig"; sourceTree = "<group>"; };
+		934A2BFA3886539E46583234DF2C8B0A /* HeroAnimatorViewContext.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HeroAnimatorViewContext.swift; path = Sources/Animator/HeroAnimatorViewContext.swift; sourceTree = "<group>"; };
+		95568154064CE960195D45B95A17D3E7 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/CoreMedia.framework; sourceTree = DEVELOPER_DIR; };
+		975337F2C18A2302AA0D1103484A1EC1 /* HeroStringConvertible.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HeroStringConvertible.swift; path = Sources/Parser/HeroStringConvertible.swift; sourceTree = "<group>"; };
+		98ADF2BD30A3886C3664963FA2244BF2 /* Hero-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Hero-umbrella.h"; sourceTree = "<group>"; };
+		98D308DA00EB9AA37FB047A50715E97C /* HeroTransition+Complete.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "HeroTransition+Complete.swift"; path = "Sources/Transition/HeroTransition+Complete.swift"; sourceTree = "<group>"; };
+		9A19E0744337C0C38FFC54C64D79DE4E /* HeroModifier.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HeroModifier.swift; path = Sources/HeroModifier.swift; sourceTree = "<group>"; };
+		9AECF688D8E2CF7991E5E448A74CC68F /* SPAlert-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "SPAlert-Info.plist"; sourceTree = "<group>"; };
+		9AF8E681A250FE8EC2AE0179B2F9A906 /* ConditionalPreprocessor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConditionalPreprocessor.swift; path = Sources/Preprocessors/ConditionalPreprocessor.swift; sourceTree = "<group>"; };
+		9BF6DA2971136839511FDDB689E8D59A /* Pods-Gosio.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Gosio.modulemap"; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9EBC046B0EBAAC7DAF7EE02659AF6B1C /* SPAlertHaptic.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SPAlertHaptic.swift; path = Sources/SPAlert/Services/SPAlertHaptic.swift; sourceTree = "<group>"; };
+		A8C87F10351A47A25944E37D1A94CBA2 /* Parser.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Parser.swift; path = Sources/Parser/Parser.swift; sourceTree = "<group>"; };
+		A8E7C7BF93FFFEABA7D76DC9517AF27E /* SPAlertLayout.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SPAlertLayout.swift; path = Sources/SPAlert/Models/SPAlertLayout.swift; sourceTree = "<group>"; };
+		A94F8E22B2B7B9093EE434ECECCBD316 /* HeroCompatible.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HeroCompatible.swift; path = Sources/HeroCompatible.swift; sourceTree = "<group>"; };
+		AF0F8EF7448C5AF8C4B3D38893E2ABE5 /* HeroTransition+Interactive.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "HeroTransition+Interactive.swift"; path = "Sources/Transition/HeroTransition+Interactive.swift"; sourceTree = "<group>"; };
+		B0FBB680D0A5C8F78042C0CD1DDDADC1 /* Pods-GosioTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-GosioTests-dummy.m"; sourceTree = "<group>"; };
+		BA64444CE0D83FF8C77B13FAE14C54B1 /* SourcePreprocessor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SourcePreprocessor.swift; path = Sources/Preprocessors/SourcePreprocessor.swift; sourceTree = "<group>"; };
+		BE18355463834A2609C5C43F3A1AB74E /* Pods-Gosio-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Gosio-acknowledgements.markdown"; sourceTree = "<group>"; };
+		BE629661A28417489F63DBC74196BBD6 /* SPAlert.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SPAlert.framework; path = SPAlert.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BF9C4780F0EDAD6CBF5855D6EE37A14D /* CALayer+Hero.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "CALayer+Hero.swift"; path = "Sources/Extensions/CALayer+Hero.swift"; sourceTree = "<group>"; };
+		C14FA50F75B45228B3708763BFC9539B /* Pods-GosioTests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-GosioTests-Info.plist"; sourceTree = "<group>"; };
+		C382C505CA880DCD8DD5AFB2F12FF5A3 /* UIColor+HexString.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIColor+HexString.swift"; path = "Sources/Extensions/UIColor+HexString.swift"; sourceTree = "<group>"; };
+		C5395AB955ED39EE111D80A92B1EC845 /* Pods-Gosio-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Gosio-acknowledgements.plist"; sourceTree = "<group>"; };
+		C6B4A357A9E84FBAC4505EFF2873D26B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		C80A59B88D703A2E3C9BC0AC3553C229 /* Pods-Gosio.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Gosio.debug.xcconfig"; sourceTree = "<group>"; };
+		CAA0501F9D557E43D4F278D17B272B99 /* Pods_GosioTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_GosioTests.framework; path = "Pods-GosioTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CBD1E083AF87B9304F6891241867493C /* SPAlert.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SPAlert.release.xcconfig; sourceTree = "<group>"; };
+		CDD69D73AD7E63119310CED4765DCBC8 /* HeroTargetState.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HeroTargetState.swift; path = Sources/HeroTargetState.swift; sourceTree = "<group>"; };
+		D346922F7681B27E55D32FC2ED58F6E2 /* SPAlertIconDoneView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SPAlertIconDoneView.swift; path = Sources/SPAlert/Icons/SPAlertIconDoneView.swift; sourceTree = "<group>"; };
+		D442F81F78D36388BD43BEB616EFECC3 /* HeroTypes.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HeroTypes.swift; path = Sources/HeroTypes.swift; sourceTree = "<group>"; };
+		D60F3ED13AA4EB3F2D27CCF82B34D923 /* Pods-Gosio.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Gosio.release.xcconfig"; sourceTree = "<group>"; };
+		D6C17D222EF82BE68416031E03B05952 /* Pods-Gosio-GosioUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Gosio-GosioUITests.release.xcconfig"; sourceTree = "<group>"; };
+		D6F84B7C566A4FE09FD92CC3323CDE64 /* Pods-Gosio-GosioUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Gosio-GosioUITests-dummy.m"; sourceTree = "<group>"; };
+		D8D42E3C245E6CD6FC519121E94F2400 /* HeroTransition+UINavigationControllerDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "HeroTransition+UINavigationControllerDelegate.swift"; path = "Sources/Transition/HeroTransition+UINavigationControllerDelegate.swift"; sourceTree = "<group>"; };
+		DA73E78489730F8CB7A08DF38B475906 /* SPAlert.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SPAlert.modulemap; sourceTree = "<group>"; };
+		DA9D1C81D77637E32B06E17128707120 /* DefaultAnimationPreprocessor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DefaultAnimationPreprocessor.swift; path = Sources/Preprocessors/DefaultAnimationPreprocessor.swift; sourceTree = "<group>"; };
+		DC72FB7278DA731E123B0F205AD5F301 /* UIViewController+Hero.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIViewController+Hero.swift"; path = "Sources/Extensions/UIViewController+Hero.swift"; sourceTree = "<group>"; };
+		DD0D7DD32885C082A494AECAF6FC6EE6 /* Hero.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Hero.debug.xcconfig; sourceTree = "<group>"; };
+		DEC3BC6F05C74CDC2071259D7996B8DD /* CascadePreprocessor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CascadePreprocessor.swift; path = Sources/Preprocessors/CascadePreprocessor.swift; sourceTree = "<group>"; };
+		E11C4A892EED1B04F5296D158D1971CA /* SPAlert-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SPAlert-umbrella.h"; sourceTree = "<group>"; };
+		E1C91D03504706F4209B346466B93E98 /* SPAlert-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SPAlert-prefix.pch"; sourceTree = "<group>"; };
+		E60B533BE2B346A92B26753107D8BCB7 /* HeroCoreAnimationViewContext.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HeroCoreAnimationViewContext.swift; path = Sources/Animator/HeroCoreAnimationViewContext.swift; sourceTree = "<group>"; };
+		E67BF158D95E57DB8202D1524823A904 /* HeroTransition+UIViewControllerTransitioningDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "HeroTransition+UIViewControllerTransitioningDelegate.swift"; path = "Sources/Transition/HeroTransition+UIViewControllerTransitioningDelegate.swift"; sourceTree = "<group>"; };
+		EA04BBCD2989BE2E9B5A79C82206D682 /* Pods-Gosio-GosioUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Gosio-GosioUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		EDCA670F2EC642000D157DEE784361D6 /* SPAlert.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SPAlert.debug.xcconfig; sourceTree = "<group>"; };
+		EE591F81C88E094BA3B1A89B8E1BE000 /* Pods-Gosio-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Gosio-Info.plist"; sourceTree = "<group>"; };
+		F1C029A61D5C84A20C77DB8E268A8937 /* SPAlert.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SPAlert.swift; path = Sources/SPAlert/SPAlert.swift; sourceTree = "<group>"; };
+		F2469E4087286AD9833D206401D8C71A /* Pods-Gosio-GosioUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Gosio-GosioUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		F36CF400282C3AD24D208A795547A7AE /* Pods-GosioTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-GosioTests-umbrella.h"; sourceTree = "<group>"; };
+		F42A66404952D2480439E96BC7F61A4E /* Pods-GosioTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-GosioTests.modulemap"; sourceTree = "<group>"; };
+		F543222C851ABA172D0B4EE8E52D92B6 /* Pods-GosioTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GosioTests.release.xcconfig"; sourceTree = "<group>"; };
+		F8C830FF7C3F0EB792F7F0D41B08BE65 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
+		FAD9AC0426072933256DCBD071CD50BA /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		07FDAEA42419A23ECABC638BDD521F8D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3F8E3626B6A6A75B8040D4474196F0CE /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4B4768BFCD4E3761A998903002126783 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				598A7DCAC2225E95352E1E7927615B6D /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		52309413A99B172410E6714FB815893E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04DFFB22C868531CA29015601F8C2C4A /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8BA9AE28CB7D2A8CB5FB4519E2A23461 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				03D6158DD18C87BE5E65C85AA6F002DF /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9753D40ABC00B850B922E91CC99D2C9B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9271FC6E06F4AB333A37B8AADB7571F7 /* CoreGraphics.framework in Frameworks */,
+				55FCB84E644087E86E3E3BC031FC2B8F /* CoreMedia.framework in Frameworks */,
+				88C124CBB1C2CF3C74537ABB507A2713 /* Foundation.framework in Frameworks */,
+				02225125CE79606D1F8B383F761EF346 /* QuartzCore.framework in Frameworks */,
+				3328507A953D6D7B316F896EEC87FD72 /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0E607B8C21FA2BA40F9E59C754C98AD3 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				47C1F7D15DF1E2C8B980BC1B49D38419 /* CoreGraphics.framework */,
+				95568154064CE960195D45B95A17D3E7 /* CoreMedia.framework */,
+				C6B4A357A9E84FBAC4505EFF2873D26B /* Foundation.framework */,
+				F8C830FF7C3F0EB792F7F0D41B08BE65 /* QuartzCore.framework */,
+				FAD9AC0426072933256DCBD071CD50BA /* UIKit.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		1730741BD9EA0950EB3F6423F187E0C1 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				114F809B23B7B2A24D7CFFC827E4A985 /* Hero.modulemap */,
+				4CE35D5051B7683113E6573F66D953FE /* Hero-dummy.m */,
+				7F7473ED67CCAF21225ED7827A76550F /* Hero-Info.plist */,
+				18F93B2550911993E86B3BD9045B1AFE /* Hero-prefix.pch */,
+				98ADF2BD30A3886C3664963FA2244BF2 /* Hero-umbrella.h */,
+				DD0D7DD32885C082A494AECAF6FC6EE6 /* Hero.debug.xcconfig */,
+				8EED7257B27FB505DF8DC9E9F6C0ED78 /* Hero.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Hero";
+			sourceTree = "<group>";
+		};
+		45E4BAD3FFB89194DF2B34F59E291667 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				13E778F4B833EE5D7ABE882406A8215E /* Hero.framework */,
+				35FB13A42C9020C19A018357B75EF1C0 /* Pods_Gosio.framework */,
+				8206F14E1849AC03B7FDEFA5C26EF711 /* Pods_Gosio_GosioUITests.framework */,
+				CAA0501F9D557E43D4F278D17B272B99 /* Pods_GosioTests.framework */,
+				BE629661A28417489F63DBC74196BBD6 /* SPAlert.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5B945D995C388FD40554FB37074EEF53 /* Pods-GosioTests */ = {
+			isa = PBXGroup;
+			children = (
+				F42A66404952D2480439E96BC7F61A4E /* Pods-GosioTests.modulemap */,
+				8FC547BD46874DBF6310F53C3469F50D /* Pods-GosioTests-acknowledgements.markdown */,
+				234362E9E8A7CCFC5F3374C8292713B3 /* Pods-GosioTests-acknowledgements.plist */,
+				B0FBB680D0A5C8F78042C0CD1DDDADC1 /* Pods-GosioTests-dummy.m */,
+				C14FA50F75B45228B3708763BFC9539B /* Pods-GosioTests-Info.plist */,
+				F36CF400282C3AD24D208A795547A7AE /* Pods-GosioTests-umbrella.h */,
+				90BBCFD0304972BCBAA20569D45FE2EF /* Pods-GosioTests.debug.xcconfig */,
+				F543222C851ABA172D0B4EE8E52D92B6 /* Pods-GosioTests.release.xcconfig */,
+			);
+			name = "Pods-GosioTests";
+			path = "Target Support Files/Pods-GosioTests";
+			sourceTree = "<group>";
+		};
+		8E4168F472841972048046CEFC4A9AF2 /* Hero */ = {
+			isa = PBXGroup;
+			children = (
+				2AE3DF31EDDD2AFC3DE27900B6B52782 /* Array+HeroModifier.swift */,
+				6D7D31C2B967CE3FB7E6574114943205 /* BasePreprocessor.swift */,
+				BF9C4780F0EDAD6CBF5855D6EE37A14D /* CALayer+Hero.swift */,
+				419FF823086F7D85E75E36BD31C2A342 /* CAMediaTimingFunction+Hero.swift */,
+				DEC3BC6F05C74CDC2071259D7996B8DD /* CascadePreprocessor.swift */,
+				756C30CB29ED5D661105507983B3F425 /* CG+Hero.swift */,
+				9AF8E681A250FE8EC2AE0179B2F9A906 /* ConditionalPreprocessor.swift */,
+				DA9D1C81D77637E32B06E17128707120 /* DefaultAnimationPreprocessor.swift */,
+				4A447743B21439C9A5238CA8F10EDD05 /* DispatchQueue+Hero.swift */,
+				934A2BFA3886539E46583234DF2C8B0A /* HeroAnimatorViewContext.swift */,
+				A94F8E22B2B7B9093EE434ECECCBD316 /* HeroCompatible.swift */,
+				66C70C535A686DC84CEFF6CD0B58FC1B /* HeroContext.swift */,
+				E60B533BE2B346A92B26753107D8BCB7 /* HeroCoreAnimationViewContext.swift */,
+				7FC84DEF943ADACFDB7725AC797199A2 /* HeroDebugPlugin.swift */,
+				2D23D61EA5E667CE427BA6F2EE6FF218 /* HeroDebugView.swift */,
+				60C3F13D35B3E31E1ECF0EF16B94CC52 /* HeroDefaultAnimator.swift */,
+				9A19E0744337C0C38FFC54C64D79DE4E /* HeroModifier.swift */,
+				42B716605CB47EAEEF0A939E77E99D6A /* HeroModifier+Advanced.swift */,
+				4E7E5019C898756A369A08E89256F276 /* HeroModifier+HeroStringConvertible.swift */,
+				09478CADC2E35207C6DEF19C2640C274 /* HeroPlugin.swift */,
+				7D0B8FD7DCD884053C086D07AC0ED019 /* HeroProgressRunner.swift */,
+				975337F2C18A2302AA0D1103484A1EC1 /* HeroStringConvertible.swift */,
+				CDD69D73AD7E63119310CED4765DCBC8 /* HeroTargetState.swift */,
+				8DE19D482F4F4EA49316D7C89B217288 /* HeroTransition.swift */,
+				334F925B96DC23628D22D8B8058BBDEF /* HeroTransition+Animate.swift */,
+				98D308DA00EB9AA37FB047A50715E97C /* HeroTransition+Complete.swift */,
+				10B99C08A52533E7801F8909F239E0F0 /* HeroTransition+CustomTransition.swift */,
+				AF0F8EF7448C5AF8C4B3D38893E2ABE5 /* HeroTransition+Interactive.swift */,
+				0BB4207E51348361D418185C5383BA56 /* HeroTransition+Start.swift */,
+				D8D42E3C245E6CD6FC519121E94F2400 /* HeroTransition+UINavigationControllerDelegate.swift */,
+				10998A7A302622A02FCFCD50F410F49D /* HeroTransition+UITabBarControllerDelegate.swift */,
+				E67BF158D95E57DB8202D1524823A904 /* HeroTransition+UIViewControllerTransitioningDelegate.swift */,
+				0851B570651A3D513BBAA932CB39E3BB /* HeroTransitionState.swift */,
+				D442F81F78D36388BD43BEB616EFECC3 /* HeroTypes.swift */,
+				065B1519A4A4EBC38A5D67C23C28CF7C /* HeroViewControllerDelegate.swift */,
+				29DD605C9A35B9C33ADBB4A1B0854CCF /* HeroViewPropertyViewContext.swift */,
+				11FAB6B6323236EAF6F69A8B9D587005 /* IgnoreSubviewModifiersPreprocessor.swift */,
+				413A3213C152010E51E76FE8E4576248 /* Lexer.swift */,
+				3E22B511AA02154F01E9364A2DE81388 /* MatchPreprocessor.swift */,
+				76530ADC9F4ADD395C7C9CFB473D4D2E /* Nodes.swift */,
+				A8C87F10351A47A25944E37D1A94CBA2 /* Parser.swift */,
+				6945C0D791737B8F70C362F7275BADF7 /* Regex.swift */,
+				BA64444CE0D83FF8C77B13FAE14C54B1 /* SourcePreprocessor.swift */,
+				68998A9B7348E71E0B6EF3FC1E807A77 /* SwiftSupport.swift */,
+				C382C505CA880DCD8DD5AFB2F12FF5A3 /* UIColor+HexString.swift */,
+				70C17B0EC248C9A0669EFB3285A599FB /* UIKit+Hero.swift */,
+				360DD43DA3C258AA822601F8832817FD /* UIView+Hero.swift */,
+				DC72FB7278DA731E123B0F205AD5F301 /* UIViewController+Hero.swift */,
+				1730741BD9EA0950EB3F6423F187E0C1 /* Support Files */,
+			);
+			name = Hero;
+			path = Hero;
+			sourceTree = "<group>";
+		};
+		B283585A63618971D3179BADE23A2085 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				DA73E78489730F8CB7A08DF38B475906 /* SPAlert.modulemap */,
+				83A548AA79A21175760585755063C48C /* SPAlert-dummy.m */,
+				9AECF688D8E2CF7991E5E448A74CC68F /* SPAlert-Info.plist */,
+				E1C91D03504706F4209B346466B93E98 /* SPAlert-prefix.pch */,
+				E11C4A892EED1B04F5296D158D1971CA /* SPAlert-umbrella.h */,
+				EDCA670F2EC642000D157DEE784361D6 /* SPAlert.debug.xcconfig */,
+				CBD1E083AF87B9304F6891241867493C /* SPAlert.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/SPAlert";
+			sourceTree = "<group>";
+		};
+		B94D7768568A9992200DB461E8CF687F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0E607B8C21FA2BA40F9E59C754C98AD3 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C8CC59B05E595D3569F384D47636122F /* SPAlert */ = {
+			isa = PBXGroup;
+			children = (
+				F1C029A61D5C84A20C77DB8E268A8937 /* SPAlert.swift */,
+				9EBC046B0EBAAC7DAF7EE02659AF6B1C /* SPAlertHaptic.swift */,
+				117DEC4DFD7DFD265DC5B4F658C8005D /* SPAlertIconAnimatable.swift */,
+				D346922F7681B27E55D32FC2ED58F6E2 /* SPAlertIconDoneView.swift */,
+				462A5E54B378750D8385DFA2CCFEBEE2 /* SPAlertIconErrorView.swift */,
+				396757D0958334F521C3B7A9CF6118E4 /* SPAlertIconHeartView.swift */,
+				3B309F5CD598629262FCC025B9B74E05 /* SPAlertIconPreset.swift */,
+				A8E7C7BF93FFFEABA7D76DC9517AF27E /* SPAlertLayout.swift */,
+				06D39F415F38D0BC8AC165A30A65C2E0 /* SPAlertView.swift */,
+				B283585A63618971D3179BADE23A2085 /* Support Files */,
+			);
+			name = SPAlert;
+			path = SPAlert;
+			sourceTree = "<group>";
+		};
+		CD05522907D4BAE9666C2AFDA94B8D26 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8E4168F472841972048046CEFC4A9AF2 /* Hero */,
+				C8CC59B05E595D3569F384D47636122F /* SPAlert */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				B94D7768568A9992200DB461E8CF687F /* Frameworks */,
+				CD05522907D4BAE9666C2AFDA94B8D26 /* Pods */,
+				45E4BAD3FFB89194DF2B34F59E291667 /* Products */,
+				FBC7549BC1C5DB89C0E705F3DE741C63 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		EDE2D181F1C714F12960FF99AC76A409 /* Pods-Gosio-GosioUITests */ = {
+			isa = PBXGroup;
+			children = (
+				3045AAB6859F874834E3932745DB6006 /* Pods-Gosio-GosioUITests.modulemap */,
+				EA04BBCD2989BE2E9B5A79C82206D682 /* Pods-Gosio-GosioUITests-acknowledgements.markdown */,
+				7C56D35A22E551DCD271A4DFC9B4D5F4 /* Pods-Gosio-GosioUITests-acknowledgements.plist */,
+				D6F84B7C566A4FE09FD92CC3323CDE64 /* Pods-Gosio-GosioUITests-dummy.m */,
+				41CDEBF6CC812BE9E71CB97DD2F1E390 /* Pods-Gosio-GosioUITests-frameworks.sh */,
+				3F5660FC77BB6E457B528D8DA94B4D5B /* Pods-Gosio-GosioUITests-Info.plist */,
+				695B1D0D7CCDB729984F89E1020920A3 /* Pods-Gosio-GosioUITests-umbrella.h */,
+				F2469E4087286AD9833D206401D8C71A /* Pods-Gosio-GosioUITests.debug.xcconfig */,
+				D6C17D222EF82BE68416031E03B05952 /* Pods-Gosio-GosioUITests.release.xcconfig */,
+			);
+			name = "Pods-Gosio-GosioUITests";
+			path = "Target Support Files/Pods-Gosio-GosioUITests";
+			sourceTree = "<group>";
+		};
+		F40C5EF8609C8159DD143D299712A71B /* Pods-Gosio */ = {
+			isa = PBXGroup;
+			children = (
+				9BF6DA2971136839511FDDB689E8D59A /* Pods-Gosio.modulemap */,
+				BE18355463834A2609C5C43F3A1AB74E /* Pods-Gosio-acknowledgements.markdown */,
+				C5395AB955ED39EE111D80A92B1EC845 /* Pods-Gosio-acknowledgements.plist */,
+				3EB417BC3E83F7EEEF34F506BD9D43A8 /* Pods-Gosio-dummy.m */,
+				0D3885BC166B2FD737CFA510F7E4127E /* Pods-Gosio-frameworks.sh */,
+				EE591F81C88E094BA3B1A89B8E1BE000 /* Pods-Gosio-Info.plist */,
+				1DCEE939588896094E589AE332F24913 /* Pods-Gosio-umbrella.h */,
+				C80A59B88D703A2E3C9BC0AC3553C229 /* Pods-Gosio.debug.xcconfig */,
+				D60F3ED13AA4EB3F2D27CCF82B34D923 /* Pods-Gosio.release.xcconfig */,
+			);
+			name = "Pods-Gosio";
+			path = "Target Support Files/Pods-Gosio";
+			sourceTree = "<group>";
+		};
+		FBC7549BC1C5DB89C0E705F3DE741C63 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				F40C5EF8609C8159DD143D299712A71B /* Pods-Gosio */,
+				EDE2D181F1C714F12960FF99AC76A409 /* Pods-Gosio-GosioUITests */,
+				5B945D995C388FD40554FB37074EEF53 /* Pods-GosioTests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		0F397C12401CB26EBE0CC054137F0083 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0A77FAC238D4DDB69E2813F3662A9BB2 /* Pods-Gosio-GosioUITests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		22D598F597A50E1C3A4F2748A86E40D3 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BEE284660B09671376D429849DDD085B /* Pods-GosioTests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7BE2DEBA442AF63FEA06A69B46AEB75A /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				30825F9E57DF4E095F0F3928E59C7758 /* SPAlert-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		977EC996CB490E364DF9BFBD2669EE60 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				28ED22D50E807703BDE53652BDB3BDA0 /* Hero-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B1BD4C3660027E3CC46BC5E1AC8B1ABB /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B10383851652EA26BE371D5BD0648452 /* Pods-Gosio-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		275F23B057B4353EE599EC0475CB74E6 /* Pods-Gosio-GosioUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 49135CF1B4128C6F2CE7D060338D5F1D /* Build configuration list for PBXNativeTarget "Pods-Gosio-GosioUITests" */;
+			buildPhases = (
+				0F397C12401CB26EBE0CC054137F0083 /* Headers */,
+				2BD3C5C8B5CEEBA875A5DC621C934C09 /* Sources */,
+				4B4768BFCD4E3761A998903002126783 /* Frameworks */,
+				77BAEC9986B14EDD0521DED7FC481E73 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7EFE8390BF5C1CA5F756E7C279EBBC79 /* PBXTargetDependency */,
+				DA0E705331290DDDBAADA08CA143EC0D /* PBXTargetDependency */,
+			);
+			name = "Pods-Gosio-GosioUITests";
+			productName = "Pods-Gosio-GosioUITests";
+			productReference = 8206F14E1849AC03B7FDEFA5C26EF711 /* Pods_Gosio_GosioUITests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		B3893AEA4D7DBB9A086E889FC469132D /* Hero */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3E8FE3182F7A698B2443CEBCF9A30678 /* Build configuration list for PBXNativeTarget "Hero" */;
+			buildPhases = (
+				977EC996CB490E364DF9BFBD2669EE60 /* Headers */,
+				9F3468E0B453FDC78874FB3004AE6603 /* Sources */,
+				9753D40ABC00B850B922E91CC99D2C9B /* Frameworks */,
+				A5EEE57DDAA76478FBAAE5512E4E4136 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Hero;
+			productName = Hero;
+			productReference = 13E778F4B833EE5D7ABE882406A8215E /* Hero.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		B4652B2924FE3B941944F77DA8477ABD /* SPAlert */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 39B310034CAF0ACC7A42429F089258D1 /* Build configuration list for PBXNativeTarget "SPAlert" */;
+			buildPhases = (
+				7BE2DEBA442AF63FEA06A69B46AEB75A /* Headers */,
+				C8DE6344E329C01769B6B9571065E895 /* Sources */,
+				8BA9AE28CB7D2A8CB5FB4519E2A23461 /* Frameworks */,
+				DBD728D8502019601F067DDD8FB73052 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SPAlert;
+			productName = SPAlert;
+			productReference = BE629661A28417489F63DBC74196BBD6 /* SPAlert.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		D729DB05211BE1B61302788E85BDAC74 /* Pods-Gosio */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F7AD04C341EB90B0A2874EDE7EEDC6F1 /* Build configuration list for PBXNativeTarget "Pods-Gosio" */;
+			buildPhases = (
+				B1BD4C3660027E3CC46BC5E1AC8B1ABB /* Headers */,
+				02327F2724C7668FF0999EFA8BE53590 /* Sources */,
+				07FDAEA42419A23ECABC638BDD521F8D /* Frameworks */,
+				A6DBB7744933950951F8368275CE2C57 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				567DE10A907DCDBCAC6F7D5519A9EC08 /* PBXTargetDependency */,
+				CA5C0D5D434A0DFF76229B91DC3239D9 /* PBXTargetDependency */,
+			);
+			name = "Pods-Gosio";
+			productName = "Pods-Gosio";
+			productReference = 35FB13A42C9020C19A018357B75EF1C0 /* Pods_Gosio.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		DF3D05AD3B2FCCE1D25AE05E9F5A8283 /* Pods-GosioTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 763F57622ACD1EBEE567E812F11CBD4A /* Build configuration list for PBXNativeTarget "Pods-GosioTests" */;
+			buildPhases = (
+				22D598F597A50E1C3A4F2748A86E40D3 /* Headers */,
+				B6D1916A36ED5199260C18FC86188EF9 /* Sources */,
+				52309413A99B172410E6714FB815893E /* Frameworks */,
+				19FD976D7DE55AB7E4A4697E66EA1B16 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D736CAAA6AF72CCFC43C4EABDEDA64AE /* PBXTargetDependency */,
+			);
+			name = "Pods-GosioTests";
+			productName = "Pods-GosioTests";
+			productReference = CAA0501F9D557E43D4F278D17B272B99 /* Pods_GosioTests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1100;
+				LastUpgradeCheck = 1100;
+			};
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = 45E4BAD3FFB89194DF2B34F59E291667 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B3893AEA4D7DBB9A086E889FC469132D /* Hero */,
+				D729DB05211BE1B61302788E85BDAC74 /* Pods-Gosio */,
+				275F23B057B4353EE599EC0475CB74E6 /* Pods-Gosio-GosioUITests */,
+				DF3D05AD3B2FCCE1D25AE05E9F5A8283 /* Pods-GosioTests */,
+				B4652B2924FE3B941944F77DA8477ABD /* SPAlert */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		19FD976D7DE55AB7E4A4697E66EA1B16 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		77BAEC9986B14EDD0521DED7FC481E73 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A5EEE57DDAA76478FBAAE5512E4E4136 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A6DBB7744933950951F8368275CE2C57 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DBD728D8502019601F067DDD8FB73052 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		02327F2724C7668FF0999EFA8BE53590 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				653E29D807C62277D9B446EAE3E7A780 /* Pods-Gosio-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2BD3C5C8B5CEEBA875A5DC621C934C09 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7C4C78FFA7E61ACB1E47C87AA28DCD32 /* Pods-Gosio-GosioUITests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9F3468E0B453FDC78874FB3004AE6603 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				000FB9EDA233684DCE3C0D776F682440 /* Array+HeroModifier.swift in Sources */,
+				971DE19A2425C011DEA7F234EF9DFB3D /* BasePreprocessor.swift in Sources */,
+				DCEB1D1D97936446FFCC775B87820D76 /* CALayer+Hero.swift in Sources */,
+				596395B6FA3AB7BE5E2986C1057FFB51 /* CAMediaTimingFunction+Hero.swift in Sources */,
+				981E678C694BD6CB6E47750023C41356 /* CascadePreprocessor.swift in Sources */,
+				8675FAF0C389A827D865B4231B097350 /* CG+Hero.swift in Sources */,
+				E14591ACB8E8B67FA53C24B992997EB6 /* ConditionalPreprocessor.swift in Sources */,
+				B4A5070619398ABCE3153716A8B1FD39 /* DefaultAnimationPreprocessor.swift in Sources */,
+				AB333ACA619804B14FDACD4892AD0F33 /* DispatchQueue+Hero.swift in Sources */,
+				BE63C2C8EC7B15BE0848D01ED7125E86 /* Hero-dummy.m in Sources */,
+				AEDEEFE01BDC994BB676D0C6C4EA0B4F /* HeroAnimatorViewContext.swift in Sources */,
+				2F24C371BA4C2962F44ACC8E17667583 /* HeroCompatible.swift in Sources */,
+				BAA6B8A757D1C7D80877064966A6F57D /* HeroContext.swift in Sources */,
+				C6EEAC88D46661939CEC80B9C757D646 /* HeroCoreAnimationViewContext.swift in Sources */,
+				F67D13F1DF0DD6F7271E3B94CCA8AC22 /* HeroDebugPlugin.swift in Sources */,
+				86F6100A3164708D9449C570776E4A53 /* HeroDebugView.swift in Sources */,
+				611B67BEEBA7FB3983E8D9AC3796A551 /* HeroDefaultAnimator.swift in Sources */,
+				8267702DC8728FA8827B0E9F5850D564 /* HeroModifier+Advanced.swift in Sources */,
+				76259741C02A8C73A3015C5D2DA496CA /* HeroModifier+HeroStringConvertible.swift in Sources */,
+				B761609304C53DD165E21D6979C187FA /* HeroModifier.swift in Sources */,
+				4C0109B9064995D017EF8BA9471065BD /* HeroPlugin.swift in Sources */,
+				C404ABC8391D8C5678272EA2B7149664 /* HeroProgressRunner.swift in Sources */,
+				561B43E02C4CC483EEAC28AE2C961D3D /* HeroStringConvertible.swift in Sources */,
+				E259639E8D936042ECD20840FBBD4EC8 /* HeroTargetState.swift in Sources */,
+				0E2025F3049EB290C9C701EB7697FD83 /* HeroTransition+Animate.swift in Sources */,
+				D0F527FECD9CDE6E33868A911863F3A2 /* HeroTransition+Complete.swift in Sources */,
+				0C8C91A946F029E0110E06480F600A47 /* HeroTransition+CustomTransition.swift in Sources */,
+				4DD18CA1B0628DA289B294D2106D55A3 /* HeroTransition+Interactive.swift in Sources */,
+				DC2F67DD3163291EB40DC85B0D8BFD12 /* HeroTransition+Start.swift in Sources */,
+				783190536DC8297B50B399D8250F2032 /* HeroTransition+UINavigationControllerDelegate.swift in Sources */,
+				63D62B669C1B1D76B8FA2AEE51AF2863 /* HeroTransition+UITabBarControllerDelegate.swift in Sources */,
+				0703CE26B7245672B91E0B78E1281E44 /* HeroTransition+UIViewControllerTransitioningDelegate.swift in Sources */,
+				38406719BDA0D1C99B94A33EB1BF2AA1 /* HeroTransition.swift in Sources */,
+				5D561331EDDD8446C2C74304EF534F0B /* HeroTransitionState.swift in Sources */,
+				DB289656E21B490DA80311AD52DBA5C0 /* HeroTypes.swift in Sources */,
+				143BC48EA7B427B9F43FBF38C1209904 /* HeroViewControllerDelegate.swift in Sources */,
+				565C22E5071430F1DB95C884B2CF9D00 /* HeroViewPropertyViewContext.swift in Sources */,
+				E65E75D9FF3AD6FD21154DE84D1AE4FA /* IgnoreSubviewModifiersPreprocessor.swift in Sources */,
+				0A3AA2E0FDAF8A8858240069811996EA /* Lexer.swift in Sources */,
+				7077E7A72EB1E524F2EF25029B712F2F /* MatchPreprocessor.swift in Sources */,
+				9BF3A86AFAFDA9B4C5150324F3DFD0D3 /* Nodes.swift in Sources */,
+				B6AE25C51BED9621BBA67FE397452160 /* Parser.swift in Sources */,
+				F4DD189E36C289688DD2187E0A38D96F /* Regex.swift in Sources */,
+				80538854F50E894E283C87058249C10C /* SourcePreprocessor.swift in Sources */,
+				A7EA1BA19DDD7C4C829D4E8BCB133B5D /* SwiftSupport.swift in Sources */,
+				85908A69CE5A0C54998A6D597BDB062F /* UIColor+HexString.swift in Sources */,
+				E05D3E5962B58A2AE76850E534A24C7B /* UIKit+Hero.swift in Sources */,
+				D99F7D4FA69590F4F4DE4234BC19616A /* UIView+Hero.swift in Sources */,
+				D5B6C3D9C30E853925EDFD6F6B2F735A /* UIViewController+Hero.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B6D1916A36ED5199260C18FC86188EF9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				373C718EFB554E6DB53B8108C10AF901 /* Pods-GosioTests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C8DE6344E329C01769B6B9571065E895 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5F8C5665FEB194DA51EB48EE12F70A36 /* SPAlert-dummy.m in Sources */,
+				B6461FC455E76D6427B298A059694C5D /* SPAlert.swift in Sources */,
+				0F8EBAADA80C6AF2C62DAAC68A8FD8AB /* SPAlertHaptic.swift in Sources */,
+				603A44B0C00347070B5B2D9862663F70 /* SPAlertIconAnimatable.swift in Sources */,
+				570C57E2F7EB5A594868402D3C830391 /* SPAlertIconDoneView.swift in Sources */,
+				E710EAB54B8983AD48B1965D564ED8A3 /* SPAlertIconErrorView.swift in Sources */,
+				92D72E2B335A6BDD963963DB32EB976B /* SPAlertIconHeartView.swift in Sources */,
+				E547D1E609A0486FBC2C386A14C44B51 /* SPAlertIconPreset.swift in Sources */,
+				6DA116A3729AD06FE4965D7FFA9FE63B /* SPAlertLayout.swift in Sources */,
+				B6A307601C54492B96394E278F095E92 /* SPAlertView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		567DE10A907DCDBCAC6F7D5519A9EC08 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Hero;
+			target = B3893AEA4D7DBB9A086E889FC469132D /* Hero */;
+			targetProxy = DA050CFDE46FAF3F542796CA6CE8A247 /* PBXContainerItemProxy */;
+		};
+		7EFE8390BF5C1CA5F756E7C279EBBC79 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Hero;
+			target = B3893AEA4D7DBB9A086E889FC469132D /* Hero */;
+			targetProxy = 2AA21BD32DFB2A51A1F838BCE8ABBAAB /* PBXContainerItemProxy */;
+		};
+		CA5C0D5D434A0DFF76229B91DC3239D9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SPAlert;
+			target = B4652B2924FE3B941944F77DA8477ABD /* SPAlert */;
+			targetProxy = CE5E174C5FAD578F1B38A7BE8C443EA0 /* PBXContainerItemProxy */;
+		};
+		D736CAAA6AF72CCFC43C4EABDEDA64AE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-Gosio";
+			target = D729DB05211BE1B61302788E85BDAC74 /* Pods-Gosio */;
+			targetProxy = 6272D5A9B72A4CC831E7A531341E190C /* PBXContainerItemProxy */;
+		};
+		DA0E705331290DDDBAADA08CA143EC0D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SPAlert;
+			target = B4652B2924FE3B941944F77DA8477ABD /* SPAlert */;
+			targetProxy = A6B59E6E9472AA02A9519730280428FB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		11802A2EDAFAA939E52542DEFDCDC865 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8EED7257B27FB505DF8DC9E9F6C0ED78 /* Hero.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Hero/Hero-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Hero/Hero-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/Hero/Hero.modulemap";
+				PRODUCT_MODULE_NAME = Hero;
+				PRODUCT_NAME = Hero;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		2CF7B95B5F890B3F7ED55BE7FF0D3252 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F543222C851ABA172D0B4EE8E52D92B6 /* Pods-GosioTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-GosioTests/Pods-GosioTests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-GosioTests/Pods-GosioTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		509FBF897C70BB8299CD7986536AF3CE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 90BBCFD0304972BCBAA20569D45FE2EF /* Pods-GosioTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-GosioTests/Pods-GosioTests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-GosioTests/Pods-GosioTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		5C59FA2D769E85FFB77567C81C6A9138 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F2469E4087286AD9833D206401D8C71A /* Pods-Gosio-GosioUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Gosio-GosioUITests/Pods-Gosio-GosioUITests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Gosio-GosioUITests/Pods-Gosio-GosioUITests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		963BD7925C123C698115AE45CD264E7F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		A6860AA78D977BE0943CE6B0D740D581 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D6C17D222EF82BE68416031E03B05952 /* Pods-Gosio-GosioUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Gosio-GosioUITests/Pods-Gosio-GosioUITests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Gosio-GosioUITests/Pods-Gosio-GosioUITests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		AB5913B5BBECE87C71250B290813DB0D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CBD1E083AF87B9304F6891241867493C /* SPAlert.release.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/SPAlert/SPAlert-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SPAlert/SPAlert-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/SPAlert/SPAlert.modulemap";
+				PRODUCT_MODULE_NAME = SPAlert;
+				PRODUCT_NAME = SPAlert;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.1;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		B6909A7E062E1B16DFD449AB03BF8C05 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D60F3ED13AA4EB3F2D27CCF82B34D923 /* Pods-Gosio.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Gosio/Pods-Gosio-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Gosio/Pods-Gosio.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		D4F409146983BBD1A03C4C502C43E12C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EDCA670F2EC642000D157DEE784361D6 /* SPAlert.debug.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/SPAlert/SPAlert-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SPAlert/SPAlert-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/SPAlert/SPAlert.modulemap";
+				PRODUCT_MODULE_NAME = SPAlert;
+				PRODUCT_NAME = SPAlert;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.1;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		DA2658F2CD010C6787F9341689AB43EE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DD0D7DD32885C082A494AECAF6FC6EE6 /* Hero.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Hero/Hero-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Hero/Hero-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/Hero/Hero.modulemap";
+				PRODUCT_MODULE_NAME = Hero;
+				PRODUCT_NAME = Hero;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		E8256E1B894D64F9B6D6E0F27C2CABC5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		FFF1365EC3D366DB924DF27E525F8228 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C80A59B88D703A2E3C9BC0AC3553C229 /* Pods-Gosio.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Gosio/Pods-Gosio-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Gosio/Pods-Gosio.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		39B310034CAF0ACC7A42429F089258D1 /* Build configuration list for PBXNativeTarget "SPAlert" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D4F409146983BBD1A03C4C502C43E12C /* Debug */,
+				AB5913B5BBECE87C71250B290813DB0D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3E8FE3182F7A698B2443CEBCF9A30678 /* Build configuration list for PBXNativeTarget "Hero" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DA2658F2CD010C6787F9341689AB43EE /* Debug */,
+				11802A2EDAFAA939E52542DEFDCDC865 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E8256E1B894D64F9B6D6E0F27C2CABC5 /* Debug */,
+				963BD7925C123C698115AE45CD264E7F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		49135CF1B4128C6F2CE7D060338D5F1D /* Build configuration list for PBXNativeTarget "Pods-Gosio-GosioUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5C59FA2D769E85FFB77567C81C6A9138 /* Debug */,
+				A6860AA78D977BE0943CE6B0D740D581 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		763F57622ACD1EBEE567E812F11CBD4A /* Build configuration list for PBXNativeTarget "Pods-GosioTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				509FBF897C70BB8299CD7986536AF3CE /* Debug */,
+				2CF7B95B5F890B3F7ED55BE7FF0D3252 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F7AD04C341EB90B0A2874EDE7EEDC6F1 /* Build configuration list for PBXNativeTarget "Pods-Gosio" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FFF1365EC3D366DB924DF27E525F8228 /* Debug */,
+				B6909A7E062E1B16DFD449AB03BF8C05 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+}

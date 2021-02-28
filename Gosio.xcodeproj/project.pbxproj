@@ -3,19 +3,29 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0B042827C90CFACA6A674EFD /* Pods_Gosio_GosioUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 427612BCCF6048BB813A12DD /* Pods_Gosio_GosioUITests.framework */; };
+		360DD6F025EB66D700636EBD /* DashboardVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 360DD6EF25EB66D700636EBD /* DashboardVC.swift */; };
+		360DD6F925EB67DC00636EBD /* OnboardingState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 360DD6F825EB67DB00636EBD /* OnboardingState.swift */; };
 		362E737525EAAC4E00C06078 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 362E737425EAAC4E00C06078 /* AppDelegate.swift */; };
 		362E737725EAAC4E00C06078 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 362E737625EAAC4E00C06078 /* SceneDelegate.swift */; };
-		362E737925EAAC4E00C06078 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 362E737825EAAC4E00C06078 /* ViewController.swift */; };
+		362E737925EAAC4E00C06078 /* OnboardingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 362E737825EAAC4E00C06078 /* OnboardingVC.swift */; };
 		362E737C25EAAC4E00C06078 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 362E737A25EAAC4E00C06078 /* Main.storyboard */; };
 		362E737F25EAAC4E00C06078 /* Gosio.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 362E737D25EAAC4E00C06078 /* Gosio.xcdatamodeld */; };
 		362E738125EAAC5100C06078 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 362E738025EAAC5100C06078 /* Assets.xcassets */; };
 		362E738425EAAC5100C06078 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 362E738225EAAC5100C06078 /* LaunchScreen.storyboard */; };
 		362E738F25EAAC5200C06078 /* GosioTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 362E738E25EAAC5200C06078 /* GosioTests.swift */; };
 		362E739A25EAAC5200C06078 /* GosioUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 362E739925EAAC5200C06078 /* GosioUITests.swift */; };
+		364F35AB25EB5E6E007E7996 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364F35AA25EB5E6E007E7996 /* LoginVC.swift */; };
+		364F35B425EB5E84007E7996 /* AuthState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364F35B325EB5E84007E7996 /* AuthState.swift */; };
+		364F35B925EB5E96007E7996 /* SignInWithAppleManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364F35B825EB5E96007E7996 /* SignInWithAppleManager.swift */; };
+		364F35BE25EB5ECB007E7996 /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364F35BD25EB5ECB007E7996 /* UserDefaults.swift */; };
+		364F35C325EB5F39007E7996 /* CheatSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364F35C225EB5F39007E7996 /* CheatSheet.swift */; };
+		AA2DF6DD2DB4EEAE3F7E77FE /* Pods_GosioTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24FAC72EC543397B7F4A08AB /* Pods_GosioTests.framework */; };
+		DC86A193E62F1FD61530D148 /* Pods_Gosio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A52AFAB7D7CD8C2521EAB4D /* Pods_Gosio.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,10 +46,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		24FAC72EC543397B7F4A08AB /* Pods_GosioTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GosioTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		360DD6EB25EB65D200636EBD /* Gosio.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Gosio.entitlements; sourceTree = "<group>"; };
+		360DD6EF25EB66D700636EBD /* DashboardVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardVC.swift; sourceTree = "<group>"; };
+		360DD6F825EB67DB00636EBD /* OnboardingState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingState.swift; sourceTree = "<group>"; };
 		362E737125EAAC4E00C06078 /* Gosio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Gosio.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		362E737425EAAC4E00C06078 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		362E737625EAAC4E00C06078 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		362E737825EAAC4E00C06078 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		362E737825EAAC4E00C06078 /* OnboardingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingVC.swift; sourceTree = "<group>"; };
 		362E737B25EAAC4E00C06078 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		362E737E25EAAC4E00C06078 /* Gosio.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Gosio.xcdatamodel; sourceTree = "<group>"; };
 		362E738025EAAC5100C06078 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -51,6 +65,19 @@
 		362E739525EAAC5200C06078 /* GosioUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GosioUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		362E739925EAAC5200C06078 /* GosioUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GosioUITests.swift; sourceTree = "<group>"; };
 		362E739B25EAAC5200C06078 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		364F35AA25EB5E6E007E7996 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		364F35B325EB5E84007E7996 /* AuthState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthState.swift; sourceTree = "<group>"; };
+		364F35B825EB5E96007E7996 /* SignInWithAppleManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInWithAppleManager.swift; sourceTree = "<group>"; };
+		364F35BD25EB5ECB007E7996 /* UserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
+		364F35C225EB5F39007E7996 /* CheatSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheatSheet.swift; sourceTree = "<group>"; };
+		427612BCCF6048BB813A12DD /* Pods_Gosio_GosioUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Gosio_GosioUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		882F3780B046FEA6B572E01B /* Pods-Gosio.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gosio.release.xcconfig"; path = "Target Support Files/Pods-Gosio/Pods-Gosio.release.xcconfig"; sourceTree = "<group>"; };
+		8A52AFAB7D7CD8C2521EAB4D /* Pods_Gosio.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Gosio.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8F04A75A6A1AC360E4395F9D /* Pods-Gosio.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gosio.debug.xcconfig"; path = "Target Support Files/Pods-Gosio/Pods-Gosio.debug.xcconfig"; sourceTree = "<group>"; };
+		8F55E2ED564DCFE06C7F7B2A /* Pods-Gosio-GosioUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gosio-GosioUITests.debug.xcconfig"; path = "Target Support Files/Pods-Gosio-GosioUITests/Pods-Gosio-GosioUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		95C71AED3DB9DBEF19B41AE2 /* Pods-Gosio-GosioUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gosio-GosioUITests.release.xcconfig"; path = "Target Support Files/Pods-Gosio-GosioUITests/Pods-Gosio-GosioUITests.release.xcconfig"; sourceTree = "<group>"; };
+		99D06CA40FC812F6207BC100 /* Pods-GosioTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GosioTests.debug.xcconfig"; path = "Target Support Files/Pods-GosioTests/Pods-GosioTests.debug.xcconfig"; sourceTree = "<group>"; };
+		B4607DA5BCBEC539ECCDE5EE /* Pods-GosioTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GosioTests.release.xcconfig"; path = "Target Support Files/Pods-GosioTests/Pods-GosioTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +85,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC86A193E62F1FD61530D148 /* Pods_Gosio.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +93,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AA2DF6DD2DB4EEAE3F7E77FE /* Pods_GosioTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,12 +101,48 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0B042827C90CFACA6A674EFD /* Pods_Gosio_GosioUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		360DD6E725EB633B00636EBD /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				364F35B325EB5E84007E7996 /* AuthState.swift */,
+				364F35B825EB5E96007E7996 /* SignInWithAppleManager.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		360DD6F425EB67C700636EBD /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				360DD6FD25EB692200636EBD /* Services */,
+				362E737825EAAC4E00C06078 /* OnboardingVC.swift */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		360DD6FD25EB692200636EBD /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				360DD6F825EB67DB00636EBD /* OnboardingState.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		360DD70125EB766900636EBD /* Custom */ = {
+			isa = PBXGroup;
+			children = (
+				364F35BD25EB5ECB007E7996 /* UserDefaults.swift */,
+				364F35C225EB5F39007E7996 /* CheatSheet.swift */,
+			);
+			path = Custom;
+			sourceTree = "<group>";
+		};
 		362E736825EAAC4E00C06078 = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +150,8 @@
 				362E738D25EAAC5200C06078 /* GosioTests */,
 				362E739825EAAC5200C06078 /* GosioUITests */,
 				362E737225EAAC4E00C06078 /* Products */,
+				8EA3FDB1DC685770DFDB7B93 /* Pods */,
+				967FB4580FE11BB57C892F33 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -101,12 +168,10 @@
 		362E737325EAAC4E00C06078 /* Gosio */ = {
 			isa = PBXGroup;
 			children = (
-				362E737425EAAC4E00C06078 /* AppDelegate.swift */,
-				362E737625EAAC4E00C06078 /* SceneDelegate.swift */,
-				362E737825EAAC4E00C06078 /* ViewController.swift */,
-				362E737A25EAAC4E00C06078 /* Main.storyboard */,
-				362E738025EAAC5100C06078 /* Assets.xcassets */,
-				362E738225EAAC5100C06078 /* LaunchScreen.storyboard */,
+				360DD6EB25EB65D200636EBD /* Gosio.entitlements */,
+				364F359C25EB5DF2007E7996 /* Services */,
+				364F35A025EB5E07007E7996 /* View controllers */,
+				364F359825EB5DC4007E7996 /* Storyboards */,
 				362E738525EAAC5100C06078 /* Info.plist */,
 				362E737D25EAAC4E00C06078 /* Gosio.xcdatamodeld */,
 			);
@@ -131,6 +196,68 @@
 			path = GosioUITests;
 			sourceTree = "<group>";
 		};
+		364F359825EB5DC4007E7996 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				362E737A25EAAC4E00C06078 /* Main.storyboard */,
+				362E738225EAAC5100C06078 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		364F359C25EB5DF2007E7996 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				362E737425EAAC4E00C06078 /* AppDelegate.swift */,
+				360DD70125EB766900636EBD /* Custom */,
+				362E737625EAAC4E00C06078 /* SceneDelegate.swift */,
+				362E738025EAAC5100C06078 /* Assets.xcassets */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		364F35A025EB5E07007E7996 /* View controllers */ = {
+			isa = PBXGroup;
+			children = (
+				360DD6F425EB67C700636EBD /* Onboarding */,
+				364F35AF25EB5E71007E7996 /* Auth */,
+			);
+			path = "View controllers";
+			sourceTree = "<group>";
+		};
+		364F35AF25EB5E71007E7996 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				360DD6E725EB633B00636EBD /* Services */,
+				364F35AA25EB5E6E007E7996 /* LoginVC.swift */,
+				360DD6EF25EB66D700636EBD /* DashboardVC.swift */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		8EA3FDB1DC685770DFDB7B93 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8F04A75A6A1AC360E4395F9D /* Pods-Gosio.debug.xcconfig */,
+				882F3780B046FEA6B572E01B /* Pods-Gosio.release.xcconfig */,
+				8F55E2ED564DCFE06C7F7B2A /* Pods-Gosio-GosioUITests.debug.xcconfig */,
+				95C71AED3DB9DBEF19B41AE2 /* Pods-Gosio-GosioUITests.release.xcconfig */,
+				99D06CA40FC812F6207BC100 /* Pods-GosioTests.debug.xcconfig */,
+				B4607DA5BCBEC539ECCDE5EE /* Pods-GosioTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		967FB4580FE11BB57C892F33 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8A52AFAB7D7CD8C2521EAB4D /* Pods_Gosio.framework */,
+				427612BCCF6048BB813A12DD /* Pods_Gosio_GosioUITests.framework */,
+				24FAC72EC543397B7F4A08AB /* Pods_GosioTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -138,9 +265,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 362E739E25EAAC5200C06078 /* Build configuration list for PBXNativeTarget "Gosio" */;
 			buildPhases = (
+				B32847A8FCFE79361A279CAA /* [CP] Check Pods Manifest.lock */,
 				362E736D25EAAC4E00C06078 /* Sources */,
 				362E736E25EAAC4E00C06078 /* Frameworks */,
 				362E736F25EAAC4E00C06078 /* Resources */,
+				A7039D7C896BE50E4438F636 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -155,6 +284,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 362E73A125EAAC5200C06078 /* Build configuration list for PBXNativeTarget "GosioTests" */;
 			buildPhases = (
+				7125EE43E6A233B0EF9A660C /* [CP] Check Pods Manifest.lock */,
 				362E738625EAAC5200C06078 /* Sources */,
 				362E738725EAAC5200C06078 /* Frameworks */,
 				362E738825EAAC5200C06078 /* Resources */,
@@ -173,9 +303,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 362E73A425EAAC5200C06078 /* Build configuration list for PBXNativeTarget "GosioUITests" */;
 			buildPhases = (
+				E884C57177C48254E8C0CDC2 /* [CP] Check Pods Manifest.lock */,
 				362E739125EAAC5200C06078 /* Sources */,
 				362E739225EAAC5200C06078 /* Frameworks */,
 				362E739325EAAC5200C06078 /* Resources */,
+				D5D325CAD336387BC1E675FB /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -256,15 +388,125 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		7125EE43E6A233B0EF9A660C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GosioTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A7039D7C896BE50E4438F636 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Gosio/Pods-Gosio-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Gosio/Pods-Gosio-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Gosio/Pods-Gosio-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B32847A8FCFE79361A279CAA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Gosio-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D5D325CAD336387BC1E675FB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Gosio-GosioUITests/Pods-Gosio-GosioUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Gosio-GosioUITests/Pods-Gosio-GosioUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Gosio-GosioUITests/Pods-Gosio-GosioUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E884C57177C48254E8C0CDC2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Gosio-GosioUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		362E736D25EAAC4E00C06078 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				362E737925EAAC4E00C06078 /* ViewController.swift in Sources */,
+				362E737925EAAC4E00C06078 /* OnboardingVC.swift in Sources */,
+				360DD6F025EB66D700636EBD /* DashboardVC.swift in Sources */,
+				364F35B425EB5E84007E7996 /* AuthState.swift in Sources */,
 				362E737525EAAC4E00C06078 /* AppDelegate.swift in Sources */,
+				364F35B925EB5E96007E7996 /* SignInWithAppleManager.swift in Sources */,
+				364F35BE25EB5ECB007E7996 /* UserDefaults.swift in Sources */,
 				362E737725EAAC4E00C06078 /* SceneDelegate.swift in Sources */,
+				364F35C325EB5F39007E7996 /* CheatSheet.swift in Sources */,
+				360DD6F925EB67DC00636EBD /* OnboardingState.swift in Sources */,
 				362E737F25EAAC4E00C06078 /* Gosio.xcdatamodeld in Sources */,
+				364F35AB25EB5E6E007E7996 /* LoginVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -437,9 +679,11 @@
 		};
 		362E739F25EAAC5200C06078 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8F04A75A6A1AC360E4395F9D /* Pods-Gosio.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Gosio/Gosio.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JL7UZ93S3L;
 				INFOPLIST_FILE = Gosio/Info.plist;
@@ -450,15 +694,17 @@
 				PRODUCT_BUNDLE_IDENTIFIER = tdc.Gosio;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		362E73A025EAAC5200C06078 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 882F3780B046FEA6B572E01B /* Pods-Gosio.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Gosio/Gosio.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JL7UZ93S3L;
 				INFOPLIST_FILE = Gosio/Info.plist;
@@ -469,12 +715,13 @@
 				PRODUCT_BUNDLE_IDENTIFIER = tdc.Gosio;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
 		362E73A225EAAC5200C06078 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 99D06CA40FC812F6207BC100 /* Pods-GosioTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -497,6 +744,7 @@
 		};
 		362E73A325EAAC5200C06078 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B4607DA5BCBEC539ECCDE5EE /* Pods-GosioTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -519,6 +767,7 @@
 		};
 		362E73A525EAAC5200C06078 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8F55E2ED564DCFE06C7F7B2A /* Pods-Gosio-GosioUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -539,6 +788,7 @@
 		};
 		362E73A625EAAC5200C06078 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 95C71AED3DB9DBEF19B41AE2 /* Pods-Gosio-GosioUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

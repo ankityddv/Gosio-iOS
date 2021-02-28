@@ -1,0 +1,6 @@
+framework module Pods_Gosio {
+  umbrella header "Pods-Gosio-umbrella.h"
+
+  export *
+  module * { export * }
+}
