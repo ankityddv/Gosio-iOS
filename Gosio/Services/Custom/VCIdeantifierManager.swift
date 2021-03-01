@@ -17,3 +17,9 @@ struct VCIdentifierManager {
     static let goalDeadlineKey = "GoalDeadlineVC"
     
 }
+
+struct TableViewCellIdentifierManager {
+    
+    static let dashboardCell = "goalsCell"
+    
+}

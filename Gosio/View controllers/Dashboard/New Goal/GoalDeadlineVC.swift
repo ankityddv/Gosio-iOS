@@ -14,6 +14,8 @@ class GoalDeadlineVC: UIViewController {
     var emojiStr: String = ""
     var goalNameStr: String = ""
     var goalAmountStr: String = ""
+    var NextPaymentDateString = ""
+    var RenewalDateFormat = Date()
 
     @IBAction func dismissBttnDidTap(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
@@ -23,9 +25,12 @@ class GoalDeadlineVC: UIViewController {
     @IBOutlet weak var goalName: UILabel!
     @IBOutlet weak var goalAmount: UILabel!
     @IBOutlet weak var doneBttn: UIButton!
+    @IBOutlet weak var datePicker: UIDatePicker!
     
     @IBAction func doneBttnDidTap(_ sender: Any) {
         SPAlert.present(title: "Goal Set!", preset: .done)
+        
+//        print("Date: \(RenewalDateFormat) and \(NextPaymentDateString)")
         
         DispatchQueue.main.asyncAfter(deadline: .now()+1.6) {
             let vc = self.storyboard?.instantiateViewController(withIdentifier: VCIdentifierManager.dashboardKey) as! DashboardVC
@@ -37,6 +42,15 @@ class GoalDeadlineVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpHeroAnimations()
+        
+        switch NextPaymentDateString {
+        case "":
+            print("set picker")
+            setUpRenewaDatePicker()
+        default:
+            break
+        }
+        
         emojiLabel.text = emojiStr
         goalName.text = goalNameStr
         goalAmount.text = goalAmountStr
@@ -62,4 +76,19 @@ extension GoalDeadlineVC {
         self.hero.isEnabled = true
     }
     
+}
+
+extension GoalDeadlineVC {
+    //Date Picker
+    func setUpRenewaDatePicker(){
+        datePicker.addTarget(self, action: #selector(renewalDate), for: .allEvents)
+        datePicker.minimumDate = Date()
+    }
+    @objc func renewalDate() {
+        let dateFormat = DateFormatter()
+        dateFormat.dateStyle = .medium
+        NextPaymentDateString = dateFormat.string(from: datePicker.date)
+        RenewalDateFormat = datePicker.date
+        print("Payment: \(NextPaymentDateString)")
+    }
 }

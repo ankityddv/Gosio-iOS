@@ -25,6 +25,7 @@ class DashboardVC: UIViewController, LoginViewControllerDelegate {
     var userFirstName = ""
     var userEmail = ""
     
+    @IBOutlet weak var tableVieww: FadingTableView!
     @IBOutlet weak var addNewGoalBttn: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -91,5 +92,24 @@ extension DashboardVC {
             window.overrideUserInterfaceStyle = .dark
         }
     }
+    
+}
+
+extension DashboardVC: UITableViewDelegate,UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 6
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell: goalsCell = tableView.dequeueReusableCell(withIdentifier: TableViewCellIdentifierManager.dashboardCell, for: indexPath) as! goalsCell
+        
+        return cell
+    }
+    
+    
+}
+
+class goalsCell: UITableViewCell {
     
 }
