@@ -13,6 +13,9 @@
 		3602BEB925EBD0890014DD16 /* GoalDeadlineVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3602BEB825EBD0890014DD16 /* GoalDeadlineVC.swift */; };
 		3602BEBE25EBD7120014DD16 /* HeroIDs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3602BEBD25EBD7120014DD16 /* HeroIDs.swift */; };
 		3602BECD25EBDB0B0014DD16 /* Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3602BECC25EBDB0B0014DD16 /* Manager.swift */; };
+		360CD43225EE700200A7D72B /* AppThemeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 360CD43125EE700200A7D72B /* AppThemeVC.swift */; };
+		360CD44225EE759000A7D72B /* AppIconVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 360CD44125EE759000A7D72B /* AppIconVC.swift */; };
+		360CD44B25EE789E00A7D72B /* AppIconService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 360CD44A25EE789E00A7D72B /* AppIconService.swift */; };
 		360DD6F025EB66D700636EBD /* DashboardVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 360DD6EF25EB66D700636EBD /* DashboardVC.swift */; };
 		360DD6F925EB67DC00636EBD /* OnboardingState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 360DD6F825EB67DB00636EBD /* OnboardingState.swift */; };
 		360DD73125EB815400636EBD /* PresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 360DD73025EB815400636EBD /* PresentationController.swift */; };
@@ -27,6 +30,8 @@
 		362E738425EAAC5100C06078 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 362E738225EAAC5100C06078 /* LaunchScreen.storyboard */; };
 		362E738F25EAAC5200C06078 /* GosioTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 362E738E25EAAC5200C06078 /* GosioTests.swift */; };
 		362E739A25EAAC5200C06078 /* GosioUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 362E739925EAAC5200C06078 /* GosioUITests.swift */; };
+		3636FB3025EE7B35005A25EC /* blue.png in Resources */ = {isa = PBXBuildFile; fileRef = 3636FB2F25EE7B35005A25EC /* blue.png */; };
+		3636FB3525EE7B3D005A25EC /* default.png in Resources */ = {isa = PBXBuildFile; fileRef = 3636FB3425EE7B3C005A25EC /* default.png */; };
 		36404CB525ECA65B00C5A188 /* FadingTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36404CB425ECA65B00C5A188 /* FadingTableView.swift */; };
 		36404CC225ED01FD00C5A188 /* GoalModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36404CC125ED01FD00C5A188 /* GoalModel.swift */; };
 		36404CC825ED033100C5A188 /* Zip6Sequence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36404CC725ED033100C5A188 /* Zip6Sequence.swift */; };
@@ -72,6 +77,9 @@
 		3602BEB825EBD0890014DD16 /* GoalDeadlineVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalDeadlineVC.swift; sourceTree = "<group>"; };
 		3602BEBD25EBD7120014DD16 /* HeroIDs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroIDs.swift; sourceTree = "<group>"; };
 		3602BECC25EBDB0B0014DD16 /* Manager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Manager.swift; sourceTree = "<group>"; };
+		360CD43125EE700200A7D72B /* AppThemeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppThemeVC.swift; sourceTree = "<group>"; };
+		360CD44125EE759000A7D72B /* AppIconVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppIconVC.swift; sourceTree = "<group>"; };
+		360CD44A25EE789E00A7D72B /* AppIconService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppIconService.swift; sourceTree = "<group>"; };
 		360DD6EB25EB65D200636EBD /* Gosio.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Gosio.entitlements; sourceTree = "<group>"; };
 		360DD6EF25EB66D700636EBD /* DashboardVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardVC.swift; sourceTree = "<group>"; };
 		360DD6F825EB67DB00636EBD /* OnboardingState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingState.swift; sourceTree = "<group>"; };
@@ -93,6 +101,8 @@
 		362E739525EAAC5200C06078 /* GosioUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GosioUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		362E739925EAAC5200C06078 /* GosioUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GosioUITests.swift; sourceTree = "<group>"; };
 		362E739B25EAAC5200C06078 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3636FB2F25EE7B35005A25EC /* blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blue.png; sourceTree = "<group>"; };
+		3636FB3425EE7B3C005A25EC /* default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = default.png; sourceTree = "<group>"; };
 		36404CB425ECA65B00C5A188 /* FadingTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FadingTableView.swift; sourceTree = "<group>"; };
 		36404CC125ED01FD00C5A188 /* GoalModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalModel.swift; sourceTree = "<group>"; };
 		36404CC725ED033100C5A188 /* Zip6Sequence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Zip6Sequence.swift; sourceTree = "<group>"; };
@@ -167,6 +177,43 @@
 			path = Services;
 			sourceTree = "<group>";
 		};
+		360CD43625EE754D00A7D72B /* App Theme */ = {
+			isa = PBXGroup;
+			children = (
+				360CD43125EE700200A7D72B /* AppThemeVC.swift */,
+			);
+			path = "App Theme";
+			sourceTree = "<group>";
+		};
+		360CD43725EE755800A7D72B /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				367FECE125EE172C007F116B /* SettingsVC.swift */,
+				360CD44625EE76EA00A7D72B /* App Icon */,
+				360CD43625EE754D00A7D72B /* App Theme */,
+				367FED1025EE5F0D007F116B /* Currency */,
+				367FECEE25EE22B5007F116B /* Siri Shortcuts */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		360CD44625EE76EA00A7D72B /* App Icon */ = {
+			isa = PBXGroup;
+			children = (
+				360CD44F25EE78E900A7D72B /* Services */,
+				360CD44125EE759000A7D72B /* AppIconVC.swift */,
+			);
+			path = "App Icon";
+			sourceTree = "<group>";
+		};
+		360CD44F25EE78E900A7D72B /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				360CD44A25EE789E00A7D72B /* AppIconService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		360DD6E725EB633B00636EBD /* Services */ = {
 			isa = PBXGroup;
 			children = (
@@ -214,9 +261,6 @@
 				36404CC625ED020800C5A188 /* Services */,
 				360DD74625EB8FC600636EBD /* Menu PopUp */,
 				360DD6EF25EB66D700636EBD /* DashboardVC.swift */,
-				367FECE125EE172C007F116B /* SettingsVC.swift */,
-				367FED1025EE5F0D007F116B /* Currency */,
-				367FECEE25EE22B5007F116B /* Siri Shortcuts */,
 			);
 			path = Dashboard;
 			sourceTree = "<group>";
@@ -284,6 +328,15 @@
 			path = GosioUITests;
 			sourceTree = "<group>";
 		};
+		3636FB3925EE7B4A005A25EC /* Alternate Icons */ = {
+			isa = PBXGroup;
+			children = (
+				3636FB3425EE7B3C005A25EC /* default.png */,
+				3636FB2F25EE7B35005A25EC /* blue.png */,
+			);
+			path = "Alternate Icons";
+			sourceTree = "<group>";
+		};
 		36404CC625ED020800C5A188 /* Services */ = {
 			isa = PBXGroup;
 			children = (
@@ -304,6 +357,7 @@
 		364F359C25EB5DF2007E7996 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				3636FB3925EE7B4A005A25EC /* Alternate Icons */,
 				360DD70125EB766900636EBD /* Custom */,
 				362E737425EAAC4E00C06078 /* AppDelegate.swift */,
 				362E737625EAAC4E00C06078 /* SceneDelegate.swift */,
@@ -319,6 +373,7 @@
 				360DD6F425EB67C700636EBD /* Onboarding */,
 				364F35AF25EB5E71007E7996 /* Auth */,
 				360DD74525EB8FB700636EBD /* Dashboard */,
+				360CD43725EE755800A7D72B /* Settings */,
 			);
 			path = "View controllers";
 			sourceTree = "<group>";
@@ -500,8 +555,10 @@
 			files = (
 				362E738425EAAC5100C06078 /* LaunchScreen.storyboard in Resources */,
 				360DD73925EB817A00636EBD /* MenuView.xib in Resources */,
+				3636FB3025EE7B35005A25EC /* blue.png in Resources */,
 				362E738125EAAC5100C06078 /* Assets.xcassets in Resources */,
 				362E737C25EAAC4E00C06078 /* Main.storyboard in Resources */,
+				3636FB3525EE7B3D005A25EC /* default.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -642,6 +699,9 @@
 				367FED0C25EE5F06007F116B /* CurrencyModel.swift in Sources */,
 				364EB8F225EDEBD000E14444 /* LastOnboardingVC.swift in Sources */,
 				364F35B925EB5E96007E7996 /* SignInWithAppleManager.swift in Sources */,
+				360CD44225EE759000A7D72B /* AppIconVC.swift in Sources */,
+				360CD44B25EE789E00A7D72B /* AppIconService.swift in Sources */,
+				360CD43225EE700200A7D72B /* AppThemeVC.swift in Sources */,
 				364F35BE25EB5ECB007E7996 /* UserDefaults.swift in Sources */,
 				36404CC825ED033100C5A188 /* Zip6Sequence.swift in Sources */,
 				3602BEB425EBD07E0014DD16 /* GoalAmountVC.swift in Sources */,

@@ -72,6 +72,7 @@ class DashboardVC: UIViewController, LoginViewControllerDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        initialiseAppTheme()
         initialiseCurrency()
         self.navigationController?.isNavigationBarHidden = true
         addNewGoalBttn.hero.id = HeroIDs.buttonKey
@@ -143,12 +144,55 @@ extension DashboardVC {
         self.userActivity?.becomeCurrent()
     }
     
-    func initialiseCurrency(){
-        switch (userDefaults?.object(forKey: userDefaultsKeyManager.currencyCodeKey) as? String) {
+    func initialiseCurrency() {
+        initialiseAppIcon()
+        switch (userDefaults?.object(forKey: userDefaultsKeyManager.currencyCodeKey) as? String)  {
         case nil:
             userDefaults?.set("USD", forKey: userDefaultsKeyManager.currencyCodeKey)
+            userDefaults?.set("$", forKey: userDefaultsKeyManager.currencySignKey)
         default:
             break
+        }
+    }
+    
+    func initialiseAppIcon() {
+        switch (userDefaults?.object(forKey: userDefaultsKeyManager.appIconKey) as? String)  {
+        case nil:
+            userDefaults?.set(0, forKey: userDefaultsKeyManager.appIconKey)
+        default:
+            break
+        }
+    }
+    
+}
+
+extension DashboardVC {
+    
+    func initialiseAppTheme() {
+        // Read userdefaults
+        
+        switch (userDefaults?.object(forKey: userDefaultsKeyManager.themeKey) as? Int) {
+        case nil:
+            break
+        default:
+            let integer = userDefaults?.object(forKey: userDefaultsKeyManager.themeKey) as? Int
+            
+            if (userDefaults?.object(forKey: userDefaultsKeyManager.themeKey) as? Int) != nil {
+                // send to home
+                if integer! == 0 {
+                    UIApplication.shared.windows.forEach { window in
+                        window.overrideUserInterfaceStyle = .unspecified
+                    }
+                } else if integer! == 1{
+                    UIApplication.shared.windows.forEach { window in
+                        window.overrideUserInterfaceStyle = .light
+                    }
+                } else if integer! == 2{
+                    UIApplication.shared.windows.forEach { window in
+                        window.overrideUserInterfaceStyle = .dark
+                    }
+                }
+            }
         }
     }
     
@@ -172,6 +216,7 @@ extension DashboardVC: UITableViewDelegate,UITableViewDataSource {
             cell.goalAmount.text = String("$ \(Int(goalArr[indexPath.row].goalAchievedAmount)) / \(Int(goalArr[indexPath.row].goalTotalAmount)) ")
         default:
             cell.goalAmount.text = String("\(currencyCodeString!) \(Int(goalArr[indexPath.row].goalAchievedAmount)) / \(Int(goalArr[indexPath.row].goalTotalAmount)) ")
+        break
         }
         
         cell.goalStatusIndicator.image = UIImage(named: goalArr[indexPath.row].goalStatus)

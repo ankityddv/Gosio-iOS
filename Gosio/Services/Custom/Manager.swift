@@ -26,6 +26,8 @@ struct VCIdentifierManager {
     static let settingsKey = "SettingsVC"
     static let addToSiriKey = "AddToSiriVC"
     static let CurrencyKey = "CurrencyVC"
+    static let appThemeKey = "AppThemeVC"
+    static let AppIconVCKey = "AppIconVC"
     
 }
 
@@ -33,6 +35,9 @@ struct TableViewCellIdentifierManager {
     
     static let dashboardCell = "goalsCell"
     static let currencyCell = "CurrencyTVCell"
+    static let appThemeCell = "appThemeTVCell"
+    static let appIconCell = "appIconCell"
+    
 }
 
 struct urlManager {
@@ -42,6 +47,17 @@ struct urlManager {
 }
 
 struct imageNameManager {
+    
     static let checkMark = "checkMark"
     static let noneMark = "noneMark"
+    
+}
+
+struct userDefaultsKeyManager {
+  
+    static let currencySignKey = "currencySign"
+    static let currencyCodeKey = "currencyCode"
+    static let themeKey = "theme"
+    static let appIconKey = "appIcon"
+    
 }

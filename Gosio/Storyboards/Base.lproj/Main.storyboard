@@ -587,7 +587,7 @@
                                 <rect key="frame" x="32" y="82" width="44" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="69o-7h-B5X">
@@ -752,6 +752,9 @@
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="tintColor" systemColor="systemRedColor"/>
                                         <inset key="separatorInset" minX="20" minY="0.0" maxX="20" maxY="0.0"/>
+                                        <connections>
+                                            <segue destination="9Gy-Fj-cTh" kind="show" id="jED-wn-LsV"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="X9D-br-Yhc" rowHeight="60" style="IBUITableViewCellStyleDefault" id="2f0-vR-f9x">
                                         <rect key="frame" x="0.0" y="115.5" width="414" height="60"/>
@@ -792,6 +795,9 @@
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="tintColor" systemColor="systemPinkColor"/>
                                         <inset key="separatorInset" minX="20" minY="0.0" maxX="20" maxY="0.0"/>
+                                        <connections>
+                                            <segue destination="MXU-RA-GPb" kind="show" id="Nip-86-jjl"/>
+                                        </connections>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -1380,7 +1386,7 @@ Add new goal</string>
             </objects>
             <point key="canvasLocation" x="3170" y="790"/>
         </scene>
-        <!--Currency-->
+        <!--CurrencyVC-->
         <scene sceneID="BLc-Rr-kGp">
             <objects>
                 <tableViewController storyboardIdentifier="CurrencyVC" hidesBottomBarWhenPushed="YES" id="0iK-HO-7hu" customClass="CurrencyVC" customModule="Gosio" customModuleProvider="target" sceneMemberID="viewController">
@@ -1388,9 +1394,44 @@ Add new goal</string>
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" name="BgColor"/>
+                        <view key="tableHeaderView" contentMode="scaleToFill" id="H6f-Qn-02N">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="202"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hvf-m3-daW">
+                                    <rect key="frame" x="50" y="20" width="314" height="84"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="84" id="6ka-Nc-85d"/>
+                                        <constraint firstAttribute="width" constant="314" id="NWX-5w-gNO"/>
+                                    </constraints>
+                                    <string key="text">Select
+Currency</string>
+                                    <fontDescription key="fontDescription" name="AirbnbCerealApp-Bold" family="Airbnb Cereal App" pointSize="27"/>
+                                    <color key="textColor" name="TitleTextColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Now you can add new goal by asking Siri to do that for you" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Guf-FX-kwp">
+                                    <rect key="frame" x="50" y="121" width="314" height="37"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="37" id="LhU-eb-cGW"/>
+                                        <constraint firstAttribute="width" constant="314" id="bqj-mh-Wy2"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" name="AirbnbCerealApp-Light" family="Airbnb Cereal App" pointSize="14"/>
+                                    <color key="textColor" name="SubtitleTextColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstItem="Guf-FX-kwp" firstAttribute="centerX" secondItem="H6f-Qn-02N" secondAttribute="centerX" id="FHF-5G-0A4"/>
+                                <constraint firstItem="Guf-FX-kwp" firstAttribute="top" secondItem="Hvf-m3-daW" secondAttribute="bottom" constant="17" id="JGw-dq-G2s"/>
+                                <constraint firstItem="Hvf-m3-daW" firstAttribute="top" secondItem="H6f-Qn-02N" secondAttribute="top" constant="20" symbolic="YES" id="Yuf-hP-32D"/>
+                                <constraint firstItem="Hvf-m3-daW" firstAttribute="centerX" secondItem="H6f-Qn-02N" secondAttribute="centerX" id="ylD-V8-mIH"/>
+                            </constraints>
+                        </view>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CurrencyTVCell" textLabel="cNT-Zx-jqs" style="IBUITableViewCellStyleDefault" id="0xh-fL-34k" customClass="CurrencyTVCell" customModule="Gosio" customModuleProvider="target">
-                                <rect key="frame" x="20" y="55.5" width="374" height="43.5"/>
+                                <rect key="frame" x="20" y="257.5" width="374" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="0xh-fL-34k" id="dcF-SS-oUB">
                                     <rect key="frame" x="0.0" y="0.0" width="374" height="43.5"/>
@@ -1417,11 +1458,176 @@ Add new goal</string>
                             <outlet property="delegate" destination="0iK-HO-7hu" id="tMd-hm-xYa"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Currency" largeTitleDisplayMode="always" id="Xvp-Vc-sGC"/>
+                    <navigationItem key="navigationItem" largeTitleDisplayMode="always" id="Xvp-Vc-sGC"/>
+                    <connections>
+                        <outlet property="subtitleLabel" destination="Guf-FX-kwp" id="KhU-df-SLF"/>
+                        <outlet property="titleLabel" destination="Hvf-m3-daW" id="heG-QG-oWi"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nku-bh-Y68" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3872" y="790"/>
+            <point key="canvasLocation" x="3871.0144927536235" y="789.50892857142856"/>
+        </scene>
+        <!--App IconVC-->
+        <scene sceneID="tgR-gu-TOA">
+            <objects>
+                <tableViewController storyboardIdentifier="AppIconVC" id="MXU-RA-GPb" customClass="AppIconVC" customModule="Gosio" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" separatorStyle="default" rowHeight="90" sectionHeaderHeight="18" sectionFooterHeight="18" id="yRc-sG-wda">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" name="BgColor"/>
+                        <view key="tableHeaderView" contentMode="scaleToFill" id="dlF-kG-ApW">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="202"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XOa-wb-pqa">
+                                    <rect key="frame" x="50" y="32" width="314" height="84"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <string key="text">Select 
+Theme</string>
+                                    <fontDescription key="fontDescription" name="AirbnbCerealApp-Bold" family="Airbnb Cereal App" pointSize="27"/>
+                                    <color key="textColor" name="TitleTextColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Now you can add new goal by asking Siri to do that for you" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="akN-Iu-Fha">
+                                    <rect key="frame" x="50" y="133" width="314" height="37"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <fontDescription key="fontDescription" name="AirbnbCerealApp-Light" family="Airbnb Cereal App" pointSize="14"/>
+                                    <color key="textColor" name="SubtitleTextColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </view>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="appIconCell" rowHeight="90" id="b6m-Aj-0CR" customClass="appIconCell" customModule="Gosio" customModuleProvider="target">
+                                <rect key="frame" x="20" y="257.5" width="374" height="90"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="b6m-Aj-0CR" id="Byy-qG-tHl">
+                                    <rect key="frame" x="0.0" y="0.0" width="374" height="90"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="spb-iM-3Ar">
+                                            <rect key="frame" x="20" y="15" width="60" height="60"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                    <integer key="value" value="6"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o4F-7Y-BAq">
+                                            <rect key="frame" x="107" y="34" width="175" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" name="SecondaryBgColor"/>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="iconImage" destination="spb-iM-3Ar" id="Oon-QV-vMb"/>
+                                    <outlet property="iconName" destination="o4F-7Y-BAq" id="eLq-Id-Ngb"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="MXU-RA-GPb" id="TW0-U3-hI6"/>
+                            <outlet property="delegate" destination="MXU-RA-GPb" id="UdV-oD-Ozg"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="NBI-fZ-6Go"/>
+                    <connections>
+                        <outlet property="subtitleLabel" destination="akN-Iu-Fha" id="TDc-aY-xOQ"/>
+                        <outlet property="titleLabel" destination="XOa-wb-pqa" id="zfm-Z8-hZc"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nYl-8g-TGJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="371.01449275362324" y="1462.5"/>
+        </scene>
+        <!--App ThemeVC-->
+        <scene sceneID="IaG-Rq-hp3">
+            <objects>
+                <tableViewController storyboardIdentifier="AppThemeVC" hidesBottomBarWhenPushed="YES" id="9Gy-Fj-cTh" customClass="AppThemeVC" customModule="Gosio" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="uxC-jr-jwj">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" name="BgColor"/>
+                        <view key="tableHeaderView" contentMode="scaleToFill" id="rwi-21-7TR">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="202"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zCd-ML-Zoe">
+                                    <rect key="frame" x="50" y="20" width="314" height="84"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="314" id="NSE-wR-Tkf"/>
+                                        <constraint firstAttribute="height" constant="84" id="zHJ-sm-7CC"/>
+                                    </constraints>
+                                    <string key="text">Select 
+Theme</string>
+                                    <fontDescription key="fontDescription" name="AirbnbCerealApp-Bold" family="Airbnb Cereal App" pointSize="27"/>
+                                    <color key="textColor" name="TitleTextColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Now you can add new goal by asking Siri to do that for you" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B2U-mH-2oV">
+                                    <rect key="frame" x="50" y="121" width="314" height="37"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="314" id="5xL-va-9lx"/>
+                                        <constraint firstAttribute="height" constant="37" id="7hf-zA-3Th"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" name="AirbnbCerealApp-Light" family="Airbnb Cereal App" pointSize="14"/>
+                                    <color key="textColor" name="SubtitleTextColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstItem="B2U-mH-2oV" firstAttribute="top" secondItem="zCd-ML-Zoe" secondAttribute="bottom" constant="17" id="3Je-ks-TpU"/>
+                                <constraint firstItem="B2U-mH-2oV" firstAttribute="centerX" secondItem="rwi-21-7TR" secondAttribute="centerX" id="6Wi-Pl-M3d"/>
+                                <constraint firstItem="zCd-ML-Zoe" firstAttribute="top" secondItem="rwi-21-7TR" secondAttribute="top" constant="20" symbolic="YES" id="G5z-pD-3YY"/>
+                                <constraint firstItem="zCd-ML-Zoe" firstAttribute="centerX" secondItem="rwi-21-7TR" secondAttribute="centerX" id="pmo-xI-qeh"/>
+                            </constraints>
+                        </view>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="appThemeTVCell" textLabel="kQm-uQ-ob6" style="IBUITableViewCellStyleDefault" id="RyJ-9B-dkf" customClass="appThemeTVCell" customModule="Gosio" customModuleProvider="target">
+                                <rect key="frame" x="20" y="257.5" width="374" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="RyJ-9B-dkf" id="Tca-5z-wjR">
+                                    <rect key="frame" x="0.0" y="0.0" width="374" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="kQm-uQ-ob6">
+                                            <rect key="frame" x="20" y="0.0" width="334" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" name="AirbnbCerealApp-Book" family="Airbnb Cereal App" pointSize="16"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" name="SecondaryBgColor"/>
+                                <connections>
+                                    <outlet property="titleLabel" destination="kQm-uQ-ob6" id="6to-iE-mm5"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <sections/>
+                        <connections>
+                            <outlet property="dataSource" destination="9Gy-Fj-cTh" id="nx7-3l-A09"/>
+                            <outlet property="delegate" destination="9Gy-Fj-cTh" id="oHr-jB-Tb3"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" largeTitleDisplayMode="always" id="IwG-Dh-Kwn"/>
+                    <connections>
+                        <outlet property="subtitleLabel" destination="B2U-mH-2oV" id="w6m-fy-QVB"/>
+                        <outlet property="titleLabel" destination="zCd-ML-Zoe" id="KJe-XW-Eol"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Fvd-eb-Clw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1042" y="1463"/>
         </scene>
     </scenes>
     <resources>
@@ -1434,7 +1640,7 @@ Add new goal</string>
         <image name="onboardingIllustration" width="577" height="433"/>
         <image name="twitter" width="30" height="30"/>
         <namedColor name="AccentColor">
-            <color red="0.32899999618530273" green="0.27099999785423279" blue="0.92900002002716064" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.32941176470588235" green="0.27058823529411763" blue="0.92941176470588238" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="AppColor">
             <color red="0.32899999618530273" green="0.32400000095367432" blue="0.4779999852180481" alpha="0.33000001311302185" colorSpace="custom" customColorSpace="sRGB"/>

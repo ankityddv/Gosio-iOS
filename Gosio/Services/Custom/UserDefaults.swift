@@ -12,9 +12,6 @@ let userDefaults = UserDefaults(suiteName: "group.tdc.Gosio")
 
 var currencyCodeString = userDefaults?.object(forKey: userDefaultsKeyManager.currencySignKey) as? String
 
-struct userDefaultsKeyManager {
-  
-   static let currencySignKey = "currencySign"
-   static let currencyCodeKey = "currencyCode"
-    
-}
+var appIconInt = userDefaults?.object(forKey: userDefaultsKeyManager.appIconKey) as? Int
+
+

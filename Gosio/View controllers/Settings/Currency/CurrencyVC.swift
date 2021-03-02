@@ -13,9 +13,17 @@ class CurrencyVC: UITableViewController {
     var searching = false
     let searchController = UISearchController(searchResultsController: nil)
 
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var subtitleLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         appendData()
+        
+        titleLabel.attributedText =  NSMutableAttributedString()
+            .bold("Select\n")
+            .boldBlueHighlight(" Currency ")
+        subtitleLabel.text = "Select a currency according to the country you're living in"
         
         searchController.obscuresBackgroundDuringPresentation = false
         searchController.searchBar.placeholder = "Search currency"
