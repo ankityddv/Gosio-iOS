@@ -19,8 +19,7 @@ class AppThemeVC: UITableViewController {
         titleLabel.attributedText =  NSMutableAttributedString()
             .bold("Select\n")
             .boldBlueHighlight(" Theme ")
-        subtitleLabel.text = "Select a currency according to the country you are living in"
-        
+        subtitleLabel.text = "We are pro dark mode, we don't want \nany disagreements"
     }
     
     // MARK: - Table view data source
@@ -118,6 +117,7 @@ class AppThemeVC: UITableViewController {
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
             tableView.deselectRow(at: indexPath, animated: true)
         }
+        
         mediumImpactHeptic()
     }
     

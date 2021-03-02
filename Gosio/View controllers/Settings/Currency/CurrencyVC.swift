@@ -23,7 +23,7 @@ class CurrencyVC: UITableViewController {
         titleLabel.attributedText =  NSMutableAttributedString()
             .bold("Select\n")
             .boldBlueHighlight(" Currency ")
-        subtitleLabel.text = "Select a currency according to the country you're living in"
+        subtitleLabel.text = "Select a currency according to the \ncountry you're living in"
         
         searchController.obscuresBackgroundDuringPresentation = false
         searchController.searchBar.placeholder = "Search currency"

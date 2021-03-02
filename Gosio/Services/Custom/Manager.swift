@@ -28,6 +28,8 @@ struct VCIdentifierManager {
     static let CurrencyKey = "CurrencyVC"
     static let appThemeKey = "AppThemeVC"
     static let AppIconVCKey = "AppIconVC"
+    static let PrivacyPolicyKey = "PrivacyPolicyVC"
+    static let TermsOfUseKey = "TermsOfUseVC"
     
 }
 

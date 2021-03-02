@@ -32,6 +32,8 @@
 		362E739A25EAAC5200C06078 /* GosioUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 362E739925EAAC5200C06078 /* GosioUITests.swift */; };
 		3636FB3025EE7B35005A25EC /* blue.png in Resources */ = {isa = PBXBuildFile; fileRef = 3636FB2F25EE7B35005A25EC /* blue.png */; };
 		3636FB3525EE7B3D005A25EC /* default.png in Resources */ = {isa = PBXBuildFile; fileRef = 3636FB3425EE7B3C005A25EC /* default.png */; };
+		3636FB4125EE9403005A25EC /* PrivacyPolicyVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3636FB4025EE9403005A25EC /* PrivacyPolicyVC.swift */; };
+		3636FB4625EE940D005A25EC /* TermsOfUseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3636FB4525EE940D005A25EC /* TermsOfUseVC.swift */; };
 		36404CB525ECA65B00C5A188 /* FadingTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36404CB425ECA65B00C5A188 /* FadingTableView.swift */; };
 		36404CC225ED01FD00C5A188 /* GoalModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36404CC125ED01FD00C5A188 /* GoalModel.swift */; };
 		36404CC825ED033100C5A188 /* Zip6Sequence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36404CC725ED033100C5A188 /* Zip6Sequence.swift */; };
@@ -103,6 +105,8 @@
 		362E739B25EAAC5200C06078 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3636FB2F25EE7B35005A25EC /* blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blue.png; sourceTree = "<group>"; };
 		3636FB3425EE7B3C005A25EC /* default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = default.png; sourceTree = "<group>"; };
+		3636FB4025EE9403005A25EC /* PrivacyPolicyVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyPolicyVC.swift; sourceTree = "<group>"; };
+		3636FB4525EE940D005A25EC /* TermsOfUseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsOfUseVC.swift; sourceTree = "<group>"; };
 		36404CB425ECA65B00C5A188 /* FadingTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FadingTableView.swift; sourceTree = "<group>"; };
 		36404CC125ED01FD00C5A188 /* GoalModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalModel.swift; sourceTree = "<group>"; };
 		36404CC725ED033100C5A188 /* Zip6Sequence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Zip6Sequence.swift; sourceTree = "<group>"; };
@@ -189,8 +193,10 @@
 			isa = PBXGroup;
 			children = (
 				367FECE125EE172C007F116B /* SettingsVC.swift */,
-				360CD44625EE76EA00A7D72B /* App Icon */,
+				3636FB4025EE9403005A25EC /* PrivacyPolicyVC.swift */,
+				3636FB4525EE940D005A25EC /* TermsOfUseVC.swift */,
 				360CD43625EE754D00A7D72B /* App Theme */,
+				360CD44625EE76EA00A7D72B /* App Icon */,
 				367FED1025EE5F0D007F116B /* Currency */,
 				367FECEE25EE22B5007F116B /* Siri Shortcuts */,
 			);
@@ -689,6 +695,7 @@
 				3602BEBE25EBD7120014DD16 /* HeroIDs.swift in Sources */,
 				362E737925EAAC4E00C06078 /* OnboardingVC.swift in Sources */,
 				364EB91225EDFCB200E14444 /* attributedFontExtention.swift in Sources */,
+				3636FB4125EE9403005A25EC /* PrivacyPolicyVC.swift in Sources */,
 				3602BEB925EBD0890014DD16 /* GoalDeadlineVC.swift in Sources */,
 				3602BECD25EBDB0B0014DD16 /* Manager.swift in Sources */,
 				367FECE225EE172C007F116B /* SettingsVC.swift in Sources */,
@@ -709,6 +716,7 @@
 				364F35C325EB5F39007E7996 /* CheatSheet.swift in Sources */,
 				367FED1625EE604D007F116B /* zip3sequence.swift in Sources */,
 				360DD6F925EB67DC00636EBD /* OnboardingState.swift in Sources */,
+				3636FB4625EE940D005A25EC /* TermsOfUseVC.swift in Sources */,
 				36404CB525ECA65B00C5A188 /* FadingTableView.swift in Sources */,
 				367FED0725EE5ED5007F116B /* CurrencyVC.swift in Sources */,
 				36404CC225ED01FD00C5A188 /* GoalModel.swift in Sources */,

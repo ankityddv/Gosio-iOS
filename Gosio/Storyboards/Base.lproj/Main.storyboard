@@ -537,13 +537,16 @@
                                 <rect key="frame" x="87" y="121" width="240" height="238"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WCI-4Z-hxk">
-                                <rect key="frame" x="145" y="835" width="124" height="27"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WCI-4Z-hxk">
+                                <rect key="frame" x="168" y="835" width="79" height="27"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                <state key="normal" title="Terms and Conditions">
+                                <state key="normal" title="Privacy Policy">
                                     <color key="titleColor" name="AccentColor"/>
                                 </state>
+                                <connections>
+                                    <action selector="privacyPolicyDidTap:" destination="NrQ-Rx-sGS" eventType="touchUpInside" id="T8t-hM-LzJ"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="waG-AO-vVA"/>
@@ -1022,6 +1025,7 @@
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="GOSIO" translatesAutoresizingMaskIntoConstraints="NO" id="s27-Bl-pkP">
                                                     <rect key="frame" x="183" y="15" width="48" height="43"/>
+                                                    <color key="tintColor" name="SubtitleTextColor"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="43" id="KoR-Ub-Thq"/>
                                                         <constraint firstAttribute="width" constant="48" id="ng7-et-Rq2"/>
@@ -1029,11 +1033,12 @@
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Version" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tIt-6B-5Gp">
                                                     <rect key="frame" x="177.5" y="63" width="59.5" height="24"/>
+                                                    <color key="tintColor" name="SubtitleTextColor"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="24" id="JjL-N6-NAC"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" name="AirbnbCerealApp-Medium" family="Airbnb Cereal App" pointSize="18"/>
-                                                    <color key="textColor" name="GrayColor"/>
+                                                    <color key="textColor" name="SubtitleTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -1068,7 +1073,7 @@
         <!--Terms of use-->
         <scene sceneID="Nu1-t6-DRm">
             <objects>
-                <viewController storyboardIdentifier="TermsOfUse" id="BSc-dx-XOs" customClass="TermsOfUse" customModule="Gosio" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TermsOfUseVC" id="BSc-dx-XOs" customClass="TermsOfUseVC" customModule="Gosio" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3ns-CM-bPa">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1146,7 +1151,7 @@
         <!--Privacy policy-->
         <scene sceneID="AGg-gd-pUM">
             <objects>
-                <viewController storyboardIdentifier="PrivacyPolicy" id="7gs-yq-n2x" customClass="PrivacyPolicy" customModule="Gosio" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PrivacyPolicyVC" id="7gs-yq-n2x" customClass="PrivacyPolicyVC" customModule="Gosio" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="CZs-wB-3s1">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="1186"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1379,6 +1384,7 @@ Add new goal</string>
                     <navigationItem key="navigationItem" id="jvC-IL-pqJ"/>
                     <connections>
                         <outlet property="buttonView" destination="6Ez-FQ-IEg" id="1Ik-k8-uG8"/>
+                        <outlet property="subtitleLabel" destination="T1x-25-9su" id="8xw-Hj-Gvn"/>
                         <outlet property="titleLabel" destination="1rQ-BX-eAO" id="pp6-LN-UJd"/>
                     </connections>
                 </viewController>
@@ -1512,7 +1518,7 @@ Theme</string>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <userDefinedRuntimeAttributes>
                                                 <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                    <integer key="value" value="6"/>
+                                                    <integer key="value" value="8"/>
                                                 </userDefinedRuntimeAttribute>
                                             </userDefinedRuntimeAttributes>
                                         </imageView>
@@ -1524,7 +1530,6 @@ Theme</string>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
-                                    <color key="backgroundColor" name="SecondaryBgColor"/>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="iconImage" destination="spb-iM-3Ar" id="Oon-QV-vMb"/>
@@ -1647,9 +1652,6 @@ Theme</string>
         </namedColor>
         <namedColor name="BgColor">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="GrayColor">
-            <color red="0.32899999618530273" green="0.32400000095367432" blue="0.4779999852180481" alpha="0.33000001311302185" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="HeaderbgColor">
             <color red="0.32899999618530273" green="0.32400000095367432" blue="0.4779999852180481" alpha="0.33000001311302185" colorSpace="custom" customColorSpace="sRGB"/>

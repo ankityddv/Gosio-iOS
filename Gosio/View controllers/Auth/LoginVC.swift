@@ -20,6 +20,10 @@ class LoginVC: UIViewController {
     @IBOutlet weak var appleButtonView: UIView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var subtitleLabel: UILabel!
+    @IBAction func privacyPolicyDidTap(_ sender: Any) {
+        let vc = storyboard?.instantiateViewController(withIdentifier: VCIdentifierManager.PrivacyPolicyKey) as! PrivacyPolicyVC
+        self.present(vc, animated: true, completion: nil)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,6 +42,7 @@ extension LoginVC: ASAuthorizationControllerDelegate {
         let vc = storyboard?.instantiateViewController(withIdentifier: VCIdentifierManager.dashboardKey) as! DashboardVC
         appleButtonView.hero.id = HeroIDs.buttonKey
         self.present(vc, animated: true, completion: nil)
+        userDefaults?.set(0, forKey: "onboardingState")
     }
     
     private func signInWithExistingAccount(credential: ASAuthorizationAppleIDCredential) {
@@ -46,6 +51,7 @@ extension LoginVC: ASAuthorizationControllerDelegate {
         let vc = storyboard?.instantiateViewController(withIdentifier: VCIdentifierManager.dashboardKey) as! DashboardVC
         appleButtonView.hero.id = HeroIDs.buttonKey
         self.present(vc, animated: true, completion: nil)
+        userDefaults?.set(0, forKey: "onboardingState")
     }
     
     private func signInWithUserAndPassword(credential: ASAuthorizationAppleIDCredential) {
@@ -54,6 +60,7 @@ extension LoginVC: ASAuthorizationControllerDelegate {
         let vc = storyboard?.instantiateViewController(withIdentifier: VCIdentifierManager.dashboardKey) as! DashboardVC
         appleButtonView.hero.id = HeroIDs.buttonKey
         self.present(vc, animated: true, completion: nil)
+        userDefaults?.set(0, forKey: "onboardingState")
     }
     
     func authorizationController(controller: ASAuthorizationController, didCompleteWithAuthorization authorization: ASAuthorization) {

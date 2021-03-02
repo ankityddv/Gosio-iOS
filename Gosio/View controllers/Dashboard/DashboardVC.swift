@@ -123,10 +123,10 @@ extension DashboardVC {
                 let vc = self.storyboard?.instantiateViewController(identifier: VCIdentifierManager.loginKey) as! LoginVC
                 vc.delegate = self
                 self.present(vc, animated: false, completion: nil)
-                print("Send to LoginVC")
+                print("Send to Login")
             case .signedIn:
-                self.userFirstName = (userDefaults?.string(forKey: SignInWithAppleManager.userFirstNameKey)!)!
-                self.userEmail = (userDefaults?.string(forKey: SignInWithAppleManager.userEmailKey)!)!
+//                self.userFirstName = (userDefaults?.string(forKey: SignInWithAppleManager.userFirstNameKey)!)!
+//                self.userEmail = (userDefaults?.string(forKey: SignInWithAppleManager.userEmailKey)!)!
                 print("SignedIN")
             case .signedOut:
                 print("Signed Out")

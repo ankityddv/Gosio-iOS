@@ -12,6 +12,7 @@ class AddToSiriVC: UIViewController {
 
     @IBOutlet weak var buttonView: UIView!
     @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var subtitleLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,6 +20,7 @@ class AddToSiriVC: UIViewController {
         titleLabel.attributedText =  NSMutableAttributedString()
             .bold("Hey Siri! \n")
             .boldBlueHighlight(" Add new goal ")
+        subtitleLabel.text = "Now you can add new goal by asking \nSiri to do that for you"
     }
     
     func addSiriButton(to view: UIView) {
