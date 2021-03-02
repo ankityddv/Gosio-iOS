@@ -65,3 +65,12 @@ extension UIApplication {
         return base
     }
 }
+
+
+func arrayToData(stringArray: [goalModel]) -> Data? {
+  return try? JSONSerialization.data(withJSONObject: stringArray, options: [])
+}
+
+func dataToStringArray(data: Data) -> [goalModel]? {
+  return (try? JSONSerialization.jsonObject(with: data, options: [])) as? [goalModel]
+}

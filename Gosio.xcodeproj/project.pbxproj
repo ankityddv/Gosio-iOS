@@ -28,6 +28,8 @@
 		362E738F25EAAC5200C06078 /* GosioTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 362E738E25EAAC5200C06078 /* GosioTests.swift */; };
 		362E739A25EAAC5200C06078 /* GosioUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 362E739925EAAC5200C06078 /* GosioUITests.swift */; };
 		36404CB525ECA65B00C5A188 /* FadingTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36404CB425ECA65B00C5A188 /* FadingTableView.swift */; };
+		36404CC225ED01FD00C5A188 /* GoalModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36404CC125ED01FD00C5A188 /* GoalModel.swift */; };
+		36404CC825ED033100C5A188 /* Zip6Sequence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36404CC725ED033100C5A188 /* Zip6Sequence.swift */; };
 		364F35AB25EB5E6E007E7996 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364F35AA25EB5E6E007E7996 /* LoginVC.swift */; };
 		364F35B425EB5E84007E7996 /* AuthState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364F35B325EB5E84007E7996 /* AuthState.swift */; };
 		364F35B925EB5E96007E7996 /* SignInWithAppleManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364F35B825EB5E96007E7996 /* SignInWithAppleManager.swift */; };
@@ -83,6 +85,8 @@
 		362E739925EAAC5200C06078 /* GosioUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GosioUITests.swift; sourceTree = "<group>"; };
 		362E739B25EAAC5200C06078 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		36404CB425ECA65B00C5A188 /* FadingTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FadingTableView.swift; sourceTree = "<group>"; };
+		36404CC125ED01FD00C5A188 /* GoalModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalModel.swift; sourceTree = "<group>"; };
+		36404CC725ED033100C5A188 /* Zip6Sequence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Zip6Sequence.swift; sourceTree = "<group>"; };
 		364F35AA25EB5E6E007E7996 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		364F35B325EB5E84007E7996 /* AuthState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthState.swift; sourceTree = "<group>"; };
 		364F35B825EB5E96007E7996 /* SignInWithAppleManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInWithAppleManager.swift; sourceTree = "<group>"; };
@@ -175,6 +179,7 @@
 			isa = PBXGroup;
 			children = (
 				364F35BD25EB5ECB007E7996 /* UserDefaults.swift */,
+				36404CC725ED033100C5A188 /* Zip6Sequence.swift */,
 				364F35C225EB5F39007E7996 /* CheatSheet.swift */,
 				3602BECC25EBDB0B0014DD16 /* VCIdeantifierManager.swift */,
 				36404CB425ECA65B00C5A188 /* FadingTableView.swift */,
@@ -185,9 +190,9 @@
 		360DD74525EB8FB700636EBD /* Dashboard */ = {
 			isa = PBXGroup;
 			children = (
+				36404CC625ED020800C5A188 /* Services */,
 				360DD74625EB8FC600636EBD /* Menu PopUp */,
 				360DD6EF25EB66D700636EBD /* DashboardVC.swift */,
-				3602BEAC25EBD0660014DD16 /* New Goal */,
 			);
 			path = Dashboard;
 			sourceTree = "<group>";
@@ -255,6 +260,14 @@
 			path = GosioUITests;
 			sourceTree = "<group>";
 		};
+		36404CC625ED020800C5A188 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				36404CC125ED01FD00C5A188 /* GoalModel.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		364F359825EB5DC4007E7996 /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
@@ -278,6 +291,7 @@
 		364F35A025EB5E07007E7996 /* View controllers */ = {
 			isa = PBXGroup;
 			children = (
+				3602BEAC25EBD0660014DD16 /* New Goal */,
 				360DD6F425EB67C700636EBD /* Onboarding */,
 				364F35AF25EB5E71007E7996 /* Auth */,
 				360DD74525EB8FB700636EBD /* Dashboard */,
@@ -565,11 +579,13 @@
 				362E737525EAAC4E00C06078 /* AppDelegate.swift in Sources */,
 				364F35B925EB5E96007E7996 /* SignInWithAppleManager.swift in Sources */,
 				364F35BE25EB5ECB007E7996 /* UserDefaults.swift in Sources */,
+				36404CC825ED033100C5A188 /* Zip6Sequence.swift in Sources */,
 				3602BEB425EBD07E0014DD16 /* GoalAmountVC.swift in Sources */,
 				362E737725EAAC4E00C06078 /* SceneDelegate.swift in Sources */,
 				364F35C325EB5F39007E7996 /* CheatSheet.swift in Sources */,
 				360DD6F925EB67DC00636EBD /* OnboardingState.swift in Sources */,
 				36404CB525ECA65B00C5A188 /* FadingTableView.swift in Sources */,
+				36404CC225ED01FD00C5A188 /* GoalModel.swift in Sources */,
 				360DD73E25EB81F700636EBD /* MenuView.swift in Sources */,
 				3602BEA825EBD0600014DD16 /* GoalNameVC.swift in Sources */,
 				362E737F25EAAC4E00C06078 /* Gosio.xcdatamodeld in Sources */,

@@ -14,6 +14,13 @@ class DashboardVC: UIViewController, LoginViewControllerDelegate {
         label.text = "User identified: \(String(describing: userDefaults?.string(forKey: SignInWithAppleManager.userIdentifierKey)!))"
     }
     
+    let label = UILabel()
+    var userFirstName = ""
+    var userEmail = ""
+    
+    @IBOutlet weak var tableVieww: FadingTableView!
+    @IBOutlet weak var addNewGoalBttn: UIButton!
+    
     @IBAction func showMenu(_ sender: Any) {
         let slideVC = MenuView()
         slideVC.modalPresentationStyle = .custom
@@ -21,15 +28,11 @@ class DashboardVC: UIViewController, LoginViewControllerDelegate {
         self.present(slideVC, animated: true, completion: nil)
     }
     
-    let label = UILabel()
-    var userFirstName = ""
-    var userEmail = ""
     
-    @IBOutlet weak var tableVieww: FadingTableView!
-    @IBOutlet weak var addNewGoalBttn: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
         addNewGoalBttn.hero.id = HeroIDs.buttonKey
+        self.hero.isEnabled = true
         
 //        let userFirstNameSTr = (userDefaults?.string(forKey: SignInWithAppleManager.userFirstNameKey)!)!
 //        let userEmailSTr = (userDefaults?.string(forKey: SignInWithAppleManager.userEmailKey)!)!
@@ -43,12 +46,13 @@ class DashboardVC: UIViewController, LoginViewControllerDelegate {
 
 }
 
+
+//MARK:- delegate for popUp
 extension DashboardVC: UIViewControllerTransitioningDelegate {
     func presentationController(forPresented presented: UIViewController, presenting: UIViewController?, source: UIViewController) -> UIPresentationController? {
         PresentationController(presentedViewController: presented, presenting: presenting)
     }
 }
-
 
 
 //MARK:- functions()
@@ -65,7 +69,6 @@ extension DashboardVC {
             let vc = storyboard?.instantiateViewController(withIdentifier: VCIdentifierManager.onboardingKey) as! OnboardingVC
             self.present(vc, animated: true, completion: nil)
             break
-//            userDefaults?.set(0, forKey: "onboardingState")
         }
     }
     
@@ -87,29 +90,38 @@ extension DashboardVC {
         }
     }
     
-    func validateTheme(){
-        UIApplication.shared.windows.forEach { window in
-            window.overrideUserInterfaceStyle = .dark
-        }
-    }
-    
 }
 
+
+//MARK:- Table View
 extension DashboardVC: UITableViewDelegate,UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 6
+        return goalArr.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell: goalsCell = tableView.dequeueReusableCell(withIdentifier: TableViewCellIdentifierManager.dashboardCell, for: indexPath) as! goalsCell
-        
+        cell.goalEmoji.text = goalArr[indexPath.row].emoji
+        cell.goalName.text = goalArr[indexPath.row].goalName
+        cell.goalAmount.text = String("$ \(Int(goalArr[indexPath.row].goalAchievedAmount)) / \(Int(goalArr[indexPath.row].goalTotalAmount)) ")
+        cell.goalStatusIndicator.image = UIImage(named: goalArr[indexPath.row].goalStatus)
+        cell.progressBar.setProgress(goalArr[indexPath.row].progressBar, animated: true)
+        cell.goalPercentage.text = String("\(goalArr[indexPath.row].goalPercentage) %")
         return cell
     }
     
-    
 }
 
+
+//MARK:- goalsCell
 class goalsCell: UITableViewCell {
+    
+    @IBOutlet weak var goalEmoji: UILabel!
+    @IBOutlet weak var goalName: UILabel!
+    @IBOutlet weak var goalAmount: UILabel!
+    @IBOutlet weak var goalStatusIndicator: UIImageView!
+    @IBOutlet weak var progressBar: UIProgressView!
+    @IBOutlet weak var goalPercentage: UILabel!
     
 }

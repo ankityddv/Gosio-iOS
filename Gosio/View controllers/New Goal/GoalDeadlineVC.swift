@@ -31,12 +31,16 @@ class GoalDeadlineVC: UIViewController {
         SPAlert.present(title: "Goal Set!", preset: .done)
         
 //        print("Date: \(RenewalDateFormat) and \(NextPaymentDateString)")
-        
+        createNewGoal()
         DispatchQueue.main.asyncAfter(deadline: .now()+1.6) {
             let vc = self.storyboard?.instantiateViewController(withIdentifier: VCIdentifierManager.dashboardKey) as! DashboardVC
             self.present(vc, animated: true, completion: nil)
         }
         
+    }
+    
+    func createNewGoal() {
+        goalArr.insert(goalModel(emoji: emojiStr, goalName: goalNameStr, goalAchievedAmount: 0.0, goalTotalAmount: Float(goalAmountStr)!, goalStatus: "ahead", progressBar: 0, goalPercentage: 0), at: 0)
     }
     
     override func viewDidLoad() {
