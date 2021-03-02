@@ -72,6 +72,7 @@ class DashboardVC: UIViewController, LoginViewControllerDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        initialiseCurrency()
         self.navigationController?.isNavigationBarHidden = true
         addNewGoalBttn.hero.id = HeroIDs.buttonKey
         self.hero.isEnabled = true
@@ -142,6 +143,15 @@ extension DashboardVC {
         self.userActivity?.becomeCurrent()
     }
     
+    func initialiseCurrency(){
+        switch (userDefaults?.object(forKey: userDefaultsKeyManager.currencyCodeKey) as? String) {
+        case nil:
+            userDefaults?.set("USD", forKey: userDefaultsKeyManager.currencyCodeKey)
+        default:
+            break
+        }
+    }
+    
 }
 
 
@@ -156,7 +166,14 @@ extension DashboardVC: UITableViewDelegate,UITableViewDataSource {
         let cell: goalsCell = tableView.dequeueReusableCell(withIdentifier: TableViewCellIdentifierManager.dashboardCell, for: indexPath) as! goalsCell
         cell.goalEmoji.text = goalArr[indexPath.row].emoji
         cell.goalName.text = goalArr[indexPath.row].goalName
-        cell.goalAmount.text = String("$ \(Int(goalArr[indexPath.row].goalAchievedAmount)) / \(Int(goalArr[indexPath.row].goalTotalAmount)) ")
+        
+        switch userDefaults?.object(forKey: userDefaultsKeyManager.currencyCodeKey) as? String {
+        case nil:
+            cell.goalAmount.text = String("$ \(Int(goalArr[indexPath.row].goalAchievedAmount)) / \(Int(goalArr[indexPath.row].goalTotalAmount)) ")
+        default:
+            cell.goalAmount.text = String("\(currencyCodeString!) \(Int(goalArr[indexPath.row].goalAchievedAmount)) / \(Int(goalArr[indexPath.row].goalTotalAmount)) ")
+        }
+        
         cell.goalStatusIndicator.image = UIImage(named: goalArr[indexPath.row].goalStatus)
         cell.progressBar.setProgress(goalArr[indexPath.row].progressBar, animated: true)
         cell.goalPercentage.text = String("\(goalArr[indexPath.row].goalPercentage) %")

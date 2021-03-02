@@ -15,6 +15,8 @@ struct storyboardManager {
 
 struct VCIdentifierManager {
     
+    static let page1Key = "page1"
+    static let page2Key = "page2"
     static let loginKey = "LoginVC"
     static let onboardingKey = "OnboardingVC"
     static let dashboardKey = "DashboardVC"
@@ -22,19 +24,24 @@ struct VCIdentifierManager {
     static let goalAmountKey = "GoalAmountVC"
     static let goalDeadlineKey = "GoalDeadlineVC"
     static let settingsKey = "SettingsVC"
-    static let page1Key = "page1"
-    static let page2Key = "page2"
+    static let addToSiriKey = "AddToSiriVC"
+    static let CurrencyKey = "CurrencyVC"
     
 }
 
 struct TableViewCellIdentifierManager {
     
     static let dashboardCell = "goalsCell"
-    
+    static let currencyCell = "CurrencyTVCell"
 }
 
 struct urlManager {
     
     static let appUrl = "https://apps.apple.com/us/app/gosio-achieve-your-goals/id1555987291"
     
+}
+
+struct imageNameManager {
+    static let checkMark = "checkMark"
+    static let noneMark = "noneMark"
 }

@@ -42,7 +42,7 @@ class SettingsVC: UITableViewController {
         case 0:
             return 3
         case 1:
-            return 1
+            return 2
         case 2:
             return 3
         case 3:
@@ -126,7 +126,7 @@ class SettingsVC: UITableViewController {
         let titleStr = self.tableView(tableView, titleForHeaderInSection: section)
         myLabel.text = titleStr?.uppercased()
         myLabel.font = UIFont(name: "AirbnbCerealApp-Bold", size: 15) ?? UIFont.systemFont(ofSize: 15)
-        myLabel.textColor = UIColor.init(named: "tableViewHeaderTitleColor")
+        myLabel.textColor = UIColor.init(named: "SubtitleTextColor")
         let headerView = UIView()
         headerView.addSubview(myLabel)
 

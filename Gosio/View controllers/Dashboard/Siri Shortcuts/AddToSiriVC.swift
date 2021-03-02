@@ -11,10 +11,14 @@ import IntentsUI
 class AddToSiriVC: UIViewController {
 
     @IBOutlet weak var buttonView: UIView!
+    @IBOutlet weak var titleLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         addSiriButton(to: self.buttonView)
+        titleLabel.attributedText =  NSMutableAttributedString()
+            .bold("Hey Siri! \n")
+            .boldBlueHighlight(" Add new goal ")
     }
     
     func addSiriButton(to view: UIView) {
