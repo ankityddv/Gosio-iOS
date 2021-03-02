@@ -36,7 +36,12 @@ class GoalAmountVC: UIViewController {
         setUpHeroAnimations()
         setUpKeyboardNotifications()
         emojiLabel.text = emojiStr
-        titleLabel.text = "What is the amount you need for \(goalNameStr)?"
+        
+        titleLabel.attributedText =  NSMutableAttributedString()
+            .bold("What is the amount you need for ")
+            .boldBlueHighlight("\(goalNameStr)")
+            .bold(" ?")
+        
     }
     
 

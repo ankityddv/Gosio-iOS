@@ -15,6 +15,7 @@ class GoalNameVC: UIViewController {
         self.dismiss(animated: true, completion: nil)
     }
     
+    @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var emojiTextField: UITextField!
     @IBOutlet weak var goalNameTextField: UITextField!
     @IBOutlet weak var nextBttn: UIButton!
@@ -36,6 +37,12 @@ class GoalNameVC: UIViewController {
         super.viewDidLoad()
         setUpHeroAnimations()
         setUpKeyboardNotifications()
+        
+        titleLabel.attributedText =  NSMutableAttributedString()
+            .bold("What is it that you truly ")
+            .boldBlueHighlight("desire")
+            .bold(" ?")
+        
     }
     
 

@@ -67,7 +67,7 @@ extension DashboardVC {
         case .sendToOnboarding:
             print("sendToOnboarding")
             let vc = storyboard?.instantiateViewController(withIdentifier: VCIdentifierManager.onboardingKey) as! OnboardingVC
-            self.present(vc, animated: true, completion: nil)
+            self.present(vc, animated: false, completion: nil)
             break
         }
     }
@@ -78,7 +78,7 @@ extension DashboardVC {
             case .undefined:
                 let vc = self.storyboard?.instantiateViewController(identifier: VCIdentifierManager.loginKey) as! LoginVC
                 vc.delegate = self
-                self.present(vc, animated: true, completion: nil)
+                self.present(vc, animated: false, completion: nil)
                 print("Send to LoginVC")
             case .signedIn:
                 self.userFirstName = (userDefaults?.string(forKey: SignInWithAppleManager.userFirstNameKey)!)!

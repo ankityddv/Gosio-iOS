@@ -30,6 +30,8 @@
 		36404CB525ECA65B00C5A188 /* FadingTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36404CB425ECA65B00C5A188 /* FadingTableView.swift */; };
 		36404CC225ED01FD00C5A188 /* GoalModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36404CC125ED01FD00C5A188 /* GoalModel.swift */; };
 		36404CC825ED033100C5A188 /* Zip6Sequence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36404CC725ED033100C5A188 /* Zip6Sequence.swift */; };
+		364EB8F225EDEBD000E14444 /* LastOnboardingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364EB8F125EDEBD000E14444 /* LastOnboardingVC.swift */; };
+		364EB91225EDFCB200E14444 /* attributedFontExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364EB91125EDFCB200E14444 /* attributedFontExtention.swift */; };
 		364F35AB25EB5E6E007E7996 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364F35AA25EB5E6E007E7996 /* LoginVC.swift */; };
 		364F35B425EB5E84007E7996 /* AuthState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364F35B325EB5E84007E7996 /* AuthState.swift */; };
 		364F35B925EB5E96007E7996 /* SignInWithAppleManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364F35B825EB5E96007E7996 /* SignInWithAppleManager.swift */; };
@@ -87,6 +89,8 @@
 		36404CB425ECA65B00C5A188 /* FadingTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FadingTableView.swift; sourceTree = "<group>"; };
 		36404CC125ED01FD00C5A188 /* GoalModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalModel.swift; sourceTree = "<group>"; };
 		36404CC725ED033100C5A188 /* Zip6Sequence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Zip6Sequence.swift; sourceTree = "<group>"; };
+		364EB8F125EDEBD000E14444 /* LastOnboardingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastOnboardingVC.swift; sourceTree = "<group>"; };
+		364EB91125EDFCB200E14444 /* attributedFontExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = attributedFontExtention.swift; sourceTree = "<group>"; };
 		364F35AA25EB5E6E007E7996 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		364F35B325EB5E84007E7996 /* AuthState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthState.swift; sourceTree = "<group>"; };
 		364F35B825EB5E96007E7996 /* SignInWithAppleManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInWithAppleManager.swift; sourceTree = "<group>"; };
@@ -163,6 +167,7 @@
 			children = (
 				360DD6FD25EB692200636EBD /* Services */,
 				362E737825EAAC4E00C06078 /* OnboardingVC.swift */,
+				364EB8F125EDEBD000E14444 /* LastOnboardingVC.swift */,
 			);
 			path = Onboarding;
 			sourceTree = "<group>";
@@ -180,6 +185,7 @@
 			children = (
 				364F35BD25EB5ECB007E7996 /* UserDefaults.swift */,
 				36404CC725ED033100C5A188 /* Zip6Sequence.swift */,
+				364EB91125EDFCB200E14444 /* attributedFontExtention.swift */,
 				364F35C225EB5F39007E7996 /* CheatSheet.swift */,
 				3602BECC25EBDB0B0014DD16 /* VCIdeantifierManager.swift */,
 				36404CB425ECA65B00C5A188 /* FadingTableView.swift */,
@@ -572,11 +578,13 @@
 			files = (
 				3602BEBE25EBD7120014DD16 /* HeroIDs.swift in Sources */,
 				362E737925EAAC4E00C06078 /* OnboardingVC.swift in Sources */,
+				364EB91225EDFCB200E14444 /* attributedFontExtention.swift in Sources */,
 				3602BEB925EBD0890014DD16 /* GoalDeadlineVC.swift in Sources */,
 				3602BECD25EBDB0B0014DD16 /* VCIdeantifierManager.swift in Sources */,
 				360DD6F025EB66D700636EBD /* DashboardVC.swift in Sources */,
 				364F35B425EB5E84007E7996 /* AuthState.swift in Sources */,
 				362E737525EAAC4E00C06078 /* AppDelegate.swift in Sources */,
+				364EB8F225EDEBD000E14444 /* LastOnboardingVC.swift in Sources */,
 				364F35B925EB5E96007E7996 /* SignInWithAppleManager.swift in Sources */,
 				364F35BE25EB5ECB007E7996 /* UserDefaults.swift in Sources */,
 				36404CC825ED033100C5A188 /* Zip6Sequence.swift in Sources */,

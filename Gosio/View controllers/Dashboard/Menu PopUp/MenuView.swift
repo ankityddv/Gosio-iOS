@@ -23,6 +23,7 @@ class MenuView: UIViewController {
     }
     
     @IBAction func settingButtonDidTap(_ sender: Any) {
+        
     }
     
     override func viewDidLoad() {

@@ -7,7 +7,7 @@
 
 import UIKit
 import AuthenticationServices
-
+import Hero
 
 protocol LoginViewControllerDelegate {
     func didFinishAuth()
@@ -18,6 +18,8 @@ class LoginVC: UIViewController {
     var delegate: LoginViewControllerDelegate?
     
     @IBOutlet weak var appleButtonView: UIView!
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var subtitleLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,6 +36,7 @@ extension LoginVC: ASAuthorizationControllerDelegate {
         print("Registering new account with user: \(credential.user)")
         delegate?.didFinishAuth()
         let vc = storyboard?.instantiateViewController(withIdentifier: VCIdentifierManager.dashboardKey) as! DashboardVC
+        appleButtonView.hero.id = HeroIDs.buttonKey
         self.present(vc, animated: true, completion: nil)
     }
     
@@ -41,6 +44,7 @@ extension LoginVC: ASAuthorizationControllerDelegate {
         print("Signing in with existing account with user: \(credential.user)")
         delegate?.didFinishAuth()
         let vc = storyboard?.instantiateViewController(withIdentifier: VCIdentifierManager.dashboardKey) as! DashboardVC
+        appleButtonView.hero.id = HeroIDs.buttonKey
         self.present(vc, animated: true, completion: nil)
     }
     
@@ -48,6 +52,7 @@ extension LoginVC: ASAuthorizationControllerDelegate {
         print("Signing in using an existing icloud Keychain credential with user:: \(credential.user)")
         delegate?.didFinishAuth()
         let vc = storyboard?.instantiateViewController(withIdentifier: VCIdentifierManager.dashboardKey) as! DashboardVC
+        appleButtonView.hero.id = HeroIDs.buttonKey
         self.present(vc, animated: true, completion: nil)
     }
     
@@ -115,6 +120,15 @@ extension LoginVC {
         ])
         
         self.isModalInPresentation = true
+        
+        titleLabel.attributedText =  NSMutableAttributedString()
+            .bold("Achieving your goals is ")
+            .boldBlueHighlight("easier")
+            .bold(" than you think!")
+        
+        subtitleLabel.attributedText = NSMutableAttributedString()
+            .subtitleNormal("Sign up will only take ")
+            .subtitleNormalBlueHighlight("10 seconds")
     }
     
     @objc

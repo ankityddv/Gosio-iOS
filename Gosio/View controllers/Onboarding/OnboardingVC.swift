@@ -6,16 +6,47 @@
 //
 
 import UIKit
+import liquid_swipe
 
-class OnboardingVC: UIViewController {
-
-    @IBAction func continueBttnDidTap(_ sender: Any) {
-        userDefaults?.set(0, forKey: "onboardingState")
+class ColoredController: UIViewController {
+    
+    var viewColor: UIColor = .white {
+        didSet {
+            viewIfLoaded?.backgroundColor = viewColor
+        }
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = viewColor
+    }
+}
+
+class OnboardingVC: LiquidSwipeContainerController, LiquidSwipeContainerDataSource {
+    
+    // Add identifiers of VCs which are to be presented.
+    var viewControllers: [UIViewController] = {
+        let firstPageVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "page1")
+        let secondPageVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "page2")
+        var controllers: [UIViewController] = [firstPageVC, secondPageVC]
+        return controllers
+    }()
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        datasource = self
+    }
+    
+    func numberOfControllersInLiquidSwipeContainer(_ liquidSwipeContainer: LiquidSwipeContainerController) -> Int{
+        return viewControllers.count
+    }
         
+    func liquidSwipeContainer(_ liquidSwipeContainer: LiquidSwipeContainerController, viewControllerAtIndex index: Int) -> UIViewController {
+        return viewControllers[index]
+    }
+        
+    override var prefersStatusBarHidden: Bool{
+        return true
     }
 
 

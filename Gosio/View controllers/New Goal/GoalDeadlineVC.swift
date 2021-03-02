@@ -21,6 +21,7 @@ class GoalDeadlineVC: UIViewController {
         self.dismiss(animated: true, completion: nil)
     }
     
+    @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var emojiLabel: UITextField!
     @IBOutlet weak var goalName: UILabel!
     @IBOutlet weak var goalAmount: UILabel!
@@ -55,6 +56,10 @@ class GoalDeadlineVC: UIViewController {
             break
         }
         
+        titleLabel.attributedText =  NSMutableAttributedString()
+            .bold("When you want to ")
+            .boldBlueHighlight("accomplish")
+            .bold(" this goal?")
         emojiLabel.text = emojiStr
         goalName.text = goalNameStr
         goalAmount.text = goalAmountStr
