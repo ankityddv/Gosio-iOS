@@ -26,8 +26,8 @@ class OnboardingVC: LiquidSwipeContainerController, LiquidSwipeContainerDataSour
     
     // Add identifiers of VCs which are to be presented.
     var viewControllers: [UIViewController] = {
-        let firstPageVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "page1")
-        let secondPageVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "page2")
+        let firstPageVC = UIStoryboard(name: storyboardManager.mainKey, bundle: nil).instantiateViewController(withIdentifier: VCIdentifierManager.page1Key)
+        let secondPageVC = UIStoryboard(name: storyboardManager.mainKey, bundle: nil).instantiateViewController(withIdentifier: VCIdentifierManager.page2Key)
         var controllers: [UIViewController] = [firstPageVC, secondPageVC]
         return controllers
     }()

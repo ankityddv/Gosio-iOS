@@ -20,17 +20,59 @@ class DashboardVC: UIViewController, LoginViewControllerDelegate {
     
     @IBOutlet weak var tableVieww: FadingTableView!
     @IBOutlet weak var addNewGoalBttn: UIButton!
+    @IBOutlet weak var menuBttn: UIButton!
+    
     
     @IBAction func showMenu(_ sender: Any) {
+        
+        /*
+        let favorite = UIAction(title: "Show me stats",
+                                image: UIImage(systemName: "number")) { [self] _ in
+          // Perform action
+            showMenuPopUp()
+        }
+        let settings = UIAction(title: "Settings",
+          image: UIImage(systemName: "gearshape")) { _ in
+          // Perform action
+            let vc = self.storyboard?.instantiateViewController(withIdentifier: VCIdentifierManager.settingsKey) as! SettingsVC
+            let navigationController = UINavigationController(rootViewController: vc)
+            navigationController.modalPresentationStyle = .automatic
+            self.present(navigationController, animated: true, completion: nil)
+        }
+
+        menuBttn.showsMenuAsPrimaryAction = true
+        menuBttn.menu = UIMenu(title: "", children: [favorite,settings])
+         */
+        
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: VCIdentifierManager.settingsKey) as! SettingsVC
+        let navigationController = UINavigationController(rootViewController: vc)
+        navigationController.modalPresentationStyle = .automatic
+        self.present(navigationController, animated: true, completion: nil)
+    }
+    
+    
+    @objc
+    func showMenuPopUp(){
         let slideVC = MenuView()
         slideVC.modalPresentationStyle = .custom
         slideVC.transitioningDelegate = self
         self.present(slideVC, animated: true, completion: nil)
     }
     
+    @IBAction func addNewGoalDidTap(_ sender: Any) {
+        addNewGoal()
+    }
+    
+    @objc
+    func addNewGoal(){
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: VCIdentifierManager.goalNameKey) as! GoalNameVC
+        self.present(vc, animated: true, completion: nil)
+        createUSerActivity()
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationController?.isNavigationBarHidden = true
         addNewGoalBttn.hero.id = HeroIDs.buttonKey
         self.hero.isEnabled = true
         
@@ -88,6 +130,16 @@ extension DashboardVC {
                 print("Signed Out")
             }
         }
+    }
+    
+    func createUSerActivity(){
+        let activity = NSUserActivity(activityType: UserActivityType.addNewGoal)
+        activity.title = "Add new goal"
+        activity.isEligibleForSearch = true
+        activity.isEligibleForPrediction = true
+        
+        self.userActivity = activity
+        self.userActivity?.becomeCurrent()
     }
     
 }

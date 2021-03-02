@@ -49,6 +49,39 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Save changes in the application's managed object context when the application transitions to the background.
         (UIApplication.shared.delegate as? AppDelegate)?.saveContext()
     }
+    
+    func scene(_ scene: UIScene, continue userActivity: NSUserActivity) {
+        if let _ = userActivity.interaction?.intent as? AddGoalIntent {
+
+            if let windowScene = scene as? UIWindowScene {
+                    
+                self.window = UIWindow(windowScene: windowScene)
+                let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                let initialViewController = storyboard.instantiateViewController(withIdentifier: VCIdentifierManager.dashboardKey) as! DashboardVC
+                let navigationController = UINavigationController(rootViewController: initialViewController)
+                navigationController.navigationBar.prefersLargeTitles = true
+                self.window!.rootViewController = navigationController
+                self.window!.makeKeyAndVisible()
+                initialViewController.addNewGoal()
+                    
+            }
+        } else if userActivity.activityType ==  UserActivityType.addNewGoal {
+            
+            if let windowScene = scene as? UIWindowScene {
+                    
+                self.window = UIWindow(windowScene: windowScene)
+                let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                let initialViewController = storyboard.instantiateViewController(withIdentifier: VCIdentifierManager.dashboardKey) as! DashboardVC
+                let navigationController = UINavigationController(rootViewController: initialViewController)
+                navigationController.navigationBar.prefersLargeTitles = true
+                self.window!.rootViewController = navigationController
+                self.window!.makeKeyAndVisible()
+                initialViewController.addNewGoal()
+                    
+            }
+            
+        }
+    }
 
 
 }
