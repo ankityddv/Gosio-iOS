@@ -7,6 +7,7 @@
 
 import Hero
 import UIKit
+import CoreData
 
 class DashboardVC: UIViewController, LoginViewControllerDelegate {
     
@@ -17,6 +18,26 @@ class DashboardVC: UIViewController, LoginViewControllerDelegate {
     let label = UILabel()
     var userFirstName = ""
     var userEmail = ""
+    
+    var firstLoad = true
+    
+    func fetchData() {
+        if (firstLoad) {
+            let appDelegate = UIApplication.shared.delegate as! AppDelegate
+            let context:NSManagedObjectContext = appDelegate.persistentContainer.viewContext
+            let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Goal")
+            
+            do{
+                let results:NSArray = try context.fetch(request) as NSArray
+                for result in results {
+                    let myGoal = result as! Goal
+                    goal.append(myGoal)
+                }
+            } catch {
+                print("Fetch failed")
+            }
+        }
+    }
     
     @IBOutlet weak var totalGoalAmount: UILabel!
     @IBOutlet weak var tableVieww: FadingTableView!
@@ -73,7 +94,9 @@ class DashboardVC: UIViewController, LoginViewControllerDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        reloadSum()
+//        initialiseTestGoalArray()
+        fetchData()
+        updateTotalAmount()
         initialiseAppTheme()
         initialiseCurrency()
         self.navigationController?.isNavigationBarHidden = true
@@ -166,9 +189,9 @@ extension DashboardVC {
         }
     }
     
-    func reloadSum(){
+    func updateTotalAmount(){
         
-        let sum = goalArr.map({$0.goalTotalAmount}).reduce(0, +)
+        let sum = goal.map({$0.goalAchievedAmount! as! Int}).reduce(0, +)
         
         switch userDefaults?.object(forKey: userDefaultsKeyManager.currencySignKey) as? String {
         case nil:
@@ -214,25 +237,47 @@ extension DashboardVC {
 extension DashboardVC: UITableViewDelegate,UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return goalArr.count
+//        return goalArr.count
+        return goal.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell: goalsCell = tableView.dequeueReusableCell(withIdentifier: TableViewCellIdentifierManager.dashboardCell, for: indexPath) as! goalsCell
-        cell.goalEmoji.text = goalArr[indexPath.row].emoji
-        cell.goalName.text = goalArr[indexPath.row].goalName
+        
+//        cell.goalEmoji.text = goalArr[indexPath.row].emoji
+//        cell.goalName.text = goalArr[indexPath.row].goalName
+//
+//        switch userDefaults?.object(forKey: userDefaultsKeyManager.currencyCodeKey) as? String {
+//        case nil:
+//            cell.goalAmount.text = String("$ \(Int(goalArr[indexPath.row].goalAchievedAmount)) / \(Int(goalArr[indexPath.row].goalTotalAmount)) ")
+//        default:
+//            cell.goalAmount.text = String("\(currencyCodeString!) \(Int(goalArr[indexPath.row].goalAchievedAmount)) / \(Int(goalArr[indexPath.row].goalTotalAmount)) ")
+//        break
+//        }
+//
+//        cell.goalStatusIndicator.image = UIImage(named: goalArr[indexPath.row].goalStatus)
+//        cell.progressBar.setProgress(goalArr[indexPath.row].progressBar, animated: true)
+//        cell.goalPercentage.text = String("\(goalArr[indexPath.row].goalPercentage) %")
+        
+        let thisGoal: Goal!
+        thisGoal = goal[indexPath.row]
+        
+        cell.goalEmoji.text = thisGoal.emoji
+        cell.goalName.text = thisGoal.goalName
         
         switch userDefaults?.object(forKey: userDefaultsKeyManager.currencyCodeKey) as? String {
-        case nil:
-            cell.goalAmount.text = String("$ \(Int(goalArr[indexPath.row].goalAchievedAmount)) / \(Int(goalArr[indexPath.row].goalTotalAmount)) ")
-        default:
-            cell.goalAmount.text = String("\(currencyCodeString!) \(Int(goalArr[indexPath.row].goalAchievedAmount)) / \(Int(goalArr[indexPath.row].goalTotalAmount)) ")
-        break
+            case nil:
+                cell.goalAmount.text = String("$ \(thisGoal.goalAchievedAmount!) / \(thisGoal.goalTotalAmount!) ")
+            default:
+                cell.goalAmount.text = String("\(currencyCodeString!) \(thisGoal.goalAchievedAmount!) / \(thisGoal.goalTotalAmount!) ")
+            break
         }
         
-        cell.goalStatusIndicator.image = UIImage(named: goalArr[indexPath.row].goalStatus)
-        cell.progressBar.setProgress(goalArr[indexPath.row].progressBar, animated: true)
-        cell.goalPercentage.text = String("\(goalArr[indexPath.row].goalPercentage) %")
+        cell.goalStatusIndicator.image = UIImage(named: thisGoal.goalStatus)
+        cell.progressBar.setProgress(thisGoal.progressBar! as! Float, animated: true)
+        cell.goalPercentage.text = String("\(thisGoal.goalPercentage!) %")
+        
+        
         return cell
     }
     

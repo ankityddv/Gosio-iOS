@@ -8,6 +8,7 @@
 import Hero
 import SPAlert
 import UIKit
+import CoreData
 
 class GoalDeadlineVC: UIViewController {
     
@@ -40,9 +41,36 @@ class GoalDeadlineVC: UIViewController {
         
     }
     
+//    func createNewGoal() {
+//        goalArr.insert(goalModel(emoji: emojiStr, goalName: goalNameStr, goalAchievedAmount: 0.0, goalTotalAmount: Float(goalAmountStr)!, goalStatus: "ahead", progressBar: 0, goalPercentage: 0, goalAccomplishmentDate: goalAccomplishmentDateStr), at: 0)
+//    }
+    
     func createNewGoal() {
-        goalArr.insert(goalModel(emoji: emojiStr, goalName: goalNameStr, goalAchievedAmount: 0.0, goalTotalAmount: Float(goalAmountStr)!, goalStatus: "ahead", progressBar: 0, goalPercentage: 0, goalAccomplishmentDate: goalAccomplishmentDateStr), at: 0)
+        
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let context:NSManagedObjectContext = appDelegate.persistentContainer.viewContext
+        let entity = NSEntityDescription.entity(forEntityName: "Goal", in: context)
+        let newGoal = Goal(entity: entity!, insertInto: context)
+        
+        newGoal.emoji = emojiStr
+        newGoal.goalName = goalNameStr
+        newGoal.goalAchievedAmount = 0.0
+        newGoal.goalTotalAmount = NSNumber(value: Float(goalAmountStr)!)
+        newGoal.goalStatus = GoalStatus.up
+        newGoal.progressBar = 0
+        newGoal.goalPercentage = 10
+        newGoal.goalAccomplishmentDate = goalAccomplishmentDateStr
+        
+        goal.removeAll()
+        
+        do {
+            try context.save()
+        } catch {
+            print("Array not saved to core data")
+        }
+        
     }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()

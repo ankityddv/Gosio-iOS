@@ -3,7 +3,18 @@
     <entity name="Entity" representedClassName="Entity" syncable="YES" codeGenerationType="class">
         <attribute name="number" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
     </entity>
+    <entity name="Goal" representedClassName="Goal" syncable="YES">
+        <attribute name="emoji" optional="YES" attributeType="String"/>
+        <attribute name="goalAccomplishmentDate" optional="YES" attributeType="String"/>
+        <attribute name="goalAchievedAmount" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="goalName" optional="YES" attributeType="String"/>
+        <attribute name="goalPercentage" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="goalStatus" optional="YES" attributeType="String"/>
+        <attribute name="goalTotalAmount" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="progressBar" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES"/>
+    </entity>
     <elements>
         <element name="Entity" positionX="-63" positionY="-18" width="128" height="44"/>
+        <element name="Goal" positionX="-63" positionY="-9" width="128" height="149"/>
     </elements>
 </model>
