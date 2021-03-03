@@ -71,6 +71,9 @@ class AppThemeVC: UITableViewController {
             
             tableView.cellForRow(at: IndexPath(row: 0, section: 0))?.accessoryView = imageView
             
+            let alert = presentAlertWithOneButton(AlertTitle: "You have changed the theme to \"System\".", Message: "", ActionBttnTitle: "OK")
+            self.present(alert, animated: true, completion: nil)
+            
             userDefaults?.set(0, forKey: userDefaultsKeyManager.themeKey)
         case 1:
             UIApplication.shared.windows.forEach { window in
@@ -90,6 +93,9 @@ class AppThemeVC: UITableViewController {
             
             tableView.cellForRow(at: IndexPath(row: 1, section: 0))?.accessoryView = imageView
             
+            let alert = presentAlertWithOneButton(AlertTitle: "You have changed the theme to \"Light\".", Message: "", ActionBttnTitle: "OK")
+            self.present(alert, animated: true, completion: nil)
+            
             userDefaults?.set(1, forKey: userDefaultsKeyManager.themeKey)
         case 2:
             UIApplication.shared.windows.forEach { window in
@@ -108,6 +114,9 @@ class AppThemeVC: UITableViewController {
             }
             
             tableView.cellForRow(at: IndexPath(row: 2, section: 0))?.accessoryView = imageView
+            
+            let alert = presentAlertWithOneButton(AlertTitle: "You have changed the theme to \"Dark\".", Message: "", ActionBttnTitle: "OK")
+            self.present(alert, animated: true, completion: nil)
             
             userDefaults?.set(2, forKey: userDefaultsKeyManager.themeKey)
         default:

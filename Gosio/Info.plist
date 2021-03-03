@@ -10,11 +10,11 @@
 	<dict>
 		<key>CFBundleAlternateIcons</key>
 		<dict>
-			<key>blue</key>
+			<key>White</key>
 			<dict>
 				<key>CFBundleIconFiles</key>
 				<array>
-					<string>blue</string>
+					<string>White</string>
 				</array>
 			</dict>
 		</dict>

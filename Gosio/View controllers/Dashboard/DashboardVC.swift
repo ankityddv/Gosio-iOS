@@ -18,6 +18,7 @@ class DashboardVC: UIViewController, LoginViewControllerDelegate {
     var userFirstName = ""
     var userEmail = ""
     
+    @IBOutlet weak var totalGoalAmount: UILabel!
     @IBOutlet weak var tableVieww: FadingTableView!
     @IBOutlet weak var addNewGoalBttn: UIButton!
     @IBOutlet weak var menuBttn: UIButton!
@@ -72,6 +73,7 @@ class DashboardVC: UIViewController, LoginViewControllerDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        reloadSum()
         initialiseAppTheme()
         initialiseCurrency()
         self.navigationController?.isNavigationBarHidden = true
@@ -156,7 +158,7 @@ extension DashboardVC {
     }
     
     func initialiseAppIcon() {
-        switch (userDefaults?.object(forKey: userDefaultsKeyManager.appIconKey) as? String)  {
+        switch (userDefaults?.object(forKey: userDefaultsKeyManager.appIconKey) as? Int)  {
         case nil:
             userDefaults?.set(0, forKey: userDefaultsKeyManager.appIconKey)
         default:
@@ -164,9 +166,18 @@ extension DashboardVC {
         }
     }
     
-}
-
-extension DashboardVC {
+    func reloadSum(){
+        
+        let sum = goalArr.map({$0.goalTotalAmount}).reduce(0, +)
+        
+        switch userDefaults?.object(forKey: userDefaultsKeyManager.currencySignKey) as? String {
+        case nil:
+            totalGoalAmount.text = "$ \(Int(sum))"
+        default:
+            totalGoalAmount.text = "\(currencyCodeString!) \(Int(sum))"
+        }
+        
+    }
     
     func initialiseAppTheme() {
         // Read userdefaults

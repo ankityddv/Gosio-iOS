@@ -16,7 +16,8 @@ struct goalModel: Hashable
     var goalStatus : String = ""
     var progressBar: Float = 0.0
     var goalPercentage: Int = 0
+    var goalAccomplishmentDate: String = ""
 }
 
 
-var goalArr = [goalModel(emoji: "♻️", goalName: "Buy Lambo", goalAchievedAmount: 0.0, goalTotalAmount: 45000.8, goalStatus: "ahead", progressBar: 0.3, goalPercentage: 0)]
+var goalArr = [goalModel(emoji: "♻️", goalName: "Buy Lambo", goalAchievedAmount: 0.0, goalTotalAmount: 45000.8, goalStatus: "ahead", progressBar: 0.3, goalPercentage: 0, goalAccomplishmentDate: "21-09-2021")]

@@ -45,6 +45,7 @@ struct TableViewCellIdentifierManager {
 struct urlManager {
     
     static let appUrl = "https://apps.apple.com/us/app/gosio-achieve-your-goals/id1555987291"
+    static let faqUrl = "https://ankityddv.github.io/Gosio-BetaRegistration/"
     
 }
 

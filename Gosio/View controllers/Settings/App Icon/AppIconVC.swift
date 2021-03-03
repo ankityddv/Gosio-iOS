@@ -13,7 +13,7 @@ class AppIconVC: UITableViewController {
     @IBOutlet weak var subtitleLabel: UILabel!
     
     let appIconService = AppIconService()
-    let appIconArray = ["default","blue"]
+    let appIconArray = ["Default","White"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -79,7 +79,7 @@ class AppIconVC: UITableViewController {
             userDefaults?.set(0, forKey: userDefaultsKeyManager.appIconKey)
             
         case 1:
-            appIconService.changeAppIcon(to: .blue)
+            appIconService.changeAppIcon(to: .White)
             
             for section in 0..<self.tableView.numberOfSections{
                 for row in 0..<self.tableView.numberOfRows(inSection: section){

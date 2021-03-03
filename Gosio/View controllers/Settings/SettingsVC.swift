@@ -8,6 +8,7 @@
 import UIKit
 import SPAlert
 import MessageUI
+import SafariServices
 
 class SettingsVC: UITableViewController {
 
@@ -48,7 +49,7 @@ class SettingsVC: UITableViewController {
         case 3:
             return 2
         case 4:
-            return 2
+            return 3
         case 5:
             return 1
         default:
@@ -107,6 +108,13 @@ class SettingsVC: UITableViewController {
                 openApp(userName: "gosioapp", appName: "twitter")
             case 1:
                 openApp(userName: "gosioapp", appName: "instagram")
+            default:
+                break
+            }
+        case 4:
+            switch indexPath.row {
+            case 2:
+                showFaqs()
             default:
                 break
             }
@@ -174,6 +182,16 @@ extension SettingsVC {
             return
         }
         UIApplication.shared.open(writeReviewURL)
+    }
+    
+    func showFaqs() {
+        if let url = URL(string: urlManager.faqUrl) {
+            let config = SFSafariViewController.Configuration()
+            config.entersReaderIfAvailable = true
+
+            let vc = SFSafariViewController(url: url, configuration: config)
+            present(vc, animated: true)
+        }
     }
     
 }

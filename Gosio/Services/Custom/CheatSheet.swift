@@ -88,3 +88,14 @@ func openApp(userName: String, appName: String){
         application.open(webURL as URL)
     }
 }
+
+func presentAlertWithOneButton(AlertTitle: String, Message: String, ActionBttnTitle: String) -> UIAlertController{
+    
+    let alertController = UIAlertController(title: AlertTitle, message: Message, preferredStyle: .alert)
+    let defaultAction = UIAlertAction(title: ActionBttnTitle, style: .cancel, handler: nil)
+    
+    alertController.view.tintColor = UIColor(named: "AccentColor")
+    
+    alertController.addAction(defaultAction)
+    return alertController
+}

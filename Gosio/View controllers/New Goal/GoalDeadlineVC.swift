@@ -14,7 +14,7 @@ class GoalDeadlineVC: UIViewController {
     var emojiStr: String = ""
     var goalNameStr: String = ""
     var goalAmountStr: String = ""
-    var NextPaymentDateString = ""
+    var goalAccomplishmentDateStr: String = ""
     var RenewalDateFormat = Date()
 
     @IBAction func dismissBttnDidTap(_ sender: Any) {
@@ -41,14 +41,14 @@ class GoalDeadlineVC: UIViewController {
     }
     
     func createNewGoal() {
-        goalArr.insert(goalModel(emoji: emojiStr, goalName: goalNameStr, goalAchievedAmount: 0.0, goalTotalAmount: Float(goalAmountStr)!, goalStatus: "ahead", progressBar: 0, goalPercentage: 0), at: 0)
+        goalArr.insert(goalModel(emoji: emojiStr, goalName: goalNameStr, goalAchievedAmount: 0.0, goalTotalAmount: Float(goalAmountStr)!, goalStatus: "ahead", progressBar: 0, goalPercentage: 0, goalAccomplishmentDate: goalAccomplishmentDateStr), at: 0)
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpHeroAnimations()
         
-        switch NextPaymentDateString {
+        switch goalAccomplishmentDateStr {
         case "":
             print("set picker")
             setUpRenewaDatePicker()
@@ -96,8 +96,8 @@ extension GoalDeadlineVC {
     @objc func renewalDate() {
         let dateFormat = DateFormatter()
         dateFormat.dateStyle = .medium
-        NextPaymentDateString = dateFormat.string(from: datePicker.date)
+        goalAccomplishmentDateStr = dateFormat.string(from: datePicker.date)
         RenewalDateFormat = datePicker.date
-        print("Payment: \(NextPaymentDateString)")
+        print("Payment: \(goalAccomplishmentDateStr)")
     }
 }

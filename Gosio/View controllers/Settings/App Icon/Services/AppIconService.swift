@@ -13,7 +13,7 @@ class AppIconService {
     
     enum AppIcon: String {
         case primaryAppIcon
-        case blue
+        case White
     }
     
     func changeAppIcon(to appIcon: AppIcon) {

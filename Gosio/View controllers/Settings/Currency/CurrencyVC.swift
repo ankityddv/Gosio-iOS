@@ -90,9 +90,15 @@ class CurrencyVC: UITableViewController {
         if searching {
             userDefaults?.set("\(searchedCurrency[indexPath.row].currencyCode)", forKey: userDefaultsKeyManager.currencyCodeKey)
             userDefaults?.set("\(searchedCurrency[indexPath.row].currencySign)", forKey: userDefaultsKeyManager.currencySignKey)
+            let alert = presentAlertWithOneButton(AlertTitle: "You have changed the default currency to \((searchedCurrency[indexPath.row].currencyCode)).", Message: "", ActionBttnTitle: "OK")
+            self.present(alert, animated: true, completion: nil)
         } else {
             userDefaults?.set("\(Currency[indexPath.row].currencyCode)", forKey: userDefaultsKeyManager.currencyCodeKey)
             userDefaults?.set("\(Currency[indexPath.row].currencySign)", forKey: userDefaultsKeyManager.currencySignKey)
+            
+            let alert = presentAlertWithOneButton(AlertTitle: "You have changed the default currency to \((Currency[indexPath.row].currencyCode)).", Message: "", ActionBttnTitle: "OK")
+            self.present(alert, animated: true, completion: nil)
+            
         }
     
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
