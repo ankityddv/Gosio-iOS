@@ -727,7 +727,7 @@
         <!--Settings-->
         <scene sceneID="VMO-jX-nWc">
             <objects>
-                <tableViewController storyboardIdentifier="SettingsVC" modalPresentationStyle="pageSheet" id="Pbl-Kr-Nar" customClass="SettingsVC" customModule="Gosio" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="SettingsVC" id="Pbl-Kr-Nar" customClass="SettingsVC" customModule="Gosio" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="static" style="grouped" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="Vdr-tJ-K0B">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1070,7 +1070,7 @@
             </objects>
             <point key="canvasLocation" x="1042" y="791"/>
         </scene>
-        <!--Terms of use-->
+        <!--Terms Of UseVC-->
         <scene sceneID="Nu1-t6-DRm">
             <objects>
                 <viewController storyboardIdentifier="TermsOfUseVC" id="BSc-dx-XOs" customClass="TermsOfUseVC" customModule="Gosio" customModuleProvider="target" sceneMemberID="viewController">
@@ -1079,7 +1079,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your privacy is very important to Gosio (and the developer of Gosio, Ankit Yadav)." lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bmd-g3-FuO">
-                                <rect key="frame" x="20" y="12" width="374" height="48"/>
+                                <rect key="frame" x="20" y="124" width="374" height="48"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="OKY-RO-hb9"/>
                                 </constraints>
@@ -1088,7 +1088,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The Gosio App provides a free version in which you can access limited features of the app." lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z0l-7O-wtq">
-                                <rect key="frame" x="20" y="114" width="374" height="48"/>
+                                <rect key="frame" x="20" y="226" width="374" height="48"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="0gt-z8-Wt4"/>
                                 </constraints>
@@ -1097,7 +1097,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Free Version" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A7d-Za-SBg">
-                                <rect key="frame" x="20" y="86" width="99.5" height="25"/>
+                                <rect key="frame" x="20" y="198" width="99.5" height="25"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="25" id="21y-i7-cAZ"/>
                                 </constraints>
@@ -1106,7 +1106,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is enabled by a one time purchase or a cancelable subscription which unlocks all features in the app." lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ech-Oh-EIQ">
-                                <rect key="frame" x="20" y="216" width="374" height="48"/>
+                                <rect key="frame" x="20" y="328" width="374" height="48"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="x5B-9J-Ii0"/>
                                 </constraints>
@@ -1115,12 +1115,24 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Plus Version" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L7T-VJ-8d6">
-                                <rect key="frame" x="20" y="188" width="99" height="25"/>
+                                <rect key="frame" x="20" y="300" width="99" height="25"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="25" id="yR8-c3-reY"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="AirbnbCerealApp-Medium" family="Airbnb Cereal App" pointSize="18"/>
                                 <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eox-LH-v1y">
+                                <rect key="frame" x="50" y="20" width="314" height="84"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="84" id="J5h-hF-Psp"/>
+                                    <constraint firstAttribute="width" constant="314" id="RU7-gu-VvH"/>
+                                </constraints>
+                                <string key="text">Hey, Siri ! 
+Add new goal</string>
+                                <fontDescription key="fontDescription" name="AirbnbCerealApp-Bold" family="Airbnb Cereal App" pointSize="27"/>
+                                <color key="textColor" name="TitleTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -1130,19 +1142,24 @@
                             <constraint firstItem="A7d-Za-SBg" firstAttribute="leading" secondItem="7iK-Sn-GTy" secondAttribute="leading" constant="20" id="0d6-ut-AQQ"/>
                             <constraint firstItem="ech-Oh-EIQ" firstAttribute="leading" secondItem="7iK-Sn-GTy" secondAttribute="leading" constant="20" id="424-2e-7jQ"/>
                             <constraint firstItem="z0l-7O-wtq" firstAttribute="leading" secondItem="7iK-Sn-GTy" secondAttribute="leading" constant="20" id="9sW-un-nKy"/>
+                            <constraint firstItem="eox-LH-v1y" firstAttribute="top" secondItem="7iK-Sn-GTy" secondAttribute="top" constant="20" id="E7O-jW-J3n"/>
                             <constraint firstItem="bmd-g3-FuO" firstAttribute="leading" secondItem="7iK-Sn-GTy" secondAttribute="leading" constant="20" id="Mmu-D5-6TC"/>
                             <constraint firstItem="ech-Oh-EIQ" firstAttribute="top" secondItem="L7T-VJ-8d6" secondAttribute="bottom" constant="3" id="QJI-DO-foH"/>
+                            <constraint firstItem="eox-LH-v1y" firstAttribute="centerX" secondItem="3ns-CM-bPa" secondAttribute="centerX" id="SgF-Si-AnQ"/>
+                            <constraint firstItem="bmd-g3-FuO" firstAttribute="top" secondItem="eox-LH-v1y" secondAttribute="bottom" constant="20" id="WjQ-AN-5Gt"/>
                             <constraint firstItem="z0l-7O-wtq" firstAttribute="top" secondItem="A7d-Za-SBg" secondAttribute="bottom" constant="3" id="YHa-ll-xlk"/>
                             <constraint firstItem="L7T-VJ-8d6" firstAttribute="leading" secondItem="7iK-Sn-GTy" secondAttribute="leading" constant="20" id="Z8Y-fa-Lba"/>
                             <constraint firstItem="7iK-Sn-GTy" firstAttribute="trailing" secondItem="ech-Oh-EIQ" secondAttribute="trailing" constant="20" id="fLk-Wz-aT4"/>
                             <constraint firstItem="L7T-VJ-8d6" firstAttribute="top" secondItem="z0l-7O-wtq" secondAttribute="bottom" constant="26" id="fhr-6Y-iz6"/>
                             <constraint firstItem="7iK-Sn-GTy" firstAttribute="trailing" secondItem="bmd-g3-FuO" secondAttribute="trailing" constant="20" id="jeR-AA-epK"/>
                             <constraint firstItem="7iK-Sn-GTy" firstAttribute="trailing" secondItem="z0l-7O-wtq" secondAttribute="trailing" constant="20" id="pVL-H6-NcB"/>
-                            <constraint firstItem="bmd-g3-FuO" firstAttribute="top" secondItem="7iK-Sn-GTy" secondAttribute="top" constant="12" id="qlv-bO-ptf"/>
                             <constraint firstItem="A7d-Za-SBg" firstAttribute="top" secondItem="bmd-g3-FuO" secondAttribute="bottom" constant="26" id="zR1-FA-AFx"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Terms of use" id="OIl-dt-hb4"/>
+                    <navigationItem key="navigationItem" id="OIl-dt-hb4"/>
+                    <connections>
+                        <outlet property="titleLabel" destination="eox-LH-v1y" id="wdI-BA-SoY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kJ4-mB-5vT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1523,7 +1540,7 @@ Theme</string>
                                             </userDefinedRuntimeAttributes>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o4F-7Y-BAq">
-                                            <rect key="frame" x="107" y="34" width="175" height="21"/>
+                                            <rect key="frame" x="107" y="34" width="179" height="21"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
@@ -1531,6 +1548,8 @@ Theme</string>
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" name="SecondaryBgColor"/>
+                                <inset key="separatorInset" minX="100" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <connections>
                                     <outlet property="iconImage" destination="spb-iM-3Ar" id="Oon-QV-vMb"/>
                                     <outlet property="iconName" destination="o4F-7Y-BAq" id="eLq-Id-Ngb"/>
@@ -1645,7 +1664,7 @@ Theme</string>
         <image name="onboardingIllustration" width="577" height="433"/>
         <image name="twitter" width="30" height="30"/>
         <namedColor name="AccentColor">
-            <color red="0.32941176470588235" green="0.27058823529411763" blue="0.92941176470588238" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.32899999618530273" green="0.27099999785423279" blue="0.92900002002716064" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="AppColor">
             <color red="0.32899999618530273" green="0.32400000095367432" blue="0.4779999852180481" alpha="0.33000001311302185" colorSpace="custom" customColorSpace="sRGB"/>

@@ -1,133 +1,133 @@
 {
   "images" : [
     {
-      "filename" : "40.png",
+      "filename" : "Icon-App-20x20@2x.png",
       "idiom" : "iphone",
       "scale" : "2x",
       "size" : "20x20"
     },
     {
-      "filename" : "60.png",
+      "filename" : "Icon-Notification@3x.png",
       "idiom" : "iphone",
       "scale" : "3x",
       "size" : "20x20"
     },
     {
-      "filename" : "29.png",
+      "filename" : "Icon-Small.png",
       "idiom" : "iphone",
       "scale" : "1x",
       "size" : "29x29"
     },
     {
-      "filename" : "58.png",
+      "filename" : "Icon-29@2x.png",
       "idiom" : "iphone",
       "scale" : "2x",
       "size" : "29x29"
     },
     {
-      "filename" : "87.png",
+      "filename" : "Icon-29@3x.png",
       "idiom" : "iphone",
       "scale" : "3x",
       "size" : "29x29"
     },
     {
-      "filename" : "80.png",
+      "filename" : "Icon-40@2x.png",
       "idiom" : "iphone",
       "scale" : "2x",
       "size" : "40x40"
     },
     {
-      "filename" : "120.png",
+      "filename" : "Icon-App-40x40@3x.png",
       "idiom" : "iphone",
       "scale" : "3x",
       "size" : "40x40"
     },
     {
-      "filename" : "57.png",
+      "filename" : "Icon.png",
       "idiom" : "iphone",
       "scale" : "1x",
       "size" : "57x57"
     },
     {
-      "filename" : "114.png",
+      "filename" : "Icon@2x.png",
       "idiom" : "iphone",
       "scale" : "2x",
       "size" : "57x57"
     },
     {
-      "filename" : "120-1.png",
+      "filename" : "Icon-60@2x.png",
       "idiom" : "iphone",
       "scale" : "2x",
       "size" : "60x60"
     },
     {
-      "filename" : "180.png",
+      "filename" : "Icon-60@3x.png",
       "idiom" : "iphone",
       "scale" : "3x",
       "size" : "60x60"
     },
     {
-      "filename" : "20.png",
+      "filename" : "Icon-App-20x20@1x.png",
       "idiom" : "ipad",
       "scale" : "1x",
       "size" : "20x20"
     },
     {
-      "filename" : "40-1.png",
+      "filename" : "Icon-App-20x20@2x-1.png",
       "idiom" : "ipad",
       "scale" : "2x",
       "size" : "20x20"
     },
     {
-      "filename" : "29-1.png",
+      "filename" : "Icon-App-29x29@1x.png",
       "idiom" : "ipad",
       "scale" : "1x",
       "size" : "29x29"
     },
     {
-      "filename" : "58-1.png",
+      "filename" : "Icon-App-29x29@2x.png",
       "idiom" : "ipad",
       "scale" : "2x",
       "size" : "29x29"
     },
     {
-      "filename" : "40-2.png",
+      "filename" : "Icon-App-40x40@1x.png",
       "idiom" : "ipad",
       "scale" : "1x",
       "size" : "40x40"
     },
     {
-      "filename" : "80-1.png",
+      "filename" : "Icon-App-40x40@2x.png",
       "idiom" : "ipad",
       "scale" : "2x",
       "size" : "40x40"
     },
     {
-      "filename" : "76.png",
+      "filename" : "Icon-76.png",
       "idiom" : "ipad",
       "scale" : "1x",
       "size" : "76x76"
     },
     {
-      "filename" : "152.png",
+      "filename" : "Icon-76@2x.png",
       "idiom" : "ipad",
       "scale" : "2x",
       "size" : "76x76"
     },
     {
-      "filename" : "167.png",
+      "filename" : "Icon-83.5@2x.png",
       "idiom" : "ipad",
       "scale" : "2x",
       "size" : "83.5x83.5"
     },
     {
-      "filename" : "appstore.png",
+      "filename" : "iTunesArtwork@2x-1.png",
       "idiom" : "ios-marketing",
       "scale" : "1x",
       "size" : "1024x1024"
     },
     {
-      "filename" : "48.png",
+      "filename" : "48x48.png",
       "idiom" : "watch",
       "role" : "notificationCenter",
       "scale" : "2x",
@@ -135,7 +135,7 @@
       "subtype" : "38mm"
     },
     {
-      "filename" : "55.png",
+      "filename" : "Icon-55.png",
       "idiom" : "watch",
       "role" : "notificationCenter",
       "scale" : "2x",
@@ -143,21 +143,21 @@
       "subtype" : "42mm"
     },
     {
-      "filename" : "58-2.png",
+      "filename" : "Icon-58.png",
       "idiom" : "watch",
       "role" : "companionSettings",
       "scale" : "2x",
       "size" : "29x29"
     },
     {
-      "filename" : "87-1.png",
+      "filename" : "Icon-87.png",
       "idiom" : "watch",
       "role" : "companionSettings",
       "scale" : "3x",
       "size" : "29x29"
     },
     {
-      "filename" : "80-2.png",
+      "filename" : "Icon-80.png",
       "idiom" : "watch",
       "role" : "appLauncher",
       "scale" : "2x",
@@ -165,7 +165,7 @@
       "subtype" : "38mm"
     },
     {
-      "filename" : "88.png",
+      "filename" : "Icon-88.png",
       "idiom" : "watch",
       "role" : "appLauncher",
       "scale" : "2x",
@@ -173,7 +173,7 @@
       "subtype" : "40mm"
     },
     {
-      "filename" : "100.png",
+      "filename" : "Icon-100.png",
       "idiom" : "watch",
       "role" : "appLauncher",
       "scale" : "2x",
@@ -181,7 +181,7 @@
       "subtype" : "44mm"
     },
     {
-      "filename" : "172.png",
+      "filename" : "Icon-172.png",
       "idiom" : "watch",
       "role" : "quickLook",
       "scale" : "2x",
@@ -189,7 +189,7 @@
       "subtype" : "38mm"
     },
     {
-      "filename" : "196.png",
+      "filename" : "Icon-197.png",
       "idiom" : "watch",
       "role" : "quickLook",
       "scale" : "2x",
@@ -197,7 +197,7 @@
       "subtype" : "42mm"
     },
     {
-      "filename" : "216.png",
+      "filename" : "iTunesArtwork@2x-3.png",
       "idiom" : "watch",
       "role" : "quickLook",
       "scale" : "2x",
@@ -205,39 +205,45 @@
       "subtype" : "44mm"
     },
     {
-      "filename" : "appstore-1.png",
+      "filename" : "iTunesArtwork@2x-2.png",
       "idiom" : "watch-marketing",
       "scale" : "1x",
       "size" : "1024x1024"
     },
     {
-      "filename" : "16.png",
+      "filename" : "16x16.png",
       "idiom" : "mac",
       "scale" : "1x",
       "size" : "16x16"
     },
     {
-      "filename" : "32.png",
+      "filename" : "32x32.png",
       "idiom" : "mac",
       "scale" : "1x",
       "size" : "32x32"
     },
     {
-      "filename" : "128.png",
+      "filename" : "128x128.png",
       "idiom" : "mac",
       "scale" : "1x",
       "size" : "128x128"
     },
     {
-      "filename" : "256.png",
+      "filename" : "256x256.png",
       "idiom" : "mac",
       "scale" : "1x",
       "size" : "256x256"
     },
     {
-      "filename" : "512.png",
+      "filename" : "512x512.png",
       "idiom" : "mac",
       "scale" : "1x",
+      "size" : "512x512"
+    },
+    {
+      "filename" : "ItunesArtwork@2x.png",
+      "idiom" : "mac",
+      "scale" : "2x",
       "size" : "512x512"
     }
   ],

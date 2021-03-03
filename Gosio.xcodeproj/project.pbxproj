@@ -30,10 +30,10 @@
 		362E738425EAAC5100C06078 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 362E738225EAAC5100C06078 /* LaunchScreen.storyboard */; };
 		362E738F25EAAC5200C06078 /* GosioTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 362E738E25EAAC5200C06078 /* GosioTests.swift */; };
 		362E739A25EAAC5200C06078 /* GosioUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 362E739925EAAC5200C06078 /* GosioUITests.swift */; };
-		3636FB3025EE7B35005A25EC /* blue.png in Resources */ = {isa = PBXBuildFile; fileRef = 3636FB2F25EE7B35005A25EC /* blue.png */; };
-		3636FB3525EE7B3D005A25EC /* default.png in Resources */ = {isa = PBXBuildFile; fileRef = 3636FB3425EE7B3C005A25EC /* default.png */; };
+		3636FB3525EE7B3D005A25EC /* blue.png in Resources */ = {isa = PBXBuildFile; fileRef = 3636FB3425EE7B3C005A25EC /* blue.png */; };
 		3636FB4125EE9403005A25EC /* PrivacyPolicyVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3636FB4025EE9403005A25EC /* PrivacyPolicyVC.swift */; };
 		3636FB4625EE940D005A25EC /* TermsOfUseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3636FB4525EE940D005A25EC /* TermsOfUseVC.swift */; };
+		3636FB4B25EE9A00005A25EC /* default.png in Resources */ = {isa = PBXBuildFile; fileRef = 3636FB4A25EE9A00005A25EC /* default.png */; };
 		36404CB525ECA65B00C5A188 /* FadingTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36404CB425ECA65B00C5A188 /* FadingTableView.swift */; };
 		36404CC225ED01FD00C5A188 /* GoalModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36404CC125ED01FD00C5A188 /* GoalModel.swift */; };
 		36404CC825ED033100C5A188 /* Zip6Sequence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36404CC725ED033100C5A188 /* Zip6Sequence.swift */; };
@@ -103,10 +103,10 @@
 		362E739525EAAC5200C06078 /* GosioUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GosioUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		362E739925EAAC5200C06078 /* GosioUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GosioUITests.swift; sourceTree = "<group>"; };
 		362E739B25EAAC5200C06078 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3636FB2F25EE7B35005A25EC /* blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blue.png; sourceTree = "<group>"; };
-		3636FB3425EE7B3C005A25EC /* default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = default.png; sourceTree = "<group>"; };
+		3636FB3425EE7B3C005A25EC /* blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blue.png; sourceTree = "<group>"; };
 		3636FB4025EE9403005A25EC /* PrivacyPolicyVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyPolicyVC.swift; sourceTree = "<group>"; };
 		3636FB4525EE940D005A25EC /* TermsOfUseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsOfUseVC.swift; sourceTree = "<group>"; };
+		3636FB4A25EE9A00005A25EC /* default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = default.png; sourceTree = "<group>"; };
 		36404CB425ECA65B00C5A188 /* FadingTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FadingTableView.swift; sourceTree = "<group>"; };
 		36404CC125ED01FD00C5A188 /* GoalModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalModel.swift; sourceTree = "<group>"; };
 		36404CC725ED033100C5A188 /* Zip6Sequence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Zip6Sequence.swift; sourceTree = "<group>"; };
@@ -337,8 +337,8 @@
 		3636FB3925EE7B4A005A25EC /* Alternate Icons */ = {
 			isa = PBXGroup;
 			children = (
-				3636FB3425EE7B3C005A25EC /* default.png */,
-				3636FB2F25EE7B35005A25EC /* blue.png */,
+				3636FB3425EE7B3C005A25EC /* blue.png */,
+				3636FB4A25EE9A00005A25EC /* default.png */,
 			);
 			path = "Alternate Icons";
 			sourceTree = "<group>";
@@ -560,11 +560,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				362E738425EAAC5100C06078 /* LaunchScreen.storyboard in Resources */,
+				3636FB4B25EE9A00005A25EC /* default.png in Resources */,
 				360DD73925EB817A00636EBD /* MenuView.xib in Resources */,
-				3636FB3025EE7B35005A25EC /* blue.png in Resources */,
 				362E738125EAAC5100C06078 /* Assets.xcassets in Resources */,
 				362E737C25EAAC4E00C06078 /* Main.storyboard in Resources */,
-				3636FB3525EE7B3D005A25EC /* default.png in Resources */,
+				3636FB3525EE7B3D005A25EC /* blue.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -905,6 +905,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Gosio/Gosio.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = JL7UZ93S3L;
 				INFOPLIST_FILE = Gosio/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -927,6 +928,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Gosio/Gosio.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = JL7UZ93S3L;
 				INFOPLIST_FILE = Gosio/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
