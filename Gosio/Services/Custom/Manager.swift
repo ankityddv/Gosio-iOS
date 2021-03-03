@@ -27,9 +27,10 @@ struct VCIdentifierManager {
     static let addToSiriKey = "AddToSiriVC"
     static let CurrencyKey = "CurrencyVC"
     static let appThemeKey = "AppThemeVC"
-    static let AppIconVCKey = "AppIconVC"
-    static let PrivacyPolicyKey = "PrivacyPolicyVC"
-    static let TermsOfUseKey = "TermsOfUseVC"
+    static let appIconVCKey = "AppIconVC"
+    static let privacyPolicyKey = "PrivacyPolicyVC"
+    static let termsOfUseKey = "TermsOfUseVC"
+    static let goalDetailKey = "GoalExpandVC"
     
 }
 

@@ -23,6 +23,49 @@
         </array>
     </customFonts>
     <scenes>
+        <!--Goal ExpandVC-->
+        <scene sceneID="vIU-5l-CNW">
+            <objects>
+                <viewController storyboardIdentifier="GoalExpandVC" id="SN9-O4-ROP" customClass="GoalExpandVC" customModule="Gosio" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="baP-T0-igO">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Zb-UX-alY">
+                                <rect key="frame" x="191" y="391" width="32" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="save"/>
+                                <connections>
+                                    <action selector="save:" destination="SN9-O4-ROP" eventType="touchUpInside" id="7QU-Ym-hZ0"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bMT-pa-lUO">
+                                <rect key="frame" x="178" y="305" width="59" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Increase"/>
+                                <connections>
+                                    <action selector="increase:" destination="SN9-O4-ROP" eventType="touchUpInside" id="cJ2-kT-Ap1"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tdl-yF-ONU">
+                                <rect key="frame" x="113" y="193" width="188" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="AdP-k0-IQk"/>
+                        <color key="backgroundColor" name="BgColor"/>
+                    </view>
+                    <connections>
+                        <outlet property="scoreLabel" destination="tdl-yF-ONU" id="f8D-P1-qx3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="F4I-4M-O0I" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1040.5797101449275" y="-579.24107142857144"/>
+        </scene>
         <!--DashboardVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -101,7 +144,7 @@
                                     <action selector="showMenu:" destination="BYZ-38-t0r" eventType="touchUpInside" id="b9f-D6-Cgk"/>
                                 </connections>
                             </button>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="115" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="nGI-3d-gAT" customClass="FadingTableView" customModule="Gosio" customModuleProvider="target">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="115" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="nGI-3d-gAT" customClass="FadingTableView" customModule="Gosio" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="379" width="414" height="517"/>
                                 <color key="backgroundColor" name="BgColor"/>
                                 <prototypes>

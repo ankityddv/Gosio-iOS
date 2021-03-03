@@ -21,7 +21,7 @@ class LoginVC: UIViewController {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var subtitleLabel: UILabel!
     @IBAction func privacyPolicyDidTap(_ sender: Any) {
-        let vc = storyboard?.instantiateViewController(withIdentifier: VCIdentifierManager.PrivacyPolicyKey) as! PrivacyPolicyVC
+        let vc = storyboard?.instantiateViewController(withIdentifier: VCIdentifierManager.privacyPolicyKey) as! PrivacyPolicyVC
         self.present(vc, animated: true, completion: nil)
     }
     

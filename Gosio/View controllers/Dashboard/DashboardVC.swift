@@ -236,6 +236,15 @@ extension DashboardVC: UITableViewDelegate,UITableViewDataSource {
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let vc = storyboard?.instantiateViewController(withIdentifier: VCIdentifierManager.goalDetailKey) as! GoalExpandVC
+        self.present(vc, animated: true, completion: nil)
+        
+        print("did tap")
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
+    
 }
 
 

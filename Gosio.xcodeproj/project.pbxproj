@@ -51,6 +51,7 @@
 		367FED0725EE5ED5007F116B /* CurrencyVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 367FED0625EE5ED5007F116B /* CurrencyVC.swift */; };
 		367FED0C25EE5F06007F116B /* CurrencyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 367FED0B25EE5F06007F116B /* CurrencyModel.swift */; };
 		367FED1625EE604D007F116B /* zip3sequence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 367FED1525EE604D007F116B /* zip3sequence.swift */; };
+		36D95DDD25EFA33200692411 /* GoalExpandVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D95DDC25EFA33200692411 /* GoalExpandVC.swift */; };
 		AA2DF6DD2DB4EEAE3F7E77FE /* Pods_GosioTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24FAC72EC543397B7F4A08AB /* Pods_GosioTests.framework */; };
 		DC86A193E62F1FD61530D148 /* Pods_Gosio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A52AFAB7D7CD8C2521EAB4D /* Pods_Gosio.framework */; };
 /* End PBXBuildFile section */
@@ -124,6 +125,7 @@
 		367FED0625EE5ED5007F116B /* CurrencyVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyVC.swift; sourceTree = "<group>"; };
 		367FED0B25EE5F06007F116B /* CurrencyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyModel.swift; sourceTree = "<group>"; };
 		367FED1525EE604D007F116B /* zip3sequence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = zip3sequence.swift; sourceTree = "<group>"; };
+		36D95DDC25EFA33200692411 /* GoalExpandVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalExpandVC.swift; sourceTree = "<group>"; };
 		427612BCCF6048BB813A12DD /* Pods_Gosio_GosioUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Gosio_GosioUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		882F3780B046FEA6B572E01B /* Pods-Gosio.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gosio.release.xcconfig"; path = "Target Support Files/Pods-Gosio/Pods-Gosio.release.xcconfig"; sourceTree = "<group>"; };
 		8A52AFAB7D7CD8C2521EAB4D /* Pods_Gosio.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Gosio.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -396,6 +398,7 @@
 				364F35AF25EB5E71007E7996 /* Auth */,
 				360DD74525EB8FB700636EBD /* Dashboard */,
 				360CD43725EE755800A7D72B /* Settings */,
+				36D95DDC25EFA33200692411 /* GoalExpandVC.swift */,
 			);
 			path = "View controllers";
 			sourceTree = "<group>";
@@ -729,6 +732,7 @@
 				36404CC825ED033100C5A188 /* Zip6Sequence.swift in Sources */,
 				3602BEB425EBD07E0014DD16 /* GoalAmountVC.swift in Sources */,
 				362E737725EAAC4E00C06078 /* SceneDelegate.swift in Sources */,
+				36D95DDD25EFA33200692411 /* GoalExpandVC.swift in Sources */,
 				364F35C325EB5F39007E7996 /* CheatSheet.swift in Sources */,
 				367FED1625EE604D007F116B /* zip3sequence.swift in Sources */,
 				360DD6F925EB67DC00636EBD /* OnboardingState.swift in Sources */,
