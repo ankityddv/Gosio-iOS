@@ -63,5 +63,18 @@ struct userDefaultsKeyManager {
     static let currencyCodeKey = "currencyCode"
     static let themeKey = "theme"
     static let appIconKey = "appIcon"
+    static let requestReviewKey = "requestReview"
+    
+}
+
+struct HeroIDs {
+    
+    static let buttonKey = "button"
+    static let emojiKey = "emoji"
+    static let goalNameKey = "goalName"
+    static let goalAmountKey = "goalAmount"
+    static let dismissButtonKey = "dismissButton"
+    static let emojiInDashboardKey = "emojiInDashboard"
+    static let totalGoalAmountKey = "totalAmountLabel"
     
 }

@@ -6,8 +6,8 @@
 //
 
 import Hero
-import SPAlert
 import UIKit
+import SPAlert
 import CoreData
 
 class GoalDeadlineVC: UIViewController {
@@ -16,6 +16,7 @@ class GoalDeadlineVC: UIViewController {
     var goalNameStr: String = ""
     var goalAmountStr: String = ""
     var goalAccomplishmentDateStr: String = ""
+    
     var RenewalDateFormat = Date()
 
     @IBAction func dismissBttnDidTap(_ sender: Any) {
@@ -30,20 +31,20 @@ class GoalDeadlineVC: UIViewController {
     @IBOutlet weak var datePicker: UIDatePicker!
     
     @IBAction func doneBttnDidTap(_ sender: Any) {
-        SPAlert.present(title: "Goal Set!", preset: .done)
         
-//        print("Date: \(RenewalDateFormat) and \(NextPaymentDateString)")
-        createNewGoal()
-        DispatchQueue.main.asyncAfter(deadline: .now()+1.6) {
-            let vc = self.storyboard?.instantiateViewController(withIdentifier: VCIdentifierManager.dashboardKey) as! DashboardVC
-            self.present(vc, animated: true, completion: nil)
+        switch goalAccomplishmentDateStr {
+        case "":
+            SPAlert.present(message: "Please select a date", haptic: .error)
+        default:
+            SPAlert.present(title: "Goal Set", preset: .done)
+            createNewGoal()
+            DispatchQueue.main.asyncAfter(deadline: .now()+1.6) {
+                let vc = self.storyboard?.instantiateViewController(withIdentifier: VCIdentifierManager.dashboardKey) as! DashboardVC
+                self.present(vc, animated: true, completion: nil)
+            }
         }
         
     }
-    
-//    func createNewGoal() {
-//        goalArr.insert(goalModel(emoji: emojiStr, goalName: goalNameStr, goalAchievedAmount: 0.0, goalTotalAmount: Float(goalAmountStr)!, goalStatus: "ahead", progressBar: 0, goalPercentage: 0, goalAccomplishmentDate: goalAccomplishmentDateStr), at: 0)
-//    }
     
     func createNewGoal() {
         
@@ -58,7 +59,7 @@ class GoalDeadlineVC: UIViewController {
         newGoal.goalTotalAmount = NSNumber(value: Float(goalAmountStr)!)
         newGoal.goalStatus = GoalStatus.up
         newGoal.progressBar = 0
-        newGoal.goalPercentage = 10
+        newGoal.goalPercentage = 0
         newGoal.goalAccomplishmentDate = goalAccomplishmentDateStr
         
         goal.removeAll()
@@ -90,7 +91,7 @@ class GoalDeadlineVC: UIViewController {
             .bold(" this goal?")
         emojiLabel.text = emojiStr
         goalName.text = goalNameStr
-        goalAmount.text = goalAmountStr
+        goalAmount.text = "\(currencyCodeString!) \(goalAmountStr)"
         
         let dismissKeyboard = UITapGestureRecognizer(target: self, action: #selector(SwipehideKeyboard))
         view.addGestureRecognizer(dismissKeyboard)

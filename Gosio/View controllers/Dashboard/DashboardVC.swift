@@ -7,6 +7,7 @@
 
 import Hero
 import UIKit
+import StoreKit
 import CoreData
 
 class DashboardVC: UIViewController, LoginViewControllerDelegate {
@@ -39,6 +40,7 @@ class DashboardVC: UIViewController, LoginViewControllerDelegate {
         }
     }
     
+    @IBOutlet weak var emojiLabel: UILabel!
     @IBOutlet weak var totalGoalAmount: UILabel!
     @IBOutlet weak var tableVieww: FadingTableView!
     @IBOutlet weak var addNewGoalBttn: UIButton!
@@ -94,13 +96,17 @@ class DashboardVC: UIViewController, LoginViewControllerDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        initialiseTestGoalArray()
+        requestReview()
         fetchData()
         updateTotalAmount()
         initialiseAppTheme()
         initialiseCurrency()
         self.navigationController?.isNavigationBarHidden = true
+        
+        emojiLabel.hero.id = HeroIDs.emojiInDashboardKey
+        totalGoalAmount.hero.id = HeroIDs.totalGoalAmountKey
         addNewGoalBttn.hero.id = HeroIDs.buttonKey
+        menuBttn.hero.id = HeroIDs.dismissButtonKey
         self.hero.isEnabled = true
         
 //        let userFirstNameSTr = (userDefaults?.string(forKey: SignInWithAppleManager.userFirstNameKey)!)!
@@ -230,6 +236,25 @@ extension DashboardVC {
         }
     }
     
+    func requestReview(){
+        
+        switch userDefaults?.object(forKey: userDefaultsKeyManager.requestReviewKey) as? Int {
+        case nil:
+            reviewInteger = 0
+            userDefaults?.set(reviewInteger!, forKey: userDefaultsKeyManager.requestReviewKey)
+        default:
+            switch reviewInteger! % 8 {
+            case 0:
+                SKStoreReviewController.requestReview()
+            default:
+                break
+            }
+            reviewInteger! += 1
+            userDefaults?.set(reviewInteger!, forKey: userDefaultsKeyManager.requestReviewKey)
+        }
+        
+    }
+    
 }
 
 
@@ -243,21 +268,6 @@ extension DashboardVC: UITableViewDelegate,UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell: goalsCell = tableView.dequeueReusableCell(withIdentifier: TableViewCellIdentifierManager.dashboardCell, for: indexPath) as! goalsCell
-        
-//        cell.goalEmoji.text = goalArr[indexPath.row].emoji
-//        cell.goalName.text = goalArr[indexPath.row].goalName
-//
-//        switch userDefaults?.object(forKey: userDefaultsKeyManager.currencyCodeKey) as? String {
-//        case nil:
-//            cell.goalAmount.text = String("$ \(Int(goalArr[indexPath.row].goalAchievedAmount)) / \(Int(goalArr[indexPath.row].goalTotalAmount)) ")
-//        default:
-//            cell.goalAmount.text = String("\(currencyCodeString!) \(Int(goalArr[indexPath.row].goalAchievedAmount)) / \(Int(goalArr[indexPath.row].goalTotalAmount)) ")
-//        break
-//        }
-//
-//        cell.goalStatusIndicator.image = UIImage(named: goalArr[indexPath.row].goalStatus)
-//        cell.progressBar.setProgress(goalArr[indexPath.row].progressBar, animated: true)
-//        cell.goalPercentage.text = String("\(goalArr[indexPath.row].goalPercentage) %")
         
         let thisGoal: Goal!
         thisGoal = goal[indexPath.row]
@@ -277,13 +287,13 @@ extension DashboardVC: UITableViewDelegate,UITableViewDataSource {
         cell.progressBar.setProgress(thisGoal.progressBar! as! Float, animated: true)
         cell.goalPercentage.text = String("\(thisGoal.goalPercentage!) %")
         
-        
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         let vc = storyboard?.instantiateViewController(withIdentifier: VCIdentifierManager.goalDetailKey) as! GoalExpandVC
+        vc.indexPathRow = indexPath.row
         self.present(vc, animated: true, completion: nil)
         
         print("did tap")

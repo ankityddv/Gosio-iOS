@@ -14,4 +14,5 @@ var currencyCodeString = userDefaults?.object(forKey: userDefaultsKeyManager.cur
 
 var appIconInt = userDefaults?.object(forKey: userDefaultsKeyManager.appIconKey) as? Int
 
+var reviewInteger = userDefaults?.object(forKey: userDefaultsKeyManager.requestReviewKey) as? Int
 

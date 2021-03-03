@@ -7,6 +7,7 @@
 
 import Hero
 import UIKit
+import SPAlert
 
 class GoalAmountVC: UIViewController {
     
@@ -24,11 +25,24 @@ class GoalAmountVC: UIViewController {
     @IBOutlet weak var nextBttnTopConstraint: NSLayoutConstraint!
     
     @IBAction func nextBttnDidTap(_ sender: Any) {
-        let vc = storyboard?.instantiateViewController(withIdentifier: VCIdentifierManager.goalDeadlineKey) as! GoalDeadlineVC
-        vc.emojiStr = emojiStr
-        vc.goalNameStr = goalNameStr
-        vc.goalAmountStr = String(Float(amountTextField.text!)!)
-        self.present(vc, animated: true, completion: nil)
+        
+        switch amountTextField.text! {
+        case "":
+            SPAlert.present(message: "Please enter an amount", haptic: .error)
+        default:
+            let amount = amountTextField.text!
+            if Float(amount) != nil {
+                let vc = storyboard?.instantiateViewController(withIdentifier: VCIdentifierManager.goalDeadlineKey) as! GoalDeadlineVC
+                vc.emojiStr = emojiStr
+                vc.goalNameStr = goalNameStr
+                vc.goalAmountStr = String(Float(amount)!)
+                self.present(vc, animated: true, completion: nil)
+            } else {
+                SPAlert.present(message: "Please enter a valid amount", haptic: .error)
+            }
+            
+        }
+        
     }
     
     override func viewDidLoad() {

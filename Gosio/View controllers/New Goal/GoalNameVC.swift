@@ -22,13 +22,28 @@ class GoalNameVC: UIViewController {
     @IBOutlet weak var nextBttnTopConstraint: NSLayoutConstraint!
     
     @IBAction func nextBttnDidTap(_ sender: Any) {
-        if emojiTextField.text != "" && goalNameTextField.text != "" {
+        
+        let emoji = emojiTextField.text
+        let goalName = goalNameTextField.text
+        
+        if emoji != "" && goalName != "" {
+            
             let vc = storyboard?.instantiateViewController(withIdentifier: VCIdentifierManager.goalAmountKey) as! GoalAmountVC
             vc.emojiStr = emojiTextField.text!
             vc.goalNameStr = goalNameTextField.text!
             self.present(vc, animated: true, completion: nil)
+            
         } else {
-            SPAlert.present(message: "Please enter the values!", haptic: .error)
+            // Edit Stat
+            if (emoji == "") && (goalName == "")  {
+                SPAlert.present(message: "Please enter an emoji and your goal", haptic: .error)
+            } else if (emoji == "") {
+                SPAlert.present(message: "Please enter an emoji", haptic: .error)
+            } else if (goalName == "")  {
+                SPAlert.present(message: "Please enter your goal", haptic: .error)
+            }
+            
+            
         }
         
     }

@@ -35,7 +35,6 @@
 		3636FB4625EE940D005A25EC /* TermsOfUseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3636FB4525EE940D005A25EC /* TermsOfUseVC.swift */; };
 		3636FB4B25EE9A00005A25EC /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 3636FB4A25EE9A00005A25EC /* Default.png */; };
 		36404CB525ECA65B00C5A188 /* FadingTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36404CB425ECA65B00C5A188 /* FadingTableView.swift */; };
-		36404CC225ED01FD00C5A188 /* GoalModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36404CC125ED01FD00C5A188 /* GoalModel.swift */; };
 		36404CC825ED033100C5A188 /* Zip6Sequence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36404CC725ED033100C5A188 /* Zip6Sequence.swift */; };
 		364EB8F225EDEBD000E14444 /* LastOnboardingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364EB8F125EDEBD000E14444 /* LastOnboardingVC.swift */; };
 		364EB91225EDFCB200E14444 /* attributedFontExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364EB91125EDFCB200E14444 /* attributedFontExtention.swift */; };
@@ -51,6 +50,7 @@
 		367FED0725EE5ED5007F116B /* CurrencyVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 367FED0625EE5ED5007F116B /* CurrencyVC.swift */; };
 		367FED0C25EE5F06007F116B /* CurrencyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 367FED0B25EE5F06007F116B /* CurrencyModel.swift */; };
 		367FED1625EE604D007F116B /* zip3sequence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 367FED1525EE604D007F116B /* zip3sequence.swift */; };
+		36960CAC25EFF3B400946619 /* textFieldMaxLength.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36960CAB25EFF3B400946619 /* textFieldMaxLength.swift */; };
 		36D95DDD25EFA33200692411 /* GoalExpandVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D95DDC25EFA33200692411 /* GoalExpandVC.swift */; };
 		36D95DEA25EFAA9100692411 /* GoalDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D95DE925EFAA9100692411 /* GoalDataModel.swift */; };
 		AA2DF6DD2DB4EEAE3F7E77FE /* Pods_GosioTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24FAC72EC543397B7F4A08AB /* Pods_GosioTests.framework */; };
@@ -110,7 +110,6 @@
 		3636FB4525EE940D005A25EC /* TermsOfUseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsOfUseVC.swift; sourceTree = "<group>"; };
 		3636FB4A25EE9A00005A25EC /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		36404CB425ECA65B00C5A188 /* FadingTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FadingTableView.swift; sourceTree = "<group>"; };
-		36404CC125ED01FD00C5A188 /* GoalModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalModel.swift; sourceTree = "<group>"; };
 		36404CC725ED033100C5A188 /* Zip6Sequence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Zip6Sequence.swift; sourceTree = "<group>"; };
 		364EB8F125EDEBD000E14444 /* LastOnboardingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastOnboardingVC.swift; sourceTree = "<group>"; };
 		364EB91125EDFCB200E14444 /* attributedFontExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = attributedFontExtention.swift; sourceTree = "<group>"; };
@@ -126,6 +125,7 @@
 		367FED0625EE5ED5007F116B /* CurrencyVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyVC.swift; sourceTree = "<group>"; };
 		367FED0B25EE5F06007F116B /* CurrencyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyModel.swift; sourceTree = "<group>"; };
 		367FED1525EE604D007F116B /* zip3sequence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = zip3sequence.swift; sourceTree = "<group>"; };
+		36960CAB25EFF3B400946619 /* textFieldMaxLength.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = textFieldMaxLength.swift; sourceTree = "<group>"; };
 		36D95DDC25EFA33200692411 /* GoalExpandVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalExpandVC.swift; sourceTree = "<group>"; };
 		36D95DE925EFAA9100692411 /* GoalDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalDataModel.swift; sourceTree = "<group>"; };
 		427612BCCF6048BB813A12DD /* Pods_Gosio_GosioUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Gosio_GosioUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -180,7 +180,6 @@
 		3602BEC225EBD7170014DD16 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				36404CC125ED01FD00C5A188 /* GoalModel.swift */,
 				36D95DE925EFAA9100692411 /* GoalDataModel.swift */,
 			);
 			path = Services;
@@ -261,6 +260,7 @@
 				364EB91125EDFCB200E14444 /* attributedFontExtention.swift */,
 				36404CB425ECA65B00C5A188 /* FadingTableView.swift */,
 				367FED1525EE604D007F116B /* zip3sequence.swift */,
+				36960CAB25EFF3B400946619 /* textFieldMaxLength.swift */,
 				36404CC725ED033100C5A188 /* Zip6Sequence.swift */,
 			);
 			path = Custom;
@@ -733,6 +733,7 @@
 				360CD44B25EE789E00A7D72B /* AppIconService.swift in Sources */,
 				360CD43225EE700200A7D72B /* AppThemeVC.swift in Sources */,
 				364F35BE25EB5ECB007E7996 /* UserDefaults.swift in Sources */,
+				36960CAC25EFF3B400946619 /* textFieldMaxLength.swift in Sources */,
 				36404CC825ED033100C5A188 /* Zip6Sequence.swift in Sources */,
 				3602BEB425EBD07E0014DD16 /* GoalAmountVC.swift in Sources */,
 				362E737725EAAC4E00C06078 /* SceneDelegate.swift in Sources */,
@@ -743,7 +744,6 @@
 				3636FB4625EE940D005A25EC /* TermsOfUseVC.swift in Sources */,
 				36404CB525ECA65B00C5A188 /* FadingTableView.swift in Sources */,
 				367FED0725EE5ED5007F116B /* CurrencyVC.swift in Sources */,
-				36404CC225ED01FD00C5A188 /* GoalModel.swift in Sources */,
 				360DD73E25EB81F700636EBD /* MenuView.swift in Sources */,
 				367FECEA25EE21DF007F116B /* AddToSiriVC.swift in Sources */,
 				3602BEA825EBD0600014DD16 /* GoalNameVC.swift in Sources */,
@@ -929,7 +929,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Gosio/Gosio.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_TEAM = JL7UZ93S3L;
 				INFOPLIST_FILE = Gosio/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -939,8 +939,9 @@
 				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = tdc.Gosio;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -952,7 +953,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Gosio/Gosio.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_TEAM = JL7UZ93S3L;
 				INFOPLIST_FILE = Gosio/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -962,8 +963,9 @@
 				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = tdc.Gosio;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};

@@ -67,15 +67,6 @@ extension UIApplication {
 }
 
 
-func arrayToData(stringArray: [goalModel]) -> Data? {
-  return try? JSONSerialization.data(withJSONObject: stringArray, options: [])
-}
-
-func dataToStringArray(data: Data) -> [goalModel]? {
-  return (try? JSONSerialization.jsonObject(with: data, options: [])) as? [goalModel]
-}
-
-
 func openApp(userName: String, appName: String){
     let appURL = NSURL(string: "\(appName)://user?screen_name=\(userName)")!
     let webURL = NSURL(string: "https://\(appName).com/\(userName)")!
