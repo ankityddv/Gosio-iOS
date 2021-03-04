@@ -18,9 +18,7 @@ class GoalExpandVC: UIViewController {
     @IBOutlet weak var goalTotalAmount: UILabel!
     @IBOutlet weak var goalAccomplishmentDate: UILabel!
     @IBOutlet weak var goalStatus: UIImageView!
-    
-    @IBOutlet weak var instructionsLabel: UILabel!
-    
+    @IBOutlet weak var progressBar: UIProgressView!
     
     
     @IBAction func dismissButtonDidTap(_ sender: Any) {
@@ -45,28 +43,28 @@ class GoalExpandVC: UIViewController {
         goalTotalAmount.text = "\(currencyCodeString!) \(selectedGoal.goalTotalAmount!)"
         goalAccomplishmentDate.text = String("\(currencyCodeString!) \(goalToAchieve) by \(selectedGoal.goalAccomplishmentDate!)")
         goalStatus.image = UIImage(named: "\(selectedGoal.goalStatus ?? "")Expand")
+        progressBar.setProgress(selectedGoal.progressBar! as! Float, animated: true)
         
-        
-        instructionsLabel.attributedText = NSMutableAttributedString()
-            .subtitleNormal("Features like goal amount increment, \nediting and deletion are currently \n")
-            .subtitleNormalBlueHighlight(" under development.\n")
-            .subtitleNormal("\n")
-            .subtitleNormal("We request you to ")
-            .subtitleNormalBlueHighlight("test")
-            .subtitleNormal(" if: \n")
-            .subtitleNormal("1. You can ")
-            .subtitleNormalBlueHighlight("signin")
-            .subtitleNormal(" properly? \n")
-            .subtitleNormal("2. You can ")
-            .subtitleNormalBlueHighlight("add new goals.\n")
-            .subtitleNormal("3. You can set default currency, \napp icon, app theme.\n")
-            .subtitleNormal("4. You can add new goal by ")
-            .subtitleNormalBlueHighlight("asking Siri\n")
-            .subtitleNormal("to do that for you?\n")
-            .subtitleNormal("\n")
-            .subtitleNormal("Follow us on Twitter/Instagram ")
-            .subtitleNormalBlueHighlight("@GosioApp")
-            .subtitleNormal(" for regular updates on what's cooking, you can always slide into our DM's to report any issue :)")
+//        instructionsLabel.attributedText = NSMutableAttributedString()
+//            .subtitleNormal("Features like goal amount increment, \nediting and deletion are currently \n")
+//            .subtitleNormalBlueHighlight(" under development.\n")
+//            .subtitleNormal("\n")
+//            .subtitleNormal("We request you to ")
+//            .subtitleNormalBlueHighlight("test")
+//            .subtitleNormal(" if: \n")
+//            .subtitleNormal("1. You can ")
+//            .subtitleNormalBlueHighlight("signin")
+//            .subtitleNormal(" properly? \n")
+//            .subtitleNormal("2. You can ")
+//            .subtitleNormalBlueHighlight("add new goals.\n")
+//            .subtitleNormal("3. You can set default currency, \napp icon, app theme.\n")
+//            .subtitleNormal("4. You can add new goal by ")
+//            .subtitleNormalBlueHighlight("asking Siri\n")
+//            .subtitleNormal("to do that for you?\n")
+//            .subtitleNormal("\n")
+//            .subtitleNormal("Follow us on Twitter/Instagram ")
+//            .subtitleNormalBlueHighlight("@GosioApp")
+//            .subtitleNormal(" for regular updates on what's cooking, you can always slide into our DM's to report any issue :)")
         
     }
     

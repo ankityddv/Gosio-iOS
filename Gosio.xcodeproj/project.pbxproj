@@ -260,8 +260,8 @@
 				364EB91125EDFCB200E14444 /* attributedFontExtention.swift */,
 				36404CB425ECA65B00C5A188 /* FadingTableView.swift */,
 				367FED1525EE604D007F116B /* zip3sequence.swift */,
-				36960CAB25EFF3B400946619 /* textFieldMaxLength.swift */,
 				36404CC725ED033100C5A188 /* Zip6Sequence.swift */,
+				36960CAB25EFF3B400946619 /* textFieldMaxLength.swift */,
 			);
 			path = Custom;
 			sourceTree = "<group>";

@@ -80,3 +80,12 @@ struct HeroIDs {
     static let goalAccomplishmentDateKey = "goalAccomplishmentDate"
     
 }
+
+
+struct GoalStatus {
+    
+    static let up : String = "ahead"
+    static let down : String = "below"
+    static let pause : String = "pause"
+    
+}

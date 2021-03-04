@@ -104,6 +104,7 @@ class CurrencyVC: UITableViewController {
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
             tableView.deselectRow(at: indexPath, animated: true)
         }
+        lightImpactHeptic()
         
     }
 }

@@ -79,31 +79,27 @@
                                     <constraint firstAttribute="height" constant="20" id="ij8-JE-J38"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="More features " lineBreakMode="tailTruncation" numberOfLines="19" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DL8-5s-Ypf">
-                                <rect key="frame" x="57" y="336" width="300" height="350"/>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="aJr-TM-Vuc">
+                                <rect key="frame" x="113" y="67" width="188" height="4"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="300" id="2vE-8f-Def"/>
-                                    <constraint firstAttribute="height" constant="350" id="5Ud-Iz-HKn"/>
+                                    <constraint firstAttribute="height" constant="4" id="O7d-8m-tqg"/>
+                                    <constraint firstAttribute="width" constant="188" id="mDM-jR-zYj"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
-                                <color key="textColor" name="TitleTextColor"/>
-                                <nil key="highlightedColor"/>
-                                <size key="shadowOffset" width="0.0" height="0.0"/>
-                            </label>
+                            </progressView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="AdP-k0-IQk"/>
                         <color key="backgroundColor" name="BgColor"/>
                         <constraints>
                             <constraint firstItem="AdP-k0-IQk" firstAttribute="trailing" secondItem="VeG-Wq-kRk" secondAttribute="trailing" constant="20" id="8mg-Cg-3dI"/>
                             <constraint firstItem="VeG-Wq-kRk" firstAttribute="top" secondItem="AdP-k0-IQk" secondAttribute="top" constant="10" id="G0e-hz-IXa"/>
+                            <constraint firstItem="aJr-TM-Vuc" firstAttribute="centerX" secondItem="baP-T0-igO" secondAttribute="centerX" id="KTa-Tb-dPZ"/>
                             <constraint firstItem="enE-ae-Eue" firstAttribute="top" secondItem="725-qQ-H8D" secondAttribute="bottom" constant="51" id="N6j-jW-sIQ"/>
                             <constraint firstItem="725-qQ-H8D" firstAttribute="centerX" secondItem="baP-T0-igO" secondAttribute="centerX" id="RQC-EE-wvc"/>
                             <constraint firstItem="725-qQ-H8D" firstAttribute="top" secondItem="8Bz-mz-zAY" secondAttribute="bottom" constant="9" id="Rct-gd-nbl"/>
-                            <constraint firstItem="DL8-5s-Ypf" firstAttribute="centerX" secondItem="baP-T0-igO" secondAttribute="centerX" id="TsG-W4-blj"/>
-                            <constraint firstItem="DL8-5s-Ypf" firstAttribute="top" secondItem="enE-ae-Eue" secondAttribute="bottom" constant="30" id="Udn-w7-xch"/>
                             <constraint firstItem="qHN-1u-5mg" firstAttribute="centerX" secondItem="baP-T0-igO" secondAttribute="centerX" id="WN9-tJ-4GT"/>
                             <constraint firstItem="qHN-1u-5mg" firstAttribute="top" secondItem="AdP-k0-IQk" secondAttribute="top" constant="51" id="dGM-v6-shw"/>
                             <constraint firstItem="8Bz-mz-zAY" firstAttribute="centerX" secondItem="baP-T0-igO" secondAttribute="centerX" id="gwW-y7-wv7"/>
+                            <constraint firstItem="aJr-TM-Vuc" firstAttribute="top" secondItem="AdP-k0-IQk" secondAttribute="top" constant="23" id="haQ-9Q-buK"/>
                             <constraint firstItem="enE-ae-Eue" firstAttribute="centerX" secondItem="baP-T0-igO" secondAttribute="centerX" id="sc2-OW-ytU"/>
                             <constraint firstItem="8Bz-mz-zAY" firstAttribute="top" secondItem="qHN-1u-5mg" secondAttribute="bottom" constant="15" id="wCB-Lr-tOJ"/>
                         </constraints>
@@ -114,7 +110,7 @@
                         <outlet property="goalAccomplishmentDate" destination="725-qQ-H8D" id="x2r-F8-BbT"/>
                         <outlet property="goalStatus" destination="enE-ae-Eue" id="sSp-hC-bsK"/>
                         <outlet property="goalTotalAmount" destination="8Bz-mz-zAY" id="rDf-KH-7bT"/>
-                        <outlet property="instructionsLabel" destination="DL8-5s-Ypf" id="bB2-eo-AFj"/>
+                        <outlet property="progressBar" destination="aJr-TM-Vuc" id="dfO-VJ-tBm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="F4I-4M-O0I" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -445,7 +441,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="52"/>
                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="🏎" placeholder="$ 569 000" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gnR-Mk-LI5">
+                            <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="🏎" placeholder="$ 569 000" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gnR-Mk-LI5">
                                 <rect key="frame" x="158.5" y="276" width="97" height="63"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="63" id="Ds7-oj-z4q"/>
@@ -1418,7 +1414,7 @@ of use</string>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="89" id="baL-N8-aUi"/>
                                                 </constraints>
-                                                <string key="text">Your privacy is very important to Gosio ( and the developer of Gosio, Ankit Yadav). This Privacy Policy covers how we collect, use, disclose, transfer, and store your information. Please take a moment to get to know our practices and contact us if you have any questions.</string>
+                                                <string key="text">Your privacy is very important to Gosio (and the developer of Gosio, Ankit Yadav). This Privacy Policy covers how we collect, use, disclose, transfer, and store your information. Please take a moment to get to know our practices and contact us if you have any questions.</string>
                                                 <fontDescription key="fontDescription" name="AirbnbCerealApp-Light" family="Airbnb Cereal App" pointSize="13"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>

@@ -24,8 +24,3 @@ class Goal: NSManagedObject {
 
 var goal = [Goal]()
 
-struct GoalStatus {
-    static let up : String = "ahead"
-    static let down : String = "ahead"
-    static let pause : String = "ahead"
-}
