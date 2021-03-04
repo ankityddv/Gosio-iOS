@@ -36,45 +36,47 @@ struct VCIdentifierManager {
 
 struct TableViewCellIdentifierManager {
     
+    static let appIconCell = "appIconCell"
     static let dashboardCell = "goalsCell"
     static let currencyCell = "CurrencyTVCell"
     static let appThemeCell = "appThemeTVCell"
-    static let appIconCell = "appIconCell"
     
 }
 
 struct urlManager {
     
     static let appUrl = "https://apps.apple.com/us/app/gosio-achieve-your-goals/id1555987291"
-    static let faqUrl = "https://ankityddv.github.io/Gosio-BetaRegistration/"
+    static let faqUrl = "https://ankityddv.github.io/Gosio-BetaRegistration/faq"
+    static let betaUrl = "https://ankityddv.github.io/Gosio-BetaRegistration/"
     
 }
 
 struct imageNameManager {
     
-    static let checkMark = "checkMark"
     static let noneMark = "noneMark"
+    static let checkMark = "checkMark"
     
 }
 
 struct userDefaultsKeyManager {
   
-    static let currencySignKey = "currencySign"
-    static let currencyCodeKey = "currencyCode"
     static let themeKey = "theme"
     static let appIconKey = "appIcon"
+    static let currencyCodeKey = "currencyCode"
+    static let currencySignKey = "currencySign"
     static let requestReviewKey = "requestReview"
     
 }
 
 struct HeroIDs {
     
-    static let buttonKey = "button"
     static let emojiKey = "emoji"
+    static let buttonKey = "button"
     static let goalNameKey = "goalName"
     static let goalAmountKey = "goalAmount"
     static let dismissButtonKey = "dismissButton"
-    static let emojiInDashboardKey = "emojiInDashboard"
     static let totalGoalAmountKey = "totalAmountLabel"
+    static let emojiInDashboardKey = "emojiInDashboard"
+    static let goalAccomplishmentDateKey = "goalAccomplishmentDate"
     
 }

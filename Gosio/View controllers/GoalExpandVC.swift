@@ -44,7 +44,7 @@ class GoalExpandVC: UIViewController {
         emoji.text = selectedGoal.emoji
         goalTotalAmount.text = "\(currencyCodeString!) \(selectedGoal.goalTotalAmount!)"
         goalAccomplishmentDate.text = String("\(currencyCodeString!) \(goalToAchieve) by \(selectedGoal.goalAccomplishmentDate!)")
-        goalStatus.image = UIImage(named: selectedGoal.goalStatus)
+        goalStatus.image = UIImage(named: "\(selectedGoal.goalStatus ?? "")Expand")
         
         
         instructionsLabel.attributedText = NSMutableAttributedString()
@@ -74,10 +74,9 @@ class GoalExpandVC: UIViewController {
         goalTotalAmount.hero.id = HeroIDs.totalGoalAmountKey
         dismissButton.hero.id = HeroIDs.dismissButtonKey
         emoji.hero.id = HeroIDs.emojiInDashboardKey
+        goalAccomplishmentDate.hero.id = HeroIDs.goalAccomplishmentDateKey
         self.hero.isEnabled = true
     }
-
-   
     
     
 }

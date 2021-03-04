@@ -21,7 +21,7 @@ class AppIconVC: UITableViewController {
         titleLabel.attributedText =  NSMutableAttributedString()
             .bold("Select\n")
             .boldBlueHighlight(" App Icon ")
-        subtitleLabel.text = "Select an app icon of your choice"
+        subtitleLabel.text = "Multiple app icons are cool and we know that"
         
     }
 

@@ -19,7 +19,8 @@ class AppThemeVC: UITableViewController {
         titleLabel.attributedText =  NSMutableAttributedString()
             .bold("Select\n")
             .boldBlueHighlight(" Theme ")
-        subtitleLabel.text = "We are pro dark mode, we don't want \nany disagreements"
+        subtitleLabel.text = "Dark mode is only for your phone not your soul"
+
     }
     
     // MARK: - Table view data source

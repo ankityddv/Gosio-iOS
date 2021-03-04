@@ -14,6 +14,9 @@ class SettingsVC: UITableViewController {
 
     @IBOutlet weak var versionLabel: UILabel!
     
+    @IBAction func dismissBttnDidTap(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
     let appVersion = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String
     let buildVersion = Bundle.main.infoDictionary?["CFBundleVersion"] as! String
     

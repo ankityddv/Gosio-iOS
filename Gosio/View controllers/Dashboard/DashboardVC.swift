@@ -45,7 +45,7 @@ class DashboardVC: UIViewController, LoginViewControllerDelegate {
     @IBOutlet weak var tableVieww: FadingTableView!
     @IBOutlet weak var addNewGoalBttn: UIButton!
     @IBOutlet weak var menuBttn: UIButton!
-    
+    @IBOutlet weak var totalAmountSavedStaticLabel: UILabel!
     
     @IBAction func showMenu(_ sender: Any) {
         
@@ -68,10 +68,10 @@ class DashboardVC: UIViewController, LoginViewControllerDelegate {
         menuBttn.menu = UIMenu(title: "", children: [favorite,settings])
          */
         
-        let vc = self.storyboard?.instantiateViewController(withIdentifier: VCIdentifierManager.settingsKey) as! SettingsVC
-        let navigationController = UINavigationController(rootViewController: vc)
-        navigationController.modalPresentationStyle = .automatic
-        self.present(navigationController, animated: true, completion: nil)
+//        let vc = self.storyboard?.instantiateViewController(withIdentifier: VCIdentifierManager.settingsKey) as! SettingsVC
+//        let navigationController = UINavigationController(rootViewController: vc)
+//        navigationController.modalPresentationStyle = .automatic
+//        self.present(navigationController, animated: true, completion: nil)
     }
     
     
@@ -98,25 +98,27 @@ class DashboardVC: UIViewController, LoginViewControllerDelegate {
         super.viewDidLoad()
         requestReview()
         fetchData()
-        updateTotalAmount()
         initialiseAppTheme()
         initialiseCurrency()
         self.navigationController?.isNavigationBarHidden = true
-        
-        emojiLabel.hero.id = HeroIDs.emojiInDashboardKey
-        totalGoalAmount.hero.id = HeroIDs.totalGoalAmountKey
-        addNewGoalBttn.hero.id = HeroIDs.buttonKey
-        menuBttn.hero.id = HeroIDs.dismissButtonKey
-        self.hero.isEnabled = true
-        
-//        let userFirstNameSTr = (userDefaults?.string(forKey: SignInWithAppleManager.userFirstNameKey)!)!
-//        let userEmailSTr = (userDefaults?.string(forKey: SignInWithAppleManager.userEmailKey)!)!
-        
-        
+        setUpHeroAnimations()
     }
     
     override func viewDidAppear(_ animated: Bool) {
         vaildateOnboarding()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        updateTotalAmount()
+    }
+    
+    func setUpHeroAnimations(){
+        emojiLabel.hero.id = HeroIDs.emojiInDashboardKey
+        totalGoalAmount.hero.id = HeroIDs.totalGoalAmountKey
+        addNewGoalBttn.hero.id = HeroIDs.buttonKey
+        menuBttn.hero.id = HeroIDs.dismissButtonKey
+        totalAmountSavedStaticLabel.hero.id = HeroIDs.goalAccomplishmentDateKey
+        self.hero.isEnabled = true
     }
 
 }
