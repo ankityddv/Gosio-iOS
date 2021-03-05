@@ -43,6 +43,10 @@
 		364F35B925EB5E96007E7996 /* SignInWithAppleManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364F35B825EB5E96007E7996 /* SignInWithAppleManager.swift */; };
 		364F35BE25EB5ECB007E7996 /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364F35BD25EB5ECB007E7996 /* UserDefaults.swift */; };
 		364F35C325EB5F39007E7996 /* CheatSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364F35C225EB5F39007E7996 /* CheatSheet.swift */; };
+		36785D7825F111D3000DA319 /* BalloonPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36785D7725F111D3000DA319 /* BalloonPickerView.swift */; };
+		36785D7925F111D3000DA319 /* BalloonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36785D7525F111D2000DA319 /* BalloonView.swift */; };
+		36785D7A25F111D3000DA319 /* ThumbView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36785D7425F111D2000DA319 /* ThumbView.swift */; };
+		36785D7B25F111D3000DA319 /* TrackLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36785D7625F111D3000DA319 /* TrackLayer.swift */; };
 		367FECE225EE172C007F116B /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 367FECE125EE172C007F116B /* SettingsVC.swift */; };
 		367FECEA25EE21DF007F116B /* AddToSiriVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 367FECE925EE21DF007F116B /* AddToSiriVC.swift */; };
 		367FECF025EE22CA007F116B /* Intents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 367FECEF25EE22CA007F116B /* Intents.intentdefinition */; };
@@ -118,6 +122,10 @@
 		364F35B825EB5E96007E7996 /* SignInWithAppleManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInWithAppleManager.swift; sourceTree = "<group>"; };
 		364F35BD25EB5ECB007E7996 /* UserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
 		364F35C225EB5F39007E7996 /* CheatSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheatSheet.swift; sourceTree = "<group>"; };
+		36785D7425F111D2000DA319 /* ThumbView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThumbView.swift; sourceTree = "<group>"; };
+		36785D7525F111D2000DA319 /* BalloonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalloonView.swift; sourceTree = "<group>"; };
+		36785D7625F111D3000DA319 /* TrackLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackLayer.swift; sourceTree = "<group>"; };
+		36785D7725F111D3000DA319 /* BalloonPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalloonPickerView.swift; sourceTree = "<group>"; };
 		367FECE125EE172C007F116B /* SettingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
 		367FECE925EE21DF007F116B /* AddToSiriVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddToSiriVC.swift; sourceTree = "<group>"; };
 		367FECEF25EE22CA007F116B /* Intents.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = Intents.intentdefinition; sourceTree = "<group>"; };
@@ -401,6 +409,10 @@
 				364F35AF25EB5E71007E7996 /* Auth */,
 				360DD74525EB8FB700636EBD /* Dashboard */,
 				360CD43725EE755800A7D72B /* Settings */,
+				36785D7725F111D3000DA319 /* BalloonPickerView.swift */,
+				36785D7525F111D2000DA319 /* BalloonView.swift */,
+				36785D7425F111D2000DA319 /* ThumbView.swift */,
+				36785D7625F111D3000DA319 /* TrackLayer.swift */,
 				36D95DDC25EFA33200692411 /* GoalExpandVC.swift */,
 			);
 			path = "View controllers";
@@ -738,19 +750,23 @@
 				3602BEB425EBD07E0014DD16 /* GoalAmountVC.swift in Sources */,
 				362E737725EAAC4E00C06078 /* SceneDelegate.swift in Sources */,
 				36D95DDD25EFA33200692411 /* GoalExpandVC.swift in Sources */,
+				36785D7925F111D3000DA319 /* BalloonView.swift in Sources */,
 				364F35C325EB5F39007E7996 /* CheatSheet.swift in Sources */,
 				367FED1625EE604D007F116B /* zip3sequence.swift in Sources */,
 				360DD6F925EB67DC00636EBD /* OnboardingState.swift in Sources */,
 				3636FB4625EE940D005A25EC /* TermsOfUseVC.swift in Sources */,
+				36785D7A25F111D3000DA319 /* ThumbView.swift in Sources */,
 				36404CB525ECA65B00C5A188 /* FadingTableView.swift in Sources */,
 				367FED0725EE5ED5007F116B /* CurrencyVC.swift in Sources */,
 				360DD73E25EB81F700636EBD /* MenuView.swift in Sources */,
 				367FECEA25EE21DF007F116B /* AddToSiriVC.swift in Sources */,
+				36785D7825F111D3000DA319 /* BalloonPickerView.swift in Sources */,
 				3602BEA825EBD0600014DD16 /* GoalNameVC.swift in Sources */,
 				362E737F25EAAC4E00C06078 /* Gosio.xcdatamodeld in Sources */,
 				364F35AB25EB5E6E007E7996 /* LoginVC.swift in Sources */,
 				367FECF025EE22CA007F116B /* Intents.intentdefinition in Sources */,
 				360DD73125EB815400636EBD /* PresentationController.swift in Sources */,
+				36785D7B25F111D3000DA319 /* TrackLayer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

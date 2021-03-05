@@ -110,6 +110,7 @@ class DashboardVC: UIViewController, LoginViewControllerDelegate {
     
     override func viewWillAppear(_ animated: Bool) {
         updateTotalAmount()
+        tableVieww.reloadData()
     }
     
     func setUpHeroAnimations(){
@@ -199,7 +200,7 @@ extension DashboardVC {
     
     func updateTotalAmount(){
         
-        let sum = goal.map({$0.goalAchievedAmount! as! Int}).reduce(0, +)
+        let sum = goal.map({$0.goalAchievedAmount! as! Float}).reduce(0, +)
         
         switch userDefaults?.object(forKey: userDefaultsKeyManager.currencySignKey) as? String {
         case nil:

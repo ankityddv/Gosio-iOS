@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_1" orientation="portrait" appearance="dark"/>
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
@@ -86,11 +86,67 @@
                                     <constraint firstAttribute="width" constant="188" id="mDM-jR-zYj"/>
                                 </constraints>
                             </progressView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Df-Zu-XKH">
+                                <rect key="frame" x="138" y="700" width="137" height="38"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" name="SecondaryBgColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <state key="normal" title="❌ Delete">
+                                    <color key="titleColor" name="SubtitleTextColor"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="deleteBttnDidTap:" destination="SN9-O4-ROP" eventType="touchUpInside" id="ZcZ-Gz-wxd"/>
+                                    <action selector="doneBttnDidTap:" destination="waB-nz-PwT" eventType="touchUpInside" id="muw-kx-79u"/>
+                                    <action selector="saveButtonDidTap:" destination="SN9-O4-ROP" eventType="touchUpInside" id="NYV-Jq-URO"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Ug-sM-XM4">
+                                <rect key="frame" x="139" y="643" width="137" height="38"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" name="SecondaryBgColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <state key="normal" title="✅ Done">
+                                    <color key="titleColor" name="SubtitleTextColor"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="doneBttnDidTap:" destination="waB-nz-PwT" eventType="touchUpInside" id="vsT-pT-DyR"/>
+                                    <action selector="saveButtonDidTap:" destination="SN9-O4-ROP" eventType="touchUpInside" id="K4o-A9-OrH"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8Ua-IB-o5I" customClass="BalloonPickerView" customModule="Gosio" customModuleProvider="target">
+                                <rect key="frame" x="16" y="487" width="382" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <action selector="valueChanged" destination="SN9-O4-ROP" eventType="valueChanged" id="nz7-o5-MUM"/>
+                                </connections>
+                            </view>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$ 287 000" lineBreakMode="tailTruncation" numberOfLines="25" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZIf-VZ-H8l">
+                                <rect key="frame" x="57" y="342" width="300" height="500"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="500" id="MbJ-n3-hRw"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <color key="textColor" name="TitleTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="AdP-k0-IQk"/>
                         <color key="backgroundColor" name="BgColor"/>
                         <constraints>
                             <constraint firstItem="AdP-k0-IQk" firstAttribute="trailing" secondItem="VeG-Wq-kRk" secondAttribute="trailing" constant="20" id="8mg-Cg-3dI"/>
+                            <constraint firstItem="ZIf-VZ-H8l" firstAttribute="top" secondItem="enE-ae-Eue" secondAttribute="bottom" constant="36" id="Cc8-VD-pgn"/>
+                            <constraint firstItem="AdP-k0-IQk" firstAttribute="trailing" secondItem="ZIf-VZ-H8l" secondAttribute="trailing" constant="57" id="Dih-lz-NTq"/>
                             <constraint firstItem="VeG-Wq-kRk" firstAttribute="top" secondItem="AdP-k0-IQk" secondAttribute="top" constant="10" id="G0e-hz-IXa"/>
                             <constraint firstItem="aJr-TM-Vuc" firstAttribute="centerX" secondItem="baP-T0-igO" secondAttribute="centerX" id="KTa-Tb-dPZ"/>
                             <constraint firstItem="enE-ae-Eue" firstAttribute="top" secondItem="725-qQ-H8D" secondAttribute="bottom" constant="51" id="N6j-jW-sIQ"/>
@@ -100,6 +156,7 @@
                             <constraint firstItem="qHN-1u-5mg" firstAttribute="top" secondItem="AdP-k0-IQk" secondAttribute="top" constant="51" id="dGM-v6-shw"/>
                             <constraint firstItem="8Bz-mz-zAY" firstAttribute="centerX" secondItem="baP-T0-igO" secondAttribute="centerX" id="gwW-y7-wv7"/>
                             <constraint firstItem="aJr-TM-Vuc" firstAttribute="top" secondItem="AdP-k0-IQk" secondAttribute="top" constant="23" id="haQ-9Q-buK"/>
+                            <constraint firstItem="ZIf-VZ-H8l" firstAttribute="leading" secondItem="AdP-k0-IQk" secondAttribute="leading" constant="57" id="leX-wJ-cEf"/>
                             <constraint firstItem="enE-ae-Eue" firstAttribute="centerX" secondItem="baP-T0-igO" secondAttribute="centerX" id="sc2-OW-ytU"/>
                             <constraint firstItem="8Bz-mz-zAY" firstAttribute="top" secondItem="qHN-1u-5mg" secondAttribute="bottom" constant="15" id="wCB-Lr-tOJ"/>
                         </constraints>
@@ -110,6 +167,8 @@
                         <outlet property="goalAccomplishmentDate" destination="725-qQ-H8D" id="x2r-F8-BbT"/>
                         <outlet property="goalStatus" destination="enE-ae-Eue" id="sSp-hC-bsK"/>
                         <outlet property="goalTotalAmount" destination="8Bz-mz-zAY" id="rDf-KH-7bT"/>
+                        <outlet property="instructions" destination="ZIf-VZ-H8l" id="5HK-NN-Aq7"/>
+                        <outlet property="picker" destination="8Ua-IB-o5I" id="yp3-Ct-mAo"/>
                         <outlet property="progressBar" destination="aJr-TM-Vuc" id="dfO-VJ-tBm"/>
                     </connections>
                 </viewController>
@@ -242,7 +301,7 @@
                                                             <rect key="frame" x="80" y="70" width="168" height="4"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         </progressView>
-                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Ahead" translatesAutoresizingMaskIntoConstraints="NO" id="faQ-7z-Mdw">
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ahead" translatesAutoresizingMaskIntoConstraints="NO" id="faQ-7z-Mdw">
                                                             <rect key="frame" x="80" y="48" width="14" height="14"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         </imageView>
@@ -1920,9 +1979,14 @@ Theme</string>
             <point key="canvasLocation" x="1040.5797101449275" y="790.84821428571422"/>
         </scene>
     </scenes>
+    <designables>
+        <designable name="8Ua-IB-o5I">
+            <size key="intrinsicContentSize" width="240" height="42"/>
+        </designable>
+    </designables>
     <resources>
-        <image name="Ahead" width="14" height="14"/>
         <image name="GOSIO" width="690" height="142"/>
+        <image name="ahead" width="14" height="14"/>
         <image name="aheadExpand" width="44" height="16"/>
         <image name="chevron.right" catalog="system" width="96" height="128"/>
         <image name="cross" width="14" height="14"/>
