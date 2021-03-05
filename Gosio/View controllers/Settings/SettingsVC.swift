@@ -12,30 +12,22 @@ import SafariServices
 
 class SettingsVC: UITableViewController {
 
+    
+    let appVersion = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String
+    let buildVersion = Bundle.main.infoDictionary?["CFBundleVersion"] as! String
+    
+    
     @IBOutlet weak var versionLabel: UILabel!
+    
     
     @IBAction func dismissBttnDidTap(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }
-    let appVersion = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String
-    let buildVersion = Bundle.main.infoDictionary?["CFBundleVersion"] as! String
-    
+   
     override func viewDidLoad() {
         super.viewDidLoad()
-        versionLabel.text = "Version \(appVersion ?? "") (\(buildVersion))"
-        tableView.separatorColor = UIColor.clear
+        setUpUi()
         setUpNavBar()
-    }
-    
-    func setUpNavBar(){
-        self.navigationController?.navigationBar.setValue(true, forKey: "hidesShadow")
-        self.navigationController?.navigationBar.barTintColor = UIColor(named: "BgColor")
-        self.navigationController?.navigationBar.layer.masksToBounds = false
-        self.navigationController?.navigationBar.layer.shadowColor = UIColor.black.cgColor
-        self.navigationController?.navigationBar.layer.shadowOpacity = 0.1
-        self.navigationController?.navigationBar.layer.shadowOffset = CGSize(width: 0.4, height: 0.4)
-        self.navigationController?.navigationBar.layer.shadowRadius = 10
-        self.navigationController?.navigationBar.prefersLargeTitles = true
     }
     
 
@@ -129,7 +121,6 @@ class SettingsVC: UITableViewController {
             tableView.deselectRow(at: indexPath, animated: true)
         }
     }
-    
     override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
 
         let myLabel = UILabel()
@@ -145,9 +136,26 @@ class SettingsVC: UITableViewController {
     }
 }
 
+
 // MARK:- All Functions
 extension SettingsVC {
     
+    
+    func setUpUi(){
+        versionLabel.text = "Version \(appVersion ?? "") (\(buildVersion))"
+        tableView.separatorColor = UIColor.clear
+    }
+    
+    func setUpNavBar(){
+        self.navigationController?.navigationBar.setValue(true, forKey: "hidesShadow")
+        self.navigationController?.navigationBar.barTintColor = UIColor(named: "BgColor")
+        self.navigationController?.navigationBar.layer.masksToBounds = false
+        self.navigationController?.navigationBar.layer.shadowColor = UIColor.black.cgColor
+        self.navigationController?.navigationBar.layer.shadowOpacity = 0.1
+        self.navigationController?.navigationBar.layer.shadowOffset = CGSize(width: 0.4, height: 0.4)
+        self.navigationController?.navigationBar.layer.shadowRadius = 10
+        self.navigationController?.navigationBar.prefersLargeTitles = true
+    }
     
     func showMailComposer(){
         guard MFMailComposeViewController.canSendMail() else {
@@ -199,7 +207,9 @@ extension SettingsVC {
     
 }
 
+
 extension SettingsVC: MFMailComposeViewControllerDelegate {
+    
     
     func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
         if let _ = error {
@@ -219,5 +229,6 @@ extension SettingsVC: MFMailComposeViewControllerDelegate {
         }
         controller.dismiss(animated: true)
     }
+    
     
 }

@@ -9,25 +9,24 @@ import UIKit
 
 class AppThemeVC: UITableViewController {
     
+    
+    var themeOptions = ["System","Light","Dark"]
+    
+    
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var subtitleLabel: UILabel!
     
-    var themeOptions = ["System","Light","Dark"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        titleLabel.attributedText =  NSMutableAttributedString()
-            .bold("Select\n")
-            .boldBlueHighlight(" Theme ")
-        subtitleLabel.text = "Dark mode is only for your phone not your soul"
-
+        setUpUi()
     }
+    
     
     // MARK: - Table view data source
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return themeOptions.count
     }
-    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell:appThemeTVCell = tableView.dequeueReusableCell(withIdentifier: TableViewCellIdentifierManager.appThemeCell) as! appThemeTVCell
         cell.titleLabel.text = themeOptions[indexPath.row]
@@ -46,7 +45,6 @@ class AppThemeVC: UITableViewController {
         
         return cell
     }
-    
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let imageView = UIImageView()
         imageView.frame = CGRect(x: 150, y: 20, width: 20, height: 20)
@@ -132,6 +130,21 @@ class AppThemeVC: UITableViewController {
     }
     
 
+}
+
+
+//MARK:- functions()
+extension AppThemeVC {
+    
+    
+    func setUpUi(){
+        titleLabel.attributedText =  NSMutableAttributedString()
+            .bold("Select\n")
+            .boldBlueHighlight(" Theme ")
+        subtitleLabel.text = "Dark mode is only for your phone not your soul"
+    }
+    
+    
 }
 
 

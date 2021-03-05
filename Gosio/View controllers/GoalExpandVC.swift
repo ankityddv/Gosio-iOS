@@ -10,9 +10,9 @@ import Hero
 import CoreData
 
 class GoalExpandVC: UIViewController {
+
     
-    var indexPathRow = Int()
-    
+    var selectedGoal: Goal? = nil
     var achievedAmount = Float()
 
     @IBOutlet weak var dismissButton: UIButton!
@@ -22,94 +22,96 @@ class GoalExpandVC: UIViewController {
     @IBOutlet weak var goalStatus: UIImageView!
     @IBOutlet weak var progressBar: UIProgressView!
     @IBOutlet weak var instructions: UILabel!
-    
-    @IBAction func dismissButtonDidTap(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
-    }
-    
-    
-    
     @IBOutlet weak var picker: BalloonPickerView!
-    
-    
+
+
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpUi()
         setUpHeroAnimations()
         setUpBalloon()
     }
-    
-    func setUpBalloon() {
-        let balloonView = BalloonView()
-        balloonView.image = #imageLiteral(resourceName: "balloon")
-        picker.baloonView = balloonView
-        picker.value = 0
-        picker.tintColor = UIColor(named: "AccentColor")
-        valueChanged()
+
+
+    @IBAction func dismissButtonDidTap(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
     }
-    
-    @IBAction func valueChanged() {
-//        goalTotalAmount.text = "\(currencyCodeString!) \(Int(picker.value))"
-//        achievedAmount = Float(picker.value)
-    }
-    
+    //Edit
     @IBAction func saveButtonDidTap(_ sender: Any) {
         
-        let selectedGoal: Goal!
-        selectedGoal = goal[indexPathRow]
+        let percentage = Int(((achievedAmount) / Float(truncating: (selectedGoal!.goalTotalAmount!)))*100)
+        let progress = Float(((achievedAmount) / Float(truncating: (selectedGoal!.goalTotalAmount!))))
+
+    //        print(achievedAmount)
+    //        print(percentage)
+    //        print("Progress = \(achievedAmount) / \(selectedGoal!.goalTotalAmount!) =  \(progress)")
         
-        let percentage = Int(((achievedAmount) / Float(truncating: (selectedGoal.goalTotalAmount!)))*100)
-        let progress = Float(((achievedAmount) / Float(truncating: (selectedGoal.goalTotalAmount!))))
-        
-        print(achievedAmount)
-        print(percentage)
-        print("Progress = \(achievedAmount) / \(selectedGoal.goalTotalAmount!) =  \(progress)")
-        
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        let context:NSManagedObjectContext = appDelegate.persistentContainer.viewContext
-        let entity = NSEntityDescription.entity(forEntityName: "Goal", in: context)
-        let newGoal = Goal(entity: entity!, insertInto: context)
-        
-        newGoal.emoji = selectedGoal.emoji
-        newGoal.goalName = selectedGoal.goalName
-        newGoal.goalAchievedAmount = NSNumber(value: achievedAmount)
-        newGoal.goalTotalAmount = selectedGoal.goalTotalAmount
-        newGoal.goalStatus = GoalStatus.up
-        newGoal.progressBar = NSNumber(value: progress)
-        newGoal.goalPercentage = NSNumber(value: percentage)
-        newGoal.goalAccomplishmentDate = selectedGoal.goalAccomplishmentDate
-        
-        goal.remove(at: indexPathRow)
-        
-        do {
-            try context.save()
-            print("Saved")
-        } catch {
-            print("Array not saved to core data")
+        if selectedGoal == nil {
+            print("New Note")
+        } else {
+            let request = NSFetchRequest<NSFetchRequestResult>(entityName: coreDataIdentifierManager.goalKey)
+            do {
+                let results:NSArray = try context.fetch(request) as NSArray
+                for result in results
+                {
+                    let goal = result as! Goal
+                    if(goal == selectedGoal)
+                    {
+                        goal.emoji = selectedGoal!.emoji
+                        goal.goalName = selectedGoal!.goalName
+                        goal.goalAchievedAmount = NSNumber(value: achievedAmount)
+                        goal.goalTotalAmount = selectedGoal!.goalTotalAmount
+                        goal.goalStatus = GoalStatus.up
+                        goal.progressBar = NSNumber(value: progress)
+                        goal.goalPercentage = NSNumber(value: percentage)
+                        goal.goalAccomplishmentDate = selectedGoal!.goalAccomplishmentDate
+                        try context.save()
+    //                        print("Saved ✅")
+                    }
+                }
+            } catch {
+                print("Fetch Failed")
+            }
+            
         }
         
     }
-    
+
     @IBAction func deleteBttnDidTap(_ sender: Any) {
         
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        let context:NSManagedObjectContext = appDelegate.persistentContainer.viewContext
-        let entity = NSEntityDescription.entity(forEntityName: "Goal", in: context)
-        let newGoal = Goal(entity: entity!, insertInto: context)
+        let request = NSFetchRequest<NSFetchRequestResult>(entityName: coreDataIdentifierManager.goalKey)
+        
+        do {
+            let results:NSArray = try context.fetch(request) as NSArray
+            for result in results {
+                let goal = result as! Goal
+                if (goal == selectedGoal) {
+                    goal.deletedDate = Date()
+                    try context.save()
+                }
+            }
+        }
+        catch {
+            print("Fetch Failed")
+        }
         
     }
+
+
+}
+
+//MARK:- functions()
+extension GoalExpandVC {
     
-    func setUpUi(){
-        let selectedGoal: Goal!
-        selectedGoal = goal[indexPathRow]
+    func setUpUi() {
         
-        let goalToAchieve = Int(truncating: selectedGoal.goalTotalAmount!) - Int(truncating: selectedGoal.goalAchievedAmount)
+        let goalToAchieve = Int(truncating: selectedGoal!.goalTotalAmount!) - Int(truncating: selectedGoal!.goalAchievedAmount)
         
-        emoji.text = selectedGoal.emoji
-        goalTotalAmount.text = "\(currencyCodeString!) \(selectedGoal.goalTotalAmount!)"
-        goalAccomplishmentDate.text = String("\(currencyCodeString!) \(goalToAchieve) by \(selectedGoal.goalAccomplishmentDate!)")
-        goalStatus.image = UIImage(named: "\(selectedGoal.goalStatus ?? "")Expand")
-        progressBar.setProgress(selectedGoal.progressBar! as! Float, animated: true)
+        emoji.text = selectedGoal!.emoji
+        goalTotalAmount.text = "\(currencyCodeString!) \(selectedGoal!.goalTotalAmount!)"
+        goalAccomplishmentDate.text = String("\(currencyCodeString!) \(goalToAchieve) by \(selectedGoal!.goalAccomplishmentDate!)")
+        goalStatus.image = UIImage(named: "\(selectedGoal!.goalStatus ?? "")Expand")
+        progressBar.setProgress(selectedGoal!.progressBar! as! Float, animated: true)
         
         instructions.attributedText = NSMutableAttributedString()
             .subtitleNormal("Features like goal amount increment, \nediting and deletion are currently \n")
@@ -134,7 +136,7 @@ class GoalExpandVC: UIViewController {
         
     }
     
-    func setUpHeroAnimations(){
+    func setUpHeroAnimations() {
         goalTotalAmount.hero.id = HeroIDs.totalGoalAmountKey
         dismissButton.hero.id = HeroIDs.dismissButtonKey
         emoji.hero.id = HeroIDs.emojiInDashboardKey
@@ -142,41 +144,54 @@ class GoalExpandVC: UIViewController {
         self.hero.isEnabled = true
     }
     
+    func setUpBalloon() {
+        let balloonView = BalloonView()
+        balloonView.image = #imageLiteral(resourceName: "balloon")
+        picker.baloonView = balloonView
+        picker.maximumValue = Double(truncating: selectedGoal!.goalTotalAmount!)
+        picker.value = 0
+        picker.tintColor = UIColor(named: "AccentColor")
+        valueChanged()
+    }
+
+    @IBAction func valueChanged() {
+        achievedAmount = Float(picker.value)
+    }
     
 }
 
 /*
- 
- func save(_ sender: Any) {
-     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-     let entity = NSEntityDescription.entity(forEntityName: "Entity", in: context)
-     let newEntity = NSManagedObject(entity: entity!, insertInto: context)
-     
-     newEntity.setValue(score, forKey: "number")
-     
-     do {
-         try context.save()
-         print("Saved")
-     } catch {
-         print("Fucked it while saving!")
-     }
- }
 
- func getData(){
-     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-     let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Entity")
-     request.returnsObjectsAsFaults = false
-     
-     do {
-         let result = try context.fetch(request)
-         for data in result as! [NSManagedObject] {
-             score = data.value(forKey: "number") as! Int
-         }
-         print("Fetched")
-     } catch {
-         print("Fucked it while fetching!")
+func save(_ sender: Any) {
+ let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+ let entity = NSEntityDescription.entity(forEntityName: "Entity", in: context)
+ let newEntity = NSManagedObject(entity: entity!, insertInto: context)
+ 
+ newEntity.setValue(score, forKey: "number")
+ 
+ do {
+     try context.save()
+     print("Saved")
+ } catch {
+     print("Fucked it while saving!")
+ }
+}
+
+func getData(){
+ let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+ let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Entity")
+ request.returnsObjectsAsFaults = false
+ 
+ do {
+     let result = try context.fetch(request)
+     for data in result as! [NSManagedObject] {
+         score = data.value(forKey: "number") as! Int
      }
-     
+     print("Fetched")
+ } catch {
+     print("Fucked it while fetching!")
  }
  
- */
+}
+
+*/

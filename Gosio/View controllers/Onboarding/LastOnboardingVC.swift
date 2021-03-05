@@ -9,6 +9,7 @@ import UIKit
 
 class LastOnboardingVC: UIViewController {
 
+    
     @IBAction func continueBttnTapped(_ sender: Any) {
         userDefaults?.set(0, forKey: "onboardingState")
         let vc = storyboard?.instantiateViewController(withIdentifier: VCIdentifierManager.loginKey) as! LoginVC
@@ -19,5 +20,6 @@ class LastOnboardingVC: UIViewController {
         super.viewDidLoad()
         
     }
+    
 
 }

@@ -12,33 +12,17 @@ import CoreData
 
 class DashboardVC: UIViewController, LoginViewControllerDelegate {
     
+    
     func didFinishAuth() {
         label.text = "User identified: \(String(describing: userDefaults?.string(forKey: SignInWithAppleManager.userIdentifierKey)!))"
     }
     
+    
     let label = UILabel()
     var userFirstName = ""
     var userEmail = ""
-    
     var firstLoad = true
     
-    func fetchData() {
-        if (firstLoad) {
-            let appDelegate = UIApplication.shared.delegate as! AppDelegate
-            let context:NSManagedObjectContext = appDelegate.persistentContainer.viewContext
-            let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Goal")
-            
-            do{
-                let results:NSArray = try context.fetch(request) as NSArray
-                for result in results {
-                    let myGoal = result as! Goal
-                    goal.append(myGoal)
-                }
-            } catch {
-                print("Fetch failed")
-            }
-        }
-    }
     
     @IBOutlet weak var emojiLabel: UILabel!
     @IBOutlet weak var totalGoalAmount: UILabel!
@@ -46,6 +30,7 @@ class DashboardVC: UIViewController, LoginViewControllerDelegate {
     @IBOutlet weak var addNewGoalBttn: UIButton!
     @IBOutlet weak var menuBttn: UIButton!
     @IBOutlet weak var totalAmountSavedStaticLabel: UILabel!
+    
     
     @IBAction func showMenu(_ sender: Any) {
         
@@ -68,27 +53,21 @@ class DashboardVC: UIViewController, LoginViewControllerDelegate {
         menuBttn.menu = UIMenu(title: "", children: [favorite,settings])
          */
         
-//        let vc = self.storyboard?.instantiateViewController(withIdentifier: VCIdentifierManager.settingsKey) as! SettingsVC
-//        let navigationController = UINavigationController(rootViewController: vc)
-//        navigationController.modalPresentationStyle = .automatic
-//        self.present(navigationController, animated: true, completion: nil)
+    //        let vc = self.storyboard?.instantiateViewController(withIdentifier: VCIdentifierManager.settingsKey) as! SettingsVC
+    //        let navigationController = UINavigationController(rootViewController: vc)
+    //        navigationController.modalPresentationStyle = .automatic
+    //        self.present(navigationController, animated: true, completion: nil)
     }
-    
-    
-    @objc
-    func showMenuPopUp(){
+    @objc func showMenuPopUp(){
         let slideVC = MenuView()
         slideVC.modalPresentationStyle = .custom
         slideVC.transitioningDelegate = self
         self.present(slideVC, animated: true, completion: nil)
     }
-    
     @IBAction func addNewGoalDidTap(_ sender: Any) {
         addNewGoal()
     }
-    
-    @objc
-    func addNewGoal(){
+    @objc func addNewGoal(){
         let vc = self.storyboard?.instantiateViewController(withIdentifier: VCIdentifierManager.goalNameKey) as! GoalNameVC
         self.present(vc, animated: true, completion: nil)
         createUSerActivity()
@@ -103,15 +82,73 @@ class DashboardVC: UIViewController, LoginViewControllerDelegate {
         self.navigationController?.isNavigationBarHidden = true
         setUpHeroAnimations()
     }
-    
     override func viewDidAppear(_ animated: Bool) {
         vaildateOnboarding()
     }
-    
     override func viewWillAppear(_ animated: Bool) {
         updateTotalAmount()
         tableVieww.reloadData()
     }
+    
+    
+
+}
+
+
+//MARK:- Table View
+extension DashboardVC: UITableViewDelegate,UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+//        return goal.count
+        return nonDeletedGoals().count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell: goalsCell = tableView.dequeueReusableCell(withIdentifier: TableViewCellIdentifierManager.dashboardCell, for: indexPath) as! goalsCell
+        
+        let thisGoal: Goal!
+        thisGoal = nonDeletedGoals()[indexPath.row]
+        
+        cell.goalEmoji.text = thisGoal.emoji
+        cell.goalName.text = thisGoal.goalName
+        
+        switch userDefaults?.object(forKey: userDefaultsKeyManager.currencyCodeKey) as? String {
+            case nil:
+                cell.goalAmount.text = String("$ \(thisGoal.goalAchievedAmount!) / \(thisGoal.goalTotalAmount!) ")
+            default:
+                cell.goalAmount.text = String("\(currencyCodeString!) \(thisGoal.goalAchievedAmount!) / \(thisGoal.goalTotalAmount!) ")
+            break
+        }
+        
+        cell.goalStatusIndicator.image = UIImage(named: thisGoal.goalStatus)
+        cell.progressBar.setProgress(thisGoal.progressBar! as! Float, animated: true)
+        cell.goalPercentage.text = String("\(thisGoal.goalPercentage!) %")
+        
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let vc = storyboard?.instantiateViewController(withIdentifier: VCIdentifierManager.goalDetailKey) as! GoalExpandVC
+        
+        let selectedGoal : Goal!
+        selectedGoal = nonDeletedGoals()[indexPath.row]
+        vc.selectedGoal = selectedGoal
+        
+//        vc.indexPathRow = indexPath.row
+        self.present(vc, animated: true, completion: nil)
+        
+//        print("did tap")
+        tableView.deselectRow(at: indexPath, animated: true)
+    
+    }
+    
+}
+
+
+//MARK:- functions()
+extension DashboardVC {
+    
     
     func setUpHeroAnimations(){
         emojiLabel.hero.id = HeroIDs.emojiInDashboardKey
@@ -121,20 +158,6 @@ class DashboardVC: UIViewController, LoginViewControllerDelegate {
         totalAmountSavedStaticLabel.hero.id = HeroIDs.goalAccomplishmentDateKey
         self.hero.isEnabled = true
     }
-
-}
-
-
-//MARK:- delegate for popUp
-extension DashboardVC: UIViewControllerTransitioningDelegate {
-    func presentationController(forPresented presented: UIViewController, presenting: UIViewController?, source: UIViewController) -> UIPresentationController? {
-        PresentationController(presentedViewController: presented, presenting: presenting)
-    }
-}
-
-
-//MARK:- functions()
-extension DashboardVC {
     
     func vaildateOnboarding(){
         switch checkOnboardingState() {
@@ -200,7 +223,7 @@ extension DashboardVC {
     
     func updateTotalAmount(){
         
-        let sum = goal.map({$0.goalAchievedAmount! as! Float}).reduce(0, +)
+        let sum = nonDeletedGoals().map({$0.goalAchievedAmount! as! Float}).reduce(0, +)
         
         switch userDefaults?.object(forKey: userDefaultsKeyManager.currencySignKey) as? String {
         case nil:
@@ -258,51 +281,44 @@ extension DashboardVC {
         
     }
     
+    func fetchData() {
+        
+        if (firstLoad) {
+            
+            firstLoad = false
+            let request = NSFetchRequest<NSFetchRequestResult>(entityName: coreDataIdentifierManager.goalKey)
+            
+            do {
+                let results:NSArray = try context.fetch(request) as NSArray
+                for result in results {
+                    let myGoal = result as! Goal
+                    goal.append(myGoal)
+                }
+            } catch {
+                print("Fetch failed")
+            }
+        }
+    }
+    
+    func nonDeletedGoals() -> [Goal] {
+        var noDeleteGoalList = [Goal]()
+        for goal in goal {
+            if(goal.deletedDate == nil) {
+                noDeleteGoalList.append(goal)
+            }
+        }
+        return noDeleteGoalList
+    }
+    
+    
 }
 
 
-//MARK:- Table View
-extension DashboardVC: UITableViewDelegate,UITableViewDataSource {
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        return goalArr.count
-        return goal.count
+//MARK:- delegate for popUp
+extension DashboardVC: UIViewControllerTransitioningDelegate {
+    func presentationController(forPresented presented: UIViewController, presenting: UIViewController?, source: UIViewController) -> UIPresentationController? {
+        PresentationController(presentedViewController: presented, presenting: presenting)
     }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell: goalsCell = tableView.dequeueReusableCell(withIdentifier: TableViewCellIdentifierManager.dashboardCell, for: indexPath) as! goalsCell
-        
-        let thisGoal: Goal!
-        thisGoal = goal[indexPath.row]
-        
-        cell.goalEmoji.text = thisGoal.emoji
-        cell.goalName.text = thisGoal.goalName
-        
-        switch userDefaults?.object(forKey: userDefaultsKeyManager.currencyCodeKey) as? String {
-            case nil:
-                cell.goalAmount.text = String("$ \(thisGoal.goalAchievedAmount!) / \(thisGoal.goalTotalAmount!) ")
-            default:
-                cell.goalAmount.text = String("\(currencyCodeString!) \(thisGoal.goalAchievedAmount!) / \(thisGoal.goalTotalAmount!) ")
-            break
-        }
-        
-        cell.goalStatusIndicator.image = UIImage(named: thisGoal.goalStatus)
-        cell.progressBar.setProgress(thisGoal.progressBar! as! Float, animated: true)
-        cell.goalPercentage.text = String("\(thisGoal.goalPercentage!) %")
-        
-        return cell
-    }
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
-        let vc = storyboard?.instantiateViewController(withIdentifier: VCIdentifierManager.goalDetailKey) as! GoalExpandVC
-        vc.indexPathRow = indexPath.row
-        self.present(vc, animated: true, completion: nil)
-        
-        print("did tap")
-        tableView.deselectRow(at: indexPath, animated: true)
-    }
-    
 }
 
 

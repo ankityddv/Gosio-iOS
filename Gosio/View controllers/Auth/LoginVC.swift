@@ -17,18 +17,23 @@ class LoginVC: UIViewController {
 
     var delegate: LoginViewControllerDelegate?
     
+    
     @IBOutlet weak var appleButtonView: UIView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var subtitleLabel: UILabel!
+    
+    
     @IBAction func privacyPolicyDidTap(_ sender: Any) {
         let vc = storyboard?.instantiateViewController(withIdentifier: VCIdentifierManager.privacyPolicyKey) as! PrivacyPolicyVC
         self.present(vc, animated: true, completion: nil)
     }
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupView()
+        setupUi()
     }
+    
 
 }
 
@@ -97,7 +102,9 @@ extension LoginVC: ASAuthorizationControllerDelegate {
         print("Something bad happened")
     }
     
+    
 }
+
 
 extension LoginVC: ASAuthorizationControllerPresentationContextProviding {
     
@@ -108,11 +115,10 @@ extension LoginVC: ASAuthorizationControllerPresentationContextProviding {
 }
 
 
-
 //MARK:- funtions()
 extension LoginVC {
     
-    func setupView() {
+    func setupUi() {
         let appleButton = ASAuthorizationAppleIDButton()
         appleButton.translatesAutoresizingMaskIntoConstraints = false
         appleButton.addTarget(self, action: #selector(didTapAppleButton), for: .touchUpInside)

@@ -7,12 +7,13 @@
 
 import Foundation
 
-struct CurrencyModel
-{
+
+struct CurrencyModel {
     var currencyName : String = ""
     var currencyCode : String = ""
     var currencySign : String = ""
 }
+
 
 var Currency = [CurrencyModel]()
 

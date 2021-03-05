@@ -11,12 +11,10 @@ import SPAlert
 
 class GoalAmountVC: UIViewController {
     
+    
     var emojiStr: String = ""
     var goalNameStr: String = ""
 
-    @IBAction func dismissBttnDidTap(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
-    }
     
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var emojiLabel: UITextField!
@@ -24,13 +22,18 @@ class GoalAmountVC: UIViewController {
     @IBOutlet weak var nextBttn: UIButton!
     @IBOutlet weak var nextBttnTopConstraint: NSLayoutConstraint!
     
+    
+    @IBAction func dismissBttnDidTap(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
     @IBAction func nextBttnDidTap(_ sender: Any) {
         
-        switch amountTextField.text! {
+        let amount = amountTextField.text!
+        
+        switch amount {
         case "":
             SPAlert.present(message: "Please enter an amount", haptic: .error)
         default:
-            let amount = amountTextField.text!
             if Float(amount) != nil {
                 let vc = storyboard?.instantiateViewController(withIdentifier: VCIdentifierManager.goalDeadlineKey) as! GoalDeadlineVC
                 vc.emojiStr = emojiStr
@@ -40,22 +43,16 @@ class GoalAmountVC: UIViewController {
             } else {
                 SPAlert.present(message: "Please enter a valid amount", haptic: .error)
             }
-            
         }
         
     }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpHeroAnimations()
         setUpKeyboardNotifications()
-        emojiLabel.text = emojiStr
-        
-        titleLabel.attributedText =  NSMutableAttributedString()
-            .bold("What is the amount you need for ")
-            .boldBlueHighlight("\(goalNameStr)")
-            .bold(" ?")
-        
+        setUpUi()
     }
     
 
@@ -65,6 +62,7 @@ class GoalAmountVC: UIViewController {
 //MARK:- function()
 extension GoalAmountVC {
     
+    
     func setUpHeroAnimations(){
         titleLabel.hero.id = HeroIDs.goalNameKey
         emojiLabel.hero.id = HeroIDs.emojiKey
@@ -73,10 +71,22 @@ extension GoalAmountVC {
         self.hero.isEnabled = true
     }
     
+    func setUpUi(){
+        emojiLabel.text = emojiStr
+        
+        titleLabel.attributedText =  NSMutableAttributedString()
+            .bold("What is the amount you need for ")
+            .boldBlueHighlight("\(goalNameStr)")
+            .bold(" ?")
+    }
+    
+    
 }
+
 
 //MARK:- keyboard notifications
 extension GoalAmountVC {
+    
     
     func setUpKeyboardNotifications(){
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardDidShowNotification, object: nil)
@@ -111,5 +121,6 @@ extension GoalAmountVC {
     @objc func SwipehideKeyboard() {
         UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
     }
+    
     
 }

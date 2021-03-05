@@ -11,7 +11,6 @@
 		3602BEA825EBD0600014DD16 /* GoalNameVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3602BEA725EBD0600014DD16 /* GoalNameVC.swift */; };
 		3602BEB425EBD07E0014DD16 /* GoalAmountVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3602BEB325EBD07E0014DD16 /* GoalAmountVC.swift */; };
 		3602BEB925EBD0890014DD16 /* GoalDeadlineVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3602BEB825EBD0890014DD16 /* GoalDeadlineVC.swift */; };
-		3602BEBE25EBD7120014DD16 /* HeroIDs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3602BEBD25EBD7120014DD16 /* HeroIDs.swift */; };
 		3602BECD25EBDB0B0014DD16 /* Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3602BECC25EBDB0B0014DD16 /* Manager.swift */; };
 		360CD43225EE700200A7D72B /* AppThemeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 360CD43125EE700200A7D72B /* AppThemeVC.swift */; };
 		360CD44225EE759000A7D72B /* AppIconVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 360CD44125EE759000A7D72B /* AppIconVC.swift */; };
@@ -43,6 +42,7 @@
 		364F35B925EB5E96007E7996 /* SignInWithAppleManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364F35B825EB5E96007E7996 /* SignInWithAppleManager.swift */; };
 		364F35BE25EB5ECB007E7996 /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364F35BD25EB5ECB007E7996 /* UserDefaults.swift */; };
 		364F35C325EB5F39007E7996 /* CheatSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364F35C225EB5F39007E7996 /* CheatSheet.swift */; };
+		365DAE1E25F20839004AAABC /* CoreDataServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 365DAE1D25F20839004AAABC /* CoreDataServices.swift */; };
 		36785D7825F111D3000DA319 /* BalloonPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36785D7725F111D3000DA319 /* BalloonPickerView.swift */; };
 		36785D7925F111D3000DA319 /* BalloonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36785D7525F111D2000DA319 /* BalloonView.swift */; };
 		36785D7A25F111D3000DA319 /* ThumbView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36785D7425F111D2000DA319 /* ThumbView.swift */; };
@@ -83,7 +83,6 @@
 		3602BEA725EBD0600014DD16 /* GoalNameVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalNameVC.swift; sourceTree = "<group>"; };
 		3602BEB325EBD07E0014DD16 /* GoalAmountVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalAmountVC.swift; sourceTree = "<group>"; };
 		3602BEB825EBD0890014DD16 /* GoalDeadlineVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalDeadlineVC.swift; sourceTree = "<group>"; };
-		3602BEBD25EBD7120014DD16 /* HeroIDs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroIDs.swift; sourceTree = "<group>"; };
 		3602BECC25EBDB0B0014DD16 /* Manager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Manager.swift; sourceTree = "<group>"; };
 		360CD43125EE700200A7D72B /* AppThemeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppThemeVC.swift; sourceTree = "<group>"; };
 		360CD44125EE759000A7D72B /* AppIconVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppIconVC.swift; sourceTree = "<group>"; };
@@ -122,6 +121,7 @@
 		364F35B825EB5E96007E7996 /* SignInWithAppleManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInWithAppleManager.swift; sourceTree = "<group>"; };
 		364F35BD25EB5ECB007E7996 /* UserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
 		364F35C225EB5F39007E7996 /* CheatSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheatSheet.swift; sourceTree = "<group>"; };
+		365DAE1D25F20839004AAABC /* CoreDataServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataServices.swift; sourceTree = "<group>"; };
 		36785D7425F111D2000DA319 /* ThumbView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThumbView.swift; sourceTree = "<group>"; };
 		36785D7525F111D2000DA319 /* BalloonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalloonView.swift; sourceTree = "<group>"; };
 		36785D7625F111D3000DA319 /* TrackLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackLayer.swift; sourceTree = "<group>"; };
@@ -265,6 +265,7 @@
 				364F35C225EB5F39007E7996 /* CheatSheet.swift */,
 				364F35BD25EB5ECB007E7996 /* UserDefaults.swift */,
 				3602BECC25EBDB0B0014DD16 /* Manager.swift */,
+				365DAE1D25F20839004AAABC /* CoreDataServices.swift */,
 				364EB91125EDFCB200E14444 /* attributedFontExtention.swift */,
 				36404CB425ECA65B00C5A188 /* FadingTableView.swift */,
 				367FED1525EE604D007F116B /* zip3sequence.swift */,
@@ -277,7 +278,6 @@
 		360DD74525EB8FB700636EBD /* Dashboard */ = {
 			isa = PBXGroup;
 			children = (
-				36404CC625ED020800C5A188 /* Services */,
 				360DD74625EB8FC600636EBD /* Menu PopUp */,
 				360DD6EF25EB66D700636EBD /* DashboardVC.swift */,
 			);
@@ -370,14 +370,6 @@
 				3636FB4A25EE9A00005A25EC /* Default.png */,
 			);
 			path = "Alternate Icons";
-			sourceTree = "<group>";
-		};
-		36404CC625ED020800C5A188 /* Services */ = {
-			isa = PBXGroup;
-			children = (
-				3602BEBD25EBD7120014DD16 /* HeroIDs.swift */,
-			);
-			path = Services;
 			sourceTree = "<group>";
 		};
 		364F359825EB5DC4007E7996 /* Storyboards */ = {
@@ -726,7 +718,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3602BEBE25EBD7120014DD16 /* HeroIDs.swift in Sources */,
 				362E737925EAAC4E00C06078 /* OnboardingVC.swift in Sources */,
 				364EB91225EDFCB200E14444 /* attributedFontExtention.swift in Sources */,
 				3636FB4125EE9403005A25EC /* PrivacyPolicyVC.swift in Sources */,
@@ -754,6 +745,7 @@
 				364F35C325EB5F39007E7996 /* CheatSheet.swift in Sources */,
 				367FED1625EE604D007F116B /* zip3sequence.swift in Sources */,
 				360DD6F925EB67DC00636EBD /* OnboardingState.swift in Sources */,
+				365DAE1E25F20839004AAABC /* CoreDataServices.swift in Sources */,
 				3636FB4625EE940D005A25EC /* TermsOfUseVC.swift in Sources */,
 				36785D7A25F111D3000DA319 /* ThumbView.swift in Sources */,
 				36404CB525ECA65B00C5A188 /* FadingTableView.swift in Sources */,

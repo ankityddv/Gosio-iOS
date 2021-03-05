@@ -11,9 +11,6 @@ import SPAlert
 
 class GoalNameVC: UIViewController {
 
-    @IBAction func dismissButtonDidTap(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
-    }
     
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var emojiTextField: UITextField!
@@ -21,12 +18,16 @@ class GoalNameVC: UIViewController {
     @IBOutlet weak var nextBttn: UIButton!
     @IBOutlet weak var nextBttnTopConstraint: NSLayoutConstraint!
     
+    
+    @IBAction func dismissButtonDidTap(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
     @IBAction func nextBttnDidTap(_ sender: Any) {
         
         let emoji = emojiTextField.text
         let goalName = goalNameTextField.text
         
-        if emoji != "" && goalName != "" {
+        if (emoji?.isEmpty == true) && (goalName?.isEmpty == true) {
             
             let vc = storyboard?.instantiateViewController(withIdentifier: VCIdentifierManager.goalAmountKey) as! GoalAmountVC
             vc.emojiStr = emojiTextField.text!
@@ -34,30 +35,24 @@ class GoalNameVC: UIViewController {
             self.present(vc, animated: true, completion: nil)
             
         } else {
-            // Edit Stat
-            if (emoji == "") && (goalName == "")  {
+            // Show error
+            if (emoji?.isEmpty == true) && (goalName?.isEmpty == true)  {
                 SPAlert.present(message: "Please enter an emoji and your goal", haptic: .error)
-            } else if (emoji == "") {
+            } else if (emoji?.isEmpty == true) {
                 SPAlert.present(message: "Please enter an emoji", haptic: .error)
-            } else if (goalName == "")  {
+            } else if (goalName?.isEmpty == true)  {
                 SPAlert.present(message: "Please enter your goal", haptic: .error)
             }
-            
-            
         }
         
     }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpHeroAnimations()
         setUpKeyboardNotifications()
-        
-        titleLabel.attributedText =  NSMutableAttributedString()
-            .bold("What is it that you truly ")
-            .boldBlueHighlight("desire")
-            .bold(" ?")
-        
+        setUpUi()
     }
     
 
@@ -67,6 +62,7 @@ class GoalNameVC: UIViewController {
 //MARK:- function()
 extension GoalNameVC {
     
+    
     func setUpHeroAnimations(){
         emojiTextField.hero.id = HeroIDs.emojiKey
         goalNameTextField.hero.id = HeroIDs.goalNameKey
@@ -74,10 +70,19 @@ extension GoalNameVC {
         self.hero.isEnabled = true
     }
     
+    func setUpUi(){
+        titleLabel.attributedText =  NSMutableAttributedString()
+            .bold("What is it that you truly ")
+            .boldBlueHighlight("desire")
+            .bold(" ?")
+    }
+    
+    
 }
 
 //MARK:- keyboard notifications
 extension GoalNameVC {
+    
     
     func setUpKeyboardNotifications(){
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardDidShowNotification, object: nil)

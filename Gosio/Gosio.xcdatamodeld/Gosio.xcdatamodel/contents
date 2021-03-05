@@ -4,6 +4,7 @@
         <attribute name="number" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
     </entity>
     <entity name="Goal" representedClassName="Goal" syncable="YES">
+        <attribute name="deletedDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="emoji" optional="YES" attributeType="String"/>
         <attribute name="goalAccomplishmentDate" optional="YES" attributeType="String"/>
         <attribute name="goalAchievedAmount" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES"/>
@@ -15,6 +16,6 @@
     </entity>
     <elements>
         <element name="Entity" positionX="-63" positionY="-18" width="128" height="44"/>
-        <element name="Goal" positionX="-63" positionY="-9" width="128" height="149"/>
+        <element name="Goal" positionX="-63" positionY="-9" width="128" height="164"/>
     </elements>
 </model>

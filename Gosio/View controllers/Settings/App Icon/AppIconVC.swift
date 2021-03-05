@@ -9,28 +9,24 @@ import UIKit
 
 class AppIconVC: UITableViewController {
 
-    @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var subtitleLabel: UILabel!
     
     let appIconService = AppIconService()
     let appIconArray = ["Default","White"]
     
+    
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var subtitleLabel: UILabel!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        titleLabel.attributedText =  NSMutableAttributedString()
-            .bold("Select\n")
-            .boldBlueHighlight(" App Icon ")
-        subtitleLabel.text = "Multiple app icons are cool and we know that"
-        
     }
-
-    // MARK: - Table view data source
     
+    
+    // MARK: - Table view data source
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return appIconArray.count
     }
-    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell:appIconCell = tableView.dequeueReusableCell(withIdentifier: TableViewCellIdentifierManager.appIconCell) as! appIconCell
         
@@ -51,7 +47,6 @@ class AppIconVC: UITableViewController {
         
         return cell
     }
-    
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         let imageView = UIImageView()
@@ -107,6 +102,21 @@ class AppIconVC: UITableViewController {
         mediumImpactHeptic()
     }
 
+    
+}
+
+
+//MARK:- functions()
+extension AppIconVC {
+    
+    
+    func setUpUi() {
+        titleLabel.attributedText =  NSMutableAttributedString()
+            .bold("Select\n")
+            .boldBlueHighlight(" App Icon ")
+        subtitleLabel.text = "Multiple app icons are cool and we know that"
+    }
+    
     
 }
 

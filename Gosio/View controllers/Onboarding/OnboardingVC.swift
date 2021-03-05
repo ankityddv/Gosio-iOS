@@ -20,9 +20,12 @@ class ColoredController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = viewColor
     }
+    
 }
 
+
 class OnboardingVC: LiquidSwipeContainerController, LiquidSwipeContainerDataSource {
+    
     
     // Add identifiers of VCs which are to be presented.
     var viewControllers: [UIViewController] = {
@@ -32,10 +35,12 @@ class OnboardingVC: LiquidSwipeContainerController, LiquidSwipeContainerDataSour
         return controllers
     }()
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         datasource = self
     }
+    
     
     func numberOfControllersInLiquidSwipeContainer(_ liquidSwipeContainer: LiquidSwipeContainerController) -> Int{
         return viewControllers.count

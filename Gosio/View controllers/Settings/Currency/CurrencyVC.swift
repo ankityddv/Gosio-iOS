@@ -19,18 +19,7 @@ class CurrencyVC: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         appendData()
-        
-        titleLabel.attributedText =  NSMutableAttributedString()
-            .bold("Select\n")
-            .boldBlueHighlight(" Currency ")
-        subtitleLabel.text = "Obv. this is important"
-        
-        searchController.obscuresBackgroundDuringPresentation = false
-        searchController.searchBar.placeholder = "Search currency"
-        self.navigationItem.searchController = searchController
-        self.definesPresentationContext = true
-        searchController.searchBar.delegate = self
-//        searchController.searchBar.searchTextField.font = UIFont(name: "AirbnbCerealApp-Book", size: 14)
+        setUpUi()
     }
 
     // MARK: - Table view data source
@@ -107,8 +96,30 @@ class CurrencyVC: UITableViewController {
         lightImpactHeptic()
         
     }
+    
+    
 }
 
+
+//MARK:-  functions()
+extension CurrencyVC {
+    
+    func setUpUi() {
+        titleLabel.attributedText =  NSMutableAttributedString()
+            .bold("Select\n")
+            .boldBlueHighlight(" Currency ")
+        subtitleLabel.text = "Obv. this is important"
+        searchController.obscuresBackgroundDuringPresentation = false
+        searchController.searchBar.placeholder = "Search currency"
+        self.navigationItem.searchController = searchController
+        self.definesPresentationContext = true
+        searchController.searchBar.delegate = self
+    }
+    
+}
+
+
+//MARK:-  Search Bar
 extension CurrencyVC: UISearchBarDelegate {
     
     func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
@@ -116,7 +127,7 @@ extension CurrencyVC: UISearchBarDelegate {
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) { [self] in
             let cancelButton = searchController.searchBar.value(forKey: "cancelButton") as! UIButton
             cancelButton.setTitle("Cancel", for: .normal)
-//            cancelButton.titleLabel!.font = UIFont(name: "AirbnbCerealApp-Book", size: 16.2)
+    //            cancelButton.titleLabel!.font = UIFont(name: "AirbnbCerealApp-Book", size: 16.2)
         }
         
     }

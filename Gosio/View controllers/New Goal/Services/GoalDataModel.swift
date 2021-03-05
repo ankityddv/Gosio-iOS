@@ -19,6 +19,7 @@ class Goal: NSManagedObject {
     @NSManaged var progressBar: NSNumber!
     @NSManaged var goalPercentage: NSNumber!
     @NSManaged var goalAccomplishmentDate: String!
+    @NSManaged var deletedDate: Date?
     
 }
 

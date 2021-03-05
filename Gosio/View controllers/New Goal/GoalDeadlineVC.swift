@@ -12,16 +12,13 @@ import CoreData
 
 class GoalDeadlineVC: UIViewController {
     
+    
     var emojiStr: String = ""
     var goalNameStr: String = ""
     var goalAmountStr: String = ""
     var goalAccomplishmentDateStr: String = ""
-    
     var RenewalDateFormat = Date()
 
-    @IBAction func dismissBttnDidTap(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
-    }
     
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var emojiLabel: UITextField!
@@ -30,6 +27,10 @@ class GoalDeadlineVC: UIViewController {
     @IBOutlet weak var doneBttn: UIButton!
     @IBOutlet weak var datePicker: UIDatePicker!
     
+    
+    @IBAction func dismissBttnDidTap(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
     @IBAction func doneBttnDidTap(_ sender: Any) {
         
         switch goalAccomplishmentDateStr {
@@ -42,32 +43,6 @@ class GoalDeadlineVC: UIViewController {
                 let vc = self.storyboard?.instantiateViewController(withIdentifier: VCIdentifierManager.dashboardKey) as! DashboardVC
                 self.present(vc, animated: true, completion: nil)
             }
-        }
-        
-    }
-    
-    func createNewGoal() {
-        
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        let context:NSManagedObjectContext = appDelegate.persistentContainer.viewContext
-        let entity = NSEntityDescription.entity(forEntityName: "Goal", in: context)
-        let newGoal = Goal(entity: entity!, insertInto: context)
-        
-        newGoal.emoji = emojiStr
-        newGoal.goalName = goalNameStr
-        newGoal.goalAchievedAmount = 0.0
-        newGoal.goalTotalAmount = NSNumber(value: Float(goalAmountStr)!)
-        newGoal.goalStatus = GoalStatus.up
-        newGoal.progressBar = 0
-        newGoal.goalPercentage = 0
-        newGoal.goalAccomplishmentDate = goalAccomplishmentDateStr
-        
-        goal.removeAll()
-        
-        do {
-            try context.save()
-        } catch {
-            print("Array not saved to core data")
         }
         
     }
@@ -96,9 +71,7 @@ class GoalDeadlineVC: UIViewController {
         let dismissKeyboard = UITapGestureRecognizer(target: self, action: #selector(SwipehideKeyboard))
         view.addGestureRecognizer(dismissKeyboard)
     }
-    @objc func SwipehideKeyboard() {
-        UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
-    }
+    
 
 }
 
@@ -114,9 +87,42 @@ extension GoalDeadlineVC {
         self.hero.isEnabled = true
     }
     
+    func createNewGoal() {
+        
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let context:NSManagedObjectContext = appDelegate.persistentContainer.viewContext
+        let entity = NSEntityDescription.entity(forEntityName: "Goal", in: context)
+        let newGoal = Goal(entity: entity!, insertInto: context)
+        
+        newGoal.emoji = emojiStr
+        newGoal.goalName = goalNameStr
+        newGoal.goalAchievedAmount = 0.0
+        newGoal.goalTotalAmount = NSNumber(value: Float(goalAmountStr)!)
+        newGoal.goalStatus = GoalStatus.up
+        newGoal.progressBar = 0
+        newGoal.goalPercentage = 0
+        newGoal.goalAccomplishmentDate = goalAccomplishmentDateStr
+        
+        goal.removeAll()
+        
+        do {
+            try context.save()
+        } catch {
+            print("Array not saved to core data")
+        }
+        
+    }
+    
+    @objc func SwipehideKeyboard() {
+        UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
+    }
+    
 }
 
+
 extension GoalDeadlineVC {
+    
+    
     //Date Picker
     func setUpRenewaDatePicker(){
         datePicker.addTarget(self, action: #selector(renewalDate), for: .allEvents)
@@ -129,4 +135,6 @@ extension GoalDeadlineVC {
         RenewalDateFormat = datePicker.date
         print("Payment: \(goalAccomplishmentDateStr)")
     }
+    
+    
 }

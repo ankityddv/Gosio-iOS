@@ -12,6 +12,7 @@ enum onboardingState {
     case sendToOnboarding
 }
 
+
 func checkOnboardingState() -> onboardingState {
     
     if (userDefaults?.object(forKey: "onboardingState") as? Int) != nil {
