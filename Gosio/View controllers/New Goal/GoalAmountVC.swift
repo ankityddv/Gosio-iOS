@@ -105,17 +105,25 @@ extension GoalAmountVC {
         
         UIView.animate(withDuration: 0.3, animations: {
             self.nextBttn.frame.origin.y = screenHeight - (keyboardHeight + 50)
-            print(screenHeight - (keyboardHeight + 50))
+    //            print(screenHeight - (keyboardHeight + 50))
             
         }, completion: { [self]_ in
             nextBttnTopConstraint.constant = 91-68
-            print("Done")
+    //            print("Done")
         })
 
     }
 
     @objc func keyboardWillHide(notification: NSNotification) {
-        print("Dismissed")
+    //        print("Dismissed")
+        UIView.animate(withDuration: 0.3, animations: {
+            self.nextBttn.frame.origin.y = 568
+    //            print(screenHeight - (keyboardHeight + 50))
+            
+        }, completion: { [self]_ in
+            nextBttnTopConstraint.constant = 91
+            
+        })
     }
     
     @objc func SwipehideKeyboard() {

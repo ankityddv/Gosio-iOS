@@ -16,7 +16,6 @@
 		360CD44225EE759000A7D72B /* AppIconVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 360CD44125EE759000A7D72B /* AppIconVC.swift */; };
 		360CD44B25EE789E00A7D72B /* AppIconService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 360CD44A25EE789E00A7D72B /* AppIconService.swift */; };
 		360DD6F025EB66D700636EBD /* DashboardVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 360DD6EF25EB66D700636EBD /* DashboardVC.swift */; };
-		360DD6F925EB67DC00636EBD /* OnboardingState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 360DD6F825EB67DB00636EBD /* OnboardingState.swift */; };
 		360DD73125EB815400636EBD /* PresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 360DD73025EB815400636EBD /* PresentationController.swift */; };
 		360DD73925EB817A00636EBD /* MenuView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 360DD73825EB817A00636EBD /* MenuView.xib */; };
 		360DD73E25EB81F700636EBD /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 360DD73D25EB81F700636EBD /* MenuView.swift */; };
@@ -35,7 +34,6 @@
 		3636FB4B25EE9A00005A25EC /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 3636FB4A25EE9A00005A25EC /* Default.png */; };
 		36404CB525ECA65B00C5A188 /* FadingTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36404CB425ECA65B00C5A188 /* FadingTableView.swift */; };
 		36404CC825ED033100C5A188 /* Zip6Sequence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36404CC725ED033100C5A188 /* Zip6Sequence.swift */; };
-		364EB8F225EDEBD000E14444 /* LastOnboardingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364EB8F125EDEBD000E14444 /* LastOnboardingVC.swift */; };
 		364EB91225EDFCB200E14444 /* attributedFontExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364EB91125EDFCB200E14444 /* attributedFontExtention.swift */; };
 		364F35AB25EB5E6E007E7996 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364F35AA25EB5E6E007E7996 /* LoginVC.swift */; };
 		364F35B425EB5E84007E7996 /* AuthState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364F35B325EB5E84007E7996 /* AuthState.swift */; };
@@ -43,6 +41,7 @@
 		364F35BE25EB5ECB007E7996 /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364F35BD25EB5ECB007E7996 /* UserDefaults.swift */; };
 		364F35C325EB5F39007E7996 /* CheatSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364F35C225EB5F39007E7996 /* CheatSheet.swift */; };
 		365DAE1E25F20839004AAABC /* CoreDataServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 365DAE1D25F20839004AAABC /* CoreDataServices.swift */; };
+		36637CF025F37DC900A1F1A9 /* MoreAppsbyAnkitYadavVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36637CEF25F37DC900A1F1A9 /* MoreAppsbyAnkitYadavVC.swift */; };
 		36785D7825F111D3000DA319 /* BalloonPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36785D7725F111D3000DA319 /* BalloonPickerView.swift */; };
 		36785D7925F111D3000DA319 /* BalloonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36785D7525F111D2000DA319 /* BalloonView.swift */; };
 		36785D7A25F111D3000DA319 /* ThumbView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36785D7425F111D2000DA319 /* ThumbView.swift */; };
@@ -55,6 +54,21 @@
 		367FED0C25EE5F06007F116B /* CurrencyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 367FED0B25EE5F06007F116B /* CurrencyModel.swift */; };
 		367FED1625EE604D007F116B /* zip3sequence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 367FED1525EE604D007F116B /* zip3sequence.swift */; };
 		36960CAC25EFF3B400946619 /* textFieldMaxLength.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36960CAB25EFF3B400946619 /* textFieldMaxLength.swift */; };
+		36B7643D25F39C110017AC35 /* PaperOnboarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B7643A25F39C100017AC35 /* PaperOnboarding.swift */; };
+		36B7643E25F39C110017AC35 /* PaperOnboardingDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B7643B25F39C110017AC35 /* PaperOnboardingDataSource.swift */; };
+		36B7643F25F39C110017AC35 /* PaperOnboardingDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B7643C25F39C110017AC35 /* PaperOnboardingDelegate.swift */; };
+		36B7644B25F39C320017AC35 /* PageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B7644A25F39C320017AC35 /* PageView.swift */; };
+		36B7645525F39C530017AC35 /* PageContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B7645425F39C530017AC35 /* PageContainer.swift */; };
+		36B7645A25F39C590017AC35 /* PageViewItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B7645925F39C590017AC35 /* PageViewItem.swift */; };
+		36B7646125F39C7B0017AC35 /* OnboardingContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B7645F25F39C7A0017AC35 /* OnboardingContentView.swift */; };
+		36B7646225F39C7B0017AC35 /* OnboardingContantViewItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B7646025F39C7B0017AC35 /* OnboardingContantViewItem.swift */; };
+		36B7646925F39C9C0017AC35 /* Configuring.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B7646825F39C9C0017AC35 /* Configuring.swift */; };
+		36B7646A25F39C9C0017AC35 /* ConstraintsHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B7646725F39C9B0017AC35 /* ConstraintsHelper.swift */; };
+		36B7647025F39CB60017AC35 /* GestureControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B7646F25F39CB60017AC35 /* GestureControl.swift */; };
+		36B7647625F39CC70017AC35 /* FillAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B7647525F39CC70017AC35 /* FillAnimationView.swift */; };
+		36B7649325F3A6840017AC35 /* Slide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B7649225F3A6840017AC35 /* Slide.swift */; };
+		36B7649825F3A68B0017AC35 /* Slide.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36B7649725F3A68B0017AC35 /* Slide.xib */; };
+		36B7649D25F3A7330017AC35 /* OnboardingState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B7649C25F3A7320017AC35 /* OnboardingState.swift */; };
 		36D95DDD25EFA33200692411 /* GoalExpandVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D95DDC25EFA33200692411 /* GoalExpandVC.swift */; };
 		36D95DEA25EFAA9100692411 /* GoalDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D95DE925EFAA9100692411 /* GoalDataModel.swift */; };
 		AA2DF6DD2DB4EEAE3F7E77FE /* Pods_GosioTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24FAC72EC543397B7F4A08AB /* Pods_GosioTests.framework */; };
@@ -89,7 +103,6 @@
 		360CD44A25EE789E00A7D72B /* AppIconService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppIconService.swift; sourceTree = "<group>"; };
 		360DD6EB25EB65D200636EBD /* Gosio.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Gosio.entitlements; sourceTree = "<group>"; };
 		360DD6EF25EB66D700636EBD /* DashboardVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardVC.swift; sourceTree = "<group>"; };
-		360DD6F825EB67DB00636EBD /* OnboardingState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingState.swift; sourceTree = "<group>"; };
 		360DD73025EB815400636EBD /* PresentationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentationController.swift; sourceTree = "<group>"; };
 		360DD73825EB817A00636EBD /* MenuView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuView.xib; sourceTree = "<group>"; };
 		360DD73D25EB81F700636EBD /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
@@ -114,7 +127,6 @@
 		3636FB4A25EE9A00005A25EC /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		36404CB425ECA65B00C5A188 /* FadingTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FadingTableView.swift; sourceTree = "<group>"; };
 		36404CC725ED033100C5A188 /* Zip6Sequence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Zip6Sequence.swift; sourceTree = "<group>"; };
-		364EB8F125EDEBD000E14444 /* LastOnboardingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastOnboardingVC.swift; sourceTree = "<group>"; };
 		364EB91125EDFCB200E14444 /* attributedFontExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = attributedFontExtention.swift; sourceTree = "<group>"; };
 		364F35AA25EB5E6E007E7996 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		364F35B325EB5E84007E7996 /* AuthState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthState.swift; sourceTree = "<group>"; };
@@ -122,6 +134,7 @@
 		364F35BD25EB5ECB007E7996 /* UserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
 		364F35C225EB5F39007E7996 /* CheatSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheatSheet.swift; sourceTree = "<group>"; };
 		365DAE1D25F20839004AAABC /* CoreDataServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataServices.swift; sourceTree = "<group>"; };
+		36637CEF25F37DC900A1F1A9 /* MoreAppsbyAnkitYadavVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreAppsbyAnkitYadavVC.swift; sourceTree = "<group>"; };
 		36785D7425F111D2000DA319 /* ThumbView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThumbView.swift; sourceTree = "<group>"; };
 		36785D7525F111D2000DA319 /* BalloonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalloonView.swift; sourceTree = "<group>"; };
 		36785D7625F111D3000DA319 /* TrackLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackLayer.swift; sourceTree = "<group>"; };
@@ -134,6 +147,21 @@
 		367FED0B25EE5F06007F116B /* CurrencyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyModel.swift; sourceTree = "<group>"; };
 		367FED1525EE604D007F116B /* zip3sequence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = zip3sequence.swift; sourceTree = "<group>"; };
 		36960CAB25EFF3B400946619 /* textFieldMaxLength.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = textFieldMaxLength.swift; sourceTree = "<group>"; };
+		36B7643A25F39C100017AC35 /* PaperOnboarding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaperOnboarding.swift; sourceTree = "<group>"; };
+		36B7643B25F39C110017AC35 /* PaperOnboardingDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaperOnboardingDataSource.swift; sourceTree = "<group>"; };
+		36B7643C25F39C110017AC35 /* PaperOnboardingDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaperOnboardingDelegate.swift; sourceTree = "<group>"; };
+		36B7644A25F39C320017AC35 /* PageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageView.swift; sourceTree = "<group>"; };
+		36B7645425F39C530017AC35 /* PageContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageContainer.swift; sourceTree = "<group>"; };
+		36B7645925F39C590017AC35 /* PageViewItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageViewItem.swift; sourceTree = "<group>"; };
+		36B7645F25F39C7A0017AC35 /* OnboardingContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingContentView.swift; sourceTree = "<group>"; };
+		36B7646025F39C7B0017AC35 /* OnboardingContantViewItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingContantViewItem.swift; sourceTree = "<group>"; };
+		36B7646725F39C9B0017AC35 /* ConstraintsHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstraintsHelper.swift; sourceTree = "<group>"; };
+		36B7646825F39C9C0017AC35 /* Configuring.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuring.swift; sourceTree = "<group>"; };
+		36B7646F25F39CB60017AC35 /* GestureControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GestureControl.swift; sourceTree = "<group>"; };
+		36B7647525F39CC70017AC35 /* FillAnimationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FillAnimationView.swift; sourceTree = "<group>"; };
+		36B7649225F3A6840017AC35 /* Slide.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Slide.swift; sourceTree = "<group>"; };
+		36B7649725F3A68B0017AC35 /* Slide.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Slide.xib; sourceTree = "<group>"; };
+		36B7649C25F3A7320017AC35 /* OnboardingState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingState.swift; sourceTree = "<group>"; };
 		36D95DDC25EFA33200692411 /* GoalExpandVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalExpandVC.swift; sourceTree = "<group>"; };
 		36D95DE925EFAA9100692411 /* GoalDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalDataModel.swift; sourceTree = "<group>"; };
 		427612BCCF6048BB813A12DD /* Pods_Gosio_GosioUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Gosio_GosioUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -211,6 +239,7 @@
 				367FECEE25EE22B5007F116B /* Siri Shortcuts */,
 				3636931725EF83A10041F088 /* Privacy policy */,
 				3636931625EF83970041F088 /* Terms of use */,
+				36637CF425F3802D00A1F1A9 /* Our Apps */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -244,24 +273,16 @@
 		360DD6F425EB67C700636EBD /* Onboarding */ = {
 			isa = PBXGroup;
 			children = (
-				360DD6FD25EB692200636EBD /* Services */,
+				36B764A425F3A9340017AC35 /* Services */,
 				362E737825EAAC4E00C06078 /* OnboardingVC.swift */,
-				364EB8F125EDEBD000E14444 /* LastOnboardingVC.swift */,
 			);
 			path = Onboarding;
-			sourceTree = "<group>";
-		};
-		360DD6FD25EB692200636EBD /* Services */ = {
-			isa = PBXGroup;
-			children = (
-				360DD6F825EB67DB00636EBD /* OnboardingState.swift */,
-			);
-			path = Services;
 			sourceTree = "<group>";
 		};
 		360DD70125EB766900636EBD /* Custom */ = {
 			isa = PBXGroup;
 			children = (
+				36B7643625F39BF60017AC35 /* Onboarding Animation */,
 				364F35C225EB5F39007E7996 /* CheatSheet.swift */,
 				364F35BD25EB5ECB007E7996 /* UserDefaults.swift */,
 				3602BECC25EBDB0B0014DD16 /* Manager.swift */,
@@ -401,11 +422,7 @@
 				364F35AF25EB5E71007E7996 /* Auth */,
 				360DD74525EB8FB700636EBD /* Dashboard */,
 				360CD43725EE755800A7D72B /* Settings */,
-				36785D7725F111D3000DA319 /* BalloonPickerView.swift */,
-				36785D7525F111D2000DA319 /* BalloonView.swift */,
-				36785D7425F111D2000DA319 /* ThumbView.swift */,
-				36785D7625F111D3000DA319 /* TrackLayer.swift */,
-				36D95DDC25EFA33200692411 /* GoalExpandVC.swift */,
+				365DAE3325F2203A004AAABC /* Goal Detail */,
 			);
 			path = "View controllers";
 			sourceTree = "<group>";
@@ -417,6 +434,34 @@
 				364F35AA25EB5E6E007E7996 /* LoginVC.swift */,
 			);
 			path = Auth;
+			sourceTree = "<group>";
+		};
+		365DAE3325F2203A004AAABC /* Goal Detail */ = {
+			isa = PBXGroup;
+			children = (
+				365DAE3A25F22052004AAABC /* Balloon Picker */,
+				36D95DDC25EFA33200692411 /* GoalExpandVC.swift */,
+			);
+			path = "Goal Detail";
+			sourceTree = "<group>";
+		};
+		365DAE3A25F22052004AAABC /* Balloon Picker */ = {
+			isa = PBXGroup;
+			children = (
+				36785D7725F111D3000DA319 /* BalloonPickerView.swift */,
+				36785D7525F111D2000DA319 /* BalloonView.swift */,
+				36785D7425F111D2000DA319 /* ThumbView.swift */,
+				36785D7625F111D3000DA319 /* TrackLayer.swift */,
+			);
+			path = "Balloon Picker";
+			sourceTree = "<group>";
+		};
+		36637CF425F3802D00A1F1A9 /* Our Apps */ = {
+			isa = PBXGroup;
+			children = (
+				36637CEF25F37DC900A1F1A9 /* MoreAppsbyAnkitYadavVC.swift */,
+			);
+			path = "Our Apps";
 			sourceTree = "<group>";
 		};
 		367FECEE25EE22B5007F116B /* Siri Shortcuts */ = {
@@ -450,6 +495,91 @@
 			isa = PBXGroup;
 			children = (
 				367FED0B25EE5F06007F116B /* CurrencyModel.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		36B7643625F39BF60017AC35 /* Onboarding Animation */ = {
+			isa = PBXGroup;
+			children = (
+				36B7647425F39CC20017AC35 /* FillAnimationView */,
+				36B7646E25F39CB10017AC35 /* GestureControl */,
+				36B7646625F39C900017AC35 /* Helpers */,
+				36B7645E25F39C660017AC35 /* OnboardingContentView */,
+				36B7644325F39C280017AC35 /* PageView */,
+				36B7643A25F39C100017AC35 /* PaperOnboarding.swift */,
+				36B7643B25F39C110017AC35 /* PaperOnboardingDataSource.swift */,
+				36B7643C25F39C110017AC35 /* PaperOnboardingDelegate.swift */,
+			);
+			name = "Onboarding Animation";
+			sourceTree = "<group>";
+		};
+		36B7644325F39C280017AC35 /* PageView */ = {
+			isa = PBXGroup;
+			children = (
+				36B7645025F39C440017AC35 /* PageContainerView */,
+				36B7644F25F39C3B0017AC35 /* Item */,
+				36B7644A25F39C320017AC35 /* PageView.swift */,
+			);
+			path = PageView;
+			sourceTree = "<group>";
+		};
+		36B7644F25F39C3B0017AC35 /* Item */ = {
+			isa = PBXGroup;
+			children = (
+				36B7645925F39C590017AC35 /* PageViewItem.swift */,
+			);
+			name = Item;
+			sourceTree = "<group>";
+		};
+		36B7645025F39C440017AC35 /* PageContainerView */ = {
+			isa = PBXGroup;
+			children = (
+				36B7645425F39C530017AC35 /* PageContainer.swift */,
+			);
+			name = PageContainerView;
+			sourceTree = "<group>";
+		};
+		36B7645E25F39C660017AC35 /* OnboardingContentView */ = {
+			isa = PBXGroup;
+			children = (
+				36B7646025F39C7B0017AC35 /* OnboardingContantViewItem.swift */,
+				36B7645F25F39C7A0017AC35 /* OnboardingContentView.swift */,
+			);
+			name = OnboardingContentView;
+			sourceTree = "<group>";
+		};
+		36B7646625F39C900017AC35 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				36B7646825F39C9C0017AC35 /* Configuring.swift */,
+				36B7646725F39C9B0017AC35 /* ConstraintsHelper.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		36B7646E25F39CB10017AC35 /* GestureControl */ = {
+			isa = PBXGroup;
+			children = (
+				36B7646F25F39CB60017AC35 /* GestureControl.swift */,
+			);
+			name = GestureControl;
+			sourceTree = "<group>";
+		};
+		36B7647425F39CC20017AC35 /* FillAnimationView */ = {
+			isa = PBXGroup;
+			children = (
+				36B7647525F39CC70017AC35 /* FillAnimationView.swift */,
+			);
+			name = FillAnimationView;
+			sourceTree = "<group>";
+		};
+		36B764A425F3A9340017AC35 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				36B7649C25F3A7320017AC35 /* OnboardingState.swift */,
+				36B7649725F3A68B0017AC35 /* Slide.xib */,
+				36B7649225F3A6840017AC35 /* Slide.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -588,6 +718,7 @@
 				362E738425EAAC5100C06078 /* LaunchScreen.storyboard in Resources */,
 				3636FB4B25EE9A00005A25EC /* Default.png in Resources */,
 				360DD73925EB817A00636EBD /* MenuView.xib in Resources */,
+				36B7649825F3A68B0017AC35 /* Slide.xib in Resources */,
 				362E738125EAAC5100C06078 /* Assets.xcassets in Resources */,
 				362E737C25EAAC4E00C06078 /* Main.storyboard in Resources */,
 				3636FB3525EE7B3D005A25EC /* White.png in Resources */,
@@ -722,31 +853,42 @@
 				364EB91225EDFCB200E14444 /* attributedFontExtention.swift in Sources */,
 				3636FB4125EE9403005A25EC /* PrivacyPolicyVC.swift in Sources */,
 				3602BEB925EBD0890014DD16 /* GoalDeadlineVC.swift in Sources */,
+				36B7645A25F39C590017AC35 /* PageViewItem.swift in Sources */,
 				3602BECD25EBDB0B0014DD16 /* Manager.swift in Sources */,
 				367FECE225EE172C007F116B /* SettingsVC.swift in Sources */,
 				360DD6F025EB66D700636EBD /* DashboardVC.swift in Sources */,
 				364F35B425EB5E84007E7996 /* AuthState.swift in Sources */,
 				367FECF525EE22F8007F116B /* UserActivityType.swift in Sources */,
+				36B7646125F39C7B0017AC35 /* OnboardingContentView.swift in Sources */,
+				36B7643D25F39C110017AC35 /* PaperOnboarding.swift in Sources */,
 				362E737525EAAC4E00C06078 /* AppDelegate.swift in Sources */,
 				367FED0C25EE5F06007F116B /* CurrencyModel.swift in Sources */,
-				364EB8F225EDEBD000E14444 /* LastOnboardingVC.swift in Sources */,
+				36B7646A25F39C9C0017AC35 /* ConstraintsHelper.swift in Sources */,
 				364F35B925EB5E96007E7996 /* SignInWithAppleManager.swift in Sources */,
+				36B7643F25F39C110017AC35 /* PaperOnboardingDelegate.swift in Sources */,
 				36D95DEA25EFAA9100692411 /* GoalDataModel.swift in Sources */,
 				360CD44225EE759000A7D72B /* AppIconVC.swift in Sources */,
+				36B7649325F3A6840017AC35 /* Slide.swift in Sources */,
+				36B7647025F39CB60017AC35 /* GestureControl.swift in Sources */,
+				36B7643E25F39C110017AC35 /* PaperOnboardingDataSource.swift in Sources */,
 				360CD44B25EE789E00A7D72B /* AppIconService.swift in Sources */,
 				360CD43225EE700200A7D72B /* AppThemeVC.swift in Sources */,
 				364F35BE25EB5ECB007E7996 /* UserDefaults.swift in Sources */,
+				36637CF025F37DC900A1F1A9 /* MoreAppsbyAnkitYadavVC.swift in Sources */,
 				36960CAC25EFF3B400946619 /* textFieldMaxLength.swift in Sources */,
 				36404CC825ED033100C5A188 /* Zip6Sequence.swift in Sources */,
 				3602BEB425EBD07E0014DD16 /* GoalAmountVC.swift in Sources */,
+				36B7644B25F39C320017AC35 /* PageView.swift in Sources */,
+				36B7646225F39C7B0017AC35 /* OnboardingContantViewItem.swift in Sources */,
 				362E737725EAAC4E00C06078 /* SceneDelegate.swift in Sources */,
+				36B7646925F39C9C0017AC35 /* Configuring.swift in Sources */,
 				36D95DDD25EFA33200692411 /* GoalExpandVC.swift in Sources */,
 				36785D7925F111D3000DA319 /* BalloonView.swift in Sources */,
 				364F35C325EB5F39007E7996 /* CheatSheet.swift in Sources */,
 				367FED1625EE604D007F116B /* zip3sequence.swift in Sources */,
-				360DD6F925EB67DC00636EBD /* OnboardingState.swift in Sources */,
 				365DAE1E25F20839004AAABC /* CoreDataServices.swift in Sources */,
 				3636FB4625EE940D005A25EC /* TermsOfUseVC.swift in Sources */,
+				36B7647625F39CC70017AC35 /* FillAnimationView.swift in Sources */,
 				36785D7A25F111D3000DA319 /* ThumbView.swift in Sources */,
 				36404CB525ECA65B00C5A188 /* FadingTableView.swift in Sources */,
 				367FED0725EE5ED5007F116B /* CurrencyVC.swift in Sources */,
@@ -754,6 +896,8 @@
 				367FECEA25EE21DF007F116B /* AddToSiriVC.swift in Sources */,
 				36785D7825F111D3000DA319 /* BalloonPickerView.swift in Sources */,
 				3602BEA825EBD0600014DD16 /* GoalNameVC.swift in Sources */,
+				36B7645525F39C530017AC35 /* PageContainer.swift in Sources */,
+				36B7649D25F3A7330017AC35 /* OnboardingState.swift in Sources */,
 				362E737F25EAAC4E00C06078 /* Gosio.xcdatamodeld in Sources */,
 				364F35AB25EB5E6E007E7996 /* LoginVC.swift in Sources */,
 				367FECF025EE22CA007F116B /* Intents.intentdefinition in Sources */,
@@ -937,7 +1081,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Gosio/Gosio.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 9;
 				DEVELOPMENT_TEAM = JL7UZ93S3L;
 				INFOPLIST_FILE = Gosio/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -961,7 +1105,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Gosio/Gosio.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 9;
 				DEVELOPMENT_TEAM = JL7UZ93S3L;
 				INFOPLIST_FILE = Gosio/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (

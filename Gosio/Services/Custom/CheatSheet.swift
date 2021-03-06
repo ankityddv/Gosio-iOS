@@ -17,9 +17,12 @@ let window = UIApplication.shared.connectedScenes
         .first?.windows
         .filter({$0.isKeyWindow}).first
 
+let keyWindow = UIApplication.shared.keyWindow
+
 let screenSize = UIScreen.main.bounds
 let screenWidth = screenSize.width
 let screenHeight = screenSize.height
+let currentDevice = UIDevice.current.userInterfaceIdiom
 
 //MARK:- Heptic Generators
 let generator = UINotificationFeedbackGenerator()
@@ -89,4 +92,20 @@ func presentAlertWithOneButton(AlertTitle: String, Message: String, ActionBttnTi
     
     alertController.addAction(defaultAction)
     return alertController
+}
+
+
+
+
+enum iPhoneModel {
+case iPhoneX
+case iPhone8
+}
+
+func currentIphone() -> iPhoneModel{
+    if keyWindow!.safeAreaInsets.bottom > 0{
+        return .iPhoneX
+    }else{
+        return .iPhone8
+    }
 }

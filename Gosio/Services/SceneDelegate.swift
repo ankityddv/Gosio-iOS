@@ -14,6 +14,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let _ = (scene as? UIWindowScene) else { return }
+        window?.windowScene?.sizeRestrictions?.minimumSize = CGSize(width: 1200, height: 800)
+//        window?.windowScene?.sizeRestrictions?.maximumSize = CGSize(width: 1200, height: 800)
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

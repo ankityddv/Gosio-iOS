@@ -108,7 +108,7 @@ extension CurrencyVC {
         titleLabel.attributedText =  NSMutableAttributedString()
             .bold("Select\n")
             .boldBlueHighlight(" Currency ")
-        subtitleLabel.text = "Obv. this is important"
+        subtitleLabel.text = "Obviously this is important"
         searchController.obscuresBackgroundDuringPresentation = false
         searchController.searchBar.placeholder = "Search currency"
         self.navigationItem.searchController = searchController

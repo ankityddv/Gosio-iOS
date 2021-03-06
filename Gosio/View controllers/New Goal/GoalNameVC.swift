@@ -27,7 +27,7 @@ class GoalNameVC: UIViewController {
         let emoji = emojiTextField.text
         let goalName = goalNameTextField.text
         
-        if (emoji?.isEmpty == true) && (goalName?.isEmpty == true) {
+        if (emoji?.isEmpty == false) && (goalName?.isEmpty == false) {
             
             let vc = storyboard?.instantiateViewController(withIdentifier: VCIdentifierManager.goalAmountKey) as! GoalAmountVC
             vc.emojiStr = emojiTextField.text!
@@ -100,17 +100,26 @@ extension GoalNameVC {
         
         UIView.animate(withDuration: 0.3, animations: {
             self.nextBttn.frame.origin.y = screenHeight - (keyboardHeight + 50)
-            print(screenHeight - (keyboardHeight + 50))
+    //            print(screenHeight - (keyboardHeight + 50))
             
         }, completion: { [self]_ in
             nextBttnTopConstraint.constant = 91-68
-            print("Done")
+    //            print("Done")
         })
 
     }
 
     @objc func keyboardWillHide(notification: NSNotification) {
-        print("Dismissed")
+    //        print("Dismissed")
+        
+        UIView.animate(withDuration: 0.3, animations: {
+            self.nextBttn.frame.origin.y = 568
+    //            print(screenHeight - (keyboardHeight + 50))
+            
+        }, completion: { [self]_ in
+            nextBttnTopConstraint.constant = 91
+            
+        })
     }
     
     @objc func SwipehideKeyboard() {

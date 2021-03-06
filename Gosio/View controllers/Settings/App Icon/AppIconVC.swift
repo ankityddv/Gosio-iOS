@@ -20,6 +20,7 @@ class AppIconVC: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setUpUi()
     }
     
     
@@ -114,7 +115,7 @@ extension AppIconVC {
         titleLabel.attributedText =  NSMutableAttributedString()
             .bold("Select\n")
             .boldBlueHighlight(" App Icon ")
-        subtitleLabel.text = "Multiple app icons are cool and we know that"
+        subtitleLabel.text = "This is cool and we know it :)"
     }
     
     
@@ -122,7 +123,9 @@ extension AppIconVC {
 
 class appIconCell: UITableViewCell {
     
+    
     @IBOutlet weak var iconImage: UIImageView!
     @IBOutlet weak var iconName: UILabel!
+    
     
 }

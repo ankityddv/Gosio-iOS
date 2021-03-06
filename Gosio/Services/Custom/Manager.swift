@@ -31,6 +31,7 @@ struct VCIdentifierManager {
     static let privacyPolicyKey = "PrivacyPolicyVC"
     static let termsOfUseKey = "TermsOfUseVC"
     static let goalDetailKey = "GoalExpandVC"
+    static let moreAppsByUsKey = "MoreAppsbyAnkitYadavVC"
     
 }
 
@@ -40,6 +41,7 @@ struct TableViewCellIdentifierManager {
     static let dashboardCell = "goalsCell"
     static let currencyCell = "CurrencyTVCell"
     static let appThemeCell = "appThemeTVCell"
+    static let ourAppsCell = "OurAppsCell"
     
 }
 
@@ -48,6 +50,7 @@ struct urlManager {
     static let appUrl = "https://apps.apple.com/us/app/gosio-achieve-your-goals/id1555987291"
     static let faqUrl = "https://ankityddv.github.io/Gosio-BetaRegistration/faq"
     static let betaUrl = "https://ankityddv.github.io/Gosio-BetaRegistration/"
+    static let dineroUrl = "https://apps.apple.com/us/app/dinero-subscription-manager/id1545370811"
     
 }
 
@@ -85,7 +88,7 @@ struct HeroIDs {
 struct GoalStatus {
     
     static let up : String = "ahead"
-    static let down : String = "below"
+    static let down : String = "down"
     static let pause : String = "pause"
     
 }

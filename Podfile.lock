@@ -1,28 +1,20 @@
 PODS:
   - Hero (1.5.0)
-  - liquid-swipe (0.7.0):
-    - pop (~> 1.0)
-  - pop (1.0.12)
   - SPAlert (3.0.3)
 
 DEPENDENCIES:
   - Hero
-  - liquid-swipe
   - SPAlert
 
 SPEC REPOS:
   trunk:
     - Hero
-    - liquid-swipe
-    - pop
     - SPAlert
 
 SPEC CHECKSUMS:
   Hero: b7385b75e7259da62f4f85462f59a5082d66b058
-  liquid-swipe: 850f88c0717fe58ba83f0f571c47a191f29ddc1f
-  pop: d582054913807fd11fd50bfe6a539d91c7e1a55a
   SPAlert: f01599d5224e93547cbb9364b2c42e88074644b9
 
-PODFILE CHECKSUM: 73a2dd18bebfce30bebdc2cbdab1e29eb9a63fb4
+PODFILE CHECKSUM: 8d3d9387ced2a5f6258aac3ad51744510f096efa
 
 COCOAPODS: 1.10.0

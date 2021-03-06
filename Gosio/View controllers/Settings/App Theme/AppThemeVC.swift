@@ -141,7 +141,7 @@ extension AppThemeVC {
         titleLabel.attributedText =  NSMutableAttributedString()
             .bold("Select\n")
             .boldBlueHighlight(" Theme ")
-        subtitleLabel.text = "Dark mode is only for your phone not your soul"
+        subtitleLabel.text = "Dark mode is only for your device not your soul"
     }
     
     
@@ -149,5 +149,9 @@ extension AppThemeVC {
 
 
 class appThemeTVCell: UITableViewCell {
+    
+    
     @IBOutlet weak var titleLabel: UILabel!
+    
+    
 }

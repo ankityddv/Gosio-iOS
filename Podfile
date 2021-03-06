@@ -7,7 +7,6 @@ target 'Gosio' do
   # Pods for Gosio
     pod 'Hero'
     pod 'SPAlert'
-    pod 'liquid-swipe'
  
   target 'GosioTests' do
     inherit! :search_paths
