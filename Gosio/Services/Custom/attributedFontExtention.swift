@@ -16,6 +16,7 @@ extension NSMutableAttributedString {
     
     var subtitleBoldFont: UIFont { return UIFont(name: "AirbnbCerealApp-Bold", size: fontSize) ?? UIFont.boldSystemFont(ofSize: 17) }
     var subtitleNormalFont: UIFont { return UIFont(name: "AirbnbCerealApp-Book", size: fontSize) ?? UIFont.systemFont(ofSize: 17)}
+    var inAppPurchasesBottomFont: UIFont { return UIFont(name: "AirbnbCerealApp-Book", size: 10) ?? UIFont.systemFont(ofSize: 10)}
     
     func bold(_ value:String) -> NSMutableAttributedString {
         
@@ -124,12 +125,38 @@ extension NSMutableAttributedString {
         let attributes:[NSAttributedString.Key : Any] = [
             .font :  normalFont,
             .underlineStyle : NSUnderlineStyle.single.rawValue
-            
         ]
         
         self.append(NSAttributedString(string: value, attributes:attributes))
         return self
     }
+    
+    func inAppPurchaseBottom(_ value:String) -> NSMutableAttributedString {
+        
+        let attributes:[NSAttributedString.Key : Any] = [
+            .font : inAppPurchasesBottomFont,
+            .foregroundColor : UIColor(named: "SubtitleTextColor") as Any
+        ]
+        
+        self.append(NSAttributedString(string: value, attributes:attributes))
+        return self
+    }
+    
+    func inAppPurchaseLinkBottom(_ value:String, url: URL) -> NSMutableAttributedString {
+        
+        let attributes:[NSAttributedString.Key : Any] = [
+            .font : inAppPurchasesBottomFont,
+            .foregroundColor : UIColor(named: "SubtitleTextColor") as Any,
+            .link: url,
+            .underlineStyle : NSUnderlineStyle.single.rawValue
+        ]
+        
+        self.append(NSAttributedString(string: value, attributes:attributes))
+        return self
+    }
+    
+    
+    
 }
 
 extension Date {

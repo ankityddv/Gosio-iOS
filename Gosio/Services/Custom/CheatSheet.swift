@@ -94,8 +94,6 @@ func presentAlertWithOneButton(AlertTitle: String, Message: String, ActionBttnTi
 }
 
 
-
-
 enum iPhoneModel {
 case iPhoneX
 case iPhone8
@@ -106,5 +104,19 @@ func currentIphone() -> iPhoneModel{
         return .iPhoneX
     }else{
         return .iPhone8
+    }
+}
+
+
+enum subscriptionType {
+    case free
+    case pro
+}
+
+func validateSubscription() -> subscriptionType {
+    if currentSubscription == "pro" {
+        return .pro
+    } else {
+        return .free
     }
 }

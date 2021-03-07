@@ -27,21 +27,27 @@ class IAPService: NSObject {
         paymentQueue.add(self)
     }
     
+    var item = SKProduct()
+    
     func purchase(product: IAPProduct) {
         
         guard let productToPurchase = products.filter({$0.productIdentifier == product.rawValue}).first
-        else {
-            print("lol")
-            return
-            
-        }
+        else {return}
         let payment = SKPayment(product: productToPurchase)
         paymentQueue.add(payment)
         
-        print(productToPurchase)
-        print(payment)
+    }
+    
+    func updatePrice(product: IAPProduct) -> [String] {
+        
+        guard let productToPurchase = products.filter({$0.productIdentifier == product.rawValue}).first
+        else {return ["nil","nil","nil"]}
+        return [String(describing: productToPurchase.localizedTitle),
+                (String(describing: productToPurchase.price)),
+                (String(describing: productToPurchase.priceLocale.currencySymbol ?? "#"))]
         
     }
+    
     func restorePurchase() {
         print("Restoring Purchase")
         paymentQueue.restoreCompletedTransactions()
@@ -50,10 +56,11 @@ class IAPService: NSObject {
 }
 
 extension IAPService: SKProductsRequestDelegate {
+    
     func productsRequest(_ request: SKProductsRequest, didReceive response: SKProductsResponse) {
         self.products = response.products
         for product in response.products {
-            print(product.localizedTitle)
+//            print(product.localizedTitle)
             let currency = "\(product.priceLocale.currencySymbol ?? "#")"
             let price = "\(product.price)"
             let LifteTimePrice = "\(currency)" + "\(price)"
@@ -61,6 +68,7 @@ extension IAPService: SKProductsRequestDelegate {
 //            userDefaults?.set(LifteTimePrice, forKey: "LifetimeSubscriptionPrice")
         }
     }
+    
 }
 
 extension IAPService: SKPaymentTransactionObserver {
@@ -82,7 +90,7 @@ extension SKPaymentTransactionState {
         switch self {
         case .deferred:
             print("d")
-//            userDefaults?.set("NIL", forKey: "PurchasedSubscription")
+            userDefaults?.set("nil", forKey: userDefaultsKeyManager.inAppPurchaseKey)
             return "deffered"
         case .failed:
             print("f")
@@ -109,18 +117,18 @@ extension SKPaymentTransactionState {
 func restoredPurchase(){
 //    icloudSynced()
 //    stoploader()
-    userDefaults?.set("Lifetime", forKey: "PurchasedSubscription")
+    userDefaults?.set("pro", forKey: userDefaultsKeyManager.inAppPurchaseKey)
     SPAlert.present(title: "Purchase Restored Successfully", message: "Please restart the app to see the changes!", preset: .done, completion: nil)
 }
 func purchasedSucessfully(){
 //    icloudSynced()
 //    stoploader()
-    userDefaults?.set("Lifetime", forKey: "PurchasedSubscription")
+    userDefaults?.set("pro", forKey: userDefaultsKeyManager.inAppPurchaseKey)
     SPAlert.present(title: "Purchase Successful", message: "Please restart the app to see the changes!", preset: .done, completion: nil)
 }
 func purchaseFailed(){
 //    stoploader()
-    userDefaults?.set("NIL", forKey: "PurchasedSubscription")
+    userDefaults?.set("nil", forKey: userDefaultsKeyManager.inAppPurchaseKey)
     SPAlert.present(title: "Purchase Failed", message: "Please try again!", preset: .error, completion: nil)
 }
 

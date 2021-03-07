@@ -79,11 +79,12 @@ class DashboardVC: UIViewController, LoginViewControllerDelegate {
         fetchData()
         initialiseAppTheme()
         initialiseCurrency()
+        vaildateInAppPurchases()
         self.navigationController?.isNavigationBarHidden = true
         setUpHeroAnimations()
     }
     override func viewDidAppear(_ animated: Bool) {
-        vaildateOnboarding()
+//        vaildateOnboarding()
     }
     override func viewWillAppear(_ animated: Bool) {
         updateTotalAmount()
@@ -190,6 +191,22 @@ extension DashboardVC {
             }
         }
     }
+    
+    func vaildateInAppPurchases(){
+        switch userDefaults?.object(forKey: userDefaultsKeyManager.inAppPurchaseKey) as? String {
+        case nil:
+            print("Free and data saved")
+            userDefaults?.set("nil", forKey: userDefaultsKeyManager.inAppPurchaseKey)
+        default:
+            switch validateSubscription() {
+            case .pro:
+                print("Pro")
+            default:
+                print("Free")
+            }
+        }
+    }
+
     
     func createUSerActivity(){
         let activity = NSUserActivity(activityType: UserActivityType.addNewGoal)

@@ -21,9 +21,10 @@ class InAppPurchasesVC: UIViewController,controlAlert {
         present(alert, animated: true, completion: nil)
     }
     
-    var proFeaturesArr = ["Add unlimited goals","Multiple app icons","Available for iPhone, iPad and Mac at no extra cost","Support indie developers"]
+    var proFeaturesArr = ["Add unlimited goals","Multiple app icons","Available for iPhone, iPad and Mac at no extra cost","Support indie developer"]
     
     
+    @IBOutlet weak var bottomLegalLabel: UITextView!
     @IBOutlet weak var bgView: UIView!
     @IBOutlet weak var dismissBttn: UIButton!
     
@@ -32,27 +33,57 @@ class InAppPurchasesVC: UIViewController,controlAlert {
         self.dismiss(animated: true, completion: nil)
     }
     
+    @IBOutlet weak var gosioProPriceLabel: UILabel!
     @IBAction func restorePurchaseDidTap(_ sender: Any) {
         IAPService.shared.restorePurchase()
     }
     
-    @IBAction func privacyPolicyDidTap(_ sender: Any) {
-        openSafari(url: urlManager.privacyPolicyUrl)
-    }
-    
-    @IBAction func termsOfUseDidTap(_ sender: Any) {
-        openSafari(url: urlManager.termsOfUseUrl)
-    }
     
     @IBAction func purchaseBttnDidTap(_ sender: Any) {
         print("Comon")
         IAPService.shared.purchase(product: .GosioPro)
     }
     
+    func priceStringForProduct(item: SKProduct) -> String? {
+        let price = item.price
+        if price == NSDecimalNumber(decimal: 0.00) {
+            return "GET" //or whatever you like really... maybe 'Free'
+        } else {
+            let numberFormatter = NumberFormatter()
+            let locale = item.priceLocale
+            numberFormatter.numberStyle = .currency
+            numberFormatter.locale = locale
+            return numberFormatter.string(from: price)
+        }
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         IAPService.shared.getProducts()
+        
+        DispatchQueue.main.asyncAfter(deadline: .now()+3){
+            
+            let productInfoArr = IAPService.shared.updatePrice(product: .GosioPro)
+            
+            UIView.transition(with: self.gosioProPriceLabel,
+                          duration: 0.5,
+                           options: .transitionCrossDissolve,
+                        animations: { [weak self] in
+                            self!.gosioProPriceLabel.text = productInfoArr[0] + " - " + productInfoArr[2] +  productInfoArr[1]
+                     }, completion: nil)
+            
+        }
+        
         bgView.roundCorners([.allCorners], radius: 30)
+        
+        bottomLegalLabel.attributedText = NSMutableAttributedString()
+            .inAppPurchaseBottom("Payment will be charged to your iTunes account at confirmation of purchase. Your subscription will be valid for lifetime. You can manage your subscription by accessing your iTunes & App Store Account Settings after purchase. All personal data is handled under the terms and conditions of Gosio’s privacy policy. More details can be found here: ")
+            .inAppPurchaseLinkBottom("Privacy policy, ", url: URL(string: urlManager.privacyPolicyUrl)!)
+            .inAppPurchaseLinkBottom("Terms of Use.", url: URL(string: urlManager.termsOfUseUrl)!)
+        
+       
     }
     
     

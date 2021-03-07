@@ -73,6 +73,7 @@ struct userDefaultsKeyManager {
     static let currencyCodeKey = "currencyCode"
     static let currencySignKey = "currencySign"
     static let requestReviewKey = "requestReview"
+    static let inAppPurchaseKey = "inapppurchase"
     
 }
 

@@ -834,7 +834,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5v9-bE-t7q">
-                                <rect key="frame" x="138.5" y="648" width="137" height="38"/>
+                                <rect key="frame" x="138.5" y="601" width="137" height="38"/>
                                 <color key="backgroundColor" name="SecondaryBgColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="137" id="DyG-Xf-bXu"/>
@@ -866,10 +866,10 @@
                                 </connections>
                             </button>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="wheels" translatesAutoresizingMaskIntoConstraints="NO" id="YUr-Ma-84Q">
-                                <rect key="frame" x="53" y="328" width="308" height="297"/>
+                                <rect key="frame" x="53" y="328" width="308" height="250"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="297" id="1eK-o2-Oxy"/>
+                                    <constraint firstAttribute="height" constant="250" id="1eK-o2-Oxy"/>
                                     <constraint firstAttribute="width" constant="308" id="Gpt-p7-d8G"/>
                                 </constraints>
                             </datePicker>
@@ -1160,7 +1160,7 @@
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Currency" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="F1w-Bl-GtZ">
                                                     <rect key="frame" x="20" y="0.0" width="355" height="60"/>
                                                     <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" name="AirbnbCerealApp-Book" family="Airbnb Cereal App" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -1463,9 +1463,9 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Settings" largeTitleDisplayMode="always" id="C1p-dS-Kw4">
-                        <barButtonItem key="leftBarButtonItem" title="Close" id="kS1-bx-cux">
+                        <barButtonItem key="rightBarButtonItem" image="cross" id="5MR-Hj-x9Y">
                             <connections>
-                                <action selector="dismissBttnDidTap:" destination="Pbl-Kr-Nar" id="ppZ-gO-J8T"/>
+                                <action selector="dismissBttnDidTap:" destination="Pbl-Kr-Nar" id="dix-jL-HuH"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -1968,7 +1968,7 @@ by Ankit Yadav</string>
                                                 <rect key="frame" x="0.0" y="126" width="414" height="745"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CGY-6K-ywn">
-                                                        <rect key="frame" x="97" y="499" width="220" height="64"/>
+                                                        <rect key="frame" x="97" y="482" width="220" height="64"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="220" id="Kfs-Xz-1Vf"/>
                                                             <constraint firstAttribute="height" constant="64" id="Le4-aG-qYn"/>
@@ -1978,8 +1978,8 @@ by Ankit Yadav</string>
                                                             <action selector="purchaseBttnDidTap:" destination="XH5-Xd-J7x" eventType="touchUpInside" id="ddH-nC-PCd"/>
                                                         </connections>
                                                     </button>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Go Pro" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ms7-ul-Kcs">
-                                                        <rect key="frame" x="28" y="114" width="101" height="42"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gosio Pro" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ms7-ul-Kcs">
+                                                        <rect key="frame" x="28" y="114" width="147.5" height="42"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="42" id="0lb-na-0wB"/>
                                                         </constraints>
@@ -1988,11 +1988,11 @@ by Ankit Yadav</string>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="qkE-f2-HdB">
-                                                        <rect key="frame" x="13" y="173" width="388" height="292"/>
+                                                        <rect key="frame" x="13" y="173" width="388" height="216"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="height" constant="292" id="7Mh-hw-Ack"/>
-                                                            <constraint firstAttribute="width" constant="388" id="lgW-4v-qWy"/>
+                                                            <constraint firstAttribute="width" constant="388" id="VTA-Kt-PaB"/>
+                                                            <constraint firstAttribute="height" constant="216" id="ak3-Za-GhO"/>
                                                         </constraints>
                                                         <prototypes>
                                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="GosioProFeaturesCell" textLabel="tfh-rJ-ST1" imageView="EXa-A3-9Kp" style="IBUITableViewCellStyleDefault" id="6FD-uq-ZYf" customClass="GosioProFeaturesCell" customModule="Gosio" customModuleProvider="target">
@@ -2029,39 +2029,10 @@ by Ankit Yadav</string>
                                                         </connections>
                                                     </tableView>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qVJ-Mu-w2P">
-                                                        <rect key="frame" x="96.5" y="618" width="221" height="95"/>
+                                                        <rect key="frame" x="-0.5" y="561" width="415" height="153"/>
                                                         <subviews>
-                                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R3p-mm-IW0">
-                                                                <rect key="frame" x="131" y="48" width="70" height="27"/>
-                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                                <fontDescription key="fontDescription" name="AirbnbCerealApp-Book" family="Airbnb Cereal App" pointSize="11"/>
-                                                                <state key="normal" title="Terms of use">
-                                                                    <color key="titleColor" name="SubtitleTextColor"/>
-                                                                </state>
-                                                                <connections>
-                                                                    <action selector="termsOfUseDidTap:" destination="XH5-Xd-J7x" eventType="touchUpInside" id="YuJ-Hd-zV6"/>
-                                                                </connections>
-                                                            </button>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="•" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9pj-sx-EIe">
-                                                                <rect key="frame" x="106" y="51" width="8" height="21"/>
-                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                                <color key="textColor" name="SubtitleTextColor"/>
-                                                                <nil key="highlightedColor"/>
-                                                            </label>
-                                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4aj-dp-RBX">
-                                                                <rect key="frame" x="20" y="48" width="70" height="27"/>
-                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                                <fontDescription key="fontDescription" name="AirbnbCerealApp-Book" family="Airbnb Cereal App" pointSize="11"/>
-                                                                <state key="normal" title="Privacy Policy">
-                                                                    <color key="titleColor" name="SubtitleTextColor"/>
-                                                                </state>
-                                                                <connections>
-                                                                    <action selector="privacyPolicyDidTap:" destination="XH5-Xd-J7x" eventType="touchUpInside" id="uVf-Jd-fkZ"/>
-                                                                </connections>
-                                                            </button>
                                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZYP-2v-G1o">
-                                                                <rect key="frame" x="52" y="16" width="116" height="27"/>
+                                                                <rect key="frame" x="153" y="8" width="116" height="27"/>
                                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                 <fontDescription key="fontDescription" name="AirbnbCerealApp-Book" family="Airbnb Cereal App" pointSize="11"/>
                                                                 <state key="normal" title="Restore Purchase">
@@ -2071,24 +2042,44 @@ by Ankit Yadav</string>
                                                                     <action selector="restorePurchaseDidTap:" destination="XH5-Xd-J7x" eventType="touchUpInside" id="dyX-kB-cJ1"/>
                                                                 </connections>
                                                             </button>
+                                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" editable="NO" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="UZN-ge-DX2">
+                                                                <rect key="frame" x="26" y="35" width="363" height="110"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                                                <color key="textColor" name="TitleTextColor"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                            </textView>
                                                         </subviews>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="width" constant="221" id="2jT-UM-Vwd"/>
-                                                            <constraint firstAttribute="height" constant="95" id="gdh-eQ-6c2"/>
+                                                            <constraint firstAttribute="width" constant="415" id="FLy-Al-yOI"/>
+                                                            <constraint firstAttribute="height" constant="153" id="Pyt-UM-q7h"/>
                                                         </constraints>
                                                     </view>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading ..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sSB-1a-dWP">
+                                                        <rect key="frame" x="146" y="419" width="122" height="33"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="33" id="9be-vU-d5f"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="AirbnbCerealApp-Bold" family="Airbnb Cereal App" pointSize="25"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
                                                 </subviews>
                                                 <color key="backgroundColor" name="PopupBgColor"/>
                                                 <constraints>
-                                                    <constraint firstItem="qkE-f2-HdB" firstAttribute="leading" secondItem="oc5-vg-bhz" secondAttribute="leading" constant="13" id="8JJ-me-sgO"/>
-                                                    <constraint firstItem="CGY-6K-ywn" firstAttribute="top" secondItem="qkE-f2-HdB" secondAttribute="bottom" constant="34" id="Dlq-GJ-qDA"/>
-                                                    <constraint firstItem="qkE-f2-HdB" firstAttribute="top" secondItem="ms7-ul-Kcs" secondAttribute="bottom" constant="17" id="EN2-wg-EvZ"/>
                                                     <constraint firstItem="ms7-ul-Kcs" firstAttribute="top" secondItem="oc5-vg-bhz" secondAttribute="top" constant="114" id="OlL-rK-uBz"/>
-                                                    <constraint firstItem="qVJ-Mu-w2P" firstAttribute="top" secondItem="CGY-6K-ywn" secondAttribute="bottom" constant="55" id="Z6l-hI-UVU"/>
                                                     <constraint firstItem="ms7-ul-Kcs" firstAttribute="leading" secondItem="oc5-vg-bhz" secondAttribute="leading" constant="28" id="dsg-YL-BhQ"/>
+                                                    <constraint firstItem="qVJ-Mu-w2P" firstAttribute="centerX" secondItem="oc5-vg-bhz" secondAttribute="centerX" id="haO-nh-tyQ"/>
+                                                    <constraint firstItem="qVJ-Mu-w2P" firstAttribute="top" secondItem="CGY-6K-ywn" secondAttribute="bottom" constant="15" id="i1e-UU-5Pm"/>
+                                                    <constraint firstItem="CGY-6K-ywn" firstAttribute="top" secondItem="sSB-1a-dWP" secondAttribute="bottom" constant="30" id="jIz-Rt-75a"/>
+                                                    <constraint firstItem="sSB-1a-dWP" firstAttribute="centerX" secondItem="oc5-vg-bhz" secondAttribute="centerX" id="mC6-d4-5GZ"/>
+                                                    <constraint firstItem="sSB-1a-dWP" firstAttribute="top" secondItem="qkE-f2-HdB" secondAttribute="bottom" constant="30" id="nx8-e0-AJU"/>
                                                     <constraint firstItem="CGY-6K-ywn" firstAttribute="centerX" secondItem="oc5-vg-bhz" secondAttribute="centerX" id="qPx-In-Ffq"/>
-                                                    <constraint firstItem="qVJ-Mu-w2P" firstAttribute="centerX" secondItem="oc5-vg-bhz" secondAttribute="centerX" id="qju-Xp-Fuj"/>
+                                                    <constraint firstItem="qkE-f2-HdB" firstAttribute="leading" secondItem="oc5-vg-bhz" secondAttribute="leading" constant="13" id="uge-aT-oNe"/>
+                                                    <constraint firstItem="qkE-f2-HdB" firstAttribute="top" secondItem="ms7-ul-Kcs" secondAttribute="bottom" constant="17" id="yeo-Or-gW8"/>
                                                 </constraints>
                                             </view>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dbW-aa-CBM">
@@ -2159,7 +2150,9 @@ by Ankit Yadav</string>
                     <size key="freeformSize" width="414" height="1000"/>
                     <connections>
                         <outlet property="bgView" destination="oc5-vg-bhz" id="q9a-fs-WBf"/>
+                        <outlet property="bottomLegalLabel" destination="UZN-ge-DX2" id="2Ql-3i-9lc"/>
                         <outlet property="dismissBttn" destination="dbW-aa-CBM" id="C9u-eG-rc0"/>
+                        <outlet property="gosioProPriceLabel" destination="sSB-1a-dWP" id="jnj-sM-Ejg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UZp-jA-vh6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

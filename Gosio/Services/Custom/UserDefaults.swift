@@ -16,3 +16,4 @@ var appIconInt = userDefaults?.object(forKey: userDefaultsKeyManager.appIconKey)
 
 var reviewInteger = userDefaults?.object(forKey: userDefaultsKeyManager.requestReviewKey) as? Int
 
+var currentSubscription = userDefaults?.object(forKey: "currentSubscription") as? String
