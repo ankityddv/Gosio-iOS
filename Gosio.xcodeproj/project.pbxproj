@@ -53,6 +53,10 @@
 		367FED0725EE5ED5007F116B /* CurrencyVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 367FED0625EE5ED5007F116B /* CurrencyVC.swift */; };
 		367FED0C25EE5F06007F116B /* CurrencyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 367FED0B25EE5F06007F116B /* CurrencyModel.swift */; };
 		367FED1625EE604D007F116B /* zip3sequence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 367FED1525EE604D007F116B /* zip3sequence.swift */; };
+		368D369625F4C3DE00D5928D /* IAPProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368D369525F4C3DE00D5928D /* IAPProduct.swift */; };
+		368D369B25F4C41600D5928D /* IAPService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368D369A25F4C41600D5928D /* IAPService.swift */; };
+		368D36A025F4C45500D5928D /* InAppPurchasesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368D369F25F4C45500D5928D /* InAppPurchasesVC.swift */; };
+		368D36A925F4CDBA00D5928D /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 368D36A825F4CDBA00D5928D /* StoreKit.framework */; };
 		36960CAC25EFF3B400946619 /* textFieldMaxLength.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36960CAB25EFF3B400946619 /* textFieldMaxLength.swift */; };
 		36B7643D25F39C110017AC35 /* PaperOnboarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B7643A25F39C100017AC35 /* PaperOnboarding.swift */; };
 		36B7643E25F39C110017AC35 /* PaperOnboardingDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B7643B25F39C110017AC35 /* PaperOnboardingDataSource.swift */; };
@@ -146,6 +150,16 @@
 		367FED0625EE5ED5007F116B /* CurrencyVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyVC.swift; sourceTree = "<group>"; };
 		367FED0B25EE5F06007F116B /* CurrencyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyModel.swift; sourceTree = "<group>"; };
 		367FED1525EE604D007F116B /* zip3sequence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = zip3sequence.swift; sourceTree = "<group>"; };
+		368D369525F4C3DE00D5928D /* IAPProduct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IAPProduct.swift; sourceTree = "<group>"; };
+		368D369A25F4C41600D5928D /* IAPService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IAPService.swift; sourceTree = "<group>"; };
+		368D369F25F4C45500D5928D /* InAppPurchasesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InAppPurchasesVC.swift; sourceTree = "<group>"; };
+		368D36A825F4CDBA00D5928D /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		368D36AD25F4F1ED00D5928D /* AirbnbCerealLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = AirbnbCerealLight.ttf; sourceTree = "<group>"; };
+		368D36AE25F4F1ED00D5928D /* AirbnbCerealMedium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = AirbnbCerealMedium.ttf; sourceTree = "<group>"; };
+		368D36AF25F4F1EE00D5928D /* AirbnbCerealBlack.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = AirbnbCerealBlack.ttf; sourceTree = "<group>"; };
+		368D36B025F4F1EE00D5928D /* AirbnbCerealBook.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = AirbnbCerealBook.ttf; sourceTree = "<group>"; };
+		368D36B125F4F1EE00D5928D /* AirbnbCerealBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = AirbnbCerealBold.ttf; sourceTree = "<group>"; };
+		368D36B225F4F1EE00D5928D /* AirbnbCerealExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = AirbnbCerealExtraBold.ttf; sourceTree = "<group>"; };
 		36960CAB25EFF3B400946619 /* textFieldMaxLength.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = textFieldMaxLength.swift; sourceTree = "<group>"; };
 		36B7643A25F39C100017AC35 /* PaperOnboarding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaperOnboarding.swift; sourceTree = "<group>"; };
 		36B7643B25F39C110017AC35 /* PaperOnboardingDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaperOnboardingDataSource.swift; sourceTree = "<group>"; };
@@ -180,6 +194,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DC86A193E62F1FD61530D148 /* Pods_Gosio.framework in Frameworks */,
+				368D36A925F4CDBA00D5928D /* StoreKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -233,6 +248,7 @@
 			isa = PBXGroup;
 			children = (
 				367FECE125EE172C007F116B /* SettingsVC.swift */,
+				368D36A425F4C5A900D5928D /* In App Purchases */,
 				360CD43625EE754D00A7D72B /* App Theme */,
 				360CD44625EE76EA00A7D72B /* App Icon */,
 				367FED1025EE5F0D007F116B /* Currency */,
@@ -405,6 +421,7 @@
 		364F359C25EB5DF2007E7996 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				368D36B325F4F1F900D5928D /* Fonts */,
 				3636FB3925EE7B4A005A25EC /* Alternate Icons */,
 				360DD70125EB766900636EBD /* Custom */,
 				362E737425EAAC4E00C06078 /* AppDelegate.swift */,
@@ -497,6 +514,37 @@
 				367FED0B25EE5F06007F116B /* CurrencyModel.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		368BCDD925F4F97B0018DA10 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				368D369525F4C3DE00D5928D /* IAPProduct.swift */,
+				368D369A25F4C41600D5928D /* IAPService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		368D36A425F4C5A900D5928D /* In App Purchases */ = {
+			isa = PBXGroup;
+			children = (
+				368BCDD925F4F97B0018DA10 /* Services */,
+				368D369F25F4C45500D5928D /* InAppPurchasesVC.swift */,
+			);
+			path = "In App Purchases";
+			sourceTree = "<group>";
+		};
+		368D36B325F4F1F900D5928D /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				368D36AF25F4F1EE00D5928D /* AirbnbCerealBlack.ttf */,
+				368D36B125F4F1EE00D5928D /* AirbnbCerealBold.ttf */,
+				368D36B025F4F1EE00D5928D /* AirbnbCerealBook.ttf */,
+				368D36B225F4F1EE00D5928D /* AirbnbCerealExtraBold.ttf */,
+				368D36AD25F4F1ED00D5928D /* AirbnbCerealLight.ttf */,
+				368D36AE25F4F1ED00D5928D /* AirbnbCerealMedium.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 		36B7643625F39BF60017AC35 /* Onboarding Animation */ = {
@@ -600,6 +648,7 @@
 		967FB4580FE11BB57C892F33 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				368D36A825F4CDBA00D5928D /* StoreKit.framework */,
 				8A52AFAB7D7CD8C2521EAB4D /* Pods_Gosio.framework */,
 				427612BCCF6048BB813A12DD /* Pods_Gosio_GosioUITests.framework */,
 				24FAC72EC543397B7F4A08AB /* Pods_GosioTests.framework */,
@@ -869,6 +918,7 @@
 				36D95DEA25EFAA9100692411 /* GoalDataModel.swift in Sources */,
 				360CD44225EE759000A7D72B /* AppIconVC.swift in Sources */,
 				36B7649325F3A6840017AC35 /* Slide.swift in Sources */,
+				368D36A025F4C45500D5928D /* InAppPurchasesVC.swift in Sources */,
 				36B7647025F39CB60017AC35 /* GestureControl.swift in Sources */,
 				36B7643E25F39C110017AC35 /* PaperOnboardingDataSource.swift in Sources */,
 				360CD44B25EE789E00A7D72B /* AppIconService.swift in Sources */,
@@ -876,6 +926,7 @@
 				364F35BE25EB5ECB007E7996 /* UserDefaults.swift in Sources */,
 				36637CF025F37DC900A1F1A9 /* MoreAppsbyAnkitYadavVC.swift in Sources */,
 				36960CAC25EFF3B400946619 /* textFieldMaxLength.swift in Sources */,
+				368D369625F4C3DE00D5928D /* IAPProduct.swift in Sources */,
 				36404CC825ED033100C5A188 /* Zip6Sequence.swift in Sources */,
 				3602BEB425EBD07E0014DD16 /* GoalAmountVC.swift in Sources */,
 				36B7644B25F39C320017AC35 /* PageView.swift in Sources */,
@@ -894,6 +945,7 @@
 				367FED0725EE5ED5007F116B /* CurrencyVC.swift in Sources */,
 				360DD73E25EB81F700636EBD /* MenuView.swift in Sources */,
 				367FECEA25EE21DF007F116B /* AddToSiriVC.swift in Sources */,
+				368D369B25F4C41600D5928D /* IAPService.swift in Sources */,
 				36785D7825F111D3000DA319 /* BalloonPickerView.swift in Sources */,
 				3602BEA825EBD0600014DD16 /* GoalNameVC.swift in Sources */,
 				36B7645525F39C530017AC35 /* PageContainer.swift in Sources */,

@@ -44,7 +44,7 @@ class SettingsVC: UITableViewController {
         case 3:
             return 2
         case 4:
-            return 4
+            return 5
         case 5:
             return 1
         default:
@@ -108,8 +108,15 @@ class SettingsVC: UITableViewController {
             }
         case 4:
             switch indexPath.row {
+            case 0:
+                openSafari(url: urlManager.privacyPolicyUrl)
+            case 1:
+                openSafari(url: urlManager.termsOfUseUrl)
             case 2:
-                showFaqs()
+                openSafari(url: urlManager.faqUrl)
+            case 4:
+                let vc = storyboard?.instantiateViewController(withIdentifier: VCIdentifierManager.inAppPurchasesKey) as! InAppPurchasesVC
+                self.present(vc, animated: true, completion: nil)
             default:
                 break
             }
@@ -195,8 +202,8 @@ extension SettingsVC {
         UIApplication.shared.open(writeReviewURL)
     }
     
-    func showFaqs() {
-        if let url = URL(string: urlManager.faqUrl) {
+    func openSafari(url: String) {
+        if let url = URL(string: url) {
             let config = SFSafariViewController.Configuration()
             config.entersReaderIfAvailable = true
 

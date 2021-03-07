@@ -8,7 +8,6 @@
 import UIKit
 import Foundation
 
-
 //MARK:- Screen sizes
 let window = UIApplication.shared.connectedScenes
         .filter({$0.activationState == .foregroundActive})

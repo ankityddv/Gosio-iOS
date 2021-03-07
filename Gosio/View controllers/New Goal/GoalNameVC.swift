@@ -17,7 +17,7 @@ class GoalNameVC: UIViewController {
     @IBOutlet weak var goalNameTextField: UITextField!
     @IBOutlet weak var nextBttn: UIButton!
     @IBOutlet weak var nextBttnTopConstraint: NSLayoutConstraint!
-    
+    @IBOutlet weak var gotProAddView: UIView!
     
     @IBAction func dismissButtonDidTap(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
@@ -45,6 +45,12 @@ class GoalNameVC: UIViewController {
             }
         }
         
+    }
+    
+    
+    @IBAction func goProDidTap(_ sender: Any) {
+        let vc = storyboard?.instantiateViewController(withIdentifier: VCIdentifierManager.inAppPurchasesKey) as! InAppPurchasesVC
+        self.present(vc, animated: true, completion: nil)
     }
     
     
@@ -114,6 +120,7 @@ extension GoalNameVC {
         
         UIView.animate(withDuration: 0.3, animations: {
             self.nextBttn.frame.origin.y = 568
+            self.gotProAddView.frame.origin.y = 650
     //            print(screenHeight - (keyboardHeight + 50))
             
         }, completion: { [self]_ in

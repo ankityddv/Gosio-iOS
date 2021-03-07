@@ -32,6 +32,7 @@ struct VCIdentifierManager {
     static let termsOfUseKey = "TermsOfUseVC"
     static let goalDetailKey = "GoalExpandVC"
     static let moreAppsByUsKey = "MoreAppsbyAnkitYadavVC"
+    static let inAppPurchasesKey = "InAppPurchasesVC"
     
 }
 
@@ -42,6 +43,7 @@ struct TableViewCellIdentifierManager {
     static let currencyCell = "CurrencyTVCell"
     static let appThemeCell = "appThemeTVCell"
     static let ourAppsCell = "OurAppsCell"
+    static let gosioProCell = "GosioProFeaturesCell"
     
 }
 
@@ -51,6 +53,8 @@ struct urlManager {
     static let faqUrl = "https://ankityddv.github.io/Gosio-BetaRegistration/faq"
     static let betaUrl = "https://ankityddv.github.io/Gosio-BetaRegistration/"
     static let dineroUrl = "https://apps.apple.com/us/app/dinero-subscription-manager/id1545370811"
+    static let privacyPolicyUrl = "https://ankityddv.github.io/Gosio/privacyPolicy"
+    static let termsOfUseUrl = "https://ankityddv.github.io/Gosio/termsOfUse"
     
 }
 
@@ -58,6 +62,7 @@ struct imageNameManager {
     
     static let noneMark = "noneMark"
     static let checkMark = "checkMark"
+    static let check = "check"
     
 }
 
