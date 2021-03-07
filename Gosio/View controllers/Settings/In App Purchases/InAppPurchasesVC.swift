@@ -5,6 +5,7 @@
 //  Created by ANKIT YADAV on 07/03/21.
 //
 
+import Hero
 import UIKit
 import StoreKit
 import SafariServices
@@ -60,9 +61,12 @@ class InAppPurchasesVC: UIViewController,controlAlert {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         IAPService.shared.getProducts()
-        
+        setUpUi()
+        setUpHeroAnimations()
+    }
+    
+    func setUpUi() {
         DispatchQueue.main.asyncAfter(deadline: .now()+3){
             
             let productInfoArr = IAPService.shared.updatePrice(product: .GosioPro)
@@ -82,11 +86,19 @@ class InAppPurchasesVC: UIViewController,controlAlert {
             .inAppPurchaseBottom("Payment will be charged to your iTunes account at confirmation of purchase. Your subscription will be valid for lifetime. You can manage your subscription by accessing your iTunes & App Store Account Settings after purchase. All personal data is handled under the terms and conditions of Gosio’s privacy policy. More details can be found here: ")
             .inAppPurchaseLinkBottom("Privacy policy, ", url: URL(string: urlManager.privacyPolicyUrl)!)
             .inAppPurchaseLinkBottom("Terms of Use.", url: URL(string: urlManager.termsOfUseUrl)!)
-        
-       
     }
     
+    @IBOutlet weak var illustrationImageView: UIImageView!
+    @IBOutlet weak var gosioProLabel: UILabel!
+    @IBOutlet weak var goProBttn: UIButton!
     
+    func setUpHeroAnimations(){
+        illustrationImageView.hero.id = HeroIDs.IAPIllustrationKey
+        gosioProLabel.hero.id = HeroIDs.goProLabelKey
+        goProBttn.hero.id = HeroIDs.goProBttnKey
+        dismissBttn.hero.id = HeroIDs.dismissButtonKey
+        self.hero.isEnabled = true
+    }
 }
 
 

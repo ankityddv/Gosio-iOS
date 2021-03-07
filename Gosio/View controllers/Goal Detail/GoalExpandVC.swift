@@ -30,11 +30,17 @@ class GoalExpandVC: UIViewController {
     @IBOutlet weak var goalAccomplishmentDate: UILabel!
     @IBOutlet weak var goalStatus: UIImageView!
     @IBOutlet weak var progressBar: UIProgressView!
-//    @IBOutlet weak var instructions: UILabel!
     @IBOutlet weak var picker: BalloonPickerView!
     @IBOutlet weak var deleteBttn: UIButton!
     @IBOutlet weak var addMoneyBttn: UIButton!
     @IBOutlet var updatePopUpView: UIView!
+    @IBOutlet weak var dismissBttn: UIButton!
+    
+    
+    // Pro popUp
+    @IBOutlet weak var goProIllustration: UIImageView!
+    @IBOutlet weak var goProLabel: UILabel!
+    @IBOutlet weak var goProBttn: UIButton!
     
     
     override func viewDidLoad() {
@@ -45,6 +51,13 @@ class GoalExpandVC: UIViewController {
         oldAchievedAmount = selectedGoal!.goalAchievedAmount as! Float
     }
 
+    @IBAction func goProBttnDidTap(_ sender: Any) {
+        
+        let vc = storyboard?.instantiateViewController(withIdentifier: VCIdentifierManager.inAppPurchasesKey) as! InAppPurchasesVC
+        self.present(vc, animated: true, completion: nil)
+        
+    }
+    
     @IBAction func dismissPopUpBttnDidTao(_ sender: Any) {
         dissmissUpdatePopUp()
     }
@@ -204,7 +217,13 @@ extension GoalExpandVC {
         dismissButton.hero.id = HeroIDs.dismissButtonKey
         emoji.hero.id = HeroIDs.emojiInDashboardKey
         goalAccomplishmentDate.hero.id = HeroIDs.goalAccomplishmentDateKey
+        
         addMoneyBttn.hero.id = HeroIDs.buttonKey
+        goProIllustration.hero.id = HeroIDs.IAPIllustrationKey
+        goProLabel.hero.id = HeroIDs.goProLabelKey
+        goProBttn.hero.id = HeroIDs.goProBttnKey
+        dismissBttn.hero.id = HeroIDs.dismissButtonKey
+        
         self.hero.isEnabled = true
     }
     

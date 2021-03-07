@@ -44,6 +44,8 @@ struct TableViewCellIdentifierManager {
     static let appThemeCell = "appThemeTVCell"
     static let ourAppsCell = "OurAppsCell"
     static let gosioProCell = "GosioProFeaturesCell"
+    static let gosioProAdCell = "gosioProAdCell"
+    
     
 }
 
@@ -80,6 +82,9 @@ struct userDefaultsKeyManager {
 struct HeroIDs {
     
     static let emojiKey = "emoji"
+    static let goProLabelKey = "gosioProLabel"
+    static let IAPIllustrationKey = "IAPillustration"
+    static let goProBttnKey = "goProBttn"
     static let buttonKey = "button"
     static let goalNameKey = "goalName"
     static let goalAmountKey = "goalAmount"

@@ -61,10 +61,10 @@ extension IAPService: SKProductsRequestDelegate {
         self.products = response.products
         for product in response.products {
 //            print(product.localizedTitle)
-            let currency = "\(product.priceLocale.currencySymbol ?? "#")"
-            let price = "\(product.price)"
-            let LifteTimePrice = "\(currency)" + "\(price)"
-            print(LifteTimePrice)
+//            let currency = "\(product.priceLocale.currencySymbol ?? "#")"
+//            let price = "\(product.price)"
+//            let LifteTimePrice = "\(currency)" + "\(price)"
+//            print(LifteTimePrice)
 //            userDefaults?.set(LifteTimePrice, forKey: "LifetimeSubscriptionPrice")
         }
     }

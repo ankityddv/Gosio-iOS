@@ -68,7 +68,6 @@
                                 <color key="tintColor" name="TitleTextColor"/>
                                 <state key="normal" image="cross"/>
                                 <connections>
-                                    <action selector="dismissButtonDidTap:" destination="Ap8-XE-yVX" eventType="touchUpInside" id="GOs-bG-6at"/>
                                     <action selector="dismissButtonDidTap:" destination="SN9-O4-ROP" eventType="touchUpInside" id="jr2-Cx-ino"/>
                                 </connections>
                             </button>
@@ -129,6 +128,119 @@
                                     <action selector="deleteBttnDidTap:" destination="SN9-O4-ROP" eventType="touchUpInside" id="rxu-O7-oe2"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1gP-yd-8Ae">
+                                <rect key="frame" x="32" y="541" width="350" height="121"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="IAPIllustrations" translatesAutoresizingMaskIntoConstraints="NO" id="TBb-LG-dQf">
+                                        <rect key="frame" x="11" y="16.5" width="96" height="88"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="88" id="8er-Ml-U8I"/>
+                                            <constraint firstAttribute="width" constant="96" id="F3o-4X-czI"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Go Pro" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cB9-x2-ZNf">
+                                        <rect key="frame" x="120" y="16" width="65" height="27"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="27" id="pB7-BU-AzY"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="AirbnbCerealApp-Bold" family="Airbnb Cereal App" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add unlimited goals" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b5u-0L-cS8">
+                                        <rect key="frame" x="137" y="43" width="90" height="14"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="14" id="O4K-9u-nE9"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="AirbnbCerealApp-Light" family="Airbnb Cereal App" pointSize="10"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dIN-KW-Crc">
+                                        <rect key="frame" x="250" y="22" width="92" height="27"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="92" id="PAR-dJ-Qca"/>
+                                            <constraint firstAttribute="height" constant="27" id="RGJ-Ge-wY5"/>
+                                        </constraints>
+                                        <state key="normal" image="Go Pro Button "/>
+                                        <connections>
+                                            <action selector="goProBttnDidTap:" destination="SN9-O4-ROP" eventType="touchUpInside" id="WAf-gR-dBB"/>
+                                        </connections>
+                                    </button>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Check" translatesAutoresizingMaskIntoConstraints="NO" id="g5m-06-Qj4">
+                                        <rect key="frame" x="120" y="45" width="14" height="10"/>
+                                        <color key="tintColor" name="TitleTextColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="14" id="IVF-gn-cIb"/>
+                                            <constraint firstAttribute="height" constant="10" id="beQ-Tx-UaA"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Multiple app icons" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zIP-3N-kea">
+                                        <rect key="frame" x="137" y="59" width="105" height="14"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="105" id="BUC-ri-tQY"/>
+                                            <constraint firstAttribute="height" constant="14" id="NPr-pn-dQ9"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="AirbnbCerealApp-Light" family="Airbnb Cereal App" pointSize="10"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Check" translatesAutoresizingMaskIntoConstraints="NO" id="7j6-ln-cqa">
+                                        <rect key="frame" x="120" y="61" width="14" height="10"/>
+                                        <color key="tintColor" name="TitleTextColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="10" id="8sT-SK-Nkd"/>
+                                            <constraint firstAttribute="width" constant="14" id="pdz-nG-rsA"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Available for iPhone, iPad and Mac at no extra cost" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sil-1K-pNg">
+                                        <rect key="frame" x="137" y="75" width="151" height="27"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="151" id="4hb-vY-al0"/>
+                                            <constraint firstAttribute="height" constant="27" id="jQ9-wh-OdT"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="AirbnbCerealApp-Light" family="Airbnb Cereal App" pointSize="10"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Check" translatesAutoresizingMaskIntoConstraints="NO" id="gna-Rx-JMZ">
+                                        <rect key="frame" x="120" y="77" width="14" height="10"/>
+                                        <color key="tintColor" name="TitleTextColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="10" id="R1n-gV-Soa"/>
+                                            <constraint firstAttribute="width" constant="14" id="VVu-RI-hLf"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" name="SecondaryBgColor"/>
+                                <constraints>
+                                    <constraint firstItem="cB9-x2-ZNf" firstAttribute="top" secondItem="1gP-yd-8Ae" secondAttribute="top" constant="16" id="2wq-tG-yHA"/>
+                                    <constraint firstItem="zIP-3N-kea" firstAttribute="top" secondItem="b5u-0L-cS8" secondAttribute="bottom" constant="2" id="3tA-mH-FIc"/>
+                                    <constraint firstAttribute="trailing" secondItem="dIN-KW-Crc" secondAttribute="trailing" constant="8" id="Cfw-Hd-Ih7"/>
+                                    <constraint firstItem="Sil-1K-pNg" firstAttribute="top" secondItem="zIP-3N-kea" secondAttribute="bottom" constant="2" id="IsP-dn-37x"/>
+                                    <constraint firstItem="7j6-ln-cqa" firstAttribute="leading" secondItem="TBb-LG-dQf" secondAttribute="trailing" constant="13" id="LPS-i2-cuK"/>
+                                    <constraint firstItem="cB9-x2-ZNf" firstAttribute="leading" secondItem="TBb-LG-dQf" secondAttribute="trailing" constant="13" id="MPO-Ey-q1N"/>
+                                    <constraint firstItem="7j6-ln-cqa" firstAttribute="top" secondItem="g5m-06-Qj4" secondAttribute="bottom" constant="6" id="MS8-Tw-G8h"/>
+                                    <constraint firstItem="g5m-06-Qj4" firstAttribute="leading" secondItem="TBb-LG-dQf" secondAttribute="trailing" constant="13" id="NGC-0n-qwi"/>
+                                    <constraint firstAttribute="width" constant="350" id="SJW-2P-uCG"/>
+                                    <constraint firstItem="TBb-LG-dQf" firstAttribute="leading" secondItem="1gP-yd-8Ae" secondAttribute="leading" constant="11" id="U2n-re-RpJ"/>
+                                    <constraint firstItem="b5u-0L-cS8" firstAttribute="top" secondItem="cB9-x2-ZNf" secondAttribute="bottom" id="XKH-3c-TBV"/>
+                                    <constraint firstItem="Sil-1K-pNg" firstAttribute="leading" secondItem="gna-Rx-JMZ" secondAttribute="trailing" constant="3" id="ZQT-Co-Q0o"/>
+                                    <constraint firstItem="dIN-KW-Crc" firstAttribute="top" secondItem="1gP-yd-8Ae" secondAttribute="top" constant="22" id="Zmy-kZ-OZN"/>
+                                    <constraint firstItem="TBb-LG-dQf" firstAttribute="top" secondItem="1gP-yd-8Ae" secondAttribute="top" constant="16.5" id="coB-Rp-COq"/>
+                                    <constraint firstAttribute="height" constant="121" id="fLd-gd-1qK"/>
+                                    <constraint firstItem="zIP-3N-kea" firstAttribute="leading" secondItem="7j6-ln-cqa" secondAttribute="trailing" constant="3" id="l52-HV-fft"/>
+                                    <constraint firstItem="b5u-0L-cS8" firstAttribute="leading" secondItem="g5m-06-Qj4" secondAttribute="trailing" constant="3" id="lM8-ws-7XF"/>
+                                    <constraint firstItem="gna-Rx-JMZ" firstAttribute="leading" secondItem="TBb-LG-dQf" secondAttribute="trailing" constant="13" id="qap-RT-eDj"/>
+                                    <constraint firstItem="gna-Rx-JMZ" firstAttribute="top" secondItem="7j6-ln-cqa" secondAttribute="bottom" constant="6" id="wAj-aS-wYu"/>
+                                    <constraint firstItem="g5m-06-Qj4" firstAttribute="top" secondItem="cB9-x2-ZNf" secondAttribute="bottom" constant="2" id="wrk-AX-bLB"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="AdP-k0-IQk"/>
                         <color key="backgroundColor" name="BgColor"/>
@@ -141,6 +253,8 @@
                             <constraint firstItem="725-qQ-H8D" firstAttribute="centerX" secondItem="baP-T0-igO" secondAttribute="centerX" id="RQC-EE-wvc"/>
                             <constraint firstItem="725-qQ-H8D" firstAttribute="top" secondItem="8Bz-mz-zAY" secondAttribute="bottom" constant="9" id="Rct-gd-nbl"/>
                             <constraint firstItem="qHN-1u-5mg" firstAttribute="centerX" secondItem="baP-T0-igO" secondAttribute="centerX" id="WN9-tJ-4GT"/>
+                            <constraint firstItem="1gP-yd-8Ae" firstAttribute="centerX" secondItem="baP-T0-igO" secondAttribute="centerX" id="Xm2-fh-5RA"/>
+                            <constraint firstItem="1gP-yd-8Ae" firstAttribute="top" secondItem="LDw-8K-NDB" secondAttribute="bottom" constant="48" id="Y4t-xT-EOH"/>
                             <constraint firstItem="LDw-8K-NDB" firstAttribute="top" secondItem="DuG-s9-sPS" secondAttribute="bottom" constant="28" id="aZY-6s-BLe"/>
                             <constraint firstItem="qHN-1u-5mg" firstAttribute="top" secondItem="AdP-k0-IQk" secondAttribute="top" constant="51" id="dGM-v6-shw"/>
                             <constraint firstItem="DuG-s9-sPS" firstAttribute="top" secondItem="enE-ae-Eue" secondAttribute="bottom" constant="83" id="eba-Rp-dMQ"/>
@@ -154,9 +268,13 @@
                     <connections>
                         <outlet property="addMoneyBttn" destination="DuG-s9-sPS" id="saS-ah-8Lp"/>
                         <outlet property="deleteBttn" destination="LDw-8K-NDB" id="gOd-Ca-v8O"/>
+                        <outlet property="dismissBttn" destination="VeG-Wq-kRk" id="482-DB-cLQ"/>
                         <outlet property="dismissButton" destination="VeG-Wq-kRk" id="Cjs-Je-CLt"/>
                         <outlet property="editOptionsView" destination="R2G-q4-ygh" id="qD0-kI-HdA"/>
                         <outlet property="emoji" destination="qHN-1u-5mg" id="Duy-Sa-zYu"/>
+                        <outlet property="goProBttn" destination="dIN-KW-Crc" id="xcB-Z0-KQy"/>
+                        <outlet property="goProIllustration" destination="TBb-LG-dQf" id="cVc-lx-a6A"/>
+                        <outlet property="goProLabel" destination="cB9-x2-ZNf" id="HfM-Io-XAz"/>
                         <outlet property="goalAccomplishmentDate" destination="725-qQ-H8D" id="x2r-F8-BbT"/>
                         <outlet property="goalStatus" destination="enE-ae-Eue" id="sSp-hC-bsK"/>
                         <outlet property="goalTotalAmount" destination="8Bz-mz-zAY" id="rDf-KH-7bT"/>
@@ -2059,7 +2177,7 @@ by Ankit Yadav</string>
                                                         </constraints>
                                                     </view>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading ..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sSB-1a-dWP">
-                                                        <rect key="frame" x="146" y="419" width="122" height="33"/>
+                                                        <rect key="frame" x="146.5" y="419" width="121.5" height="33"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="33" id="9be-vU-d5f"/>
                                                         </constraints>
@@ -2152,7 +2270,10 @@ by Ankit Yadav</string>
                         <outlet property="bgView" destination="oc5-vg-bhz" id="q9a-fs-WBf"/>
                         <outlet property="bottomLegalLabel" destination="UZN-ge-DX2" id="2Ql-3i-9lc"/>
                         <outlet property="dismissBttn" destination="dbW-aa-CBM" id="C9u-eG-rc0"/>
+                        <outlet property="goProBttn" destination="CGY-6K-ywn" id="iaT-N4-0Fa"/>
+                        <outlet property="gosioProLabel" destination="ms7-ul-Kcs" id="mut-mP-DRX"/>
                         <outlet property="gosioProPriceLabel" destination="sSB-1a-dWP" id="jnj-sM-Ejg"/>
+                        <outlet property="illustrationImageView" destination="Cw1-qg-itS" id="YWm-3S-NBf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UZp-jA-vh6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
