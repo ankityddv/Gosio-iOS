@@ -134,21 +134,28 @@ class GoalExpandVC: UIViewController {
     @IBAction func deleteBttnDidTap(_ sender: Any) {
         
         lightImpactHeptic()
-        // create the alert
-        let alert = UIAlertController(title: "Are you sure?", message: "Procrastination isn't healthy, think once again, you can still achieve it 💪🏻 ", preferredStyle: UIAlertController.Style.alert)
-
-        // add the actions (buttons)
-        alert.addAction(UIAlertAction(title: "Give up", style: UIAlertAction.Style.destructive, handler: { action in
-            
-            deleteGoal(selectedGoal: self.selectedGoal!)
-            
-            self.dismiss(animated: true, completion: nil)
-        }))
-        alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertAction.Style.cancel, handler: nil))
-//        alert.addAction(UIAlertAction(title: "Launch the Missile", style: UIAlertAction.Style.destructive, handler: nil))
         
-        // show the alert
-        self.present(alert, animated: true, completion: nil)
+        let alertController = UIAlertController(title: "", message: "", preferredStyle: .alert)
+        
+        let deleteAction = UIAlertAction(title: "Give up", style: .destructive) { [self] _ in
+            deleteGoal(selectedGoal: self.selectedGoal!)
+            self.dismiss(animated: true, completion: nil)
+        }
+        
+        let titleFont = [NSAttributedString.Key.font: UIFont(name: "AirbnbCerealApp-Bold", size: 18.0)!]
+        let messageFont = [NSAttributedString.Key.font: UIFont(name: "AirbnbCerealApp-Book", size: 12.0)!]
+
+        let titleAttrString = NSMutableAttributedString(string: "Are you sure?", attributes: titleFont)
+        let messageAttrString = NSMutableAttributedString(string: "Procrastination isn't healthy, think once again, you can still achieve it 💪🏻", attributes: messageFont)
+
+        alertController.setValue(titleAttrString, forKey: "attributedTitle")
+        alertController.setValue(messageAttrString, forKey: "attributedMessage")
+        
+        alertController.addAction(deleteAction)
+        
+        alertController.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+        alertController.view.tintColor = UIColor(named: "AccentColor")
+        self.present(alertController, animated: true, completion: nil)
         
     }
 
@@ -199,12 +206,15 @@ extension GoalExpandVC {
             .bold(" it, now \nupdate it 💪🏻")
         
         switch getIAPStatus() {
+        case .unidentified:
+//            print("Unidentified")
+            break
         case .pro:
             goProBgView.isHidden = true
         case .free:
-            print("Free")
-        case .unidentified:
-            print("Unidentified")
+//            print("Free")
+            break
+        
         }
         
         

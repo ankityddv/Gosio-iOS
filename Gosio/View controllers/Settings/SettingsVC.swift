@@ -139,7 +139,7 @@ class SettingsVC: UITableViewController,controlAlert {
         let myLabel = UILabel()
         myLabel.frame = CGRect(x: 20, y: 8, width: 320, height: 20)
         let titleStr = self.tableView(tableView, titleForHeaderInSection: section)
-        myLabel.text = titleStr?.uppercased()
+        myLabel.text = titleStr?.capitalized
         myLabel.font = UIFont(name: "AirbnbCerealApp-Bold", size: 15) ?? UIFont.systemFont(ofSize: 15)
         myLabel.textColor = UIColor.init(named: "SubtitleTextColor")
         let headerView = UIView()

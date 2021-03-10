@@ -22,6 +22,7 @@ class LoginVC: UIViewController {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var subtitleLabel: UILabel!
     
+    @IBOutlet weak var privacyPolicyLabel: UILabel!
     
     @IBAction func privacyPolicyDidTap(_ sender: Any) {
         let vc = storyboard?.instantiateViewController(withIdentifier: VCIdentifierManager.privacyPolicyKey) as! PrivacyPolicyVC
@@ -142,6 +143,13 @@ extension LoginVC {
         subtitleLabel.attributedText = NSMutableAttributedString()
             .subtitleNormal("Sign up will only take ")
             .subtitleNormalBlueHighlight("10 seconds")
+        
+        privacyPolicyLabel.attributedText = NSMutableAttributedString()
+            .inAppPurchaseBottom("By registering you confirm that you accept our\n")
+            .inAppPurchaseLinkBottom("Privacy policy", url: URL(string: urlManager.privacyPolicyUrl)!)
+            .inAppPurchaseBottom(" and ")
+            .inAppPurchaseLinkBottom("Terms of Use", url: URL(string: urlManager.termsOfUseUrl)!)
+            .inAppPurchaseBottom(" .")
     }
     
     @objc

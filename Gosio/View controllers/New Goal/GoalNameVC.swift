@@ -94,12 +94,14 @@ extension GoalNameVC {
             .bold(" ?")
         
         switch getIAPStatus() {
+        case .unidentified:
+//            print("Unidentified")
+            break
         case .pro:
             gotProAddView.isHidden = true
         case .free:
-            print("Free")
-        case .unidentified:
-            print("Unidentified")
+//            print("Free")
+            break
         }
         
     }

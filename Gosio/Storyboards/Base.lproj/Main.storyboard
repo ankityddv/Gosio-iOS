@@ -45,20 +45,20 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$ 287 000" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Bz-mz-zAY">
-                                <rect key="frame" x="132" y="173" width="150" height="39"/>
+                                <rect key="frame" x="150.5" y="173" width="113" height="39"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="39" id="aky-fG-h6L"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <fontDescription key="fontDescription" name="AirbnbCerealApp-Book" family="Airbnb Cereal App" pointSize="25"/>
                                 <color key="textColor" name="TitleTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total amount saved" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="725-qQ-H8D">
-                                <rect key="frame" x="156" y="221" width="102" height="14"/>
+                                <rect key="frame" x="157.5" y="221" width="99" height="14"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="14" id="7eK-Bo-lia"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                <fontDescription key="fontDescription" name="AirbnbCerealApp-Book" family="Airbnb Cereal App" pointSize="11"/>
                                 <color key="textColor" name="SubtitleTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -95,7 +95,7 @@
                                     <constraint firstAttribute="height" constant="38" id="B7N-9g-vKy"/>
                                     <constraint firstAttribute="width" constant="137" id="H62-hq-APM"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <fontDescription key="fontDescription" name="AirbnbCerealApp-Book" family="Airbnb Cereal App" pointSize="12"/>
                                 <state key="normal" title="📈 Add money">
                                     <color key="titleColor" name="SubtitleTextColor"/>
                                 </state>
@@ -115,7 +115,7 @@
                                     <constraint firstAttribute="height" constant="38" id="dZr-eX-eHU"/>
                                     <constraint firstAttribute="width" constant="137" id="xz0-86-I7Y"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <fontDescription key="fontDescription" name="AirbnbCerealApp-Book" family="Airbnb Cereal App" pointSize="12"/>
                                 <state key="normal" title="❌ Delete">
                                     <color key="titleColor" name="SubtitleTextColor"/>
                                 </state>
@@ -321,7 +321,7 @@
                                     <rect key="frame" x="182" y="16" width="137" height="38"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <color key="backgroundColor" name="PopUpButtonColor"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                    <fontDescription key="fontDescription" name="AirbnbCerealApp-Book" family="Airbnb Cereal App" pointSize="12"/>
                                     <state key="normal" title="✅ Update">
                                         <color key="titleColor" name="SubtitleTextColor"/>
                                     </state>
@@ -338,7 +338,7 @@
                                     <rect key="frame" x="36" y="15" width="137" height="38"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <color key="backgroundColor" name="PopUpButtonColor"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                    <fontDescription key="fontDescription" name="AirbnbCerealApp-Book" family="Airbnb Cereal App" pointSize="12"/>
                                     <state key="normal" title="🙉 Dismiss">
                                         <color key="titleColor" name="SubtitleTextColor"/>
                                     </state>
@@ -433,7 +433,7 @@
                                     <constraint firstAttribute="height" constant="38" id="2WF-w6-tTf"/>
                                     <constraint firstAttribute="width" constant="137" id="lOn-w6-YhN"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <fontDescription key="fontDescription" name="AirbnbCerealApp-Book" family="Airbnb Cereal App" pointSize="12"/>
                                 <state key="normal" title="🎯 Add new goal">
                                     <color key="titleColor" name="SubtitleTextColor"/>
                                 </state>
@@ -493,29 +493,29 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="House in Cali" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Mz-kq-Xpj">
-                                                            <rect key="frame" x="82" y="26" width="102" height="21"/>
+                                                            <rect key="frame" x="82" y="26" width="99.5" height="21"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="21" id="pRf-t3-Jy8"/>
                                                             </constraints>
-                                                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                                            <fontDescription key="fontDescription" name="AirbnbCerealApp-Book" family="Airbnb Cereal App" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Z00%" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hU6-Jp-Y1u">
-                                                            <rect key="frame" x="291.5" y="36" width="49.5" height="21"/>
+                                                            <rect key="frame" x="296.5" y="36" width="44.5" height="21"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="21" id="mPj-uX-UiB"/>
                                                             </constraints>
-                                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                                            <fontDescription key="fontDescription" name="AirbnbCerealApp-Medium" family="Airbnb Cereal App" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$ 100 000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pot-8u-LBe">
-                                                            <rect key="frame" x="99" y="47" width="66" height="17"/>
+                                                            <rect key="frame" x="99" y="47" width="62.5" height="17"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="17" id="7ni-mk-rBb"/>
                                                             </constraints>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                            <fontDescription key="fontDescription" name="AirbnbCerealApp-Book" family="Airbnb Cereal App" pointSize="14"/>
                                                             <color key="textColor" name="SubtitleTextColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
@@ -656,7 +656,7 @@
                                     <constraint firstAttribute="height" constant="64" id="446-1Z-WC8"/>
                                     <constraint firstAttribute="width" constant="245" id="UwP-Ps-MNe"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="52"/>
+                                <fontDescription key="fontDescription" name="AirbnbCerealApp-Book" family="Airbnb Cereal App" pointSize="52"/>
                                 <textInputTraits key="textInputTraits" keyboardType="alphabet"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="maxLength">
@@ -671,7 +671,7 @@
                                     <constraint firstAttribute="width" constant="137" id="nRX-lg-iL0"/>
                                     <constraint firstAttribute="height" constant="38" id="sjr-Op-JGz"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <fontDescription key="fontDescription" name="AirbnbCerealApp-Book" family="Airbnb Cereal App" pointSize="12"/>
                                 <state key="normal" title="👉🏻 Next">
                                     <color key="titleColor" name="SubtitleTextColor"/>
                                 </state>
@@ -869,7 +869,7 @@
                                     <constraint firstAttribute="width" constant="245" id="aCM-11-CJJ"/>
                                     <constraint firstAttribute="height" constant="64" id="pub-b6-tT4"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="52"/>
+                                <fontDescription key="fontDescription" name="AirbnbCerealApp-Book" family="Airbnb Cereal App" pointSize="52"/>
                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                             </textField>
                             <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="🏎" placeholder="$ 569 000" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gnR-Mk-LI5">
@@ -888,7 +888,7 @@
                                     <constraint firstAttribute="height" constant="38" id="RO3-Pf-EOh"/>
                                     <constraint firstAttribute="width" constant="137" id="cBa-Rw-e1x"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <fontDescription key="fontDescription" name="AirbnbCerealApp-Book" family="Airbnb Cereal App" pointSize="12"/>
                                 <state key="normal" title="👉🏻 Next">
                                     <color key="titleColor" name="SubtitleTextColor"/>
                                 </state>
@@ -967,7 +967,7 @@
                                     <constraint firstAttribute="width" constant="137" id="DyG-Xf-bXu"/>
                                     <constraint firstAttribute="height" constant="38" id="mPJ-xN-HTD"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <fontDescription key="fontDescription" name="AirbnbCerealApp-Book" family="Airbnb Cereal App" pointSize="12"/>
                                 <state key="normal" title="✅ Done">
                                     <color key="titleColor" name="SubtitleTextColor"/>
                                 </state>
@@ -1006,14 +1006,14 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Ferrari" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ogH-gX-WIl">
                                         <rect key="frame" x="180" y="14" width="183" height="26"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="21"/>
+                                        <fontDescription key="fontDescription" name="AirbnbCerealApp-Book" family="Airbnb Cereal App" pointSize="21"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="$ 569 000" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UiL-Qx-wUE">
                                         <rect key="frame" x="180" y="41" width="177" height="24"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                        <fontDescription key="fontDescription" name="AirbnbCerealApp-Book" family="Airbnb Cereal App" pointSize="19"/>
                                         <color key="textColor" name="SubtitleTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -1068,16 +1068,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bk0-Gn-bku">
-                                <rect key="frame" x="0.0" y="741" width="414" height="45"/>
-                                <color key="backgroundColor" name="BgColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="45" id="2Hf-bH-Zab"/>
-                                    <constraint firstAttribute="width" constant="414" id="nhX-8v-Uqn"/>
-                                </constraints>
-                            </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Damn" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9pI-d7-FD2">
-                                <rect key="frame" x="52.5" y="375" width="309" height="162"/>
+                                <rect key="frame" x="52.5" y="360" width="309" height="162"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="162" id="CRn-Qo-Rlh"/>
                                     <constraint firstAttribute="width" constant="309" id="g5s-Ob-WMC"/>
@@ -1087,7 +1079,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign up will only take 10 seconds" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ToV-TK-nax">
-                                <rect key="frame" x="75" y="535" width="264" height="20.5"/>
+                                <rect key="frame" x="75" y="520" width="264" height="20.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="264" id="UYQ-ze-AhT"/>
                                 </constraints>
@@ -1096,52 +1088,58 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="loginIllustration" translatesAutoresizingMaskIntoConstraints="NO" id="Bs6-9N-b1R">
-                                <rect key="frame" x="87" y="104" width="240" height="238"/>
+                                <rect key="frame" x="87" y="89" width="240" height="238"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="238" id="WsK-BU-Zhc"/>
                                     <constraint firstAttribute="width" constant="240" id="gNT-9X-0AP"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WCI-4Z-hxk">
-                                <rect key="frame" x="167.5" y="835" width="79" height="27"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="tnc" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q27-zh-JGu">
+                                <rect key="frame" x="49.5" y="809" width="315" height="53"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="79" id="RAy-RB-seq"/>
-                                    <constraint firstAttribute="height" constant="27" id="jkW-V7-Yl2"/>
+                                    <constraint firstAttribute="width" constant="315" id="Cd2-7k-2N2"/>
+                                    <constraint firstAttribute="height" constant="53" id="WEa-1G-cik"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                <state key="normal" title="Privacy Policy">
-                                    <color key="titleColor" name="AccentColor"/>
-                                </state>
-                                <connections>
-                                    <action selector="privacyPolicyDidTap:" destination="NrQ-Rx-sGS" eventType="touchUpInside" id="T8t-hM-LzJ"/>
-                                </connections>
-                            </button>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bk0-Gn-bku">
+                                <rect key="frame" x="0.0" y="735" width="414" height="45"/>
+                                <color key="backgroundColor" name="BgColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="0rF-Xx-j5M"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="waG-AO-vVA"/>
                         <color key="backgroundColor" name="BgColor"/>
                         <constraints>
-                            <constraint firstItem="WCI-4Z-hxk" firstAttribute="bottom" secondItem="waG-AO-vVA" secondAttribute="bottom" id="390-SH-BdX"/>
-                            <constraint firstItem="Bk0-Gn-bku" firstAttribute="centerX" secondItem="wGP-lh-Gf0" secondAttribute="centerX" id="63g-EW-bVi"/>
+                            <constraint firstItem="q27-zh-JGu" firstAttribute="centerX" secondItem="wGP-lh-Gf0" secondAttribute="centerX" id="1S4-bt-oFz"/>
+                            <constraint firstItem="Bk0-Gn-bku" firstAttribute="trailing" secondItem="waG-AO-vVA" secondAttribute="trailing" id="Gcu-bP-f1S"/>
                             <constraint firstItem="Bs6-9N-b1R" firstAttribute="centerX" secondItem="wGP-lh-Gf0" secondAttribute="centerX" id="ReN-qe-f2V"/>
                             <constraint firstItem="9pI-d7-FD2" firstAttribute="centerX" secondItem="wGP-lh-Gf0" secondAttribute="centerX" id="UdR-zY-UOS"/>
                             <constraint firstItem="9pI-d7-FD2" firstAttribute="top" secondItem="Bs6-9N-b1R" secondAttribute="bottom" constant="33" id="Zdn-HX-CD6"/>
                             <constraint firstItem="ToV-TK-nax" firstAttribute="centerX" secondItem="wGP-lh-Gf0" secondAttribute="centerX" id="ZoQ-AN-dtz"/>
                             <constraint firstItem="ToV-TK-nax" firstAttribute="top" secondItem="Bs6-9N-b1R" secondAttribute="bottom" constant="193" id="afM-aW-XPg"/>
-                            <constraint firstItem="WCI-4Z-hxk" firstAttribute="centerX" secondItem="wGP-lh-Gf0" secondAttribute="centerX" id="bkI-oe-UVK"/>
-                            <constraint firstItem="WCI-4Z-hxk" firstAttribute="top" secondItem="Bk0-Gn-bku" secondAttribute="bottom" constant="49" id="byZ-Dk-Bgz"/>
-                            <constraint firstItem="Bs6-9N-b1R" firstAttribute="top" secondItem="waG-AO-vVA" secondAttribute="top" constant="60" id="uEl-ab-b7a"/>
+                            <constraint firstItem="q27-zh-JGu" firstAttribute="top" secondItem="Bk0-Gn-bku" secondAttribute="bottom" constant="29" id="fXe-Jd-o0I"/>
+                            <constraint firstItem="Bk0-Gn-bku" firstAttribute="leading" secondItem="waG-AO-vVA" secondAttribute="leading" id="jEU-PB-wWL"/>
+                            <constraint firstItem="Bk0-Gn-bku" firstAttribute="centerX" secondItem="wGP-lh-Gf0" secondAttribute="centerX" id="mnb-Ou-gdN"/>
+                            <constraint firstItem="Bs6-9N-b1R" firstAttribute="top" secondItem="waG-AO-vVA" secondAttribute="top" constant="45" id="uEl-ab-b7a"/>
+                            <constraint firstItem="q27-zh-JGu" firstAttribute="bottom" secondItem="waG-AO-vVA" secondAttribute="bottom" id="vAT-io-8LL"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="rH7-Ms-60Y"/>
                     <connections>
                         <outlet property="appleButtonView" destination="Bk0-Gn-bku" id="wpz-mw-fNt"/>
+                        <outlet property="privacyPolicyLabel" destination="q27-zh-JGu" id="IGo-VT-ULz"/>
                         <outlet property="subtitleLabel" destination="ToV-TK-nax" id="4wt-DW-1J5"/>
                         <outlet property="titleLabel" destination="9pI-d7-FD2" id="6eJ-Xb-OwG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bL2-ry-bVJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="287" y="80"/>
+            <point key="canvasLocation" x="286.95652173913044" y="79.6875"/>
         </scene>
         <!--OnboardingVC-->
         <scene sceneID="IzS-Pu-ktO">
@@ -1306,7 +1304,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="383" height="60"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Siri shortcuts" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="GJh-Qt-RT3">
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Siri shortcut" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="GJh-Qt-RT3">
                                                     <rect key="frame" x="20" y="0.0" width="355" height="60"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -1591,6 +1589,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Settings" largeTitleDisplayMode="always" id="C1p-dS-Kw4">
                         <barButtonItem key="rightBarButtonItem" image="cross" id="5MR-Hj-x9Y">
+                            <color key="tintColor" name="TitleTextColor"/>
                             <connections>
                                 <action selector="dismissBttnDidTap:" destination="Pbl-Kr-Nar" id="dix-jL-HuH"/>
                             </connections>
@@ -1811,7 +1810,7 @@ App Icon</string>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o4F-7Y-BAq">
                                             <rect key="frame" x="107" y="34" width="179" height="21"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <fontDescription key="fontDescription" name="AirbnbCerealApp-Book" family="Airbnb Cereal App" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -2005,11 +2004,11 @@ by Ankit Yadav</string>
                                             </userDefinedRuntimeAttributes>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SuL-aO-DL5">
-                                            <rect key="frame" x="94" y="23" width="41.5" height="21"/>
+                                            <rect key="frame" x="94" y="23" width="42" height="21"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="21" id="Axj-ph-RRa"/>
                                             </constraints>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <fontDescription key="fontDescription" name="AirbnbCerealApp-Book" family="Airbnb Cereal App" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -2018,7 +2017,7 @@ by Ankit Yadav</string>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="21" id="TC0-am-b60"/>
                                             </constraints>
-                                            <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                            <fontDescription key="fontDescription" name="AirbnbCerealApp-Book" family="Airbnb Cereal App" pointSize="11"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -2029,7 +2028,7 @@ by Ankit Yadav</string>
                                                 <constraint firstAttribute="height" constant="30" id="P9N-V4-HZt"/>
                                                 <constraint firstAttribute="width" constant="60" id="QJ0-rd-is9"/>
                                             </constraints>
-                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                            <fontDescription key="fontDescription" name="AirbnbCerealApp-Book" family="Airbnb Cereal App" pointSize="14"/>
                                             <state key="normal" title="GET">
                                                 <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </state>
@@ -2133,7 +2132,7 @@ by Ankit Yadav</string>
                                                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="tfh-rJ-ST1">
                                                                             <rect key="frame" x="49" y="0.0" width="319" height="44"/>
                                                                             <autoresizingMask key="autoresizingMask"/>
-                                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                            <fontDescription key="fontDescription" name="AirbnbCerealApp-Book" family="Airbnb Cereal App" pointSize="17"/>
                                                                             <nil key="textColor"/>
                                                                             <nil key="highlightedColor"/>
                                                                         </label>

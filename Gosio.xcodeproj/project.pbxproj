@@ -23,6 +23,12 @@
 		3627647325F9503600A55834 /* UIImage+Gif.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3627647225F9503600A55834 /* UIImage+Gif.swift */; };
 		3627647825F9505000A55834 /* CustomLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3627647725F9505000A55834 /* CustomLoader.swift */; };
 		3627647D25F9513A00A55834 /* loader.gif in Resources */ = {isa = PBXBuildFile; fileRef = 3627647C25F9513900A55834 /* loader.gif */; };
+		3627648425F965F500A55834 /* AirbnbCerealBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 368D36B125F4F1EE00D5928D /* AirbnbCerealBold.ttf */; };
+		3627648525F965F500A55834 /* AirbnbCerealLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 368D36AD25F4F1ED00D5928D /* AirbnbCerealLight.ttf */; };
+		3627648625F965F500A55834 /* AirbnbCerealExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 368D36B225F4F1EE00D5928D /* AirbnbCerealExtraBold.ttf */; };
+		3627648725F965F500A55834 /* AirbnbCerealMedium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 368D36AE25F4F1ED00D5928D /* AirbnbCerealMedium.ttf */; };
+		3627648825F965F500A55834 /* AirbnbCerealBook.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 368D36B025F4F1EE00D5928D /* AirbnbCerealBook.ttf */; };
+		3627648925F965F500A55834 /* AirbnbCerealBlack.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 368D36AF25F4F1EE00D5928D /* AirbnbCerealBlack.ttf */; };
 		362E737525EAAC4E00C06078 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 362E737425EAAC4E00C06078 /* AppDelegate.swift */; };
 		362E737725EAAC4E00C06078 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 362E737625EAAC4E00C06078 /* SceneDelegate.swift */; };
 		362E737925EAAC4E00C06078 /* OnboardingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 362E737825EAAC4E00C06078 /* OnboardingVC.swift */; };
@@ -446,12 +452,12 @@
 		364F35A025EB5E07007E7996 /* View controllers */ = {
 			isa = PBXGroup;
 			children = (
-				3602BEAC25EBD0660014DD16 /* New Goal */,
 				360DD6F425EB67C700636EBD /* Onboarding */,
 				364F35AF25EB5E71007E7996 /* Auth */,
 				360DD74525EB8FB700636EBD /* Dashboard */,
-				360CD43725EE755800A7D72B /* Settings */,
 				365DAE3325F2203A004AAABC /* Goal Detail */,
+				3602BEAC25EBD0660014DD16 /* New Goal */,
+				360CD43725EE755800A7D72B /* Settings */,
 			);
 			path = "View controllers";
 			sourceTree = "<group>";
@@ -776,12 +782,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3627648825F965F500A55834 /* AirbnbCerealBook.ttf in Resources */,
 				362E738425EAAC5100C06078 /* LaunchScreen.storyboard in Resources */,
+				3627648925F965F500A55834 /* AirbnbCerealBlack.ttf in Resources */,
 				3636FB4B25EE9A00005A25EC /* Default.png in Resources */,
 				360DD73925EB817A00636EBD /* MenuView.xib in Resources */,
 				36B7649825F3A68B0017AC35 /* Slide.xib in Resources */,
 				362E738125EAAC5100C06078 /* Assets.xcassets in Resources */,
+				3627648725F965F500A55834 /* AirbnbCerealMedium.ttf in Resources */,
+				3627648525F965F500A55834 /* AirbnbCerealLight.ttf in Resources */,
+				3627648625F965F500A55834 /* AirbnbCerealExtraBold.ttf in Resources */,
 				3627647D25F9513A00A55834 /* loader.gif in Resources */,
+				3627648425F965F500A55834 /* AirbnbCerealBold.ttf in Resources */,
 				362E737C25EAAC4E00C06078 /* Main.storyboard in Resources */,
 				3636FB3525EE7B3D005A25EC /* White.png in Resources */,
 			);

@@ -75,7 +75,7 @@ class InAppPurchasesVC: UIViewController,controlAlert {
             
             UIView.transition(with: self.gosioProPriceLabel,
                           duration: 0.5,
-                           options: .transitionCrossDissolve,
+                          options: .transitionCurlUp,
                         animations: { [weak self] in
                             self!.gosioProPriceLabel.text = productInfoArr[0] + " - " + productInfoArr[2] +  productInfoArr[1]
                      }, completion: nil)
@@ -86,8 +86,10 @@ class InAppPurchasesVC: UIViewController,controlAlert {
         
         bottomLegalLabel.attributedText = NSMutableAttributedString()
             .inAppPurchaseBottom("Payment will be charged to your iTunes account at confirmation of purchase. Your subscription will be valid for lifetime. You can manage your subscription by accessing your iTunes & App Store Account Settings after purchase. All personal data is handled under the terms and conditions of Gosio’s privacy policy. More details can be found here: ")
-            .inAppPurchaseLinkBottom("Privacy policy, ", url: URL(string: urlManager.privacyPolicyUrl)!)
-            .inAppPurchaseLinkBottom("Terms of Use.", url: URL(string: urlManager.termsOfUseUrl)!)
+            .inAppPurchaseLinkBottom("Privacy policy", url: URL(string: urlManager.privacyPolicyUrl)!)
+            .inAppPurchaseBottom(" , ")
+            .inAppPurchaseLinkBottom("Terms of Use", url: URL(string: urlManager.termsOfUseUrl)!)
+            .inAppPurchaseBottom(" .")
     }
     
     @IBOutlet weak var illustrationImageView: UIImageView!

@@ -332,24 +332,21 @@ extension DashboardVC {
     
     func vaildateInAppPurchases(){
         
-        print("Fetched --  \(getIAPStatus())")
+        print("Current version:  \(getIAPStatus())")
         
         switch getIAPStatus() {
         case .unidentified:
-            print("unidentified")
+//            print("unidentified")
             updateIAPStatus(status: false)
         case .pro:
-            print("pro")
+//            print("pro")
             break
         case .free:
-            print("free")
-            break
-        default:
+//            print("free")
             break
         }
         
     }
-
     
     func createUSerActivity(){
         

@@ -33,7 +33,7 @@ func deleteGoal(selectedGoal: Goal) {
         }
     }
     catch {
-        print("Fetch Failed")
+//        print("Fetch Failed")
     }
 }
 
@@ -52,7 +52,14 @@ func updateIAPStatus(status: Bool) {
     
 }
 
+enum subscriptionType {
+    case free
+    case pro
+    case unidentified
+}
+
 func getIAPStatus() -> subscriptionType {
+    
     let request = NSFetchRequest<NSFetchRequestResult>(entityName: coreDataIdentifierManager.IAP)
     request.returnsObjectsAsFaults = false
     var boole : Bool!

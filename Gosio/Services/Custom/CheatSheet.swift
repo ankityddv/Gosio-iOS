@@ -108,8 +108,4 @@ func currentIphone() -> iPhoneModel{
 }
 
 
-enum subscriptionType {
-    case free
-    case pro
-    case unidentified
-}
+

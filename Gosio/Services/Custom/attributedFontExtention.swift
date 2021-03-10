@@ -14,8 +14,8 @@ extension NSMutableAttributedString {
     var boldFont: UIFont { return UIFont(name: "AirbnbCerealApp-Bold", size: fontSize) ?? UIFont.boldSystemFont(ofSize: fontSize) }
     var normalFont: UIFont { return UIFont(name: "AirbnbCerealApp-Book", size: fontSize) ?? UIFont.systemFont(ofSize: fontSize)}
     
-    var subtitleBoldFont: UIFont { return UIFont(name: "AirbnbCerealApp-Bold", size: fontSize) ?? UIFont.boldSystemFont(ofSize: 17) }
-    var subtitleNormalFont: UIFont { return UIFont(name: "AirbnbCerealApp-Book", size: fontSize) ?? UIFont.systemFont(ofSize: 17)}
+    var subtitleBoldFont: UIFont { return UIFont(name: "AirbnbCerealApp-Bold", size: 17) ?? UIFont.boldSystemFont(ofSize: 17) }
+    var subtitleNormalFont: UIFont { return UIFont(name: "AirbnbCerealApp-Book", size: 17) ?? UIFont.systemFont(ofSize: 17)}
     var inAppPurchasesBottomFont: UIFont { return UIFont(name: "AirbnbCerealApp-Book", size: 10) ?? UIFont.systemFont(ofSize: 10)}
     
     func bold(_ value:String) -> NSMutableAttributedString {
