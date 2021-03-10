@@ -198,7 +198,7 @@ extension GoalExpandVC {
             .boldBlueHighlight("earned")
             .bold(" it, now \nupdate it 💪🏻")
         
-        switch validateSubscription() {
+        switch getIAPStatus() {
         case .pro:
             goProBgView.isHidden = true
         case .free:
@@ -381,37 +381,6 @@ extension GoalExpandVC {
                                     break
                                 }
                              }, completion: nil)
-    }
-}
-
-func updateIAPStatus(status: Bool) {
-    
-     let entity = NSEntityDescription.entity(forEntityName: "InAppPurchase", in: context)
-     let newEntity = NSManagedObject(entity: entity!, insertInto: context)
-     
-     newEntity.setValue(status, forKey: "isPro")
- 
-     do {
-         try context.save()
-         print("Saved")
-     } catch {
-         print("Fucked it while saving!")
-     }
-    
-}
-
-func getIAPStatus() {
-    let request = NSFetchRequest<NSFetchRequestResult>(entityName: "InAppPurchase")
-    request.returnsObjectsAsFaults = false
-    var boole : Bool!
-    do {
-        let result = try context.fetch(request)
-        for data in result as! [NSManagedObject] {
-            boole = (data.value(forKey: "isPro") as! Bool)
-        }
-        print("Fetched - \(boole)")
-    } catch {
-        print("Fucked it while fetching!")
     }
 }
 

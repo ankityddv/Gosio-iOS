@@ -89,11 +89,11 @@ extension SKPaymentTransactionState {
     func status() -> String {
         switch self {
         case .deferred:
-            print("d")
-            userDefaults?.set("nil", forKey: userDefaultsKeyManager.inAppPurchaseKey)
+//            print("d")
+            updateIAPStatus(status: true)
             return "deffered"
         case .failed:
-            print("f")
+//            print("f")
             purchaseFailed()
             return "failed"
         case .purchased:
@@ -115,21 +115,21 @@ extension SKPaymentTransactionState {
 
 
 func restoredPurchase(){
-//    icloudSynced()
     stoploader()
     print("restored lol")
-    userDefaults?.set("pro", forKey: userDefaultsKeyManager.inAppPurchaseKey)
+    updateIAPStatus(status: true)
     SPAlert.present(title: "Purchase Restored Successfully", message: "Please restart the app to see the changes!", preset: .done, completion: nil)
 }
+
 func purchasedSucessfully(){
-//    icloudSynced()
     stoploader()
-    userDefaults?.set("pro", forKey: userDefaultsKeyManager.inAppPurchaseKey)
+    updateIAPStatus(status: true)
     SPAlert.present(title: "Purchase Successful", message: "Please restart the app to see the changes!", preset: .done, completion: nil)
 }
+
 func purchaseFailed(){
     stoploader()
-    userDefaults?.set("free", forKey: userDefaultsKeyManager.inAppPurchaseKey)
+    updateIAPStatus(status: false)
     SPAlert.present(title: "Purchase Failed", message: "Please try again!", preset: .error, completion: nil)
 }
 

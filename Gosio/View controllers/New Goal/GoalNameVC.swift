@@ -93,7 +93,7 @@ extension GoalNameVC {
             .boldBlueHighlight("desire")
             .bold(" ?")
         
-        switch validateSubscription() {
+        switch getIAPStatus() {
         case .pro:
             gotProAddView.isHidden = true
         case .free:

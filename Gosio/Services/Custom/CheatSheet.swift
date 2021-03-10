@@ -113,13 +113,3 @@ enum subscriptionType {
     case pro
     case unidentified
 }
-
-func validateSubscription() -> subscriptionType {
-    if currentSubscription == "pro" {
-        return .pro
-    } else if currentSubscription == "free" {
-        return .free
-    } else {
-        return .unidentified
-    }
-}

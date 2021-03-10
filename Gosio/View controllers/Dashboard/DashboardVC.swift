@@ -70,7 +70,7 @@ class DashboardVC: UIViewController, LoginViewControllerDelegate {
     }
     @objc func addNewGoal(){
         
-        switch validateSubscription() {
+        switch getIAPStatus() {
         case .pro:
             let vc = self.storyboard?.instantiateViewController(withIdentifier: VCIdentifierManager.goalNameKey) as! GoalNameVC
             self.present(vc, animated: true, completion: nil)
@@ -101,8 +101,6 @@ class DashboardVC: UIViewController, LoginViewControllerDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        updateIAPStatus(status: true)
-        getIAPStatus()
         requestReview()
         fetchData()
         initialiseAppTheme()
@@ -334,19 +332,20 @@ extension DashboardVC {
     
     func vaildateInAppPurchases(){
         
-        switch userDefaults?.object(forKey: userDefaultsKeyManager.inAppPurchaseKey) as? String {
-        case nil:
-//            print("Free and data saved")
-            userDefaults?.set("none", forKey: userDefaultsKeyManager.inAppPurchaseKey)
+        print("Fetched --  \(getIAPStatus())")
+        
+        switch getIAPStatus() {
+        case .unidentified:
+            print("unidentified")
+            updateIAPStatus(status: false)
+        case .pro:
+            print("pro")
+            break
+        case .free:
+            print("free")
+            break
         default:
-            switch validateSubscription() {
-            case .pro:
-                print("Pro")
-            case .free:
-                print("Free")
-            case .unidentified:
-                print("Unidentified")
-            }
+            break
         }
         
     }
