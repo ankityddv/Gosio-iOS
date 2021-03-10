@@ -17,7 +17,12 @@ class GoalNameVC: UIViewController {
     @IBOutlet weak var goalNameTextField: UITextField!
     @IBOutlet weak var nextBttn: UIButton!
     @IBOutlet weak var nextBttnTopConstraint: NSLayoutConstraint!
-    @IBOutlet weak var gotProAddView: UIView!
+    
+    @IBOutlet weak var gotProAddView: AnimatedView!
+    @IBOutlet weak var goProIllustration: UIImageView!
+    @IBOutlet weak var goProLabel: UILabel!
+    @IBOutlet weak var goProBttn: UIButton!
+    @IBOutlet weak var dismissBttn: UIButton!
     
     @IBAction func dismissButtonDidTap(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
@@ -50,6 +55,7 @@ class GoalNameVC: UIViewController {
     
     @IBAction func goProDidTap(_ sender: Any) {
         let vc = storyboard?.instantiateViewController(withIdentifier: VCIdentifierManager.inAppPurchasesKey) as! InAppPurchasesVC
+        vc.isHeroEnabledd = true
         self.present(vc, animated: true, completion: nil)
     }
     
@@ -61,7 +67,6 @@ class GoalNameVC: UIViewController {
         setUpUi()
     }
     
-
 }
 
 
@@ -74,6 +79,12 @@ extension GoalNameVC {
         goalNameTextField.hero.id = HeroIDs.goalNameKey
         nextBttn.hero.id = HeroIDs.buttonKey
         self.hero.isEnabled = true
+        
+        goProIllustration.hero.id = HeroIDs.IAPIllustrationKey
+        goProLabel.hero.id = HeroIDs.goProLabelKey
+        goProBttn.hero.id = HeroIDs.goProBttnKey
+        dismissBttn.hero.id = HeroIDs.dismissButtonKey
+        
     }
     
     func setUpUi(){
@@ -81,6 +92,16 @@ extension GoalNameVC {
             .bold("What is it that you truly ")
             .boldBlueHighlight("desire")
             .bold(" ?")
+        
+        switch validateSubscription() {
+        case .pro:
+            gotProAddView.isHidden = true
+        case .free:
+            print("Free")
+        case .unidentified:
+            print("Unidentified")
+        }
+        
     }
     
     

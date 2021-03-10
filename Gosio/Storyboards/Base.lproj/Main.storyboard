@@ -15,6 +15,9 @@
         <array key="AirbnbCerealBook.ttf">
             <string>AirbnbCerealApp-Book</string>
         </array>
+        <array key="AirbnbCerealExtraBold.ttf">
+            <string>AirbnbCerealApp-ExtraBold</string>
+        </array>
         <array key="AirbnbCerealLight.ttf">
             <string>AirbnbCerealApp-Light</string>
         </array>
@@ -128,7 +131,7 @@
                                     <action selector="deleteBttnDidTap:" destination="SN9-O4-ROP" eventType="touchUpInside" id="rxu-O7-oe2"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1gP-yd-8Ae">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1gP-yd-8Ae" customClass="AnimatedView" customModule="Gosio" customModuleProvider="target">
                                 <rect key="frame" x="32" y="541" width="350" height="121"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="IAPIllustrations" translatesAutoresizingMaskIntoConstraints="NO" id="TBb-LG-dQf">
@@ -272,6 +275,7 @@
                         <outlet property="dismissButton" destination="VeG-Wq-kRk" id="Cjs-Je-CLt"/>
                         <outlet property="editOptionsView" destination="R2G-q4-ygh" id="qD0-kI-HdA"/>
                         <outlet property="emoji" destination="qHN-1u-5mg" id="Duy-Sa-zYu"/>
+                        <outlet property="goProBgView" destination="1gP-yd-8Ae" id="UNe-hp-0QD"/>
                         <outlet property="goProBttn" destination="dIN-KW-Crc" id="xcB-Z0-KQy"/>
                         <outlet property="goProIllustration" destination="TBb-LG-dQf" id="cVc-lx-a6A"/>
                         <outlet property="goProLabel" destination="cB9-x2-ZNf" id="HfM-Io-XAz"/>
@@ -571,6 +575,7 @@
                                             <outlet property="goalPercentage" destination="hU6-Jp-Y1u" id="Nte-TU-ESk"/>
                                             <outlet property="goalStatusIndicator" destination="faQ-7z-Mdw" id="vMH-hJ-dNc"/>
                                             <outlet property="progressBar" destination="jur-GS-Wn1" id="o6u-Nr-NPo"/>
+                                            <outlet property="roundedBgView" destination="eKb-9O-Rsk" id="Z74-I7-z4w"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -627,7 +632,7 @@
                                     <constraint firstAttribute="width" constant="315" id="UXs-B3-LfD"/>
                                     <constraint firstAttribute="height" constant="98" id="oUf-AQ-9jI"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="32"/>
+                                <fontDescription key="fontDescription" name="AirbnbCerealApp-ExtraBold" family="Airbnb Cereal App" pointSize="32"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -691,7 +696,7 @@
                                     <action selector="dismissButtonDidTap:" destination="Ap8-XE-yVX" eventType="touchUpInside" id="Xkx-hf-lcb"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mFx-tT-mBr">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mFx-tT-mBr" customClass="AnimatedView" customModule="Gosio" customModuleProvider="target">
                                 <rect key="frame" x="32" y="650" width="350" height="121"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="IAPIllustrations" translatesAutoresizingMaskIntoConstraints="NO" id="yc9-Tb-2vP">
@@ -824,7 +829,11 @@
                     </view>
                     <navigationItem key="navigationItem" id="jlo-Rg-9zm"/>
                     <connections>
+                        <outlet property="dismissBttn" destination="zbr-3i-a6s" id="fkb-cx-VGQ"/>
                         <outlet property="emojiTextField" destination="Z16-gy-ZVb" id="gv7-Mk-BiQ"/>
+                        <outlet property="goProBttn" destination="yH8-8W-BaM" id="b3l-OU-tAb"/>
+                        <outlet property="goProIllustration" destination="yc9-Tb-2vP" id="ji2-Wo-1f9"/>
+                        <outlet property="goProLabel" destination="Bik-do-aiz" id="l26-CA-5su"/>
                         <outlet property="goalNameTextField" destination="5EL-dG-bqm" id="CjO-g9-tTf"/>
                         <outlet property="gotProAddView" destination="mFx-tT-mBr" id="Ehi-41-huc"/>
                         <outlet property="nextBttn" destination="Q40-Ck-cRW" id="zP6-tM-A5P"/>
@@ -1132,7 +1141,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bL2-ry-bVJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="86.956521739130437" y="79.6875"/>
+            <point key="canvasLocation" x="287" y="80"/>
         </scene>
         <!--OnboardingVC-->
         <scene sceneID="IzS-Pu-ktO">
@@ -1184,7 +1193,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NmB-Rw-0SQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-603" y="80"/>
+            <point key="canvasLocation" x="-380" y="80"/>
         </scene>
         <!--Settings-->
         <scene sceneID="VMO-jX-nWc">
@@ -1518,7 +1527,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="383" height="60"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Restore purchases" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="kNU-Uq-JDK">
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Go Pro" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="kNU-Uq-JDK">
                                                     <rect key="frame" x="20" y="0.0" width="355" height="60"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" name="AirbnbCerealApp-Book" family="Airbnb Cereal App" pointSize="17"/>
@@ -1588,12 +1597,13 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="dismissBttn" destination="5MR-Hj-x9Y" id="36l-8O-Pwp"/>
                         <outlet property="versionLabel" destination="tIt-6B-5Gp" id="Z4B-BS-hbZ"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d8H-Sf-5I8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1950.7246376811595" y="790.84821428571422"/>
+            <point key="canvasLocation" x="1793" y="791"/>
         </scene>
         <!--Add To SiriVC-->
         <scene sceneID="csg-tu-dif">
@@ -1654,7 +1664,7 @@ Add new goal</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Ue-39-GHz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2683" y="790"/>
+            <point key="canvasLocation" x="2483" y="791"/>
         </scene>
         <!--CurrencyVC-->
         <scene sceneID="BLc-Rr-kGp">
@@ -1736,7 +1746,7 @@ Currency</string>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nku-bh-Y68" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3383" y="790"/>
+            <point key="canvasLocation" x="3170" y="791"/>
         </scene>
         <!--App IconVC-->
         <scene sceneID="tgR-gu-TOA">
@@ -1828,7 +1838,7 @@ App Icon</string>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nYl-8g-TGJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4748" y="791"/>
+            <point key="canvasLocation" x="4577" y="791"/>
         </scene>
         <!--App ThemeVC-->
         <scene sceneID="IaG-Rq-hp3">
@@ -1910,7 +1920,7 @@ Theme</string>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fvd-eb-Clw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5435" y="790"/>
+            <point key="canvasLocation" x="5268" y="791"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="9e3-Q8-DMj">
@@ -2066,7 +2076,7 @@ by Ankit Yadav</string>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4TM-0r-jOD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4054" y="791"/>
+            <point key="canvasLocation" x="3872" y="791"/>
         </scene>
         <!--In App PurchasesVC-->
         <scene sceneID="M8f-aP-9fY">
@@ -2278,7 +2288,7 @@ by Ankit Yadav</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UZp-jA-vh6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1950.7246376811595" y="1505.3571428571429"/>
+            <point key="canvasLocation" x="1794" y="1500"/>
         </scene>
     </scenes>
     <designables>
@@ -2298,7 +2308,7 @@ by Ankit Yadav</string>
         <image name="loginIllustration" width="1024" height="1024"/>
         <image name="twitter" width="30" height="30"/>
         <namedColor name="AccentColor">
-            <color red="0.32899999618530273" green="0.27099999785423279" blue="0.92900002002716064" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.32941176470588235" green="0.27058823529411763" blue="0.92941176470588238" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="AppColor">
             <color red="0.32899999618530273" green="0.32400000095367432" blue="0.4779999852180481" alpha="0.33000001311302185" colorSpace="custom" customColorSpace="sRGB"/>

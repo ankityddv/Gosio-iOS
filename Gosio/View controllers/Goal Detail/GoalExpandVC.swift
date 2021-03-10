@@ -41,6 +41,7 @@ class GoalExpandVC: UIViewController {
     @IBOutlet weak var goProIllustration: UIImageView!
     @IBOutlet weak var goProLabel: UILabel!
     @IBOutlet weak var goProBttn: UIButton!
+    @IBOutlet weak var goProBgView: AnimatedView!
     
     
     override func viewDidLoad() {
@@ -54,6 +55,7 @@ class GoalExpandVC: UIViewController {
     @IBAction func goProBttnDidTap(_ sender: Any) {
         
         let vc = storyboard?.instantiateViewController(withIdentifier: VCIdentifierManager.inAppPurchasesKey) as! InAppPurchasesVC
+        vc.isHeroEnabledd = true
         self.present(vc, animated: true, completion: nil)
         
     }
@@ -138,21 +140,7 @@ class GoalExpandVC: UIViewController {
         // add the actions (buttons)
         alert.addAction(UIAlertAction(title: "Give up", style: UIAlertAction.Style.destructive, handler: { action in
             
-            let request = NSFetchRequest<NSFetchRequestResult>(entityName: coreDataIdentifierManager.goalKey)
-            
-            do {
-                let results:NSArray = try context.fetch(request) as NSArray
-                for result in results {
-                    let goal = result as! Goal
-                    if (goal == self.selectedGoal) {
-                        goal.deletedDate = Date()
-                        try context.save()
-                    }
-                }
-            }
-            catch {
-                print("Fetch Failed")
-            }
+            deleteGoal(selectedGoal: self.selectedGoal!)
             
             self.dismiss(animated: true, completion: nil)
         }))
@@ -210,6 +198,16 @@ extension GoalExpandVC {
             .boldBlueHighlight("earned")
             .bold(" it, now \nupdate it 💪🏻")
         
+        switch validateSubscription() {
+        case .pro:
+            goProBgView.isHidden = true
+        case .free:
+            print("Free")
+        case .unidentified:
+            print("Unidentified")
+        }
+        
+        
     }
     
     func setUpHeroAnimations() {
@@ -256,21 +254,8 @@ extension GoalExpandVC {
     // Setup alert Popup
     @objc func showUpdatePopUp(_ sender: Any) {
         
-//        let provider = subscriptionProvidersArray![Index]
-        
-        // Get Data
-//        deleteAlertTitle.text = "Your \(provider) subscription will be deleted and you'll no longer be able to track it."
-//        if UIImage(named: provider) != nil {
-//            deleteAlertImageView.image = UIImage(named: provider)
-//        }
-//        else {
-//            deleteAlertImageView.image = UIImage(named: "Custom_Home")
-//        }
-        
         // make screen unresponsive
         self.view.isUserInteractionEnabled = false
-        //make navigation bar unresponsive
-//        self.navigationController!.view.isUserInteractionEnabled = false
         
         
         let tap = UITapGestureRecognizer(target: self, action: #selector(self.dissmissUpdatePopUp))
@@ -398,6 +383,38 @@ extension GoalExpandVC {
                              }, completion: nil)
     }
 }
+
+func updateIAPStatus(status: Bool) {
+    
+     let entity = NSEntityDescription.entity(forEntityName: "InAppPurchase", in: context)
+     let newEntity = NSManagedObject(entity: entity!, insertInto: context)
+     
+     newEntity.setValue(status, forKey: "isPro")
+ 
+     do {
+         try context.save()
+         print("Saved")
+     } catch {
+         print("Fucked it while saving!")
+     }
+    
+}
+
+func getIAPStatus() {
+    let request = NSFetchRequest<NSFetchRequestResult>(entityName: "InAppPurchase")
+    request.returnsObjectsAsFaults = false
+    var boole : Bool!
+    do {
+        let result = try context.fetch(request)
+        for data in result as! [NSManagedObject] {
+            boole = (data.value(forKey: "isPro") as! Bool)
+        }
+        print("Fetched - \(boole)")
+    } catch {
+        print("Fucked it while fetching!")
+    }
+}
+
 
 /*
 

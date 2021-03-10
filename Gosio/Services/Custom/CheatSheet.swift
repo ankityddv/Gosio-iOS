@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import Foundation
+import CoreData
 
 //MARK:- Screen sizes
 let window = UIApplication.shared.connectedScenes
@@ -111,12 +111,15 @@ func currentIphone() -> iPhoneModel{
 enum subscriptionType {
     case free
     case pro
+    case unidentified
 }
 
 func validateSubscription() -> subscriptionType {
     if currentSubscription == "pro" {
         return .pro
-    } else {
+    } else if currentSubscription == "free" {
         return .free
+    } else {
+        return .unidentified
     }
 }

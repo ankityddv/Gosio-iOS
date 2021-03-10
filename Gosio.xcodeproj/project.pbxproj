@@ -19,6 +19,10 @@
 		360DD73125EB815400636EBD /* PresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 360DD73025EB815400636EBD /* PresentationController.swift */; };
 		360DD73925EB817A00636EBD /* MenuView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 360DD73825EB817A00636EBD /* MenuView.xib */; };
 		360DD73E25EB81F700636EBD /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 360DD73D25EB81F700636EBD /* MenuView.swift */; };
+		3627646E25F9488B00A55834 /* AnimatedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3627646D25F9488B00A55834 /* AnimatedView.swift */; };
+		3627647325F9503600A55834 /* UIImage+Gif.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3627647225F9503600A55834 /* UIImage+Gif.swift */; };
+		3627647825F9505000A55834 /* CustomLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3627647725F9505000A55834 /* CustomLoader.swift */; };
+		3627647D25F9513A00A55834 /* loader.gif in Resources */ = {isa = PBXBuildFile; fileRef = 3627647C25F9513900A55834 /* loader.gif */; };
 		362E737525EAAC4E00C06078 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 362E737425EAAC4E00C06078 /* AppDelegate.swift */; };
 		362E737725EAAC4E00C06078 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 362E737625EAAC4E00C06078 /* SceneDelegate.swift */; };
 		362E737925EAAC4E00C06078 /* OnboardingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 362E737825EAAC4E00C06078 /* OnboardingVC.swift */; };
@@ -110,6 +114,10 @@
 		360DD73025EB815400636EBD /* PresentationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentationController.swift; sourceTree = "<group>"; };
 		360DD73825EB817A00636EBD /* MenuView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuView.xib; sourceTree = "<group>"; };
 		360DD73D25EB81F700636EBD /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
+		3627646D25F9488B00A55834 /* AnimatedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatedView.swift; sourceTree = "<group>"; };
+		3627647225F9503600A55834 /* UIImage+Gif.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Gif.swift"; sourceTree = "<group>"; };
+		3627647725F9505000A55834 /* CustomLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomLoader.swift; sourceTree = "<group>"; };
+		3627647C25F9513900A55834 /* loader.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = loader.gif; sourceTree = "<group>"; };
 		362E737125EAAC4E00C06078 /* Gosio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Gosio.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		362E737425EAAC4E00C06078 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		362E737625EAAC4E00C06078 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -305,6 +313,9 @@
 				365DAE1D25F20839004AAABC /* CoreDataServices.swift */,
 				364EB91125EDFCB200E14444 /* attributedFontExtention.swift */,
 				36404CB425ECA65B00C5A188 /* FadingTableView.swift */,
+				3627646D25F9488B00A55834 /* AnimatedView.swift */,
+				3627647225F9503600A55834 /* UIImage+Gif.swift */,
+				3627647725F9505000A55834 /* CustomLoader.swift */,
 				367FED1525EE604D007F116B /* zip3sequence.swift */,
 				36404CC725ED033100C5A188 /* Zip6Sequence.swift */,
 				36960CAB25EFF3B400946619 /* textFieldMaxLength.swift */,
@@ -421,6 +432,7 @@
 		364F359C25EB5DF2007E7996 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				3627647C25F9513900A55834 /* loader.gif */,
 				368D36B325F4F1F900D5928D /* Fonts */,
 				3636FB3925EE7B4A005A25EC /* Alternate Icons */,
 				360DD70125EB766900636EBD /* Custom */,
@@ -769,6 +781,7 @@
 				360DD73925EB817A00636EBD /* MenuView.xib in Resources */,
 				36B7649825F3A68B0017AC35 /* Slide.xib in Resources */,
 				362E738125EAAC5100C06078 /* Assets.xcassets in Resources */,
+				3627647D25F9513A00A55834 /* loader.gif in Resources */,
 				362E737C25EAAC4E00C06078 /* Main.storyboard in Resources */,
 				3636FB3525EE7B3D005A25EC /* White.png in Resources */,
 			);
@@ -904,10 +917,12 @@
 				3602BEB925EBD0890014DD16 /* GoalDeadlineVC.swift in Sources */,
 				36B7645A25F39C590017AC35 /* PageViewItem.swift in Sources */,
 				3602BECD25EBDB0B0014DD16 /* Manager.swift in Sources */,
+				3627647325F9503600A55834 /* UIImage+Gif.swift in Sources */,
 				367FECE225EE172C007F116B /* SettingsVC.swift in Sources */,
 				360DD6F025EB66D700636EBD /* DashboardVC.swift in Sources */,
 				364F35B425EB5E84007E7996 /* AuthState.swift in Sources */,
 				367FECF525EE22F8007F116B /* UserActivityType.swift in Sources */,
+				3627647825F9505000A55834 /* CustomLoader.swift in Sources */,
 				36B7646125F39C7B0017AC35 /* OnboardingContentView.swift in Sources */,
 				36B7643D25F39C110017AC35 /* PaperOnboarding.swift in Sources */,
 				362E737525EAAC4E00C06078 /* AppDelegate.swift in Sources */,
@@ -945,6 +960,7 @@
 				367FED0725EE5ED5007F116B /* CurrencyVC.swift in Sources */,
 				360DD73E25EB81F700636EBD /* MenuView.swift in Sources */,
 				367FECEA25EE21DF007F116B /* AddToSiriVC.swift in Sources */,
+				3627646E25F9488B00A55834 /* AnimatedView.swift in Sources */,
 				368D369B25F4C41600D5928D /* IAPService.swift in Sources */,
 				36785D7825F111D3000DA319 /* BalloonPickerView.swift in Sources */,
 				3602BEA825EBD0600014DD16 /* GoalNameVC.swift in Sources */,

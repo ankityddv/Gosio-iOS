@@ -59,7 +59,7 @@ extension IAPService: SKProductsRequestDelegate {
     
     func productsRequest(_ request: SKProductsRequest, didReceive response: SKProductsResponse) {
         self.products = response.products
-        for product in response.products {
+        for _ in response.products {
 //            print(product.localizedTitle)
 //            let currency = "\(product.priceLocale.currencySymbol ?? "#")"
 //            let price = "\(product.price)"
@@ -116,19 +116,20 @@ extension SKPaymentTransactionState {
 
 func restoredPurchase(){
 //    icloudSynced()
-//    stoploader()
+    stoploader()
+    print("restored lol")
     userDefaults?.set("pro", forKey: userDefaultsKeyManager.inAppPurchaseKey)
     SPAlert.present(title: "Purchase Restored Successfully", message: "Please restart the app to see the changes!", preset: .done, completion: nil)
 }
 func purchasedSucessfully(){
 //    icloudSynced()
-//    stoploader()
+    stoploader()
     userDefaults?.set("pro", forKey: userDefaultsKeyManager.inAppPurchaseKey)
     SPAlert.present(title: "Purchase Successful", message: "Please restart the app to see the changes!", preset: .done, completion: nil)
 }
 func purchaseFailed(){
-//    stoploader()
-    userDefaults?.set("nil", forKey: userDefaultsKeyManager.inAppPurchaseKey)
+    stoploader()
+    userDefaults?.set("free", forKey: userDefaultsKeyManager.inAppPurchaseKey)
     SPAlert.present(title: "Purchase Failed", message: "Please try again!", preset: .error, completion: nil)
 }
 

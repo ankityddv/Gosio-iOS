@@ -115,6 +115,7 @@ extension GoalAmountVC {
     }
 
     @objc func keyboardWillHide(notification: NSNotification) {
+        
     //        print("Dismissed")
         UIView.animate(withDuration: 0.3, animations: {
             self.nextBttn.frame.origin.y = 568
@@ -124,6 +125,7 @@ extension GoalAmountVC {
             nextBttnTopConstraint.constant = 91
             
         })
+        
     }
     
     @objc func SwipehideKeyboard() {

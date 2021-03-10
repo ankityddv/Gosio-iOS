@@ -14,8 +14,12 @@
         <attribute name="goalTotalAmount" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES"/>
         <attribute name="progressBar" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES"/>
     </entity>
+    <entity name="InAppPurchase" representedClassName="InAppPurchase" syncable="YES" codeGenerationType="class">
+        <attribute name="isPro" optional="YES" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
+    </entity>
     <elements>
         <element name="Entity" positionX="-63" positionY="-18" width="128" height="44"/>
         <element name="Goal" positionX="-63" positionY="-9" width="128" height="164"/>
+        <element name="InAppPurchase" positionX="-63" positionY="54" width="128" height="44"/>
     </elements>
 </model>

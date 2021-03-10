@@ -7,6 +7,7 @@
 
 import Hero
 import UIKit
+import SPAlert
 import StoreKit
 import CoreData
 
@@ -68,13 +69,40 @@ class DashboardVC: UIViewController, LoginViewControllerDelegate {
         addNewGoal()
     }
     @objc func addNewGoal(){
-        let vc = self.storyboard?.instantiateViewController(withIdentifier: VCIdentifierManager.goalNameKey) as! GoalNameVC
-        self.present(vc, animated: true, completion: nil)
-        createUSerActivity()
+        
+        switch validateSubscription() {
+        case .pro:
+            let vc = self.storyboard?.instantiateViewController(withIdentifier: VCIdentifierManager.goalNameKey) as! GoalNameVC
+            self.present(vc, animated: true, completion: nil)
+            createUSerActivity()
+        case .free:
+            if nonDeletedGoals().count >=  2 {
+                let vc = storyboard?.instantiateViewController(withIdentifier: VCIdentifierManager.inAppPurchasesKey) as! InAppPurchasesVC
+                vc.isHeroEnabledd = false
+                self.present(vc, animated: true, completion: nil)
+            } else {
+                let vc = self.storyboard?.instantiateViewController(withIdentifier: VCIdentifierManager.goalNameKey) as! GoalNameVC
+                self.present(vc, animated: true, completion: nil)
+                createUSerActivity()
+            }
+        case .unidentified:
+            if nonDeletedGoals().count >=  2 {
+                let vc = storyboard?.instantiateViewController(withIdentifier: VCIdentifierManager.inAppPurchasesKey) as! InAppPurchasesVC
+                vc.isHeroEnabledd = false
+                self.present(vc, animated: true, completion: nil)
+            } else {
+                let vc = self.storyboard?.instantiateViewController(withIdentifier: VCIdentifierManager.goalNameKey) as! GoalNameVC
+                self.present(vc, animated: true, completion: nil)
+                createUSerActivity()
+            }
+        }
+        
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        updateIAPStatus(status: true)
+        getIAPStatus()
         requestReview()
         fetchData()
         initialiseAppTheme()
@@ -84,7 +112,7 @@ class DashboardVC: UIViewController, LoginViewControllerDelegate {
         setUpHeroAnimations()
     }
     override func viewDidAppear(_ animated: Bool) {
-//        vaildateOnboarding()
+        vaildateOnboarding()
     }
     override func viewWillAppear(_ animated: Bool) {
         updateTotalAmount()
@@ -100,7 +128,6 @@ class DashboardVC: UIViewController, LoginViewControllerDelegate {
 extension DashboardVC: UITableViewDelegate,UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        return goal.count
         return nonDeletedGoals().count
     }
     
@@ -136,12 +163,121 @@ extension DashboardVC: UITableViewDelegate,UITableViewDataSource {
         selectedGoal = nonDeletedGoals()[indexPath.row]
         vc.selectedGoal = selectedGoal
         
-//        vc.indexPathRow = indexPath.row
         self.present(vc, animated: true, completion: nil)
         
-//        print("did tap")
         tableView.deselectRow(at: indexPath, animated: true)
     
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        
+        if editingStyle == .delete {
+            
+            let actionSheetController: UIAlertController = UIAlertController(title: "Edit goal", message: nil, preferredStyle: .actionSheet)
+
+            let deleteAction: UIAlertAction = UIAlertAction(title: "Delete goal", style: .destructive) { [self] action -> Void in
+                
+                let selectedGoal : Goal!
+                selectedGoal = nonDeletedGoals()[indexPath.row]
+                
+                deleteGoal(selectedGoal: selectedGoal)
+                
+                SPAlert.present(title: "Deleted", preset: .done, haptic: .success)
+                
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.5){
+                    tableView.deleteRows(at: [indexPath], with: .top)
+                }
+                
+            }
+
+            let cancelAction: UIAlertAction = UIAlertAction(title: "Cancel", style: .cancel) { action -> Void in }
+
+            actionSheetController.addAction(deleteAction)
+            actionSheetController.addAction(cancelAction)
+
+            actionSheetController.view.tintColor = UIColor(named: "AccentColor")
+            
+            present(actionSheetController, animated: true, completion: nil)   // doesn't work for iPad
+
+//            actionSheetController.popoverPresentationController?.sourceView = yourSourceViewName // works for both iPhone & iPad
+
+//            present(actionSheetController, animated: true) {
+//                print("option menu presented")
+//            }
+            
+        }
+        
+    }
+    
+    func tableView(_ tableView: UITableView, contextMenuConfigurationForRowAt indexPath: IndexPath, point: CGPoint) -> UIContextMenuConfiguration? {
+
+        let config = UIContextMenuConfiguration(identifier: indexPath as NSCopying, previewProvider: nil) { [self] _ in
+            
+            let delete = UIAction(title: "Delete goal",image: UIImage(systemName: "trash"), attributes: .destructive) { [self] _ in
+
+                let actionSheetController: UIAlertController = UIAlertController(title: "Edit goal", message: nil, preferredStyle: .actionSheet)
+
+                let deleteAction: UIAlertAction = UIAlertAction(title: "Delete goal", style: .destructive) { [self] action -> Void in
+                    
+                    let selectedGoal : Goal!
+                    selectedGoal = nonDeletedGoals()[indexPath.row]
+                    
+                    deleteGoal(selectedGoal: selectedGoal)
+                    
+                    SPAlert.present(title: "Deleted", preset: .done, haptic: .success)
+                    
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.5){
+                        tableView.deleteRows(at: [indexPath], with: .top)
+                    }
+                    
+                }
+
+                let cancelAction: UIAlertAction = UIAlertAction(title: "Cancel", style: .cancel) { action -> Void in }
+
+                actionSheetController.addAction(deleteAction)
+                actionSheetController.addAction(cancelAction)
+
+                actionSheetController.view.tintColor = UIColor(named: "AccentColor")
+                
+                present(actionSheetController, animated: true, completion: nil)
+
+            }
+
+            let menu = UIMenu(title: "", image: nil, identifier: nil, options: [], children: [delete])
+
+            return menu
+
+        }
+        return config
+        
+    }
+    
+    @available(iOS 13.0, *)
+    func tableView(_ tableView: UITableView, previewForHighlightingContextMenuWithConfiguration configuration: UIContextMenuConfiguration) -> UITargetedPreview? {
+        
+        return makeTargetedPreview(for: configuration)
+    
+    }
+
+    @available(iOS 13.0, *)
+    func tableView(_ tableView: UITableView, previewForDismissingContextMenuWithConfiguration configuration: UIContextMenuConfiguration) -> UITargetedPreview? {
+        
+        return makeTargetedPreview(for: configuration)
+        
+    }
+
+    @available(iOS 13.0, *)
+    private func makeTargetedPreview(for configuration: UIContextMenuConfiguration) -> UITargetedPreview? {
+        
+        guard let indexPath = configuration.identifier as? IndexPath else { return nil }
+        guard let cell = tableVieww.cellForRow(at: indexPath) as? goalsCell else {return nil}
+        
+        let parameters = UIPreviewParameters()
+        parameters.backgroundColor = .clear
+        parameters.visiblePath = UIBezierPath(roundedRect: cell.roundedBgView.bounds, byRoundingCorners: .allCorners, cornerRadii: CGSize(width: 30, height: 30))
+        
+        return UITargetedPreview(view: cell.roundedBgView, parameters: parameters)
+        
     }
     
 }
@@ -152,15 +288,18 @@ extension DashboardVC {
     
     
     func setUpHeroAnimations(){
+        
         emojiLabel.hero.id = HeroIDs.emojiInDashboardKey
         totalGoalAmount.hero.id = HeroIDs.totalGoalAmountKey
         addNewGoalBttn.hero.id = HeroIDs.buttonKey
         menuBttn.hero.id = HeroIDs.dismissButtonKey
         totalAmountSavedStaticLabel.hero.id = HeroIDs.goalAccomplishmentDateKey
         self.hero.isEnabled = true
+        
     }
     
     func vaildateOnboarding(){
+        
         switch checkOnboardingState() {
         case .sendToDashboard:
 //            print("sentToDashboard")
@@ -172,9 +311,11 @@ extension DashboardVC {
             self.present(vc, animated: false, completion: nil)
             break
         }
+        
     }
     
     func vaidateAuth() {
+        
         SignInWithAppleManager.checkUserAuth{ (authState) in
             switch authState {
             case .undefined:
@@ -183,32 +324,36 @@ extension DashboardVC {
                 self.present(vc, animated: false, completion: nil)
                 print("Send to Login")
             case .signedIn:
-//                self.userFirstName = (userDefaults?.string(forKey: SignInWithAppleManager.userFirstNameKey)!)!
-//                self.userEmail = (userDefaults?.string(forKey: SignInWithAppleManager.userEmailKey)!)!
                 print("SignedIN")
             case .signedOut:
                 print("Signed Out")
             }
         }
+        
     }
     
     func vaildateInAppPurchases(){
+        
         switch userDefaults?.object(forKey: userDefaultsKeyManager.inAppPurchaseKey) as? String {
         case nil:
-            print("Free and data saved")
-            userDefaults?.set("nil", forKey: userDefaultsKeyManager.inAppPurchaseKey)
+//            print("Free and data saved")
+            userDefaults?.set("none", forKey: userDefaultsKeyManager.inAppPurchaseKey)
         default:
             switch validateSubscription() {
             case .pro:
                 print("Pro")
-            default:
+            case .free:
                 print("Free")
+            case .unidentified:
+                print("Unidentified")
             }
         }
+        
     }
 
     
     func createUSerActivity(){
+        
         let activity = NSUserActivity(activityType: UserActivityType.addNewGoal)
         activity.title = "Add new goal"
         activity.isEligibleForSearch = true
@@ -216,6 +361,7 @@ extension DashboardVC {
         
         self.userActivity = activity
         self.userActivity?.becomeCurrent()
+        
     }
     
     func initialiseCurrency() {
@@ -252,7 +398,6 @@ extension DashboardVC {
     }
     
     func initialiseAppTheme() {
-        // Read userdefaults
         
         switch (userDefaults?.object(forKey: userDefaultsKeyManager.themeKey) as? Int) {
         case nil:
@@ -333,14 +478,19 @@ extension DashboardVC {
 
 //MARK:- delegate for popUp
 extension DashboardVC: UIViewControllerTransitioningDelegate {
+    
+    
     func presentationController(forPresented presented: UIViewController, presenting: UIViewController?, source: UIViewController) -> UIPresentationController? {
         PresentationController(presentedViewController: presented, presenting: presenting)
     }
+    
+    
 }
 
 
 //MARK:- goalsCell
 class goalsCell: UITableViewCell {
+    
     
     @IBOutlet weak var goalEmoji: UILabel!
     @IBOutlet weak var goalName: UILabel!
@@ -348,6 +498,7 @@ class goalsCell: UITableViewCell {
     @IBOutlet weak var goalStatusIndicator: UIImageView!
     @IBOutlet weak var progressBar: UIProgressView!
     @IBOutlet weak var goalPercentage: UILabel!
+    @IBOutlet weak var roundedBgView: UIView!
     
     //MARK:- Events
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -386,5 +537,6 @@ class goalsCell: UITableViewCell {
             }, completion: completion)
         }
     }
+    
     
 }

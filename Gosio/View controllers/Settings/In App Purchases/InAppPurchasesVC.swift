@@ -29,6 +29,7 @@ class InAppPurchasesVC: UIViewController,controlAlert {
     @IBOutlet weak var bgView: UIView!
     @IBOutlet weak var dismissBttn: UIButton!
     
+    var isHeroEnabledd: Bool = false
     
     @IBAction func dismissBttnDidTap(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
@@ -36,12 +37,13 @@ class InAppPurchasesVC: UIViewController,controlAlert {
     
     @IBOutlet weak var gosioProPriceLabel: UILabel!
     @IBAction func restorePurchaseDidTap(_ sender: Any) {
+        startloader()
         IAPService.shared.restorePurchase()
     }
     
     
     @IBAction func purchaseBttnDidTap(_ sender: Any) {
-        print("Comon")
+        startloader()
         IAPService.shared.purchase(product: .GosioPro)
     }
     
@@ -93,12 +95,15 @@ class InAppPurchasesVC: UIViewController,controlAlert {
     @IBOutlet weak var goProBttn: UIButton!
     
     func setUpHeroAnimations(){
-        illustrationImageView.hero.id = HeroIDs.IAPIllustrationKey
-        gosioProLabel.hero.id = HeroIDs.goProLabelKey
-        goProBttn.hero.id = HeroIDs.goProBttnKey
-        dismissBttn.hero.id = HeroIDs.dismissButtonKey
-        self.hero.isEnabled = true
+        if isHeroEnabledd {
+            illustrationImageView.hero.id = HeroIDs.IAPIllustrationKey
+            gosioProLabel.hero.id = HeroIDs.goProLabelKey
+            goProBttn.hero.id = HeroIDs.goProBttnKey
+            dismissBttn.hero.id = HeroIDs.dismissButtonKey
+            self.hero.isEnabled = true
+        }
     }
+    
 }
 
 
