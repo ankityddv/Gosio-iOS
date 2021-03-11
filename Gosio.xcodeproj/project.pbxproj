@@ -21,6 +21,8 @@
 		360DD73E25EB81F700636EBD /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 360DD73D25EB81F700636EBD /* MenuView.swift */; };
 		361E6E5A25F9DFF600BDD977 /* AppleIDAuthButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361E6E5925F9DFF600BDD977 /* AppleIDAuthButton.swift */; };
 		361E6E5F25F9E67B00BDD977 /* DropShadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361E6E5E25F9E67B00BDD977 /* DropShadow.swift */; };
+		361E6E6425F9FA7200BDD977 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 361E6E6325F9FA7200BDD977 /* Default.png */; };
+		361E6E6C25F9FA8200BDD977 /* White.png in Resources */ = {isa = PBXBuildFile; fileRef = 361E6E6B25F9FA8200BDD977 /* White.png */; };
 		3627646E25F9488B00A55834 /* AnimatedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3627646D25F9488B00A55834 /* AnimatedView.swift */; };
 		3627647325F9503600A55834 /* UIImage+Gif.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3627647225F9503600A55834 /* UIImage+Gif.swift */; };
 		3627647825F9505000A55834 /* CustomLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3627647725F9505000A55834 /* CustomLoader.swift */; };
@@ -40,10 +42,8 @@
 		362E738425EAAC5100C06078 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 362E738225EAAC5100C06078 /* LaunchScreen.storyboard */; };
 		362E738F25EAAC5200C06078 /* GosioTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 362E738E25EAAC5200C06078 /* GosioTests.swift */; };
 		362E739A25EAAC5200C06078 /* GosioUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 362E739925EAAC5200C06078 /* GosioUITests.swift */; };
-		3636FB3525EE7B3D005A25EC /* White.png in Resources */ = {isa = PBXBuildFile; fileRef = 3636FB3425EE7B3C005A25EC /* White.png */; };
 		3636FB4125EE9403005A25EC /* PrivacyPolicyVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3636FB4025EE9403005A25EC /* PrivacyPolicyVC.swift */; };
 		3636FB4625EE940D005A25EC /* TermsOfUseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3636FB4525EE940D005A25EC /* TermsOfUseVC.swift */; };
-		3636FB4B25EE9A00005A25EC /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 3636FB4A25EE9A00005A25EC /* Default.png */; };
 		36404CB525ECA65B00C5A188 /* FadingTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36404CB425ECA65B00C5A188 /* FadingTableView.swift */; };
 		36404CC825ED033100C5A188 /* Zip6Sequence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36404CC725ED033100C5A188 /* Zip6Sequence.swift */; };
 		364EB91225EDFCB200E14444 /* attributedFontExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364EB91125EDFCB200E14444 /* attributedFontExtention.swift */; };
@@ -124,6 +124,8 @@
 		360DD73D25EB81F700636EBD /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
 		361E6E5925F9DFF600BDD977 /* AppleIDAuthButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleIDAuthButton.swift; sourceTree = "<group>"; };
 		361E6E5E25F9E67B00BDD977 /* DropShadow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropShadow.swift; sourceTree = "<group>"; };
+		361E6E6325F9FA7200BDD977 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		361E6E6B25F9FA8200BDD977 /* White.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = White.png; sourceTree = "<group>"; };
 		3627646D25F9488B00A55834 /* AnimatedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatedView.swift; sourceTree = "<group>"; };
 		3627647225F9503600A55834 /* UIImage+Gif.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Gif.swift"; sourceTree = "<group>"; };
 		3627647725F9505000A55834 /* CustomLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomLoader.swift; sourceTree = "<group>"; };
@@ -143,10 +145,8 @@
 		362E739525EAAC5200C06078 /* GosioUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GosioUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		362E739925EAAC5200C06078 /* GosioUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GosioUITests.swift; sourceTree = "<group>"; };
 		362E739B25EAAC5200C06078 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3636FB3425EE7B3C005A25EC /* White.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = White.png; sourceTree = "<group>"; };
 		3636FB4025EE9403005A25EC /* PrivacyPolicyVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyPolicyVC.swift; sourceTree = "<group>"; };
 		3636FB4525EE940D005A25EC /* TermsOfUseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsOfUseVC.swift; sourceTree = "<group>"; };
-		3636FB4A25EE9A00005A25EC /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		36404CB425ECA65B00C5A188 /* FadingTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FadingTableView.swift; sourceTree = "<group>"; };
 		36404CC725ED033100C5A188 /* Zip6Sequence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Zip6Sequence.swift; sourceTree = "<group>"; };
 		364EB91125EDFCB200E14444 /* attributedFontExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = attributedFontExtention.swift; sourceTree = "<group>"; };
@@ -426,8 +426,8 @@
 		3636FB3925EE7B4A005A25EC /* Alternate Icons */ = {
 			isa = PBXGroup;
 			children = (
-				3636FB3425EE7B3C005A25EC /* White.png */,
-				3636FB4A25EE9A00005A25EC /* Default.png */,
+				361E6E6B25F9FA8200BDD977 /* White.png */,
+				361E6E6325F9FA7200BDD977 /* Default.png */,
 			);
 			path = "Alternate Icons";
 			sourceTree = "<group>";
@@ -791,17 +791,17 @@
 				3627648825F965F500A55834 /* AirbnbCerealBook.ttf in Resources */,
 				362E738425EAAC5100C06078 /* LaunchScreen.storyboard in Resources */,
 				3627648925F965F500A55834 /* AirbnbCerealBlack.ttf in Resources */,
-				3636FB4B25EE9A00005A25EC /* Default.png in Resources */,
 				360DD73925EB817A00636EBD /* MenuView.xib in Resources */,
 				36B7649825F3A68B0017AC35 /* Slide.xib in Resources */,
 				362E738125EAAC5100C06078 /* Assets.xcassets in Resources */,
 				3627648725F965F500A55834 /* AirbnbCerealMedium.ttf in Resources */,
 				3627648525F965F500A55834 /* AirbnbCerealLight.ttf in Resources */,
 				3627648625F965F500A55834 /* AirbnbCerealExtraBold.ttf in Resources */,
+				361E6E6425F9FA7200BDD977 /* Default.png in Resources */,
 				3627647D25F9513A00A55834 /* loader.gif in Resources */,
+				361E6E6C25F9FA8200BDD977 /* White.png in Resources */,
 				3627648425F965F500A55834 /* AirbnbCerealBold.ttf in Resources */,
 				362E737C25EAAC4E00C06078 /* Main.storyboard in Resources */,
-				3636FB3525EE7B3D005A25EC /* White.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

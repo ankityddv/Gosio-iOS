@@ -22,7 +22,7 @@ class SettingsVC: UITableViewController,controlAlert {
     
     
     @IBOutlet weak var versionLabel: UILabel!
-    @IBOutlet weak var dismissBttn: UIBarButtonItem!
+    @IBOutlet weak var dismissBttn: UIButton!
     @IBOutlet weak var goProIllustration: UIImageView!
     @IBOutlet weak var goProLabel: UILabel!
     @IBOutlet weak var goProBttn: UIButton!
@@ -70,7 +70,7 @@ class SettingsVC: UITableViewController,controlAlert {
         case 4:
             return 2
         case 5:
-            return 5
+            return 4
         case 6:
             return 1
         default:
@@ -113,8 +113,7 @@ class SettingsVC: UITableViewController,controlAlert {
             case 2:
                 switch getIAPStatus() {
                 case .pro:
-                    let vc = storyboard?.instantiateViewController(withIdentifier: VCIdentifierManager.appIconVCKey) as! AppIconVC
-                    self.present(vc, animated: true, completion: nil)
+                    performSegue(withIdentifier: segueManager.appIconKey, sender: self)
                 case .free:
                     let vc = storyboard?.instantiateViewController(withIdentifier: VCIdentifierManager.inAppPurchasesKey) as! InAppPurchasesVC
                     vc.isHeroEnabledd = false
@@ -159,10 +158,6 @@ class SettingsVC: UITableViewController,controlAlert {
                 openSafari(url: urlManager.termsOfUseUrl)
             case 2:
                 openSafari(url: urlManager.faqUrl)
-            case 4:
-                let vc = storyboard?.instantiateViewController(withIdentifier: VCIdentifierManager.inAppPurchasesKey) as! InAppPurchasesVC
-                vc.isHeroEnabledd = false
-                self.present(vc, animated: true, completion: nil)
             default:
                 break
             }
@@ -262,6 +257,7 @@ extension SettingsVC {
         goProIllustration.hero.id = HeroIDs.IAPIllustrationKey
         goProLabel.hero.id = HeroIDs.goProLabelKey
         goProBttn.hero.id = HeroIDs.goProBttnKey
+        dismissBttn.hero.id = HeroIDs.dismissButtonKey
     }
     
 }

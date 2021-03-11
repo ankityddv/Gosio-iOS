@@ -18,10 +18,6 @@ class GoalNameVC: UIViewController {
     @IBOutlet weak var nextBttn: UIButton!
     @IBOutlet weak var nextBttnTopConstraint: NSLayoutConstraint!
     
-    @IBOutlet weak var gotProAdView: AnimatedView!
-    @IBOutlet weak var goProIllustration: UIImageView!
-    @IBOutlet weak var goProLabel: UILabel!
-    @IBOutlet weak var goProBttn: UIButton!
     @IBOutlet weak var dismissBttn: UIButton!
     
     @IBAction func dismissButtonDidTap(_ sender: Any) {
@@ -40,7 +36,6 @@ class GoalNameVC: UIViewController {
             self.present(vc, animated: true, completion: nil)
             
         } else {
-            // Show error
             if (emoji?.isEmpty == true) && (goalName?.isEmpty == true)  {
                 SPAlert.present(message: "Please enter an emoji and your goal", haptic: .error)
             } else if (emoji?.isEmpty == true) {
@@ -75,34 +70,21 @@ extension GoalNameVC {
     
     
     func setUpHeroAnimations(){
+        
         emojiTextField.hero.id = HeroIDs.emojiKey
         goalNameTextField.hero.id = HeroIDs.goalNameKey
         nextBttn.hero.id = HeroIDs.buttonKey
-        self.hero.isEnabled = true
-        
-        goProIllustration.hero.id = HeroIDs.IAPIllustrationKey
-        goProLabel.hero.id = HeroIDs.goProLabelKey
-        goProBttn.hero.id = HeroIDs.goProBttnKey
         dismissBttn.hero.id = HeroIDs.dismissButtonKey
+        self.hero.isEnabled = true
         
     }
     
     func setUpUi(){
+        
         titleLabel.attributedText =  NSMutableAttributedString()
             .bold("What is it that you truly ")
             .boldBlueHighlight("desire")
             .bold(" ?")
-        
-        switch getIAPStatus() {
-        case .unidentified:
-//            print("Unidentified")
-            break
-        case .pro:
-            gotProAdView.isHidden = true
-        case .free:
-//            print("Free")
-            break
-        }
         
     }
     
@@ -143,8 +125,6 @@ extension GoalNameVC {
         
         UIView.animate(withDuration: 0.3, animations: {
             self.nextBttn.frame.origin.y = 568
-            self.gotProAdView.frame.origin.y = 650
-    //            print(screenHeight - (keyboardHeight + 50))
             
         }, completion: { [self]_ in
             nextBttnTopConstraint.constant = 91

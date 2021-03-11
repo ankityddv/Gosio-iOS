@@ -78,6 +78,13 @@ struct userDefaultsKeyManager {
     
 }
 
+struct segueManager {
+  
+    static let appIconKey = "showAppIcon"
+    
+}
+
+
 struct HeroIDs {
     
     static let emojiKey = "emoji"
