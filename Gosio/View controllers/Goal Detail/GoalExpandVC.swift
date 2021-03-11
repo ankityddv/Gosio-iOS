@@ -38,10 +38,10 @@ class GoalExpandVC: UIViewController {
     
     
     // Pro popUp
+    @IBOutlet weak var gotProAdView: AnimatedView!
     @IBOutlet weak var goProIllustration: UIImageView!
     @IBOutlet weak var goProLabel: UILabel!
     @IBOutlet weak var goProBttn: UIButton!
-    @IBOutlet weak var goProBgView: AnimatedView!
     
     
     override func viewDidLoad() {
@@ -210,7 +210,7 @@ extension GoalExpandVC {
 //            print("Unidentified")
             break
         case .pro:
-            goProBgView.isHidden = true
+            gotProAdView.isHidden = true
         case .free:
 //            print("Free")
             break

@@ -18,7 +18,7 @@ class GoalNameVC: UIViewController {
     @IBOutlet weak var nextBttn: UIButton!
     @IBOutlet weak var nextBttnTopConstraint: NSLayoutConstraint!
     
-    @IBOutlet weak var gotProAddView: AnimatedView!
+    @IBOutlet weak var gotProAdView: AnimatedView!
     @IBOutlet weak var goProIllustration: UIImageView!
     @IBOutlet weak var goProLabel: UILabel!
     @IBOutlet weak var goProBttn: UIButton!
@@ -98,7 +98,7 @@ extension GoalNameVC {
 //            print("Unidentified")
             break
         case .pro:
-            gotProAddView.isHidden = true
+            gotProAdView.isHidden = true
         case .free:
 //            print("Free")
             break
@@ -143,7 +143,7 @@ extension GoalNameVC {
         
         UIView.animate(withDuration: 0.3, animations: {
             self.nextBttn.frame.origin.y = 568
-            self.gotProAddView.frame.origin.y = 650
+            self.gotProAdView.frame.origin.y = 650
     //            print(screenHeight - (keyboardHeight + 50))
             
         }, completion: { [self]_ in

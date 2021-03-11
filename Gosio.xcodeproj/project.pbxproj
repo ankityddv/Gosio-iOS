@@ -19,6 +19,8 @@
 		360DD73125EB815400636EBD /* PresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 360DD73025EB815400636EBD /* PresentationController.swift */; };
 		360DD73925EB817A00636EBD /* MenuView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 360DD73825EB817A00636EBD /* MenuView.xib */; };
 		360DD73E25EB81F700636EBD /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 360DD73D25EB81F700636EBD /* MenuView.swift */; };
+		361E6E5A25F9DFF600BDD977 /* AppleIDAuthButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361E6E5925F9DFF600BDD977 /* AppleIDAuthButton.swift */; };
+		361E6E5F25F9E67B00BDD977 /* DropShadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361E6E5E25F9E67B00BDD977 /* DropShadow.swift */; };
 		3627646E25F9488B00A55834 /* AnimatedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3627646D25F9488B00A55834 /* AnimatedView.swift */; };
 		3627647325F9503600A55834 /* UIImage+Gif.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3627647225F9503600A55834 /* UIImage+Gif.swift */; };
 		3627647825F9505000A55834 /* CustomLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3627647725F9505000A55834 /* CustomLoader.swift */; };
@@ -120,6 +122,8 @@
 		360DD73025EB815400636EBD /* PresentationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentationController.swift; sourceTree = "<group>"; };
 		360DD73825EB817A00636EBD /* MenuView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuView.xib; sourceTree = "<group>"; };
 		360DD73D25EB81F700636EBD /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
+		361E6E5925F9DFF600BDD977 /* AppleIDAuthButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleIDAuthButton.swift; sourceTree = "<group>"; };
+		361E6E5E25F9E67B00BDD977 /* DropShadow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropShadow.swift; sourceTree = "<group>"; };
 		3627646D25F9488B00A55834 /* AnimatedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatedView.swift; sourceTree = "<group>"; };
 		3627647225F9503600A55834 /* UIImage+Gif.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Gif.swift"; sourceTree = "<group>"; };
 		3627647725F9505000A55834 /* CustomLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomLoader.swift; sourceTree = "<group>"; };
@@ -318,9 +322,11 @@
 				3602BECC25EBDB0B0014DD16 /* Manager.swift */,
 				365DAE1D25F20839004AAABC /* CoreDataServices.swift */,
 				364EB91125EDFCB200E14444 /* attributedFontExtention.swift */,
+				361E6E5E25F9E67B00BDD977 /* DropShadow.swift */,
 				36404CB425ECA65B00C5A188 /* FadingTableView.swift */,
 				3627646D25F9488B00A55834 /* AnimatedView.swift */,
 				3627647225F9503600A55834 /* UIImage+Gif.swift */,
+				361E6E5925F9DFF600BDD977 /* AppleIDAuthButton.swift */,
 				3627647725F9505000A55834 /* CustomLoader.swift */,
 				367FED1525EE604D007F116B /* zip3sequence.swift */,
 				36404CC725ED033100C5A188 /* Zip6Sequence.swift */,
@@ -925,6 +931,7 @@
 			files = (
 				362E737925EAAC4E00C06078 /* OnboardingVC.swift in Sources */,
 				364EB91225EDFCB200E14444 /* attributedFontExtention.swift in Sources */,
+				361E6E5A25F9DFF600BDD977 /* AppleIDAuthButton.swift in Sources */,
 				3636FB4125EE9403005A25EC /* PrivacyPolicyVC.swift in Sources */,
 				3602BEB925EBD0890014DD16 /* GoalDeadlineVC.swift in Sources */,
 				36B7645A25F39C590017AC35 /* PageViewItem.swift in Sources */,
@@ -936,6 +943,7 @@
 				367FECF525EE22F8007F116B /* UserActivityType.swift in Sources */,
 				3627647825F9505000A55834 /* CustomLoader.swift in Sources */,
 				36B7646125F39C7B0017AC35 /* OnboardingContentView.swift in Sources */,
+				361E6E5F25F9E67B00BDD977 /* DropShadow.swift in Sources */,
 				36B7643D25F39C110017AC35 /* PaperOnboarding.swift in Sources */,
 				362E737525EAAC4E00C06078 /* AppDelegate.swift in Sources */,
 				367FED0C25EE5F06007F116B /* CurrencyModel.swift in Sources */,

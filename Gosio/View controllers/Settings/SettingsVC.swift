@@ -23,7 +23,15 @@ class SettingsVC: UITableViewController,controlAlert {
     
     @IBOutlet weak var versionLabel: UILabel!
     @IBOutlet weak var dismissBttn: UIBarButtonItem!
+    @IBOutlet weak var goProIllustration: UIImageView!
+    @IBOutlet weak var goProLabel: UILabel!
+    @IBOutlet weak var goProBttn: UIButton!
     
+    @IBAction func goProBttnDidTap(_ sender: Any) {
+        let vc = storyboard?.instantiateViewController(withIdentifier: VCIdentifierManager.inAppPurchasesKey) as! InAppPurchasesVC
+        vc.isHeroEnabledd = true
+        self.present(vc, animated: true, completion: nil)
+    }
     
     @IBAction func dismissBttnDidTap(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
@@ -33,48 +41,66 @@ class SettingsVC: UITableViewController,controlAlert {
         super.viewDidLoad()
         setUpUi()
         setUpNavBar()
+        setUpHeroAnimations()
     }
     
-
+    override func viewWillAppear(_ animated: Bool) {
+        tableView.reloadData()
+    }
+    
     // MARK: - Table view data source
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
             
         switch section {
         case 0:
-            return 3
+            switch getIAPStatus() {
+            case .pro:
+                return 0
+            case .free:
+                return 1
+            case .unidentified:
+                return 1
+            }
         case 1:
-            return 2
-        case 2:
             return 3
-        case 3:
+        case 2:
             return 2
+        case 3:
+            return 3
         case 4:
-            return 5
+            return 2
         case 5:
+            return 5
+        case 6:
             return 1
         default:
             return 0
         }
+        
     }
     override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         
-//        switch section {
-//        case 0:
-//            switch currentSubscription() {
-//            case .Lifetime:
-//                return 0
-//            default:
-//                return UITableView.automaticDimension
-//            }
-//        default:
-//            return UITableView.automaticDimension
-//        }
-        return UITableView.automaticDimension
+        switch section {
+        case 0:
+            switch getIAPStatus() {
+            case .pro:
+                return 0
+            default:
+                return UITableView.automaticDimension
+            }
+        default:
+            return UITableView.automaticDimension
+        }
+        
     }
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         switch indexPath.section {
         case 0:
+            let vc = storyboard?.instantiateViewController(withIdentifier: VCIdentifierManager.inAppPurchasesKey) as! InAppPurchasesVC
+            vc.isHeroEnabledd = true
+            self.present(vc, animated: true, completion: nil)
+        case 1:
             switch indexPath.row {
             case 0:
                 break
@@ -84,12 +110,26 @@ class SettingsVC: UITableViewController,controlAlert {
                         UIApplication.shared.open(appSettings)
                     }
                 }
+            case 2:
+                switch getIAPStatus() {
+                case .pro:
+                    let vc = storyboard?.instantiateViewController(withIdentifier: VCIdentifierManager.appIconVCKey) as! AppIconVC
+                    self.present(vc, animated: true, completion: nil)
+                case .free:
+                    let vc = storyboard?.instantiateViewController(withIdentifier: VCIdentifierManager.inAppPurchasesKey) as! InAppPurchasesVC
+                    vc.isHeroEnabledd = false
+                    self.present(vc, animated: true, completion: nil)
+                case .unidentified:
+                    let vc = storyboard?.instantiateViewController(withIdentifier: VCIdentifierManager.inAppPurchasesKey) as! InAppPurchasesVC
+                    vc.isHeroEnabledd = false
+                    self.present(vc, animated: true, completion: nil)
+                }
             default:
                 break
             }
-        case 1:
-            break
         case 2:
+            break
+        case 3:
             switch indexPath.row {
             case 0:
                 showMailComposer()
@@ -102,7 +142,7 @@ class SettingsVC: UITableViewController,controlAlert {
             default:
                 break
             }
-        case 3:
+        case 4:
             switch indexPath.row {
             case 0:
                 openApp(userName: "gosioapp", appName: "twitter")
@@ -111,7 +151,7 @@ class SettingsVC: UITableViewController,controlAlert {
             default:
                 break
             }
-        case 4:
+        case 5:
             switch indexPath.row {
             case 0:
                 openSafari(url: urlManager.privacyPolicyUrl)
@@ -216,6 +256,12 @@ extension SettingsVC {
             let vc = SFSafariViewController(url: url, configuration: config)
             present(vc, animated: true)
         }
+    }
+    
+    func setUpHeroAnimations() {
+        goProIllustration.hero.id = HeroIDs.IAPIllustrationKey
+        goProLabel.hero.id = HeroIDs.goProLabelKey
+        goProBttn.hero.id = HeroIDs.goProBttnKey
     }
     
 }

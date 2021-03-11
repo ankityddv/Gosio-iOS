@@ -24,12 +24,6 @@ class LoginVC: UIViewController {
     
     @IBOutlet weak var privacyPolicyLabel: UILabel!
     
-    @IBAction func privacyPolicyDidTap(_ sender: Any) {
-        let vc = storyboard?.instantiateViewController(withIdentifier: VCIdentifierManager.privacyPolicyKey) as! PrivacyPolicyVC
-        self.present(vc, animated: true, completion: nil)
-    }
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUi()
@@ -120,10 +114,11 @@ extension LoginVC: ASAuthorizationControllerPresentationContextProviding {
 extension LoginVC {
     
     func setupUi() {
-        let appleButton = ASAuthorizationAppleIDButton()
+        let appleButton = ASAuthorizationAppleIDButton(type: .signIn, style: .black)
         appleButton.translatesAutoresizingMaskIntoConstraints = false
         appleButton.addTarget(self, action: #selector(didTapAppleButton), for: .touchUpInside)
         appleButton.frame = CGRect(x: 0, y: 0, width: 354, height: 45)
+        appleButton.dropShadow(color: .black, opacity: 0.1 , offSet: CGSize(width: 0.4, height: 0.4),radius: 10)
         
         appleButtonView.addSubview(appleButton)
         NSLayoutConstraint.activate([
@@ -164,6 +159,7 @@ extension LoginVC {
         controller.presentationContextProvider = self
         
         controller.performRequests()
+        print("Tapped")
     }
     
 }

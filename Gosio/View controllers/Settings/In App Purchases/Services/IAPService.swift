@@ -43,8 +43,8 @@ class IAPService: NSObject {
         guard let productToPurchase = products.filter({$0.productIdentifier == product.rawValue}).first
         else {return ["nil","nil","nil"]}
         return [String(describing: productToPurchase.localizedTitle),
-                (String(describing: productToPurchase.price)),
-                (String(describing: productToPurchase.priceLocale.currencySymbol ?? "#"))]
+                (String(describing: productToPurchase.priceLocale.currencySymbol ?? "#")),
+                (String(describing: productToPurchase.price))]
         
     }
     
@@ -116,15 +116,14 @@ extension SKPaymentTransactionState {
 
 func restoredPurchase(){
     stoploader()
-    print("restored lol")
     updateIAPStatus(status: true)
-    SPAlert.present(title: "Purchase Restored Successfully", message: "Please restart the app to see the changes!", preset: .done, completion: nil)
+    SPAlert.present(title: "Purchase Restored Successfully", message: "", preset: .done, completion: nil)
 }
 
 func purchasedSucessfully(){
     stoploader()
     updateIAPStatus(status: true)
-    SPAlert.present(title: "Purchase Successful", message: "Please restart the app to see the changes!", preset: .done, completion: nil)
+    SPAlert.present(title: "Purchase Successful", message: "", preset: .done, completion: nil)
 }
 
 func purchaseFailed(){

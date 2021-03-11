@@ -75,9 +75,9 @@ class InAppPurchasesVC: UIViewController,controlAlert {
             
             UIView.transition(with: self.gosioProPriceLabel,
                           duration: 0.5,
-                          options: .transitionCurlUp,
+                          options: .transitionFlipFromTop,
                         animations: { [weak self] in
-                            self!.gosioProPriceLabel.text = productInfoArr[0] + " - " + productInfoArr[2] +  productInfoArr[1]
+                            self!.gosioProPriceLabel.text = productInfoArr[0] + " - " + productInfoArr[1] +  productInfoArr[2]
                      }, completion: nil)
             
         }

@@ -275,13 +275,13 @@
                         <outlet property="dismissButton" destination="VeG-Wq-kRk" id="Cjs-Je-CLt"/>
                         <outlet property="editOptionsView" destination="R2G-q4-ygh" id="qD0-kI-HdA"/>
                         <outlet property="emoji" destination="qHN-1u-5mg" id="Duy-Sa-zYu"/>
-                        <outlet property="goProBgView" destination="1gP-yd-8Ae" id="UNe-hp-0QD"/>
                         <outlet property="goProBttn" destination="dIN-KW-Crc" id="xcB-Z0-KQy"/>
                         <outlet property="goProIllustration" destination="TBb-LG-dQf" id="cVc-lx-a6A"/>
                         <outlet property="goProLabel" destination="cB9-x2-ZNf" id="HfM-Io-XAz"/>
                         <outlet property="goalAccomplishmentDate" destination="725-qQ-H8D" id="x2r-F8-BbT"/>
                         <outlet property="goalStatus" destination="enE-ae-Eue" id="sSp-hC-bsK"/>
                         <outlet property="goalTotalAmount" destination="8Bz-mz-zAY" id="rDf-KH-7bT"/>
+                        <outlet property="gotProAdView" destination="1gP-yd-8Ae" id="glA-0k-GQw"/>
                         <outlet property="picker" destination="8Ua-IB-o5I" id="yp3-Ct-mAo"/>
                         <outlet property="progressBar" destination="aJr-TM-Vuc" id="dfO-VJ-tBm"/>
                         <outlet property="slideAssistView" destination="eD6-w6-myQ" id="Tsi-TM-5vA"/>
@@ -835,7 +835,7 @@
                         <outlet property="goProIllustration" destination="yc9-Tb-2vP" id="ji2-Wo-1f9"/>
                         <outlet property="goProLabel" destination="Bik-do-aiz" id="l26-CA-5su"/>
                         <outlet property="goalNameTextField" destination="5EL-dG-bqm" id="CjO-g9-tTf"/>
-                        <outlet property="gotProAddView" destination="mFx-tT-mBr" id="Ehi-41-huc"/>
+                        <outlet property="gotProAdView" destination="mFx-tT-mBr" id="PQh-Rv-gBS"/>
                         <outlet property="nextBttn" destination="Q40-Ck-cRW" id="zP6-tM-A5P"/>
                         <outlet property="nextBttnTopConstraint" destination="uNM-ff-XkY" id="Grb-Xd-kW1"/>
                         <outlet property="titleLabel" destination="s78-31-xU0" id="Ku8-mr-XVL"/>
@@ -1203,10 +1203,145 @@
                         <color key="backgroundColor" name="BgColor"/>
                         <color key="separatorColor" name="SubtitleTextColor"/>
                         <sections>
+                            <tableViewSection headerTitle="Go Pro" id="26h-M9-BvK">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" rowHeight="179" id="QZ1-Ka-flT">
+                                        <rect key="frame" x="0.0" y="55.5" width="414" height="179"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="QZ1-Ka-flT" id="tIQ-ut-b9C">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="179"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rCc-sj-QUG" customClass="AnimatedView" customModule="Gosio" customModuleProvider="target">
+                                                    <rect key="frame" x="32" y="29" width="350" height="121"/>
+                                                    <subviews>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="IAPIllustrations" translatesAutoresizingMaskIntoConstraints="NO" id="Lfi-8M-rCh">
+                                                            <rect key="frame" x="11" y="16.5" width="96" height="88"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="88" id="8ew-WC-gOx"/>
+                                                                <constraint firstAttribute="width" constant="96" id="aNn-JN-gJ0"/>
+                                                            </constraints>
+                                                        </imageView>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Go Pro" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u5z-CY-E9C">
+                                                            <rect key="frame" x="120" y="16" width="65" height="27"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="27" id="Snf-1y-cNP"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" name="AirbnbCerealApp-Bold" family="Airbnb Cereal App" pointSize="20"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add unlimited goals" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0WE-t5-8LQ">
+                                                            <rect key="frame" x="137" y="43" width="90" height="14"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="14" id="TgD-e1-EfT"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" name="AirbnbCerealApp-Light" family="Airbnb Cereal App" pointSize="10"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SGg-AY-EhI">
+                                                            <rect key="frame" x="250" y="22" width="92" height="27"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="92" id="Rht-ke-M21"/>
+                                                                <constraint firstAttribute="height" constant="27" id="shP-Yb-3f4"/>
+                                                            </constraints>
+                                                            <state key="normal" image="Go Pro Button "/>
+                                                            <connections>
+                                                                <action selector="goProBttnDidTap:" destination="Pbl-Kr-Nar" eventType="touchUpInside" id="eZ6-Dt-oNh"/>
+                                                                <action selector="goProDidTap:" destination="Ap8-XE-yVX" eventType="touchUpInside" id="bfH-v2-X9A"/>
+                                                            </connections>
+                                                        </button>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Check" translatesAutoresizingMaskIntoConstraints="NO" id="gje-6m-WUj">
+                                                            <rect key="frame" x="120" y="45" width="14" height="10"/>
+                                                            <color key="tintColor" name="TitleTextColor"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="14" id="EgS-Gh-9Sr"/>
+                                                                <constraint firstAttribute="height" constant="10" id="cla-dp-hdl"/>
+                                                            </constraints>
+                                                        </imageView>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Multiple app icons" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K6y-jD-g3G">
+                                                            <rect key="frame" x="137" y="59" width="105" height="14"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="14" id="Ms0-KP-WAp"/>
+                                                                <constraint firstAttribute="width" constant="105" id="weW-6h-pXz"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" name="AirbnbCerealApp-Light" family="Airbnb Cereal App" pointSize="10"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Check" translatesAutoresizingMaskIntoConstraints="NO" id="eDU-KE-os7">
+                                                            <rect key="frame" x="120" y="61" width="14" height="10"/>
+                                                            <color key="tintColor" name="TitleTextColor"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="14" id="VvD-xW-woc"/>
+                                                                <constraint firstAttribute="height" constant="10" id="yTa-oT-529"/>
+                                                            </constraints>
+                                                        </imageView>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Available for iPhone, iPad and Mac at no extra cost" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oaq-aS-bDS">
+                                                            <rect key="frame" x="137" y="75" width="151" height="27"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="151" id="ZGg-xO-kfP"/>
+                                                                <constraint firstAttribute="height" constant="27" id="vem-CP-UqV"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" name="AirbnbCerealApp-Light" family="Airbnb Cereal App" pointSize="10"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Check" translatesAutoresizingMaskIntoConstraints="NO" id="p8d-KM-cAG">
+                                                            <rect key="frame" x="120" y="77" width="14" height="10"/>
+                                                            <color key="tintColor" name="TitleTextColor"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="10" id="74L-dY-qNB"/>
+                                                                <constraint firstAttribute="width" constant="14" id="vdP-8W-HwU"/>
+                                                            </constraints>
+                                                        </imageView>
+                                                    </subviews>
+                                                    <color key="backgroundColor" name="SecondaryBgColor"/>
+                                                    <constraints>
+                                                        <constraint firstItem="u5z-CY-E9C" firstAttribute="leading" secondItem="Lfi-8M-rCh" secondAttribute="trailing" constant="13" id="1aL-oR-iWY"/>
+                                                        <constraint firstAttribute="height" constant="121" id="2In-xh-2CL"/>
+                                                        <constraint firstItem="gje-6m-WUj" firstAttribute="top" secondItem="u5z-CY-E9C" secondAttribute="bottom" constant="2" id="4xx-iD-4TL"/>
+                                                        <constraint firstItem="eDU-KE-os7" firstAttribute="leading" secondItem="Lfi-8M-rCh" secondAttribute="trailing" constant="13" id="BaP-FO-DDJ"/>
+                                                        <constraint firstItem="u5z-CY-E9C" firstAttribute="top" secondItem="rCc-sj-QUG" secondAttribute="top" constant="16" id="Bbs-pw-095"/>
+                                                        <constraint firstItem="SGg-AY-EhI" firstAttribute="top" secondItem="rCc-sj-QUG" secondAttribute="top" constant="22" id="GGi-8L-jcc"/>
+                                                        <constraint firstItem="K6y-jD-g3G" firstAttribute="top" secondItem="0WE-t5-8LQ" secondAttribute="bottom" constant="2" id="H5a-Rr-Hwo"/>
+                                                        <constraint firstItem="Lfi-8M-rCh" firstAttribute="top" secondItem="rCc-sj-QUG" secondAttribute="top" constant="16.5" id="QSH-e9-kif"/>
+                                                        <constraint firstItem="oaq-aS-bDS" firstAttribute="leading" secondItem="p8d-KM-cAG" secondAttribute="trailing" constant="3" id="SeR-BT-Wqc"/>
+                                                        <constraint firstItem="gje-6m-WUj" firstAttribute="leading" secondItem="Lfi-8M-rCh" secondAttribute="trailing" constant="13" id="Wu0-Zc-Cxf"/>
+                                                        <constraint firstItem="oaq-aS-bDS" firstAttribute="top" secondItem="K6y-jD-g3G" secondAttribute="bottom" constant="2" id="av7-64-iBs"/>
+                                                        <constraint firstItem="K6y-jD-g3G" firstAttribute="leading" secondItem="eDU-KE-os7" secondAttribute="trailing" constant="3" id="dvg-OH-qdC"/>
+                                                        <constraint firstItem="0WE-t5-8LQ" firstAttribute="leading" secondItem="gje-6m-WUj" secondAttribute="trailing" constant="3" id="iIy-mN-Dff"/>
+                                                        <constraint firstAttribute="trailing" secondItem="SGg-AY-EhI" secondAttribute="trailing" constant="8" id="idN-HU-3vS"/>
+                                                        <constraint firstItem="Lfi-8M-rCh" firstAttribute="leading" secondItem="rCc-sj-QUG" secondAttribute="leading" constant="11" id="knE-VE-lbJ"/>
+                                                        <constraint firstItem="p8d-KM-cAG" firstAttribute="top" secondItem="eDU-KE-os7" secondAttribute="bottom" constant="6" id="n4I-ow-QHN"/>
+                                                        <constraint firstItem="p8d-KM-cAG" firstAttribute="leading" secondItem="Lfi-8M-rCh" secondAttribute="trailing" constant="13" id="rVw-Ws-Oq3"/>
+                                                        <constraint firstAttribute="width" constant="350" id="tVR-iz-WVi"/>
+                                                        <constraint firstItem="eDU-KE-os7" firstAttribute="top" secondItem="gje-6m-WUj" secondAttribute="bottom" constant="6" id="u6G-cX-HMQ"/>
+                                                        <constraint firstItem="0WE-t5-8LQ" firstAttribute="top" secondItem="u5z-CY-E9C" secondAttribute="bottom" id="yNs-JJ-aBR"/>
+                                                    </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                            <integer key="value" value="15"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="rCc-sj-QUG" firstAttribute="top" secondItem="tIQ-ut-b9C" secondAttribute="topMargin" constant="18" id="2hk-pC-fMB"/>
+                                                <constraint firstItem="rCc-sj-QUG" firstAttribute="centerX" secondItem="tIQ-ut-b9C" secondAttribute="centerX" id="dz2-ik-j03"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="tintColor" systemColor="systemPinkColor"/>
+                                        <inset key="separatorInset" minX="20" minY="0.0" maxX="20" maxY="0.0"/>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
                             <tableViewSection headerTitle="General" id="sOg-wP-8Hb">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="Bgk-KZ-GP9" rowHeight="60" style="IBUITableViewCellStyleDefault" id="7qy-kd-1hs">
-                                        <rect key="frame" x="0.0" y="55.5" width="414" height="60"/>
+                                        <rect key="frame" x="0.0" y="290.5" width="414" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="7qy-kd-1hs" id="7ka-aV-6o2">
                                             <rect key="frame" x="0.0" y="0.0" width="383" height="60"/>
@@ -1229,7 +1364,7 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="X9D-br-Yhc" rowHeight="60" style="IBUITableViewCellStyleDefault" id="2f0-vR-f9x">
-                                        <rect key="frame" x="0.0" y="115.5" width="414" height="60"/>
+                                        <rect key="frame" x="0.0" y="350.5" width="414" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="2f0-vR-f9x" id="ZEM-l0-1dI">
                                             <rect key="frame" x="0.0" y="0.0" width="383" height="60"/>
@@ -1249,7 +1384,7 @@
                                         <inset key="separatorInset" minX="20" minY="0.0" maxX="20" maxY="0.0"/>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="Jvu-Es-3DA" rowHeight="60" style="IBUITableViewCellStyleDefault" id="bXt-Nc-4kk">
-                                        <rect key="frame" x="0.0" y="175.5" width="414" height="60"/>
+                                        <rect key="frame" x="0.0" y="410.5" width="414" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="bXt-Nc-4kk" id="NDT-iw-xkW">
                                             <rect key="frame" x="0.0" y="0.0" width="383" height="60"/>
@@ -1267,16 +1402,13 @@
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="tintColor" systemColor="systemPinkColor"/>
                                         <inset key="separatorInset" minX="20" minY="0.0" maxX="20" maxY="0.0"/>
-                                        <connections>
-                                            <segue destination="MXU-RA-GPb" kind="show" id="Nip-86-jjl"/>
-                                        </connections>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
                             <tableViewSection headerTitle="Gosio" id="bvj-ly-ytU">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="F1w-Bl-GtZ" rowHeight="60" style="IBUITableViewCellStyleDefault" id="QX5-jn-fYm">
-                                        <rect key="frame" x="0.0" y="291.5" width="414" height="60"/>
+                                        <rect key="frame" x="0.0" y="526.5" width="414" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="QX5-jn-fYm" id="FxV-sW-SHn">
                                             <rect key="frame" x="0.0" y="0.0" width="383" height="60"/>
@@ -1298,7 +1430,7 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="GJh-Qt-RT3" rowHeight="60" style="IBUITableViewCellStyleDefault" id="Xbv-lZ-5u0">
-                                        <rect key="frame" x="0.0" y="351.5" width="414" height="60"/>
+                                        <rect key="frame" x="0.0" y="586.5" width="414" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Xbv-lZ-5u0" id="4Rd-K1-qqY">
                                             <rect key="frame" x="0.0" y="0.0" width="383" height="60"/>
@@ -1324,7 +1456,7 @@
                             <tableViewSection headerTitle="Stay in touch" id="Hmo-bZ-MDO">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="0ni-sD-eKM" rowHeight="60" style="IBUITableViewCellStyleDefault" id="QCH-MR-Vc8">
-                                        <rect key="frame" x="0.0" y="467.5" width="414" height="60"/>
+                                        <rect key="frame" x="0.0" y="702.5" width="414" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="QCH-MR-Vc8" id="Snp-J8-o8t">
                                             <rect key="frame" x="0.0" y="0.0" width="383" height="60"/>
@@ -1343,7 +1475,7 @@
                                         <color key="tintColor" systemColor="systemGreenColor"/>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="3iq-of-I7g" rowHeight="60" style="IBUITableViewCellStyleDefault" id="IXW-1A-cv4">
-                                        <rect key="frame" x="0.0" y="527.5" width="414" height="60"/>
+                                        <rect key="frame" x="0.0" y="762.5" width="414" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="IXW-1A-cv4" id="xpi-vD-oXa">
                                             <rect key="frame" x="0.0" y="0.0" width="383" height="60"/>
@@ -1362,7 +1494,7 @@
                                         <color key="tintColor" systemColor="systemGreenColor"/>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="2YI-yB-fwR" rowHeight="60" style="IBUITableViewCellStyleDefault" id="mjs-vL-WJd">
-                                        <rect key="frame" x="0.0" y="587.5" width="414" height="60"/>
+                                        <rect key="frame" x="0.0" y="822.5" width="414" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="mjs-vL-WJd" id="wCw-2R-FBD">
                                             <rect key="frame" x="0.0" y="0.0" width="383" height="60"/>
@@ -1385,7 +1517,7 @@
                             <tableViewSection headerTitle="Social" id="dpz-bg-f83">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="cnF-uc-Apj" imageView="pmE-I0-GeQ" rowHeight="60" style="IBUITableViewCellStyleDefault" id="ApU-2t-3kO">
-                                        <rect key="frame" x="0.0" y="703.5" width="414" height="60"/>
+                                        <rect key="frame" x="0.0" y="938.5" width="414" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ApU-2t-3kO" id="zny-lV-uu8">
                                             <rect key="frame" x="0.0" y="0.0" width="383" height="60"/>
@@ -1408,7 +1540,7 @@
                                         <color key="tintColor" systemColor="systemGreenColor"/>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="fmH-ES-Gdf" imageView="MEQ-mH-b5m" rowHeight="60" style="IBUITableViewCellStyleDefault" id="zGD-BT-Qe4">
-                                        <rect key="frame" x="0.0" y="763.5" width="414" height="60"/>
+                                        <rect key="frame" x="0.0" y="998.5" width="414" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="zGD-BT-Qe4" id="eQi-Pd-Yet">
                                             <rect key="frame" x="0.0" y="0.0" width="383" height="60"/>
@@ -1436,7 +1568,7 @@
                             <tableViewSection headerTitle="Other" id="vNw-PQ-v13">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="Iwk-8U-XUN" rowHeight="60" style="IBUITableViewCellStyleDefault" id="5QL-Ob-68p">
-                                        <rect key="frame" x="0.0" y="879.5" width="414" height="60"/>
+                                        <rect key="frame" x="0.0" y="1114.5" width="414" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="5QL-Ob-68p" id="VoD-FE-z5a">
                                             <rect key="frame" x="0.0" y="0.0" width="383" height="60"/>
@@ -1456,7 +1588,7 @@
                                         <color key="tintColor" name="appBlueColor"/>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="hKZ-Mf-nxL" rowHeight="60" style="IBUITableViewCellStyleDefault" id="Ufd-Qi-RmQ">
-                                        <rect key="frame" x="0.0" y="939.5" width="414" height="60"/>
+                                        <rect key="frame" x="0.0" y="1174.5" width="414" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Ufd-Qi-RmQ" id="8R6-13-jcN">
                                             <rect key="frame" x="0.0" y="0.0" width="383" height="60"/>
@@ -1476,7 +1608,7 @@
                                         <color key="tintColor" name="appBlueColor"/>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="fTO-01-lg1" rowHeight="60" style="IBUITableViewCellStyleDefault" id="L5O-7A-wfa">
-                                        <rect key="frame" x="0.0" y="999.5" width="414" height="60"/>
+                                        <rect key="frame" x="0.0" y="1234.5" width="414" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="L5O-7A-wfa" id="ob4-lg-wef">
                                             <rect key="frame" x="0.0" y="0.0" width="383" height="60"/>
@@ -1496,14 +1628,14 @@
                                         <color key="tintColor" name="appBlueColor"/>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="HT9-Of-ebr" rowHeight="60" style="IBUITableViewCellStyleDefault" id="Lf6-GZ-v1T">
-                                        <rect key="frame" x="0.0" y="1059.5" width="414" height="60"/>
+                                        <rect key="frame" x="0.0" y="1294.5" width="414" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Lf6-GZ-v1T" id="dyH-S3-oY9">
-                                            <rect key="frame" x="0.0" y="0.0" width="383" height="60"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="395" height="60"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="More Apps by Ankit Yadav" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="HT9-Of-ebr">
-                                                    <rect key="frame" x="20" y="0.0" width="355" height="60"/>
+                                                    <rect key="frame" x="15" y="0.0" width="372" height="60"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" name="AirbnbCerealApp-Book" family="Airbnb Cereal App" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -1519,14 +1651,14 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="kNU-Uq-JDK" rowHeight="60" style="IBUITableViewCellStyleDefault" id="tn1-D9-PLw">
-                                        <rect key="frame" x="0.0" y="1119.5" width="414" height="60"/>
+                                        <rect key="frame" x="0.0" y="1354.5" width="414" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="tn1-D9-PLw" id="g85-co-2Ue">
-                                            <rect key="frame" x="0.0" y="0.0" width="383" height="60"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="395" height="60"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Go Pro" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="kNU-Uq-JDK">
-                                                    <rect key="frame" x="20" y="0.0" width="355" height="60"/>
+                                                    <rect key="frame" x="15" y="0.0" width="372" height="60"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" name="AirbnbCerealApp-Book" family="Airbnb Cereal App" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -1543,7 +1675,7 @@
                             <tableViewSection id="4e2-Ba-QqM">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="103" id="m2a-vL-ZBd">
-                                        <rect key="frame" x="0.0" y="1215.5" width="414" height="103"/>
+                                        <rect key="frame" x="0.0" y="1450.5" width="414" height="103"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="m2a-vL-ZBd" id="wdD-5j-6Yr">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="103"/>
@@ -1597,12 +1729,15 @@
                     </navigationItem>
                     <connections>
                         <outlet property="dismissBttn" destination="5MR-Hj-x9Y" id="36l-8O-Pwp"/>
+                        <outlet property="goProBttn" destination="SGg-AY-EhI" id="FaW-df-A55"/>
+                        <outlet property="goProIllustration" destination="Lfi-8M-rCh" id="qj3-5I-TVq"/>
+                        <outlet property="goProLabel" destination="u5z-CY-E9C" id="gIa-pk-GlO"/>
                         <outlet property="versionLabel" destination="tIt-6B-5Gp" id="Z4B-BS-hbZ"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d8H-Sf-5I8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1793" y="791"/>
+            <point key="canvasLocation" x="1792.753623188406" y="790.84821428571422"/>
         </scene>
         <!--Add To SiriVC-->
         <scene sceneID="csg-tu-dif">
@@ -1752,7 +1887,7 @@ Currency</string>
             <objects>
                 <tableViewController storyboardIdentifier="AppIconVC" id="MXU-RA-GPb" customClass="AppIconVC" customModule="Gosio" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" separatorStyle="default" rowHeight="90" sectionHeaderHeight="18" sectionFooterHeight="18" id="yRc-sG-wda">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" name="BgColor"/>
                         <view key="tableHeaderView" contentMode="scaleToFill" id="dlF-kG-ApW">
@@ -2123,21 +2258,21 @@ by Ankit Yadav</string>
                                                         </constraints>
                                                         <prototypes>
                                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="GosioProFeaturesCell" textLabel="tfh-rJ-ST1" imageView="EXa-A3-9Kp" style="IBUITableViewCellStyleDefault" id="6FD-uq-ZYf" customClass="GosioProFeaturesCell" customModule="Gosio" customModuleProvider="target">
-                                                                <rect key="frame" x="0.0" y="28" width="388" height="44"/>
+                                                                <rect key="frame" x="0.0" y="28" width="388" height="45"/>
                                                                 <autoresizingMask key="autoresizingMask"/>
                                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="6FD-uq-ZYf" id="bua-yh-rZD">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="388" height="44"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="388" height="45"/>
                                                                     <autoresizingMask key="autoresizingMask"/>
                                                                     <subviews>
                                                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="tfh-rJ-ST1">
-                                                                            <rect key="frame" x="49" y="0.0" width="319" height="44"/>
+                                                                            <rect key="frame" x="49" y="0.0" width="319" height="45"/>
                                                                             <autoresizingMask key="autoresizingMask"/>
                                                                             <fontDescription key="fontDescription" name="AirbnbCerealApp-Book" family="Airbnb Cereal App" pointSize="17"/>
                                                                             <nil key="textColor"/>
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
                                                                         <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" image="Check" id="EXa-A3-9Kp">
-                                                                            <rect key="frame" x="20" y="17" width="14" height="10"/>
+                                                                            <rect key="frame" x="20" y="17.5" width="14" height="10"/>
                                                                             <autoresizingMask key="autoresizingMask"/>
                                                                             <color key="tintColor" name="TitleTextColor"/>
                                                                         </imageView>
@@ -2307,7 +2442,7 @@ by Ankit Yadav</string>
         <image name="loginIllustration" width="1024" height="1024"/>
         <image name="twitter" width="30" height="30"/>
         <namedColor name="AccentColor">
-            <color red="0.32941176470588235" green="0.27058823529411763" blue="0.92941176470588238" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.32899999618530273" green="0.27099999785423279" blue="0.92900002002716064" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="AppColor">
             <color red="0.32899999618530273" green="0.32400000095367432" blue="0.4779999852180481" alpha="0.33000001311302185" colorSpace="custom" customColorSpace="sRGB"/>
