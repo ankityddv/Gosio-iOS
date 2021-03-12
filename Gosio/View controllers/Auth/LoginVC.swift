@@ -9,20 +9,25 @@ import UIKit
 import AuthenticationServices
 import Hero
 
+
 protocol LoginViewControllerDelegate {
+    
     func didFinishAuth()
+
 }
+
 
 class LoginVC: UIViewController {
 
+    
     var delegate: LoginViewControllerDelegate?
     
     
     @IBOutlet weak var appleButtonView: UIView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var subtitleLabel: UILabel!
-    
     @IBOutlet weak var privacyPolicyLabel: UILabel!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,7 +38,7 @@ class LoginVC: UIViewController {
 }
 
 
-//MARK:- Handle Sign In
+//MARK:- 🔐 Handle Sign In
 extension LoginVC: ASAuthorizationControllerDelegate {
     
     private func registerNewAccount(credential: ASAuthorizationAppleIDCredential) {
@@ -99,8 +104,6 @@ extension LoginVC: ASAuthorizationControllerDelegate {
     
     
 }
-
-
 extension LoginVC: ASAuthorizationControllerPresentationContextProviding {
     
     func presentationAnchor(for controller: ASAuthorizationController) -> ASPresentationAnchor {
@@ -110,7 +113,7 @@ extension LoginVC: ASAuthorizationControllerPresentationContextProviding {
 }
 
 
-//MARK:- funtions()
+//MARK:- 🤡 functions()
 extension LoginVC {
     
     func setupUi() {

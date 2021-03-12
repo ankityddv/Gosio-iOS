@@ -12,61 +12,62 @@ import SafariServices
 
 
 protocol controlAlert {
+    
     func presentRestored()
+
 }
 
+
 class InAppPurchasesVC: UIViewController,controlAlert {
+    
     
     func presentRestored() {
         let alert = presentAlertWithOneButton(AlertTitle: "Restored", Message: "Quit and restart", ActionBttnTitle: "Yay")
         present(alert, animated: true, completion: nil)
     }
     
+    
+    var isHeroEnabledd: Bool = false
     var proFeaturesArr = ["Add unlimited goals","Multiple app icons","Available for iPhone, iPad and Mac at no extra cost","Support indie developer"]
     
     
     @IBOutlet weak var bottomLegalLabel: UITextView!
     @IBOutlet weak var bgView: UIView!
     @IBOutlet weak var dismissBttn: UIButton!
+    @IBOutlet weak var gosioProPriceLabel: UILabel!
+    @IBOutlet weak var illustrationImageView: UIImageView!
+    @IBOutlet weak var gosioProLabel: UILabel!
+    @IBOutlet weak var goProBttn: UIButton!
     
-    var isHeroEnabledd: Bool = false
     
     @IBAction func dismissBttnDidTap(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }
-    
-    @IBOutlet weak var gosioProPriceLabel: UILabel!
+    @IBAction func purchaseBttnDidTap(_ sender: Any) {
+        startloader()
+        IAPService.shared.purchase(product: .GosioPro)
+    }
     @IBAction func restorePurchaseDidTap(_ sender: Any) {
         startloader()
         IAPService.shared.restorePurchase()
     }
     
     
-    @IBAction func purchaseBttnDidTap(_ sender: Any) {
-        startloader()
-        IAPService.shared.purchase(product: .GosioPro)
-    }
-    
-    func priceStringForProduct(item: SKProduct) -> String? {
-        let price = item.price
-        if price == NSDecimalNumber(decimal: 0.00) {
-            return "GET" //or whatever you like really... maybe 'Free'
-        } else {
-            let numberFormatter = NumberFormatter()
-            let locale = item.priceLocale
-            numberFormatter.numberStyle = .currency
-            numberFormatter.locale = locale
-            return numberFormatter.string(from: price)
-        }
-    }
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         IAPService.shared.getProducts()
         setUpUi()
         setUpHeroAnimations()
+        
     }
+    
+    
+}
+
+//MARK:- 🤡 functions()
+extension InAppPurchasesVC {
+    
     
     func setUpUi() {
         DispatchQueue.main.asyncAfter(deadline: .now()+3){
@@ -92,10 +93,6 @@ class InAppPurchasesVC: UIViewController,controlAlert {
             .inAppPurchaseBottom(" .")
     }
     
-    @IBOutlet weak var illustrationImageView: UIImageView!
-    @IBOutlet weak var gosioProLabel: UILabel!
-    @IBOutlet weak var goProBttn: UIButton!
-    
     func setUpHeroAnimations(){
         if isHeroEnabledd {
             illustrationImageView.hero.id = HeroIDs.IAPIllustrationKey
@@ -105,28 +102,6 @@ class InAppPurchasesVC: UIViewController,controlAlert {
             self.hero.isEnabled = true
         }
     }
-    
-}
-
-
-extension InAppPurchasesVC: UITableViewDataSource,UITableViewDelegate {
-    
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return proFeaturesArr.count
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell: GosioProFeaturesCell = tableView.dequeueReusableCell(withIdentifier: TableViewCellIdentifierManager.gosioProCell) as! GosioProFeaturesCell
-        cell.titleLabel.text = proFeaturesArr[indexPath.row]
-        return cell
-    }
-    
-    
-}
-
-
-extension InAppPurchasesVC {
     
     func openSafari(url: String) {
         if let url = URL(string: url) {
@@ -138,11 +113,46 @@ extension InAppPurchasesVC {
         }
     }
     
+    func priceStringForProduct(item: SKProduct) -> String? {
+        let price = item.price
+        if price == NSDecimalNumber(decimal: 0.00) {
+            return "GET" //or whatever you like really... maybe 'Free'
+        } else {
+            let numberFormatter = NumberFormatter()
+            let locale = item.priceLocale
+            numberFormatter.numberStyle = .currency
+            numberFormatter.locale = locale
+            return numberFormatter.string(from: price)
+        }
+    }
+    
+    
 }
 
+
+// MARK: - 📀 Table view data source
+extension InAppPurchasesVC: UITableViewDataSource,UITableViewDelegate {
+    
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return proFeaturesArr.count
+    }
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell: GosioProFeaturesCell = tableView.dequeueReusableCell(withIdentifier: TableViewCellIdentifierManager.gosioProCell) as! GosioProFeaturesCell
+        cell.titleLabel.text = proFeaturesArr[indexPath.row]
+        return cell
+    }
+    
+    
+}
+
+
+//MARK:- 🔋 featuresCell
 class GosioProFeaturesCell: UITableViewCell {
+    
     
     @IBOutlet weak var checkImage: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
+    
     
 }

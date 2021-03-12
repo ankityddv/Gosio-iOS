@@ -9,6 +9,7 @@ import Hero
 import UIKit
 import SPAlert
 
+
 class GoalNameVC: UIViewController {
 
     
@@ -17,8 +18,8 @@ class GoalNameVC: UIViewController {
     @IBOutlet weak var goalNameTextField: UITextField!
     @IBOutlet weak var nextBttn: UIButton!
     @IBOutlet weak var nextBttnTopConstraint: NSLayoutConstraint!
-    
     @IBOutlet weak var dismissBttn: UIButton!
+    
     
     @IBAction func dismissButtonDidTap(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
@@ -46,8 +47,6 @@ class GoalNameVC: UIViewController {
         }
         
     }
-    
-    
     @IBAction func goProDidTap(_ sender: Any) {
         let vc = storyboard?.instantiateViewController(withIdentifier: VCIdentifierManager.inAppPurchasesKey) as! InAppPurchasesVC
         vc.isHeroEnabledd = true
@@ -62,10 +61,11 @@ class GoalNameVC: UIViewController {
         setUpUi()
     }
     
+    
 }
 
 
-//MARK:- function()
+//MARK:- 🤡 functions()
 extension GoalNameVC {
     
     
@@ -91,7 +91,8 @@ extension GoalNameVC {
     
 }
 
-//MARK:- keyboard notifications
+
+//MARK:- ⌨️ keyboard notifications
 extension GoalNameVC {
     
     

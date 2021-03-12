@@ -10,6 +10,7 @@ import UIKit
 import SPAlert
 import CoreData
 
+
 class GoalDeadlineVC: UIViewController {
     
     
@@ -54,19 +55,11 @@ class GoalDeadlineVC: UIViewController {
         
         switch goalAccomplishmentDateStr {
         case "":
-            print("set picker")
+//            print("set picker")
             setUpRenewaDatePicker()
         default:
             break
         }
-        
-        titleLabel.attributedText =  NSMutableAttributedString()
-            .bold("When you want to ")
-            .boldBlueHighlight("accomplish")
-            .bold(" this goal?")
-        emojiLabel.text = emojiStr
-        goalName.text = goalNameStr
-        goalAmount.text = "\(getDefaultCurrency().currencySign) \(goalAmountStr)"
         
         let dismissKeyboard = UITapGestureRecognizer(target: self, action: #selector(SwipehideKeyboard))
         view.addGestureRecognizer(dismissKeyboard)
@@ -76,50 +69,41 @@ class GoalDeadlineVC: UIViewController {
 }
 
 
-//MARK:- function()
+//MARK:- 🤡 functions()
 extension GoalDeadlineVC {
     
+    
     func setUpHeroAnimations(){
+        
         emojiLabel.hero.id = HeroIDs.emojiKey
         goalName.hero.id = HeroIDs.goalNameKey
         goalAmount.hero.id = HeroIDs.goalAmountKey
         doneBttn.hero.id = HeroIDs.buttonKey
         self.hero.isEnabled = true
+        
+    }
+    
+    func setUpUi(){
+        titleLabel.attributedText =  NSMutableAttributedString()
+            .bold("When you want to ")
+            .boldBlueHighlight("accomplish")
+            .bold(" this goal?")
+        emojiLabel.text = emojiStr
+        goalName.text = goalNameStr
+        goalAmount.text = "\(getDefaultCurrency().currencySign) \(goalAmountStr)"
     }
     
     func createNewGoal() {
         
-        let entity = NSEntityDescription.entity(forEntityName: coreDataIdentifierManager.goalKey, in: context)
-        let newGoal = Goal(entity: entity!, insertInto: context)
-        
-        newGoal.emoji = emojiStr
-        newGoal.goalName = goalNameStr
-        newGoal.goalAchievedAmount = 0.0
-        newGoal.goalTotalAmount = NSNumber(value: Float(goalAmountStr)!)
-        newGoal.goalStatus = GoalStatus.up
-        newGoal.progressBar = 0
-        newGoal.goalPercentage = 0
-        newGoal.goalAccomplishmentDate = goalAccomplishmentDateStr
-        
-        goal.removeAll()
-        
-        do {
-            try context.save()
-        } catch {
-            print("Array not saved to core data")
-        }
+        createGoal(emoji: emojiStr, goalName: goalNameStr, toalAmount: goalAmountStr, date: goalAccomplishmentDateStr)
         
     }
     
     @objc func SwipehideKeyboard() {
+        
         UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
+        
     }
-    
-}
-
-
-extension GoalDeadlineVC {
-    
     
     //Date Picker
     func setUpRenewaDatePicker(){

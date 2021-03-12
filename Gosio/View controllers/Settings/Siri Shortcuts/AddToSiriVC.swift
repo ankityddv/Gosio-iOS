@@ -8,14 +8,18 @@
 import UIKit
 import IntentsUI
 
+
 class AddToSiriVC: UIViewController {
 
+    
     @IBOutlet weak var buttonView: UIView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var subtitleLabel: UILabel!
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         addSiriButton(to: self.buttonView)
         titleLabel.attributedText =  NSMutableAttributedString()
             .bold("Hey Siri! \n")
@@ -23,6 +27,14 @@ class AddToSiriVC: UIViewController {
         subtitleLabel.text = "Siri is bae"
 
     }
+    
+
+}
+
+
+//MARK:- 🤡 functions()
+extension AddToSiriVC {
+    
     
     func addSiriButton(to view: UIView) {
         if #available(iOS 12.0, *) {
@@ -42,8 +54,10 @@ class AddToSiriVC: UIViewController {
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
         self.present(alert, animated: true, completion: nil)
     }
-
+    
+    
 }
+
 
 extension AddToSiriVC {
     @available(iOS 12.0, *)
@@ -53,7 +67,6 @@ extension AddToSiriVC {
         return testIntent
     }
 }
-
 
 extension AddToSiriVC: INUIAddVoiceShortcutButtonDelegate {
     @available(iOS 12.0, *)

@@ -11,11 +11,14 @@ import SPAlert
 import StoreKit
 import CoreData
 
+
 class DashboardVC: UIViewController, LoginViewControllerDelegate {
     
     
     func didFinishAuth() {
+        
         label.text = "User identified: \(String(describing: userDefaults?.string(forKey: SignInWithAppleManager.userIdentifierKey)!))"
+        
     }
     
     
@@ -58,15 +61,20 @@ class DashboardVC: UIViewController, LoginViewControllerDelegate {
     //        let navigationController = UINavigationController(rootViewController: vc)
     //        navigationController.modalPresentationStyle = .automatic
     //        self.present(navigationController, animated: true, completion: nil)
+        
     }
     @objc func showMenuPopUp(){
+        
         let slideVC = MenuView()
         slideVC.modalPresentationStyle = .custom
         slideVC.transitioningDelegate = self
         self.present(slideVC, animated: true, completion: nil)
+
     }
     @IBAction func addNewGoalDidTap(_ sender: Any) {
+        
         addNewGoal()
+    
     }
     @objc func addNewGoal(){
         
@@ -99,8 +107,10 @@ class DashboardVC: UIViewController, LoginViewControllerDelegate {
         
     }
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         setUpHeroAnimations()
         requestReview()
         fetchData()
@@ -108,26 +118,35 @@ class DashboardVC: UIViewController, LoginViewControllerDelegate {
         initialiseCurrency()
         vaildateInAppPurchases()
         self.navigationController?.isNavigationBarHidden = true
+        
     }
     override func viewDidAppear(_ animated: Bool) {
+        
         vaildateOnboarding()
+    
     }
     override func viewWillAppear(_ animated: Bool) {
+        
         updateTotalAmount()
         tableVieww.reloadData()
+        
     }
    
+    
 }
 
 
-//MARK:- Table View
+//MARK:- 📀 Table view data source
 extension DashboardVC: UITableViewDelegate,UITableViewDataSource {
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return nonDeletedGoals().count
-    }
     
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
+        return nonDeletedGoals().count
+        
+    }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
         let cell: goalsCell = tableView.dequeueReusableCell(withIdentifier: TableViewCellIdentifierManager.dashboardCell, for: indexPath) as! goalsCell
         
         let thisGoal: Goal!
@@ -149,8 +168,8 @@ extension DashboardVC: UITableViewDelegate,UITableViewDataSource {
         cell.goalPercentage.text = String("\(thisGoal.goalPercentage!) %")
         
         return cell
+        
     }
-    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         let vc = storyboard?.instantiateViewController(withIdentifier: VCIdentifierManager.goalDetailKey) as! GoalExpandVC
@@ -164,7 +183,6 @@ extension DashboardVC: UITableViewDelegate,UITableViewDataSource {
         tableView.deselectRow(at: indexPath, animated: true)
     
     }
-    
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         
         if editingStyle == .delete {
@@ -204,7 +222,6 @@ extension DashboardVC: UITableViewDelegate,UITableViewDataSource {
         }
         
     }
-    
     func tableView(_ tableView: UITableView, contextMenuConfigurationForRowAt indexPath: IndexPath, point: CGPoint) -> UIContextMenuConfiguration? {
 
         let config = UIContextMenuConfiguration(identifier: indexPath as NSCopying, previewProvider: nil) { [self] _ in
@@ -240,6 +257,7 @@ extension DashboardVC: UITableViewDelegate,UITableViewDataSource {
             }
             
             let edit = UIAction(title: "Edit goal",image: UIImage(systemName: "pencil")) { [self] _ in
+                
                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.3){
                     
                     let vc = storyboard?.instantiateViewController(withIdentifier: VCIdentifierManager.goalDetailKey) as! GoalExpandVC
@@ -251,6 +269,7 @@ extension DashboardVC: UITableViewDelegate,UITableViewDataSource {
                     self.present(vc, animated: true, completion: nil)
                     
                 }
+                
             }
 
             let menu = UIMenu(title: "", image: nil, identifier: nil, options: [], children: [edit,delete])
@@ -261,21 +280,18 @@ extension DashboardVC: UITableViewDelegate,UITableViewDataSource {
         return config
         
     }
-    
     @available(iOS 13.0, *)
     func tableView(_ tableView: UITableView, previewForHighlightingContextMenuWithConfiguration configuration: UIContextMenuConfiguration) -> UITargetedPreview? {
         
         return makeTargetedPreview(for: configuration)
     
     }
-
     @available(iOS 13.0, *)
     func tableView(_ tableView: UITableView, previewForDismissingContextMenuWithConfiguration configuration: UIContextMenuConfiguration) -> UITargetedPreview? {
         
         return makeTargetedPreview(for: configuration)
         
     }
-
     @available(iOS 13.0, *)
     private func makeTargetedPreview(for configuration: UIContextMenuConfiguration) -> UITargetedPreview? {
         
@@ -290,10 +306,11 @@ extension DashboardVC: UITableViewDelegate,UITableViewDataSource {
         
     }
     
+    
 }
 
 
-//MARK:- functions()
+//MARK:- 🤡 functions()
 extension DashboardVC {
     
     
@@ -332,11 +349,13 @@ extension DashboardVC {
                 let vc = self.storyboard?.instantiateViewController(identifier: VCIdentifierManager.loginKey) as! LoginVC
                 vc.delegate = self
                 self.present(vc, animated: false, completion: nil)
-                print("Send to Login")
+//                print("Send to Login")
             case .signedIn:
-                print("SignedIN")
+//                print("SignedIN")
+                break
             case .signedOut:
-                print("Signed Out")
+//                print("Signed Out")
+                break
             }
         }
         
@@ -344,7 +363,7 @@ extension DashboardVC {
     
     func vaildateInAppPurchases(){
         
-        print("Current version:  \(getIAPStatus())")
+//        print("Current version:  \(getIAPStatus())"
         
         switch getIAPStatus() {
         case .unidentified:
@@ -464,7 +483,7 @@ extension DashboardVC {
                     goal.append(myGoal)
                 }
             } catch {
-                print("Fetch failed")
+//                print("Fetch failed")
             }
         }
     }
@@ -483,7 +502,7 @@ extension DashboardVC {
 }
 
 
-//MARK:- delegate for popUp
+//MARK:- ⬆️ delegate for popUp
 extension DashboardVC: UIViewControllerTransitioningDelegate {
     
     
@@ -495,7 +514,7 @@ extension DashboardVC: UIViewControllerTransitioningDelegate {
 }
 
 
-//MARK:- goalsCell
+//MARK:- 🔋 goalsCell
 class goalsCell: UITableViewCell {
     
     
@@ -507,24 +526,31 @@ class goalsCell: UITableViewCell {
     @IBOutlet weak var goalPercentage: UILabel!
     @IBOutlet weak var roundedBgView: UIView!
     
-    //MARK:- Events
+    
+    //MARK:- 🎭 Events
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesBegan(touches, with: event)
+        
         animate(isHighlighted: true)
+    
     }
-
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesEnded(touches, with: event)
+    
         animate(isHighlighted: false)
+    
     }
-
     override func touchesCancelled(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesCancelled(touches, with: event)
+    
         animate(isHighlighted: false)
+    
     }
 
-    //MARK:- Private functions
+    
+    //MARK:- 🤫 Private functions
     private func animate(isHighlighted: Bool, completion: ((Bool) -> Void)?=nil) {
+        
         let animationOptions: UIView.AnimationOptions = [.allowUserInteraction]
         if isHighlighted {
             UIView.animate(withDuration: 0.5,
@@ -543,6 +569,7 @@ class goalsCell: UITableViewCell {
                             self.transform = .identity
             }, completion: completion)
         }
+        
     }
     
     

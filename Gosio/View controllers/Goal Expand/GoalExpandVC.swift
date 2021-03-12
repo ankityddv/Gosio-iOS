@@ -10,6 +10,7 @@ import Hero
 import SPAlert
 import CoreData
 
+
 class GoalExpandVC: UIViewController {
 
     
@@ -37,21 +38,13 @@ class GoalExpandVC: UIViewController {
     @IBOutlet weak var dismissBttn: UIButton!
     
     
-    // Pro popUp
+    // ⬆️ Pro popUp
     @IBOutlet weak var gotProAdView: AnimatedView!
     @IBOutlet weak var goProIllustration: UIImageView!
     @IBOutlet weak var goProLabel: UILabel!
     @IBOutlet weak var goProBttn: UIButton!
     
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        setUpUi()
-        setUpHeroAnimations()
-        setUpBalloon()
-        oldAchievedAmount = selectedGoal!.goalAchievedAmount as! Float
-    }
-
     @IBAction func goProBttnDidTap(_ sender: Any) {
         
         let vc = storyboard?.instantiateViewController(withIdentifier: VCIdentifierManager.inAppPurchasesKey) as! InAppPurchasesVC
@@ -59,16 +52,20 @@ class GoalExpandVC: UIViewController {
         self.present(vc, animated: true, completion: nil)
         
     }
-    
     @IBAction func dismissPopUpBttnDidTao(_ sender: Any) {
+        
         dissmissUpdatePopUp()
-    }
     
+    }
     @IBAction func addMoneyDidTap(_ sender: Any) {
+        
         showUpdatePopUp(sender)
+    
     }
     @IBAction func dismissButtonDidTap(_ sender: Any) {
+        
         self.dismiss(animated: true, completion: nil)
+    
     }
     //Edit
     @IBAction func saveButtonDidTap(_ sender: Any) {
@@ -97,13 +94,13 @@ class GoalExpandVC: UIViewController {
                         goal.goalTotalAmount = selectedGoal!.goalTotalAmount
                         if (achievedAmount > oldAchievedAmount ) {
                             goal.goalStatus = GoalStatus.up
-                            print("up")
+//                            print("up")
                         } else if (achievedAmount == oldAchievedAmount ) {
                             goal.goalStatus = GoalStatus.pause
-                            print("pause")
+//                            print("pause")
                         } else if (achievedAmount < oldAchievedAmount ) {
                             goal.goalStatus = GoalStatus.down
-                            print("down")
+//                            print("down")
                         }
                         goal.progressBar = NSNumber(value: progress)
                         goal.goalPercentage = NSNumber(value: percentage)
@@ -116,7 +113,7 @@ class GoalExpandVC: UIViewController {
                 }
                 SPAlert.present(title: "Updated", preset: .done, haptic: .success)
             } catch {
-                print("Fetch Failed")
+//                print("Fetch Failed")
             }
             
         }
@@ -130,7 +127,6 @@ class GoalExpandVC: UIViewController {
         }
         
     }
-
     @IBAction func deleteBttnDidTap(_ sender: Any) {
         
         lightImpactHeptic()
@@ -158,13 +154,25 @@ class GoalExpandVC: UIViewController {
         self.present(alertController, animated: true, completion: nil)
         
     }
-
-
+    
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        setUpUi()
+        setUpHeroAnimations()
+        setUpBalloon()
+        oldAchievedAmount = selectedGoal!.goalAchievedAmount as! Float
+        
+    }
+    
+    
 }
 
 
-//MARK:- functions()
+//MARK:- 🤡 functions() 
 extension GoalExpandVC {
+    
     
     func setUpUi() {
         
@@ -179,28 +187,6 @@ extension GoalExpandVC {
         progressBar.setProgress(selectedGoal!.progressBar! as! Float, animated: true)
         deleteBttn.layer.borderColor = UIColor(named: "SecondaryBgColor")?.cgColor
         slideAssistView.roundCorners(.allCorners, radius: 10)
-        
-        
-//        instructions.attributedText = NSMutableAttributedString()
-//            .subtitleNormal("Features like goal amount increment, \nediting and deletion are currently \n")
-//            .subtitleNormalBlueHighlight(" under development.\n")
-//            .subtitleNormal("\n")
-//            .subtitleNormal("We request you to ")
-//            .subtitleNormalBlueHighlight("test")
-//            .subtitleNormal(" if: \n")
-//            .subtitleNormal("1. You can ")
-//            .subtitleNormalBlueHighlight("signin")
-//            .subtitleNormal(" properly? \n")
-//            .subtitleNormal("2. You can ")
-//            .subtitleNormalBlueHighlight("add new goals.\n")
-//            .subtitleNormal("3. You can set default currency, \napp icon, app theme.\n")
-//            .subtitleNormal("4. You can add new goal by ")
-//            .subtitleNormalBlueHighlight("asking Siri\n")
-//            .subtitleNormal("to do that for you?\n")
-//            .subtitleNormal("\n")
-//            .subtitleNormal("Follow us on Twitter/Instagram ")
-//            .subtitleNormalBlueHighlight("@GosioApp")
-//            .subtitleNormal(" for regular updates on what's cooking, you can always slide into our DM's to report any issue :)")
         
         titleLabelInPopUp.attributedText = NSMutableAttributedString()
             .bold("You've ")
@@ -223,6 +209,7 @@ extension GoalExpandVC {
     }
     
     func setUpHeroAnimations() {
+        
         goalTotalAmount.hero.id = HeroIDs.totalGoalAmountKey
         dismissButton.hero.id = HeroIDs.dismissButtonKey
         emoji.hero.id = HeroIDs.emojiInDashboardKey
@@ -235,9 +222,11 @@ extension GoalExpandVC {
         dismissBttn.hero.id = HeroIDs.dismissButtonKey
         
         self.hero.isEnabled = true
+        
     }
     
     func setUpBalloon() {
+        
         let balloonView = BalloonView()
         balloonView.image = #imageLiteral(resourceName: "balloon")
         picker.baloonView = balloonView
@@ -245,9 +234,11 @@ extension GoalExpandVC {
         picker.value = Double(truncating: selectedGoal!.goalAchievedAmount!)
         picker.tintColor = UIColor(named: "AccentColor")
         valueChanged()
+        
     }
 
     @IBAction func valueChanged() {
+        
         achievedAmount = Float(picker.value)
         let progress = Float(((achievedAmount) / Float(truncating: (selectedGoal!.goalTotalAmount!))))
         let goalToAchieve = Int(truncating: selectedGoal!.goalTotalAmount!) - Int(truncating: NSNumber(value: achievedAmount))
@@ -257,13 +248,16 @@ extension GoalExpandVC {
         goalAccomplishmentDate.text = String("\(getDefaultCurrency().currencySign) \(goalToAchieve) by \(goalAccomplishmentDatee)")
         
         progressBar.setProgress(progress, animated: true)
+        
     }
+    
     
 }
 
+
+//MARK:- ⬆️ SetUp Popup
 extension GoalExpandVC {
     
-   
     
     // Setup alert Popup
     @objc func showUpdatePopUp(_ sender: Any) {
@@ -352,7 +346,7 @@ extension GoalExpandVC {
     
     @objc func dissmissUpdatePopUp() {
         
-        if isUpdated == false {
+        if !isUpdated {
             setUpUi()
         }
         
@@ -397,40 +391,3 @@ extension GoalExpandVC {
                              }, completion: nil)
     }
 }
-
-
-/*
-
-func save(_ sender: Any) {
- let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
- let entity = NSEntityDescription.entity(forEntityName: "Entity", in: context)
- let newEntity = NSManagedObject(entity: entity!, insertInto: context)
- 
- newEntity.setValue(score, forKey: "number")
- 
- do {
-     try context.save()
-     print("Saved")
- } catch {
-     print("Fucked it while saving!")
- }
-}
-
-func getData(){
- let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
- let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Entity")
- request.returnsObjectsAsFaults = false
- 
- do {
-     let result = try context.fetch(request)
-     for data in result as! [NSManagedObject] {
-         score = data.value(forKey: "number") as! Int
-     }
-     print("Fetched")
- } catch {
-     print("Fucked it while fetching!")
- }
- 
-}
-
-*/

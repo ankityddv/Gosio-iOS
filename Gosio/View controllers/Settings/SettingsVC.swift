@@ -10,12 +10,9 @@ import SPAlert
 import MessageUI
 import SafariServices
 
-class SettingsVC: UITableViewController,controlAlert {
 
-    func presentRestored() {
-        let alert = presentAlertWithOneButton(AlertTitle: "Restored", Message: "Quit and restart", ActionBttnTitle: "Yay")
-        present(alert, animated: true, completion: nil)
-    }
+class SettingsVC: UITableViewController {
+
     
     let appVersion = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String
     let buildVersion = Bundle.main.infoDictionary?["CFBundleVersion"] as! String
@@ -27,15 +24,16 @@ class SettingsVC: UITableViewController,controlAlert {
     @IBOutlet weak var goProLabel: UILabel!
     @IBOutlet weak var goProBttn: UIButton!
     
+    
     @IBAction func goProBttnDidTap(_ sender: Any) {
         let vc = storyboard?.instantiateViewController(withIdentifier: VCIdentifierManager.inAppPurchasesKey) as! InAppPurchasesVC
         vc.isHeroEnabledd = true
         self.present(vc, animated: true, completion: nil)
     }
-    
     @IBAction func dismissBttnDidTap(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }
+    
    
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,12 +41,12 @@ class SettingsVC: UITableViewController,controlAlert {
         setUpNavBar()
         setUpHeroAnimations()
     }
-    
     override func viewWillAppear(_ animated: Bool) {
         tableView.reloadData()
     }
     
-    // MARK: - Table view data source
+    
+    // MARK: - 📀 Table view data source
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
             
         switch section {
@@ -182,12 +180,21 @@ class SettingsVC: UITableViewController,controlAlert {
 
         return headerView
     }
+    
+    
 }
 
 
-// MARK:- All Functions
+// MARK:- 🤡 functions()
 extension SettingsVC {
     
+    
+    func setUpHeroAnimations() {
+        goProIllustration.hero.id = HeroIDs.IAPIllustrationKey
+        goProLabel.hero.id = HeroIDs.goProLabelKey
+        goProBttn.hero.id = HeroIDs.goProBttnKey
+        dismissBttn.hero.id = HeroIDs.dismissButtonKey
+    }
     
     func setUpUi(){
         versionLabel.text = "Version \(appVersion ?? "") (\(buildVersion))"
@@ -253,16 +260,11 @@ extension SettingsVC {
         }
     }
     
-    func setUpHeroAnimations() {
-        goProIllustration.hero.id = HeroIDs.IAPIllustrationKey
-        goProLabel.hero.id = HeroIDs.goProLabelKey
-        goProBttn.hero.id = HeroIDs.goProBttnKey
-        dismissBttn.hero.id = HeroIDs.dismissButtonKey
-    }
-    
+   
 }
 
 
+// MARK:- 📮 Mail composer
 extension SettingsVC: MFMailComposeViewControllerDelegate {
     
     

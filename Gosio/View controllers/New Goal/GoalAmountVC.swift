@@ -9,6 +9,7 @@ import Hero
 import UIKit
 import SPAlert
 
+
 class GoalAmountVC: UIViewController {
     
     
@@ -59,7 +60,7 @@ class GoalAmountVC: UIViewController {
 }
 
 
-//MARK:- function()
+//MARK:- 🤡 functions()
 extension GoalAmountVC {
     
     
@@ -84,7 +85,7 @@ extension GoalAmountVC {
 }
 
 
-//MARK:- keyboard notifications
+//MARK:- ⌨️ keyboard notifications
 extension GoalAmountVC {
     
     

@@ -24,7 +24,7 @@ class AppIconVC: UITableViewController {
     }
     
     
-    // MARK: - Table view data source
+    // MARK: - 📀 Table view data source
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return appIconArray.count
     }
@@ -107,7 +107,7 @@ class AppIconVC: UITableViewController {
 }
 
 
-//MARK:- functions()
+//MARK:- 🤡 functions()
 extension AppIconVC {
     
     
@@ -121,6 +121,8 @@ extension AppIconVC {
     
 }
 
+
+//MARK:- 🔋 appIconCell
 class appIconCell: UITableViewCell {
     
     

@@ -7,8 +7,14 @@
 
 import UIKit
 
+
 class MoreAppsbyAnkitYadavVC: UITableViewController {
 
+    
+    var appNameArr = ["Dinero"]
+    var appSubtitleNameArr = ["Subscription manager & tracker"]
+    var appIconArr = ["dinero"]
+    
     
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var subtitleLabel: UILabel!
@@ -19,11 +25,8 @@ class MoreAppsbyAnkitYadavVC: UITableViewController {
         setUpUi()
     }
     
-    var appNameArr = ["Dinero"]
-    var appSubtitleNameArr = ["Subscription manager & tracker"]
-    var appIconArr = ["dinero"]
     
-    // MARK: - Table view data source
+    // MARK: - 📀 Table view data source
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return appNameArr.count
     }
@@ -46,8 +49,10 @@ class MoreAppsbyAnkitYadavVC: UITableViewController {
         }
     }
     
+    
 }
 
+//MARK:- 🤡 functions()
 extension MoreAppsbyAnkitYadavVC {
     
     
@@ -63,6 +68,7 @@ extension MoreAppsbyAnkitYadavVC {
 }
 
 
+//MARK:- 🔋 moreappsCell
 class OurAppsCell: UITableViewCell {
     
     

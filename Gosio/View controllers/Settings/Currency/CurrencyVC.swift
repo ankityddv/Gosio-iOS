@@ -7,22 +7,29 @@
 
 import UIKit
 
+
 class CurrencyVC: UITableViewController {
+    
     
     var searchedCurrency = [CurrencyModel]()
     var searching = false
     let searchController = UISearchController(searchResultsController: nil)
 
+    
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var subtitleLabel: UILabel!
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         appendData()
         setUpUi()
+    
     }
+    
 
-    // MARK: - Table view data source
+    // MARK: - 📀 Table view data source
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
         if searching {
             return searchedCurrency.count
@@ -112,8 +119,9 @@ class CurrencyVC: UITableViewController {
 }
 
 
-//MARK:-  functions()
+//MARK:-  🤡 functions()
 extension CurrencyVC {
+    
     
     func setUpUi() {
         titleLabel.attributedText =  NSMutableAttributedString()
@@ -127,11 +135,19 @@ extension CurrencyVC {
         searchController.searchBar.delegate = self
     }
     
+    func appendData(){
+        for (name,code,sign) in zip(currencyName,currencyCode,currencySign) {
+            CurrencyArr.append(CurrencyModel(currencyName: name, currencyCode: code, currencySign: sign))
+        }
+    }
+    
+    
 }
 
 
-//MARK:-  Search Bar
+//MARK:-  🕵🏻‍♂️ Search Bar
 extension CurrencyVC: UISearchBarDelegate {
+    
     
     func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
         
@@ -161,18 +177,11 @@ extension CurrencyVC: UISearchBarDelegate {
         tableView.reloadData()
     }
     
-}
-
-extension CurrencyVC {
-    
-    func appendData(){
-        for (name,code,sign) in zip(currencyName,currencyCode,currencySign) {
-            CurrencyArr.append(CurrencyModel(currencyName: name, currencyCode: code, currencySign: sign))
-        }
-    }
     
 }
 
+
+//MARK:- 🔋 currencyCell
 class CurrencyTVCell: UITableViewCell {
     @IBOutlet weak var currencyName: UILabel!
 }

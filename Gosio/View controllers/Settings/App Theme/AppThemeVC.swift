@@ -23,7 +23,7 @@ class AppThemeVC: UITableViewController {
     }
     
     
-    // MARK: - Table view data source
+    // MARK: - 📀 Table view data source
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return themeOptions.count
     }
@@ -133,7 +133,7 @@ class AppThemeVC: UITableViewController {
 }
 
 
-//MARK:- functions()
+//MARK:- 🤡 functions()
 extension AppThemeVC {
     
     
@@ -148,6 +148,7 @@ extension AppThemeVC {
 }
 
 
+//MARK:- 🔋 themeCell
 class appThemeTVCell: UITableViewCell {
     
     
