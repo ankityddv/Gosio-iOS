@@ -2,15 +2,6 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>UIAppFonts</key>
-	<array>
-		<string>AirbnbCerealBlack.ttf</string>
-		<string>AirbnbCerealBold.ttf</string>
-		<string>AirbnbCerealBook.ttf</string>
-		<string>AirbnbCerealExtraBold.ttf</string>
-		<string>AirbnbCerealLight.ttf</string>
-		<string>AirbnbCerealMedium.ttf</string>
-	</array>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleExecutable</key>
@@ -54,6 +45,15 @@
 	<key>NSUserActivityTypes</key>
 	<array>
 		<string>AddGoalIntent</string>
+	</array>
+	<key>UIAppFonts</key>
+	<array>
+		<string>AirbnbCerealBlack.ttf</string>
+		<string>AirbnbCerealBold.ttf</string>
+		<string>AirbnbCerealBook.ttf</string>
+		<string>AirbnbCerealExtraBold.ttf</string>
+		<string>AirbnbCerealLight.ttf</string>
+		<string>AirbnbCerealMedium.ttf</string>
 	</array>
 	<key>UIApplicationSceneManifest</key>
 	<dict>

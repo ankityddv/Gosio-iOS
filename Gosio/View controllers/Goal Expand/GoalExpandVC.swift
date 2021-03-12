@@ -170,9 +170,11 @@ extension GoalExpandVC {
         
         let goalToAchieve = Int(truncating: selectedGoal!.goalTotalAmount!) - Int(truncating: selectedGoal!.goalAchievedAmount)
         
+        let goalAccomplishmentDatee = "\(selectedGoal!.goalAccomplishmentDate!)".replacingOccurrences(of: "-", with: " ", options: .literal, range: nil)
+        
         emoji.text = selectedGoal!.emoji
         goalTotalAmount.text = "\(currencyCodeString!) \(selectedGoal!.goalTotalAmount!)"
-        goalAccomplishmentDate.text = String("\(currencyCodeString!) \(goalToAchieve) by \(selectedGoal!.goalAccomplishmentDate!)")
+        goalAccomplishmentDate.text = String("\(currencyCodeString!) \(goalToAchieve) by \(goalAccomplishmentDatee)")
         goalStatus.image = UIImage(named: "\(selectedGoal!.goalStatus ?? "")Expand")
         progressBar.setProgress(selectedGoal!.progressBar! as! Float, animated: true)
         deleteBttn.layer.borderColor = UIColor(named: "SecondaryBgColor")?.cgColor
@@ -250,7 +252,9 @@ extension GoalExpandVC {
         let progress = Float(((achievedAmount) / Float(truncating: (selectedGoal!.goalTotalAmount!))))
         let goalToAchieve = Int(truncating: selectedGoal!.goalTotalAmount!) - Int(truncating: NSNumber(value: achievedAmount))
         
-        goalAccomplishmentDate.text = String("\(currencyCodeString!) \(goalToAchieve) by \(selectedGoal!.goalAccomplishmentDate!)")
+        let goalAccomplishmentDatee = "\(selectedGoal!.goalAccomplishmentDate!)".replacingOccurrences(of: "-", with: " ", options: .literal, range: nil)
+        
+        goalAccomplishmentDate.text = String("\(currencyCodeString!) \(goalToAchieve) by \(goalAccomplishmentDatee)")
         
         progressBar.setProgress(progress, animated: true)
     }
@@ -336,7 +340,7 @@ extension GoalExpandVC {
                                 self.updatePopUpView.layer.cornerRadius = 20
                                 self.deletAlertContainerView.alpha = 0.8
                                 self.deletAlertContainerView.isUserInteractionEnabled = false
-                                self.updatePopUpView.frame = CGRect(x: 0, y: screenHeight - self.deleteAlertpopUpViewHeight + 45, width: screenWidth, height: self.deleteAlertpopUpViewHeight - 45)
+                                self.updatePopUpView.frame = CGRect(x: 0, y: screenHeight - self.deleteAlertpopUpViewHeight, width: screenWidth, height: self.deleteAlertpopUpViewHeight)
                             }
                         default:
                             break

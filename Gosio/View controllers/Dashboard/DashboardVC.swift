@@ -101,13 +101,13 @@ class DashboardVC: UIViewController, LoginViewControllerDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setUpHeroAnimations()
         requestReview()
         fetchData()
         initialiseAppTheme()
         initialiseCurrency()
         vaildateInAppPurchases()
         self.navigationController?.isNavigationBarHidden = true
-        setUpHeroAnimations()
     }
     override func viewDidAppear(_ animated: Bool) {
         vaildateOnboarding()
@@ -116,9 +116,7 @@ class DashboardVC: UIViewController, LoginViewControllerDelegate {
         updateTotalAmount()
         tableVieww.reloadData()
     }
-    
-    
-
+   
 }
 
 
@@ -240,8 +238,22 @@ extension DashboardVC: UITableViewDelegate,UITableViewDataSource {
                 present(actionSheetController, animated: true, completion: nil)
 
             }
+            
+            let edit = UIAction(title: "Edit goal",image: UIImage(systemName: "pencil")) { [self] _ in
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.3){
+                    
+                    let vc = storyboard?.instantiateViewController(withIdentifier: VCIdentifierManager.goalDetailKey) as! GoalExpandVC
+                
+                    let selectedGoal : Goal!
+                    selectedGoal = nonDeletedGoals()[indexPath.row]
+                    vc.selectedGoal = selectedGoal
+                    
+                    self.present(vc, animated: true, completion: nil)
+                    
+                }
+            }
 
-            let menu = UIMenu(title: "", image: nil, identifier: nil, options: [], children: [delete])
+            let menu = UIMenu(title: "", image: nil, identifier: nil, options: [], children: [edit,delete])
 
             return menu
 
