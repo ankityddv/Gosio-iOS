@@ -6,7 +6,7 @@
 //
 
 import Foundation
-
+import CoreData
 
 struct CurrencyModel {
     var currencyName : String = ""
@@ -15,7 +15,7 @@ struct CurrencyModel {
 }
 
 
-var Currency = [CurrencyModel]()
+var CurrencyArr = [CurrencyModel]()
 
 var currencyName =
     [
@@ -380,3 +380,48 @@ var currencySign =
   "R",
   "ZK"
 ]
+
+
+//Core Data Default currency
+
+func updateDefaultCurrency(name: String, countryCode: String, sign: String) {
+    
+    let entity = NSEntityDescription.entity(forEntityName: coreDataIdentifierManager.currency, in: context)
+     let newEntity = NSManagedObject(entity: entity!, insertInto: context)
+     
+    newEntity.setValue(name, forKey: currencyEntityIdentifierManager.name)
+    newEntity.setValue(countryCode, forKey: currencyEntityIdentifierManager.countryCode)
+    newEntity.setValue(sign, forKey: currencyEntityIdentifierManager.sign)
+    
+     do {
+        try context.save()
+     } catch {
+//        print("Fucked it while saving!")
+     }
+    
+}
+
+
+func getDefaultCurrency() -> CurrencyModel {
+    
+    let request = NSFetchRequest<NSFetchRequestResult>(entityName: coreDataIdentifierManager.currency)
+    request.returnsObjectsAsFaults = false
+    
+    var name = ""
+    var code = ""
+    var sign = ""
+    
+    do {
+        let result = try context.fetch(request)
+        for data in result as! [NSManagedObject] {
+            name = (data.value(forKey: currencyEntityIdentifierManager.name) as! String)
+            code = (data.value(forKey: currencyEntityIdentifierManager.countryCode) as! String)
+            sign = (data.value(forKey: currencyEntityIdentifierManager.sign) as! String)
+        }
+    } catch {
+//        print("Fucked it while fetching!")
+    }
+    
+    return CurrencyModel(currencyName: name, currencyCode: code, currencySign: sign)
+    
+}

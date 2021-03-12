@@ -140,7 +140,7 @@ extension DashboardVC: UITableViewDelegate,UITableViewDataSource {
             case nil:
                 cell.goalAmount.text = String("$ \(thisGoal.goalAchievedAmount!) / \(thisGoal.goalTotalAmount!) ")
             default:
-                cell.goalAmount.text = String("\(currencyCodeString!) \(thisGoal.goalAchievedAmount!) / \(thisGoal.goalTotalAmount!) ")
+                cell.goalAmount.text = String("\(getDefaultCurrency().currencySign) \(thisGoal.goalAchievedAmount!) / \(thisGoal.goalTotalAmount!) ")
             break
         }
         
@@ -374,13 +374,12 @@ extension DashboardVC {
     
     func initialiseCurrency() {
         initialiseAppIcon()
-        switch (userDefaults?.object(forKey: userDefaultsKeyManager.currencyCodeKey) as? String)  {
-        case nil:
-            userDefaults?.set("USD", forKey: userDefaultsKeyManager.currencyCodeKey)
-            userDefaults?.set("$", forKey: userDefaultsKeyManager.currencySignKey)
-        default:
-            break
+        
+        if getDefaultCurrency().currencyName == "" || getDefaultCurrency().currencyCode == "" || getDefaultCurrency().currencySign == "" {
+//            print("currency initialised")
+            updateDefaultCurrency(name: "US Dollar", countryCode: "USD", sign: "$")
         }
+        
     }
     
     func initialiseAppIcon() {
@@ -400,7 +399,7 @@ extension DashboardVC {
         case nil:
             totalGoalAmount.text = "$ \(Int(sum))"
         default:
-            totalGoalAmount.text = "\(currencyCodeString!) \(Int(sum))"
+            totalGoalAmount.text = "\(getDefaultCurrency().currencySign) \(Int(sum))"
         }
         
     }

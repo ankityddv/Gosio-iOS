@@ -16,9 +16,19 @@ struct coreDataIdentifierManager {
     static let goalKey = "Goal"
     static let IAP : String = "InAppPurchase"
     static let entity : String = "Entity"
+    static let currency : String = "Currency"
+    
+}
+struct currencyEntityIdentifierManager {
+    
+    static let name = "name"
+    static let countryCode : String = "countryCode"
+    static let sign : String = "sign"
     
 }
 
+
+// Goal CoreData
 func deleteGoal(selectedGoal: Goal) {
     let request = NSFetchRequest<NSFetchRequestResult>(entityName: coreDataIdentifierManager.goalKey)
     
@@ -37,6 +47,14 @@ func deleteGoal(selectedGoal: Goal) {
     }
 }
 
+
+// IAP CoreData
+enum subscriptionType {
+    case free
+    case pro
+    case unidentified
+}
+
 func updateIAPStatus(status: Bool) {
     
     let entity = NSEntityDescription.entity(forEntityName: coreDataIdentifierManager.IAP, in: context)
@@ -50,12 +68,6 @@ func updateIAPStatus(status: Bool) {
 //        print("Fucked it while saving!")
      }
     
-}
-
-enum subscriptionType {
-    case free
-    case pro
-    case unidentified
 }
 
 func getIAPStatus() -> subscriptionType {
@@ -81,3 +93,4 @@ func getIAPStatus() -> subscriptionType {
     }
     
 }
+

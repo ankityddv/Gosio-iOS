@@ -45,7 +45,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$ 287 000" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Bz-mz-zAY">
-                                <rect key="frame" x="151.5" y="173" width="111.5" height="39"/>
+                                <rect key="frame" x="150.5" y="173" width="113" height="39"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="39" id="aky-fG-h6L"/>
                                 </constraints>
@@ -54,7 +54,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total amount saved" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="725-qQ-H8D">
-                                <rect key="frame" x="159" y="221" width="96" height="14"/>
+                                <rect key="frame" x="157.5" y="221" width="99" height="14"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="14" id="7eK-Bo-lia"/>
                                 </constraints>
@@ -142,7 +142,7 @@
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Go Pro" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cB9-x2-ZNf">
-                                        <rect key="frame" x="120" y="16" width="63" height="27"/>
+                                        <rect key="frame" x="120" y="16" width="65" height="27"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="27" id="pB7-BU-AzY"/>
                                         </constraints>
@@ -151,7 +151,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add unlimited goals" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b5u-0L-cS8">
-                                        <rect key="frame" x="137" y="43" width="89" height="14"/>
+                                        <rect key="frame" x="137" y="43" width="90" height="14"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="14" id="O4K-9u-nE9"/>
                                         </constraints>

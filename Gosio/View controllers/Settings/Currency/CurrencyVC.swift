@@ -27,7 +27,7 @@ class CurrencyVC: UITableViewController {
         if searching {
             return searchedCurrency.count
         } else {
-            return Currency.count
+            return CurrencyArr.count
         }
     }
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -45,11 +45,11 @@ class CurrencyVC: UITableViewController {
             cell.currencyName.text = "\(searchedCurrency[indexPath.row].currencyName) (\(searchedCurrency[indexPath.row].currencySign))"
             cell.accessoryView = noneView
         } else {
-            let name = Currency[indexPath.row].currencyName
-            let sign = Currency[indexPath.row].currencySign
+            let name = CurrencyArr[indexPath.row].currencyName
+            let sign = CurrencyArr[indexPath.row].currencySign
             cell.currencyName.text = "\(name) (\(sign))"
             
-            let index = Currency.firstIndex(where: { $0.currencyCode == (userDefaults?.object(forKey: userDefaultsKeyManager.currencyCodeKey) as? String) })
+            let index = CurrencyArr.firstIndex(where: { $0.currencyCode == getDefaultCurrency().currencyCode })
             let selectedArr = [Int("\(index!)")]
             cell.accessoryView = selectedArr.contains(indexPath.row) ? checkView : noneView
         }
@@ -77,16 +77,17 @@ class CurrencyVC: UITableViewController {
         tableView.cellForRow(at: indexPath)?.accessoryView = checkView
         
         if searching {
-            userDefaults?.set("\(searchedCurrency[indexPath.row].currencyCode)", forKey: userDefaultsKeyManager.currencyCodeKey)
-            userDefaults?.set("\(searchedCurrency[indexPath.row].currencySign)", forKey: userDefaultsKeyManager.currencySignKey)
+//            updateDefaultCurrency(name: "", countryCode: "", sign: "")
+            
+            updateDefaultCurrency(name: "\(searchedCurrency[indexPath.row].currencyName)", countryCode: "\(searchedCurrency[indexPath.row].currencyCode)", sign: "\(searchedCurrency[indexPath.row].currencySign)")
             
             let alert = presentAlertWithOneButton(AlertTitle: "You have changed the default currency to \((searchedCurrency[indexPath.row].currencyCode)).", Message: "", ActionBttnTitle: "OK")
             self.present(alert, animated: true, completion: nil)
         } else {
-            userDefaults?.set("\(Currency[indexPath.row].currencyCode)", forKey: userDefaultsKeyManager.currencyCodeKey)
-            userDefaults?.set("\(Currency[indexPath.row].currencySign)", forKey: userDefaultsKeyManager.currencySignKey)
             
-            let alert = presentAlertWithOneButton(AlertTitle: "You have changed the default currency to \((Currency[indexPath.row].currencyCode)).", Message: "", ActionBttnTitle: "OK")
+            updateDefaultCurrency(name: "\(CurrencyArr[indexPath.row].currencyName)", countryCode: "\(CurrencyArr[indexPath.row].currencyCode)", sign: "\(CurrencyArr[indexPath.row].currencySign)")
+            
+            let alert = presentAlertWithOneButton(AlertTitle: "You have changed the default currency to \((CurrencyArr[indexPath.row].currencyCode)).", Message: "", ActionBttnTitle: "OK")
             self.present(alert, animated: true, completion: nil)
             
         }
@@ -139,7 +140,7 @@ extension CurrencyVC: UISearchBarDelegate {
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         
-        searchedCurrency = Currency.filter({$0.currencyName.lowercased().prefix(searchText.count) == searchText.lowercased()})
+        searchedCurrency = CurrencyArr.filter({$0.currencyName.lowercased().prefix(searchText.count) == searchText.lowercased()})
         
         searching = true
         tableView.reloadData()
@@ -157,7 +158,7 @@ extension CurrencyVC {
     
     func appendData(){
         for (name,code,sign) in zip(currencyName,currencyCode,currencySign) {
-            Currency.append(CurrencyModel(currencyName: name, currencyCode: code, currencySign: sign))
+            CurrencyArr.append(CurrencyModel(currencyName: name, currencyCode: code, currencySign: sign))
         }
     }
     

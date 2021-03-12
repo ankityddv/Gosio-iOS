@@ -66,7 +66,7 @@ class GoalDeadlineVC: UIViewController {
             .bold(" this goal?")
         emojiLabel.text = emojiStr
         goalName.text = goalNameStr
-        goalAmount.text = "\(currencyCodeString!) \(goalAmountStr)"
+        goalAmount.text = "\(getDefaultCurrency().currencySign) \(goalAmountStr)"
         
         let dismissKeyboard = UITapGestureRecognizer(target: self, action: #selector(SwipehideKeyboard))
         view.addGestureRecognizer(dismissKeyboard)
@@ -89,9 +89,7 @@ extension GoalDeadlineVC {
     
     func createNewGoal() {
         
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        let context:NSManagedObjectContext = appDelegate.persistentContainer.viewContext
-        let entity = NSEntityDescription.entity(forEntityName: "Goal", in: context)
+        let entity = NSEntityDescription.entity(forEntityName: coreDataIdentifierManager.goalKey, in: context)
         let newGoal = Goal(entity: entity!, insertInto: context)
         
         newGoal.emoji = emojiStr

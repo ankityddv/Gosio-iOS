@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="17709" systemVersion="20D64" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithCloudKit="YES" userDefinedModelVersionIdentifier="">
+    <entity name="Currency" representedClassName="Currency" syncable="YES" codeGenerationType="class">
+        <attribute name="countryCode" optional="YES" attributeType="String"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="sign" optional="YES" attributeType="String"/>
+    </entity>
     <entity name="Entity" representedClassName="Entity" syncable="YES" codeGenerationType="class">
         <attribute name="number" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
     </entity>
@@ -21,5 +26,6 @@
         <element name="Entity" positionX="-63" positionY="-18" width="128" height="44"/>
         <element name="Goal" positionX="-63" positionY="-9" width="128" height="164"/>
         <element name="InAppPurchase" positionX="-63" positionY="54" width="128" height="44"/>
+        <element name="Currency" positionX="-63" positionY="54" width="128" height="74"/>
     </elements>
 </model>

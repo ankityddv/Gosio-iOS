@@ -173,8 +173,8 @@ extension GoalExpandVC {
         let goalAccomplishmentDatee = "\(selectedGoal!.goalAccomplishmentDate!)".replacingOccurrences(of: "-", with: " ", options: .literal, range: nil)
         
         emoji.text = selectedGoal!.emoji
-        goalTotalAmount.text = "\(currencyCodeString!) \(selectedGoal!.goalTotalAmount!)"
-        goalAccomplishmentDate.text = String("\(currencyCodeString!) \(goalToAchieve) by \(goalAccomplishmentDatee)")
+        goalTotalAmount.text = "\(getDefaultCurrency().currencySign) \(selectedGoal!.goalTotalAmount!)"
+        goalAccomplishmentDate.text = String("\(getDefaultCurrency().currencySign) \(goalToAchieve) by \(goalAccomplishmentDatee)")
         goalStatus.image = UIImage(named: "\(selectedGoal!.goalStatus ?? "")Expand")
         progressBar.setProgress(selectedGoal!.progressBar! as! Float, animated: true)
         deleteBttn.layer.borderColor = UIColor(named: "SecondaryBgColor")?.cgColor
@@ -254,7 +254,7 @@ extension GoalExpandVC {
         
         let goalAccomplishmentDatee = "\(selectedGoal!.goalAccomplishmentDate!)".replacingOccurrences(of: "-", with: " ", options: .literal, range: nil)
         
-        goalAccomplishmentDate.text = String("\(currencyCodeString!) \(goalToAchieve) by \(goalAccomplishmentDatee)")
+        goalAccomplishmentDate.text = String("\(getDefaultCurrency().currencySign) \(goalToAchieve) by \(goalAccomplishmentDatee)")
         
         progressBar.setProgress(progress, animated: true)
     }
