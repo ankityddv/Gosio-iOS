@@ -23,9 +23,11 @@
 		361E6E5F25F9E67B00BDD977 /* DropShadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361E6E5E25F9E67B00BDD977 /* DropShadow.swift */; };
 		361E6E6425F9FA7200BDD977 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 361E6E6325F9FA7200BDD977 /* Default.png */; };
 		361E6E6C25F9FA8200BDD977 /* White.png in Resources */ = {isa = PBXBuildFile; fileRef = 361E6E6B25F9FA8200BDD977 /* White.png */; };
-		361E6E7825FA088100BDD977 /* MessageBubble.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361E6E7725FA088100BDD977 /* MessageBubble.swift */; };
 		36246B1025FB9E8C00ED1C66 /* IAPCoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36246B0F25FB9E8C00ED1C66 /* IAPCoreData.swift */; };
 		36246B1525FB9EB700ED1C66 /* GoalCoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36246B1425FB9EB700ED1C66 /* GoalCoreData.swift */; };
+		36246B1A25FBB19800ED1C66 /* CustomFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36246B1925FBB19800ED1C66 /* CustomFunctions.swift */; };
+		36246B1F25FBB1BC00ED1C66 /* DataModelsAndFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36246B1E25FBB1BC00ED1C66 /* DataModelsAndFunctions.swift */; };
+		36246B2725FBB24D00ED1C66 /* GoalStatusModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36246B2625FBB24D00ED1C66 /* GoalStatusModel.swift */; };
 		3627646E25F9488B00A55834 /* AnimatedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3627646D25F9488B00A55834 /* AnimatedView.swift */; };
 		3627647325F9503600A55834 /* UIImage+Gif.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3627647225F9503600A55834 /* UIImage+Gif.swift */; };
 		3627647825F9505000A55834 /* CustomLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3627647725F9505000A55834 /* CustomLoader.swift */; };
@@ -47,7 +49,7 @@
 		362E739A25EAAC5200C06078 /* GosioUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 362E739925EAAC5200C06078 /* GosioUITests.swift */; };
 		36404CB525ECA65B00C5A188 /* FadingTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36404CB425ECA65B00C5A188 /* FadingTableView.swift */; };
 		36404CC825ED033100C5A188 /* Zip6Sequence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36404CC725ED033100C5A188 /* Zip6Sequence.swift */; };
-		364EB91225EDFCB200E14444 /* attributedFontExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364EB91125EDFCB200E14444 /* attributedFontExtention.swift */; };
+		364EB91225EDFCB200E14444 /* AttributedFontExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364EB91125EDFCB200E14444 /* AttributedFontExtention.swift */; };
 		364F35AB25EB5E6E007E7996 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364F35AA25EB5E6E007E7996 /* LoginVC.swift */; };
 		364F35B425EB5E84007E7996 /* AuthState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364F35B325EB5E84007E7996 /* AuthState.swift */; };
 		364F35B925EB5E96007E7996 /* SignInWithAppleManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364F35B825EB5E96007E7996 /* SignInWithAppleManager.swift */; };
@@ -70,7 +72,7 @@
 		368D369B25F4C41600D5928D /* IAPService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368D369A25F4C41600D5928D /* IAPService.swift */; };
 		368D36A025F4C45500D5928D /* InAppPurchasesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368D369F25F4C45500D5928D /* InAppPurchasesVC.swift */; };
 		368D36A925F4CDBA00D5928D /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 368D36A825F4CDBA00D5928D /* StoreKit.framework */; };
-		36960CAC25EFF3B400946619 /* textFieldMaxLength.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36960CAB25EFF3B400946619 /* textFieldMaxLength.swift */; };
+		36960CAC25EFF3B400946619 /* TextFieldMaxLength.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36960CAB25EFF3B400946619 /* TextFieldMaxLength.swift */; };
 		36B7643D25F39C110017AC35 /* PaperOnboarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B7643A25F39C100017AC35 /* PaperOnboarding.swift */; };
 		36B7643E25F39C110017AC35 /* PaperOnboardingDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B7643B25F39C110017AC35 /* PaperOnboardingDataSource.swift */; };
 		36B7643F25F39C110017AC35 /* PaperOnboardingDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B7643C25F39C110017AC35 /* PaperOnboardingDelegate.swift */; };
@@ -127,9 +129,11 @@
 		361E6E5E25F9E67B00BDD977 /* DropShadow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropShadow.swift; sourceTree = "<group>"; };
 		361E6E6325F9FA7200BDD977 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		361E6E6B25F9FA8200BDD977 /* White.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = White.png; sourceTree = "<group>"; };
-		361E6E7725FA088100BDD977 /* MessageBubble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageBubble.swift; sourceTree = "<group>"; };
 		36246B0F25FB9E8C00ED1C66 /* IAPCoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IAPCoreData.swift; sourceTree = "<group>"; };
 		36246B1425FB9EB700ED1C66 /* GoalCoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalCoreData.swift; sourceTree = "<group>"; };
+		36246B1925FBB19800ED1C66 /* CustomFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomFunctions.swift; sourceTree = "<group>"; };
+		36246B1E25FBB1BC00ED1C66 /* DataModelsAndFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModelsAndFunctions.swift; sourceTree = "<group>"; };
+		36246B2625FBB24D00ED1C66 /* GoalStatusModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalStatusModel.swift; sourceTree = "<group>"; };
 		3627646D25F9488B00A55834 /* AnimatedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatedView.swift; sourceTree = "<group>"; };
 		3627647225F9503600A55834 /* UIImage+Gif.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Gif.swift"; sourceTree = "<group>"; };
 		3627647725F9505000A55834 /* CustomLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomLoader.swift; sourceTree = "<group>"; };
@@ -151,7 +155,7 @@
 		362E739B25EAAC5200C06078 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		36404CB425ECA65B00C5A188 /* FadingTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FadingTableView.swift; sourceTree = "<group>"; };
 		36404CC725ED033100C5A188 /* Zip6Sequence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Zip6Sequence.swift; sourceTree = "<group>"; };
-		364EB91125EDFCB200E14444 /* attributedFontExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = attributedFontExtention.swift; sourceTree = "<group>"; };
+		364EB91125EDFCB200E14444 /* AttributedFontExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttributedFontExtention.swift; sourceTree = "<group>"; };
 		364F35AA25EB5E6E007E7996 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		364F35B325EB5E84007E7996 /* AuthState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthState.swift; sourceTree = "<group>"; };
 		364F35B825EB5E96007E7996 /* SignInWithAppleManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInWithAppleManager.swift; sourceTree = "<group>"; };
@@ -180,7 +184,7 @@
 		368D36B025F4F1EE00D5928D /* AirbnbCerealBook.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = AirbnbCerealBook.ttf; sourceTree = "<group>"; };
 		368D36B125F4F1EE00D5928D /* AirbnbCerealBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = AirbnbCerealBold.ttf; sourceTree = "<group>"; };
 		368D36B225F4F1EE00D5928D /* AirbnbCerealExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = AirbnbCerealExtraBold.ttf; sourceTree = "<group>"; };
-		36960CAB25EFF3B400946619 /* textFieldMaxLength.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = textFieldMaxLength.swift; sourceTree = "<group>"; };
+		36960CAB25EFF3B400946619 /* TextFieldMaxLength.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldMaxLength.swift; sourceTree = "<group>"; };
 		36B7643A25F39C100017AC35 /* PaperOnboarding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaperOnboarding.swift; sourceTree = "<group>"; };
 		36B7643B25F39C110017AC35 /* PaperOnboardingDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaperOnboardingDataSource.swift; sourceTree = "<group>"; };
 		36B7643C25F39C110017AC35 /* PaperOnboardingDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaperOnboardingDelegate.swift; sourceTree = "<group>"; };
@@ -251,6 +255,7 @@
 		3602BEC225EBD7170014DD16 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				36246B2625FBB24D00ED1C66 /* GoalStatusModel.swift */,
 				36D95DE925EFAA9100692411 /* GoalDataModel.swift */,
 				36246B1425FB9EB700ED1C66 /* GoalCoreData.swift */,
 			);
@@ -318,21 +323,22 @@
 			isa = PBXGroup;
 			children = (
 				36B7643625F39BF60017AC35 /* Onboarding Animation */,
+				3627646D25F9488B00A55834 /* AnimatedView.swift */,
+				361E6E5925F9DFF600BDD977 /* AppleIDAuthButton.swift */,
+				364EB91125EDFCB200E14444 /* AttributedFontExtention.swift */,
 				364F35C225EB5F39007E7996 /* CheatSheet.swift */,
-				364F35BD25EB5ECB007E7996 /* UserDefaults.swift */,
-				361E6E7725FA088100BDD977 /* MessageBubble.swift */,
-				3602BECC25EBDB0B0014DD16 /* Manager.swift */,
 				365DAE1D25F20839004AAABC /* CoreDataServices.swift */,
-				364EB91125EDFCB200E14444 /* attributedFontExtention.swift */,
+				36246B1925FBB19800ED1C66 /* CustomFunctions.swift */,
+				3627647725F9505000A55834 /* CustomLoader.swift */,
+				36246B1E25FBB1BC00ED1C66 /* DataModelsAndFunctions.swift */,
 				361E6E5E25F9E67B00BDD977 /* DropShadow.swift */,
 				36404CB425ECA65B00C5A188 /* FadingTableView.swift */,
-				3627646D25F9488B00A55834 /* AnimatedView.swift */,
+				3602BECC25EBDB0B0014DD16 /* Manager.swift */,
+				364F35BD25EB5ECB007E7996 /* UserDefaults.swift */,
+				36960CAB25EFF3B400946619 /* TextFieldMaxLength.swift */,
 				3627647225F9503600A55834 /* UIImage+Gif.swift */,
-				361E6E5925F9DFF600BDD977 /* AppleIDAuthButton.swift */,
-				3627647725F9505000A55834 /* CustomLoader.swift */,
 				367FED1525EE604D007F116B /* zip3sequence.swift */,
 				36404CC725ED033100C5A188 /* Zip6Sequence.swift */,
-				36960CAB25EFF3B400946619 /* textFieldMaxLength.swift */,
 			);
 			path = Custom;
 			sourceTree = "<group>";
@@ -354,6 +360,14 @@
 				360DD73025EB815400636EBD /* PresentationController.swift */,
 			);
 			path = "Menu PopUp";
+			sourceTree = "<group>";
+		};
+		36246B3125FBB49D00ED1C66 /* GIF */ = {
+			isa = PBXGroup;
+			children = (
+				3627647C25F9513900A55834 /* loader.gif */,
+			);
+			path = GIF;
 			sourceTree = "<group>";
 		};
 		362E736825EAAC4E00C06078 = {
@@ -430,7 +444,7 @@
 		364F359C25EB5DF2007E7996 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				3627647C25F9513900A55834 /* loader.gif */,
+				36246B3125FBB49D00ED1C66 /* GIF */,
 				368D36B325F4F1F900D5928D /* Fonts */,
 				3636FB3925EE7B4A005A25EC /* Alternate Icons */,
 				360DD70125EB766900636EBD /* Custom */,
@@ -447,8 +461,8 @@
 				360DD6F425EB67C700636EBD /* Onboarding */,
 				364F35AF25EB5E71007E7996 /* Auth */,
 				360DD74525EB8FB700636EBD /* Dashboard */,
-				365DAE3325F2203A004AAABC /* Goal Expand */,
 				3602BEAC25EBD0660014DD16 /* New Goal */,
+				365DAE3325F2203A004AAABC /* Goal Expand */,
 				360CD43725EE755800A7D72B /* Settings */,
 			);
 			path = "View controllers";
@@ -917,7 +931,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				362E737925EAAC4E00C06078 /* OnboardingVC.swift in Sources */,
-				364EB91225EDFCB200E14444 /* attributedFontExtention.swift in Sources */,
+				364EB91225EDFCB200E14444 /* AttributedFontExtention.swift in Sources */,
 				361E6E5A25F9DFF600BDD977 /* AppleIDAuthButton.swift in Sources */,
 				36246B1025FB9E8C00ED1C66 /* IAPCoreData.swift in Sources */,
 				3602BEB925EBD0890014DD16 /* GoalDeadlineVC.swift in Sources */,
@@ -947,11 +961,13 @@
 				360CD43225EE700200A7D72B /* AppThemeVC.swift in Sources */,
 				364F35BE25EB5ECB007E7996 /* UserDefaults.swift in Sources */,
 				36637CF025F37DC900A1F1A9 /* MoreAppsbyAnkitYadavVC.swift in Sources */,
-				361E6E7825FA088100BDD977 /* MessageBubble.swift in Sources */,
-				36960CAC25EFF3B400946619 /* textFieldMaxLength.swift in Sources */,
+				36960CAC25EFF3B400946619 /* TextFieldMaxLength.swift in Sources */,
 				368D369625F4C3DE00D5928D /* IAPProduct.swift in Sources */,
 				36404CC825ED033100C5A188 /* Zip6Sequence.swift in Sources */,
+				36246B1F25FBB1BC00ED1C66 /* DataModelsAndFunctions.swift in Sources */,
 				3602BEB425EBD07E0014DD16 /* GoalAmountVC.swift in Sources */,
+				36246B1A25FBB19800ED1C66 /* CustomFunctions.swift in Sources */,
+				36246B2725FBB24D00ED1C66 /* GoalStatusModel.swift in Sources */,
 				36B7644B25F39C320017AC35 /* PageView.swift in Sources */,
 				36B7646225F39C7B0017AC35 /* OnboardingContantViewItem.swift in Sources */,
 				362E737725EAAC4E00C06078 /* SceneDelegate.swift in Sources */,
@@ -1157,7 +1173,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Gosio/Gosio.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = JL7UZ93S3L;
 				INFOPLIST_FILE = Gosio/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1181,7 +1197,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Gosio/Gosio.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = JL7UZ93S3L;
 				INFOPLIST_FILE = Gosio/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (

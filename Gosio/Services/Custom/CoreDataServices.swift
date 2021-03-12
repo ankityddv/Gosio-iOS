@@ -19,6 +19,7 @@ struct coreDataIdentifierManager {
     static let currency : String = "Currency"
     
 }
+
 struct currencyEntityIdentifierManager {
     
     static let name = "name"

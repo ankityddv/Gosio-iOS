@@ -7,6 +7,7 @@
 
 import Foundation
 
+
 struct storyboardManager {
     
     static let mainKey = "Main"
@@ -46,44 +47,7 @@ struct TableViewCellIdentifierManager {
     static let gosioProCell = "GosioProFeaturesCell"
     static let gosioProAdCell = "gosioProAdCell"
     
-    
 }
-
-struct urlManager {
-    
-    static let appUrl = "https://apps.apple.com/us/app/gosio-achieve-your-goals/id1555987291"
-    static let faqUrl = "https://ankityddv.github.io/Gosio-BetaRegistration/faq"
-    static let betaUrl = "https://ankityddv.github.io/Gosio-BetaRegistration/"
-    static let dineroUrl = "https://apps.apple.com/us/app/dinero-subscription-manager/id1545370811"
-    static let privacyPolicyUrl = "https://ankityddv.github.io/Gosio/privacyPolicy"
-    static let termsOfUseUrl = "https://ankityddv.github.io/Gosio/termsOfUse"
-    
-}
-
-struct imageNameManager {
-    
-    static let noneMark = "noneMark"
-    static let checkMark = "checkMark"
-    static let check = "check"
-    
-}
-
-struct userDefaultsKeyManager {
-  
-    static let themeKey = "theme"
-    static let appIconKey = "appIcon"
-    static let currencyCodeKey = "currencyCode"
-    static let currencySignKey = "currencySign"
-    static let requestReviewKey = "requestReview"
-    
-}
-
-struct segueManager {
-  
-    static let appIconKey = "showAppIcon"
-    
-}
-
 
 struct HeroIDs {
     
@@ -101,11 +65,49 @@ struct HeroIDs {
     
 }
 
-
-struct GoalStatus {
+struct segueManager {
+  
+    static let appIconKey = "showAppIcon"
     
-    static let up : String = "ahead"
-    static let down : String = "down"
-    static let pause : String = "pause"
+}
+
+struct userDefaultsKeyManager {
+  
+    static let themeKey = "theme"
+    static let appIconKey = "appIcon"
+    static let currencyCodeKey = "currencyCode"
+    static let currencySignKey = "currencySign"
+    static let requestReviewKey = "requestReview"
+    
+}
+
+struct imageNameManager {
+    
+    static let noneMark = "noneMark"
+    static let checkMark = "checkMark"
+    static let check = "check"
+    
+}
+
+
+struct urlManager {
+    
+    static let appUrl = "https://apps.apple.com/us/app/gosio-achieve-your-goals/id1555987291"
+    static let faqUrl = "https://ankityddv.github.io/Gosio-BetaRegistration/faq"
+    static let betaUrl = "https://ankityddv.github.io/Gosio-BetaRegistration/"
+    static let dineroUrl = "https://apps.apple.com/us/app/dinero-subscription-manager/id1545370811"
+    static let privacyPolicyUrl = "https://ankityddv.github.io/Gosio/privacyPolicy"
+    static let termsOfUseUrl = "https://ankityddv.github.io/Gosio/termsOfUse"
+    
+}
+
+struct FontManger {
+    
+    static let book = "AirbnbCerealApp-Book"
+    static let light = "AirbnbCerealApp-Light"
+    static let medium = "AirbnbCerealApp-Medium"
+    static let bold = "AirbnbCerealApp-Bold"
+    static let extraBold = "AirbnbCerealApp-ExtraBold"
+    static let black = "AirbnbCerealApp-Black"
     
 }

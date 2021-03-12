@@ -31,7 +31,7 @@ class SettingsVC: UITableViewController {
         self.present(vc, animated: true, completion: nil)
     }
     @IBAction func dismissBttnDidTap(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
+        dismissView()
     }
     
    
@@ -40,6 +40,8 @@ class SettingsVC: UITableViewController {
         setUpUi()
         setUpNavBar()
         setUpHeroAnimations()
+        setUpEdgeGesture()
+        
     }
     override func viewWillAppear(_ animated: Bool) {
         tableView.reloadData()
@@ -189,6 +191,10 @@ class SettingsVC: UITableViewController {
 extension SettingsVC {
     
     
+    @objc func dismissView(){
+        self.dismiss(animated: true, completion: nil)
+    }
+    
     func setUpHeroAnimations() {
         goProIllustration.hero.id = HeroIDs.IAPIllustrationKey
         goProLabel.hero.id = HeroIDs.goProLabelKey
@@ -199,6 +205,12 @@ extension SettingsVC {
     func setUpUi(){
         versionLabel.text = "Version \(appVersion ?? "") (\(buildVersion))"
         tableView.separatorColor = UIColor.clear
+    }
+    
+    func setUpEdgeGesture(){
+        let screenEdgeRecognizer = UIScreenEdgePanGestureRecognizer(target: self,action: #selector(dismissView))
+        screenEdgeRecognizer.edges = .left
+        view.addGestureRecognizer(screenEdgeRecognizer)
     }
     
     func setUpNavBar(){

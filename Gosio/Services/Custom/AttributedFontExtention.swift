@@ -8,15 +8,18 @@
 import Foundation
 import UIKit
 
+
 extension NSMutableAttributedString {
     
-    var fontSize: CGFloat { return 32 }
-    var boldFont: UIFont { return UIFont(name: "AirbnbCerealApp-Bold", size: fontSize) ?? UIFont.boldSystemFont(ofSize: fontSize) }
-    var normalFont: UIFont { return UIFont(name: "AirbnbCerealApp-Book", size: fontSize) ?? UIFont.systemFont(ofSize: fontSize)}
     
-    var subtitleBoldFont: UIFont { return UIFont(name: "AirbnbCerealApp-Bold", size: 17) ?? UIFont.boldSystemFont(ofSize: 17) }
-    var subtitleNormalFont: UIFont { return UIFont(name: "AirbnbCerealApp-Book", size: 17) ?? UIFont.systemFont(ofSize: 17)}
-    var inAppPurchasesBottomFont: UIFont { return UIFont(name: "AirbnbCerealApp-Book", size: 10) ?? UIFont.systemFont(ofSize: 10)}
+    var fontSize: CGFloat { return 32 }
+    var boldFont: UIFont { return UIFont(name: FontManger.bold, size: fontSize) ?? UIFont.boldSystemFont(ofSize: fontSize) }
+    var normalFont: UIFont { return UIFont(name: FontManger.book, size: fontSize) ?? UIFont.systemFont(ofSize: fontSize)}
+    
+    var subtitleBoldFont: UIFont { return UIFont(name: FontManger.bold, size: 17) ?? UIFont.boldSystemFont(ofSize: 17) }
+    var subtitleNormalFont: UIFont { return UIFont(name: FontManger.book, size: 17) ?? UIFont.systemFont(ofSize: 17)}
+    var inAppPurchasesBottomFont: UIFont { return UIFont(name: FontManger.book, size: 10) ?? UIFont.systemFont(ofSize: 10)}
+    
     
     func bold(_ value:String) -> NSMutableAttributedString {
         
@@ -48,6 +51,7 @@ extension NSMutableAttributedString {
         self.append(NSAttributedString(string: value, attributes:attributes))
         return self
     }
+    
     /* Other styling methods */
     func boldBlueHighlight(_ value:String) -> NSMutableAttributedString {
         
@@ -156,13 +160,16 @@ extension NSMutableAttributedString {
     }
     
     
-    
 }
 
 extension Date {
+    
+    
     func string(format: String) -> String {
         let formatter = DateFormatter()
         formatter.dateFormat = format
         return formatter.string(from: self)
     }
+    
+    
 }

@@ -48,3 +48,4 @@ func deleteGoal(selectedGoal: Goal) {
 //        print("Fetch Failed")
     }
 }
+

@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import CoreData
+
 
 //MARK:- Screen sizes
 let window = UIApplication.shared.connectedScenes
@@ -15,13 +15,12 @@ let window = UIApplication.shared.connectedScenes
         .compactMap({$0})
         .first?.windows
         .filter({$0.isKeyWindow}).first
-
 let keyWindow = UIApplication.shared.keyWindow
-
 let screenSize = UIScreen.main.bounds
 let screenWidth = screenSize.width
 let screenHeight = screenSize.height
 let currentDevice = UIDevice.current.userInterfaceIdiom
+
 
 //MARK:- Heptic Generators
 let generator = UINotificationFeedbackGenerator()
@@ -51,7 +50,9 @@ func selectionChangedHeptic(){
     generator.selectionChanged()
 }
 
+// For presention VC Popup ig
 extension UIApplication {
+    
     class func topViewController(base: UIViewController? = UIApplication.shared.keyWindow?.rootViewController) -> UIViewController? {
         if let nav = base as? UINavigationController {
             return topViewController(base: nav.visibleViewController)
@@ -66,46 +67,5 @@ extension UIApplication {
         }
         return base
     }
-}
-
-
-func openApp(userName: String, appName: String){
-    let appURL = NSURL(string: "\(appName)://user?screen_name=\(userName)")!
-    let webURL = NSURL(string: "https://\(appName).com/\(userName)")!
-
-    let application = UIApplication.shared
-
-    if application.canOpenURL(appURL as URL) {
-        application.open(appURL as URL)
-    } else {
-        application.open(webURL as URL)
-    }
-}
-
-func presentAlertWithOneButton(AlertTitle: String, Message: String, ActionBttnTitle: String) -> UIAlertController{
     
-    let alertController = UIAlertController(title: AlertTitle, message: Message, preferredStyle: .alert)
-    let defaultAction = UIAlertAction(title: ActionBttnTitle, style: .cancel, handler: nil)
-    
-    alertController.view.tintColor = UIColor(named: "AccentColor")
-    
-    alertController.addAction(defaultAction)
-    return alertController
 }
-
-
-enum iPhoneModel {
-case iPhoneX
-case iPhone8
-}
-
-func currentIphone() -> iPhoneModel{
-    if keyWindow!.safeAreaInsets.bottom > 0{
-        return .iPhoneX
-    }else{
-        return .iPhone8
-    }
-}
-
-
-

@@ -54,9 +54,14 @@ class CurrencyVC: UITableViewController {
             let sign = searchedCurrency[indexPath.row].currencySign
             cell.currencyName.text = "\(name) (\(sign))"
             
-            let index = searchedCurrency.firstIndex(where: { $0.currencyCode == getDefaultCurrency().currencyCode })
-            let selectedArr = [Int("\(index!)")]
-            cell.accessoryView = selectedArr.contains(indexPath.row) ? checkView : noneView
+            if searchedCurrency.contains(where: { $0.currencyCode == getDefaultCurrency().currencyCode }) {
+                let index = searchedCurrency.firstIndex(where: { $0.currencyCode == getDefaultCurrency().currencyCode })
+                let selectedArr = [Int("\(index!)")]
+                cell.accessoryView = selectedArr.contains(indexPath.row) ? checkView : noneView
+            } else {
+                cell.accessoryView = noneView
+            }
+            
             
         } else {
             
@@ -93,12 +98,12 @@ class CurrencyVC: UITableViewController {
         tableView.cellForRow(at: indexPath)?.accessoryView = checkView
         
         if searching {
-//            updateDefaultCurrency(name: "", countryCode: "", sign: "")
             
             updateDefaultCurrency(name: "\(searchedCurrency[indexPath.row].currencyName)", countryCode: "\(searchedCurrency[indexPath.row].currencyCode)", sign: "\(searchedCurrency[indexPath.row].currencySign)")
             
             let alert = presentAlertWithOneButton(AlertTitle: "You have changed the default currency to \((searchedCurrency[indexPath.row].currencyCode)).", Message: "", ActionBttnTitle: "OK")
             self.present(alert, animated: true, completion: nil)
+            
         } else {
             
             updateDefaultCurrency(name: "\(CurrencyArr[indexPath.row].currencyName)", countryCode: "\(CurrencyArr[indexPath.row].currencyCode)", sign: "\(CurrencyArr[indexPath.row].currencySign)")

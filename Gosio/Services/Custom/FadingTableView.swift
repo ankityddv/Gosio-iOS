@@ -8,7 +8,9 @@
 import UIKit
 import Foundation
 
+
 class FadingTableView : UITableView {
+    
   var percent = Float(0.05)
 
   private let outerColor = UIColor(white: 1.0, alpha: 0.0).cgColor
@@ -68,5 +70,7 @@ class FadingTableView : UITableView {
         CATransaction.commit()
      }
   }
+    
+    
 }
 

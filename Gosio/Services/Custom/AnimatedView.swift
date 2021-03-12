@@ -7,8 +7,10 @@
 
 import UIKit
 
+
 class AnimatedView: UIView {
         
+    
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesBegan(touches, with: event)
         animate(isHighlighted: true)
@@ -45,5 +47,6 @@ class AnimatedView: UIView {
             }, completion: completion)
         }
     }
+    
     
 }
