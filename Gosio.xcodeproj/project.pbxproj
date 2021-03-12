@@ -24,6 +24,8 @@
 		361E6E6425F9FA7200BDD977 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 361E6E6325F9FA7200BDD977 /* Default.png */; };
 		361E6E6C25F9FA8200BDD977 /* White.png in Resources */ = {isa = PBXBuildFile; fileRef = 361E6E6B25F9FA8200BDD977 /* White.png */; };
 		361E6E7825FA088100BDD977 /* MessageBubble.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361E6E7725FA088100BDD977 /* MessageBubble.swift */; };
+		36246B1025FB9E8C00ED1C66 /* IAPCoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36246B0F25FB9E8C00ED1C66 /* IAPCoreData.swift */; };
+		36246B1525FB9EB700ED1C66 /* GoalCoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36246B1425FB9EB700ED1C66 /* GoalCoreData.swift */; };
 		3627646E25F9488B00A55834 /* AnimatedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3627646D25F9488B00A55834 /* AnimatedView.swift */; };
 		3627647325F9503600A55834 /* UIImage+Gif.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3627647225F9503600A55834 /* UIImage+Gif.swift */; };
 		3627647825F9505000A55834 /* CustomLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3627647725F9505000A55834 /* CustomLoader.swift */; };
@@ -126,6 +128,8 @@
 		361E6E6325F9FA7200BDD977 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		361E6E6B25F9FA8200BDD977 /* White.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = White.png; sourceTree = "<group>"; };
 		361E6E7725FA088100BDD977 /* MessageBubble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageBubble.swift; sourceTree = "<group>"; };
+		36246B0F25FB9E8C00ED1C66 /* IAPCoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IAPCoreData.swift; sourceTree = "<group>"; };
+		36246B1425FB9EB700ED1C66 /* GoalCoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalCoreData.swift; sourceTree = "<group>"; };
 		3627646D25F9488B00A55834 /* AnimatedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatedView.swift; sourceTree = "<group>"; };
 		3627647225F9503600A55834 /* UIImage+Gif.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Gif.swift"; sourceTree = "<group>"; };
 		3627647725F9505000A55834 /* CustomLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomLoader.swift; sourceTree = "<group>"; };
@@ -248,6 +252,7 @@
 			isa = PBXGroup;
 			children = (
 				36D95DE925EFAA9100692411 /* GoalDataModel.swift */,
+				36246B1425FB9EB700ED1C66 /* GoalCoreData.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -525,6 +530,7 @@
 			isa = PBXGroup;
 			children = (
 				368D369525F4C3DE00D5928D /* IAPProduct.swift */,
+				36246B0F25FB9E8C00ED1C66 /* IAPCoreData.swift */,
 				368D369A25F4C41600D5928D /* IAPService.swift */,
 			);
 			path = Services;
@@ -913,6 +919,7 @@
 				362E737925EAAC4E00C06078 /* OnboardingVC.swift in Sources */,
 				364EB91225EDFCB200E14444 /* attributedFontExtention.swift in Sources */,
 				361E6E5A25F9DFF600BDD977 /* AppleIDAuthButton.swift in Sources */,
+				36246B1025FB9E8C00ED1C66 /* IAPCoreData.swift in Sources */,
 				3602BEB925EBD0890014DD16 /* GoalDeadlineVC.swift in Sources */,
 				36B7645A25F39C590017AC35 /* PageViewItem.swift in Sources */,
 				3602BECD25EBDB0B0014DD16 /* Manager.swift in Sources */,
@@ -968,6 +975,7 @@
 				36B7649D25F3A7330017AC35 /* OnboardingState.swift in Sources */,
 				362E737F25EAAC4E00C06078 /* Gosio.xcdatamodeld in Sources */,
 				364F35AB25EB5E6E007E7996 /* LoginVC.swift in Sources */,
+				36246B1525FB9EB700ED1C66 /* GoalCoreData.swift in Sources */,
 				367FECF025EE22CA007F116B /* Intents.intentdefinition in Sources */,
 				360DD73125EB815400636EBD /* PresentationController.swift in Sources */,
 				36785D7B25F111D3000DA319 /* TrackLayer.swift in Sources */,

@@ -42,9 +42,17 @@ class CurrencyVC: UITableViewController {
         noneView.image = UIImage(named: imageNameManager.noneMark)
         
         if searching {
-            cell.currencyName.text = "\(searchedCurrency[indexPath.row].currencyName) (\(searchedCurrency[indexPath.row].currencySign))"
-            cell.accessoryView = noneView
+            
+            let name = searchedCurrency[indexPath.row].currencyName
+            let sign = searchedCurrency[indexPath.row].currencySign
+            cell.currencyName.text = "\(name) (\(sign))"
+            
+            let index = searchedCurrency.firstIndex(where: { $0.currencyCode == getDefaultCurrency().currencyCode })
+            let selectedArr = [Int("\(index!)")]
+            cell.accessoryView = selectedArr.contains(indexPath.row) ? checkView : noneView
+            
         } else {
+            
             let name = CurrencyArr[indexPath.row].currencyName
             let sign = CurrencyArr[indexPath.row].currencySign
             cell.currencyName.text = "\(name) (\(sign))"
@@ -52,6 +60,7 @@ class CurrencyVC: UITableViewController {
             let index = CurrencyArr.firstIndex(where: { $0.currencyCode == getDefaultCurrency().currencyCode })
             let selectedArr = [Int("\(index!)")]
             cell.accessoryView = selectedArr.contains(indexPath.row) ? checkView : noneView
+            
         }
         
         return cell
