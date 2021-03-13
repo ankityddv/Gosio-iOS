@@ -11,9 +11,12 @@ import UIKit
 class OnboardingVC: UIViewController, UIScrollViewDelegate {
     
     
-    @IBOutlet weak var pageControl: UIPageControl!
+    var slides:[Slide] = [];
     
+    
+    @IBOutlet weak var pageControl: UIPageControl!
     @IBOutlet weak var signUpButton: UIButton!
+    
     
     @IBAction func signUpBttnDidTap(_ sender: Any) {
         userDefaults?.set(0, forKey: "onboardingState")
@@ -27,7 +30,6 @@ class OnboardingVC: UIViewController, UIScrollViewDelegate {
         }
     }
     
-    var slides:[Slide] = [];
     
     override func viewDidLoad() {
         super.viewDidLoad()

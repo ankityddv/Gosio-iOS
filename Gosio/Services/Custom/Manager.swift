@@ -34,6 +34,7 @@ struct VCIdentifierManager {
     static let goalDetailKey = "GoalExpandVC"
     static let moreAppsByUsKey = "MoreAppsbyAnkitYadavVC"
     static let inAppPurchasesKey = "InAppPurchasesVC"
+    static let ChooseEmojiKey = "ChooseEmojiVC"
     
 }
 

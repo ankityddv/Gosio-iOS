@@ -72,6 +72,7 @@
 		368D369B25F4C41600D5928D /* IAPService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368D369A25F4C41600D5928D /* IAPService.swift */; };
 		368D36A025F4C45500D5928D /* InAppPurchasesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368D369F25F4C45500D5928D /* InAppPurchasesVC.swift */; };
 		368D36A925F4CDBA00D5928D /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 368D36A825F4CDBA00D5928D /* StoreKit.framework */; };
+		3692A1BF25FCF3EB00583691 /* EmojiData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3692A1BE25FCF3EB00583691 /* EmojiData.swift */; };
 		36960CAC25EFF3B400946619 /* TextFieldMaxLength.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36960CAB25EFF3B400946619 /* TextFieldMaxLength.swift */; };
 		36B7643D25F39C110017AC35 /* PaperOnboarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B7643A25F39C100017AC35 /* PaperOnboarding.swift */; };
 		36B7643E25F39C110017AC35 /* PaperOnboardingDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B7643B25F39C110017AC35 /* PaperOnboardingDataSource.swift */; };
@@ -90,6 +91,8 @@
 		36B7649D25F3A7330017AC35 /* OnboardingState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B7649C25F3A7320017AC35 /* OnboardingState.swift */; };
 		36D95DDD25EFA33200692411 /* GoalExpandVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D95DDC25EFA33200692411 /* GoalExpandVC.swift */; };
 		36D95DEA25EFAA9100692411 /* GoalDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D95DE925EFAA9100692411 /* GoalDataModel.swift */; };
+		36E4208025FCE72D00E0C00D /* ChooseEmojiVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36E4207F25FCE72D00E0C00D /* ChooseEmojiVC.swift */; };
+		36E4208D25FCEB8A00E0C00D /* FadingCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36E4208C25FCEB8A00E0C00D /* FadingCollectionView.swift */; };
 		AA2DF6DD2DB4EEAE3F7E77FE /* Pods_GosioTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24FAC72EC543397B7F4A08AB /* Pods_GosioTests.framework */; };
 		DC86A193E62F1FD61530D148 /* Pods_Gosio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A52AFAB7D7CD8C2521EAB4D /* Pods_Gosio.framework */; };
 /* End PBXBuildFile section */
@@ -184,6 +187,7 @@
 		368D36B025F4F1EE00D5928D /* AirbnbCerealBook.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = AirbnbCerealBook.ttf; sourceTree = "<group>"; };
 		368D36B125F4F1EE00D5928D /* AirbnbCerealBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = AirbnbCerealBold.ttf; sourceTree = "<group>"; };
 		368D36B225F4F1EE00D5928D /* AirbnbCerealExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = AirbnbCerealExtraBold.ttf; sourceTree = "<group>"; };
+		3692A1BE25FCF3EB00583691 /* EmojiData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiData.swift; sourceTree = "<group>"; };
 		36960CAB25EFF3B400946619 /* TextFieldMaxLength.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldMaxLength.swift; sourceTree = "<group>"; };
 		36B7643A25F39C100017AC35 /* PaperOnboarding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaperOnboarding.swift; sourceTree = "<group>"; };
 		36B7643B25F39C110017AC35 /* PaperOnboardingDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaperOnboardingDataSource.swift; sourceTree = "<group>"; };
@@ -202,6 +206,8 @@
 		36B7649C25F3A7320017AC35 /* OnboardingState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingState.swift; sourceTree = "<group>"; };
 		36D95DDC25EFA33200692411 /* GoalExpandVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalExpandVC.swift; sourceTree = "<group>"; };
 		36D95DE925EFAA9100692411 /* GoalDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalDataModel.swift; sourceTree = "<group>"; };
+		36E4207F25FCE72D00E0C00D /* ChooseEmojiVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseEmojiVC.swift; sourceTree = "<group>"; };
+		36E4208C25FCEB8A00E0C00D /* FadingCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FadingCollectionView.swift; sourceTree = "<group>"; };
 		427612BCCF6048BB813A12DD /* Pods_Gosio_GosioUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Gosio_GosioUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		882F3780B046FEA6B572E01B /* Pods-Gosio.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gosio.release.xcconfig"; path = "Target Support Files/Pods-Gosio/Pods-Gosio.release.xcconfig"; sourceTree = "<group>"; };
 		8A52AFAB7D7CD8C2521EAB4D /* Pods_Gosio.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Gosio.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -246,6 +252,7 @@
 			children = (
 				3602BEC225EBD7170014DD16 /* Services */,
 				3602BEA725EBD0600014DD16 /* GoalNameVC.swift */,
+				36E4207F25FCE72D00E0C00D /* ChooseEmojiVC.swift */,
 				3602BEB325EBD07E0014DD16 /* GoalAmountVC.swift */,
 				3602BEB825EBD0890014DD16 /* GoalDeadlineVC.swift */,
 			);
@@ -255,6 +262,7 @@
 		3602BEC225EBD7170014DD16 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				3692A1BE25FCF3EB00583691 /* EmojiData.swift */,
 				36246B2625FBB24D00ED1C66 /* GoalStatusModel.swift */,
 				36D95DE925EFAA9100692411 /* GoalDataModel.swift */,
 				36246B1425FB9EB700ED1C66 /* GoalCoreData.swift */,
@@ -332,6 +340,7 @@
 				3627647725F9505000A55834 /* CustomLoader.swift */,
 				36246B1E25FBB1BC00ED1C66 /* DataModelsAndFunctions.swift */,
 				361E6E5E25F9E67B00BDD977 /* DropShadow.swift */,
+				36E4208C25FCEB8A00E0C00D /* FadingCollectionView.swift */,
 				36404CB425ECA65B00C5A188 /* FadingTableView.swift */,
 				3602BECC25EBDB0B0014DD16 /* Manager.swift */,
 				364F35BD25EB5ECB007E7996 /* UserDefaults.swift */,
@@ -942,6 +951,7 @@
 				360DD6F025EB66D700636EBD /* DashboardVC.swift in Sources */,
 				364F35B425EB5E84007E7996 /* AuthState.swift in Sources */,
 				367FECF525EE22F8007F116B /* UserActivityType.swift in Sources */,
+				36E4208025FCE72D00E0C00D /* ChooseEmojiVC.swift in Sources */,
 				3627647825F9505000A55834 /* CustomLoader.swift in Sources */,
 				36B7646125F39C7B0017AC35 /* OnboardingContentView.swift in Sources */,
 				361E6E5F25F9E67B00BDD977 /* DropShadow.swift in Sources */,
@@ -962,6 +972,7 @@
 				364F35BE25EB5ECB007E7996 /* UserDefaults.swift in Sources */,
 				36637CF025F37DC900A1F1A9 /* MoreAppsbyAnkitYadavVC.swift in Sources */,
 				36960CAC25EFF3B400946619 /* TextFieldMaxLength.swift in Sources */,
+				36E4208D25FCEB8A00E0C00D /* FadingCollectionView.swift in Sources */,
 				368D369625F4C3DE00D5928D /* IAPProduct.swift in Sources */,
 				36404CC825ED033100C5A188 /* Zip6Sequence.swift in Sources */,
 				36246B1F25FBB1BC00ED1C66 /* DataModelsAndFunctions.swift in Sources */,
@@ -976,6 +987,7 @@
 				36785D7925F111D3000DA319 /* BalloonView.swift in Sources */,
 				364F35C325EB5F39007E7996 /* CheatSheet.swift in Sources */,
 				367FED1625EE604D007F116B /* zip3sequence.swift in Sources */,
+				3692A1BF25FCF3EB00583691 /* EmojiData.swift in Sources */,
 				365DAE1E25F20839004AAABC /* CoreDataServices.swift in Sources */,
 				36B7647625F39CC70017AC35 /* FillAnimationView.swift in Sources */,
 				36785D7A25F111D3000DA319 /* ThumbView.swift in Sources */,
@@ -1173,9 +1185,10 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Gosio/Gosio.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = JL7UZ93S3L;
 				INFOPLIST_FILE = Gosio/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1197,9 +1210,10 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Gosio/Gosio.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = JL7UZ93S3L;
 				INFOPLIST_FILE = Gosio/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

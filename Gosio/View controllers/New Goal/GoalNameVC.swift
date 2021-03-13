@@ -56,6 +56,7 @@ class GoalNameVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         setUpHeroAnimations()
         setUpKeyboardNotifications()
         setUpUi()
