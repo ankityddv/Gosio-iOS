@@ -152,20 +152,28 @@ extension DashboardVC: UITableViewDelegate,UITableViewDataSource {
         let thisGoal: Goal!
         thisGoal = nonDeletedGoals()[indexPath.row]
         
-        cell.goalEmoji.text = thisGoal.emoji
-        cell.goalName.text = thisGoal.goalName
+        let emoji = thisGoal.emoji
+        let goalName = thisGoal.goalName
+        let goalAchieved = Float(round(Double(truncating: thisGoal.goalAchievedAmount!)*100)/100)
+        let goalTotalAmount = thisGoal.goalTotalAmount!
+        let goalStatus = thisGoal.goalStatus!
+        let progressBar = thisGoal.progressBar!
+        let goalPercentage = thisGoal.goalPercentage!
+        
+        cell.goalEmoji.text = emoji
+        cell.goalName.text = goalName
         
         switch userDefaults?.object(forKey: userDefaultsKeyManager.currencyCodeKey) as? String {
             case nil:
-                cell.goalAmount.text = String("$ \(thisGoal.goalAchievedAmount!) / \(thisGoal.goalTotalAmount!) ")
+                cell.goalAmount.text = String("$ \(goalAchieved) / \(goalTotalAmount) ")
             default:
-                cell.goalAmount.text = String("\(getDefaultCurrency().currencySign) \(thisGoal.goalAchievedAmount!) / \(thisGoal.goalTotalAmount!) ")
+                cell.goalAmount.text = String("\(getDefaultCurrency().currencySign) \(goalAchieved) / \(goalTotalAmount) ")
             break
         }
         
-        cell.goalStatusIndicator.image = UIImage(named: thisGoal.goalStatus)
-        cell.progressBar.setProgress(thisGoal.progressBar! as! Float, animated: true)
-        cell.goalPercentage.text = String("\(thisGoal.goalPercentage!) %")
+        cell.goalStatusIndicator.image = UIImage(named: goalStatus)
+        cell.progressBar.setProgress(progressBar as! Float, animated: true)
+        cell.goalPercentage.text = String("\(goalPercentage) %")
         
         return cell
         
@@ -187,7 +195,7 @@ extension DashboardVC: UITableViewDelegate,UITableViewDataSource {
         
         if editingStyle == .delete {
             
-            let actionSheetController: UIAlertController = UIAlertController(title: "Edit goal", message: nil, preferredStyle: .actionSheet)
+            let actionSheetController: UIAlertController = UIAlertController(title: "Are you sure?", message: "This action cannot be undone!", preferredStyle: .actionSheet)
 
             let deleteAction: UIAlertAction = UIAlertAction(title: "Delete goal", style: .destructive) { [self] action -> Void in
                 
@@ -228,7 +236,7 @@ extension DashboardVC: UITableViewDelegate,UITableViewDataSource {
             
             let delete = UIAction(title: "Delete goal",image: UIImage(systemName: "trash"), attributes: .destructive) { [self] _ in
 
-                let actionSheetController: UIAlertController = UIAlertController(title: "Edit goal", message: nil, preferredStyle: .actionSheet)
+                let actionSheetController: UIAlertController = UIAlertController(title: "Are you sure?", message: "This action cannot be undone!", preferredStyle: .actionSheet)
 
                 let deleteAction: UIAlertAction = UIAlertAction(title: "Delete goal", style: .destructive) { [self] action -> Void in
                     

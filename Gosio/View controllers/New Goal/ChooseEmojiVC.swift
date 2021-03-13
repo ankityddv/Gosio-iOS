@@ -11,8 +11,8 @@ import UIKit
 class ChooseEmojiVC: UIViewController {
 
     
-    var emojiArr: [String] = []
-    
+    var delegate: EmojiDelegate?
+    var emojiDataArr: [EmojiModel] = EmojiLibrary.fetchEmoji()
     
     @IBOutlet weak var slideAssist: UIView!
     @IBOutlet weak var collectionVieww: FadingCollectionView!
@@ -61,7 +61,7 @@ extension ChooseEmojiVC {
                 }
             }
 
-            emojiArr = array
+//            emojiArr = array
         }
     }
     
@@ -72,10 +72,13 @@ extension ChooseEmojiVC {
 //MARK:- 📀 Collection view data source
 extension ChooseEmojiVC: UICollectionViewDelegate, UICollectionViewDataSource {
     
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return emojiDataArr.count
+    }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
-        return allEmojis.count
+        return emojiDataArr[section].emojis.count
     
     }
     
@@ -83,13 +86,37 @@ extension ChooseEmojiVC: UICollectionViewDelegate, UICollectionViewDataSource {
         
         let cell: emojiCell = collectionView.dequeueReusableCell(withReuseIdentifier: "emojiCell", for: indexPath) as! emojiCell
         
-        let emojis = allEmojis[indexPath.row]
+        let emoji = emojiDataArr[indexPath.section]
         
-        cell.emojiLabel.text = emojis
+        cell.emojiLabel.text = emoji.emojis[indexPath.row]
         return cell
         
     }
     
+    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        
+        let sectionHeaderView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "EmojiSectionHeaderView", for: indexPath) as! EmojiSectionHeaderView
+        let category = emojiDataArr[indexPath.section]
+        
+        sectionHeaderView.emojiCategory = category
+        return sectionHeaderView
+        
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        let category = emojiDataArr[indexPath.section]
+        let selectedEmoji = category.emojis[indexPath.row]
+        
+        if let delegate = self.delegate {
+            delegate.changeValue(value: selectedEmoji)
+        }
+        
+        dismiss(animated: true, completion: {
+        
+        })
+        
+    }
     
     
 }
@@ -100,6 +127,20 @@ class emojiCell: UICollectionViewCell {
     
     
     @IBOutlet weak var emojiLabel: UILabel!
+    
+    
+}
+
+
+class EmojiSectionHeaderView: UICollectionReusableView {
+    
+    @IBOutlet weak var categoryLabel: UILabel!
+    
+    var emojiCategory: EmojiModel! {
+        didSet {
+            categoryLabel.text = emojiCategory.title
+        }
+    }
     
     
 }

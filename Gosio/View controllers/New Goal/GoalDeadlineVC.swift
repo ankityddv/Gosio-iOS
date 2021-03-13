@@ -52,6 +52,7 @@ class GoalDeadlineVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpHeroAnimations()
+        setUpUi()
         
         switch goalAccomplishmentDateStr {
         case "":

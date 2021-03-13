@@ -10,11 +10,21 @@ import UIKit
 import SPAlert
 
 
-class GoalNameVC: UIViewController {
+protocol EmojiDelegate {
+func changeValue(value: String)
+}
+
+
+class GoalNameVC: UIViewController, EmojiDelegate {
+    
+    
+    func changeValue(value: String) {
+        emojiLabel.text = value
+    }
 
     
     @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var emojiTextField: UITextField!
+    @IBOutlet weak var emojiLabel: UILabel!
     @IBOutlet weak var goalNameTextField: UITextField!
     @IBOutlet weak var nextBttn: UIButton!
     @IBOutlet weak var nextBttnTopConstraint: NSLayoutConstraint!
@@ -26,13 +36,13 @@ class GoalNameVC: UIViewController {
     }
     @IBAction func nextBttnDidTap(_ sender: Any) {
         
-        let emoji = emojiTextField.text
+        let emoji = emojiLabel.text
         let goalName = goalNameTextField.text
         
         if (emoji?.isEmpty == false) && (goalName?.isEmpty == false) {
             
             let vc = storyboard?.instantiateViewController(withIdentifier: VCIdentifierManager.goalAmountKey) as! GoalAmountVC
-            vc.emojiStr = emojiTextField.text!
+            vc.emojiStr = emojiLabel.text!
             vc.goalNameStr = goalNameTextField.text!
             self.present(vc, animated: true, completion: nil)
             
@@ -57,6 +67,7 @@ class GoalNameVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        setUpGestures()
         setUpHeroAnimations()
         setUpKeyboardNotifications()
         setUpUi()
@@ -72,7 +83,7 @@ extension GoalNameVC {
     
     func setUpHeroAnimations(){
         
-        emojiTextField.hero.id = HeroIDs.emojiKey
+        emojiLabel.hero.id = HeroIDs.emojiKey
         goalNameTextField.hero.id = HeroIDs.goalNameKey
         nextBttn.hero.id = HeroIDs.buttonKey
         dismissBttn.hero.id = HeroIDs.dismissButtonKey
@@ -87,6 +98,18 @@ extension GoalNameVC {
             .boldBlueHighlight("desire")
             .bold(" ?")
         
+    }
+    
+    func setUpGestures() {
+        let tap = UITapGestureRecognizer(target: self, action: #selector(showChooseEmoji))
+        emojiLabel.addGestureRecognizer(tap)
+        emojiLabel.isUserInteractionEnabled = true
+    }
+    
+    @objc func showChooseEmoji() {
+        let vc = storyboard?.instantiateViewController(withIdentifier: VCIdentifierManager.ChooseEmojiKey) as! ChooseEmojiVC
+        vc.delegate = self
+        self.present(vc, animated: true, completion: nil)
     }
     
     
