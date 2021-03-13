@@ -56,42 +56,63 @@ class AppIconVC: UITableViewController {
         
         switch indexPath.row {
         case 0:
-            appIconService.changeAppIcon(to: .primaryAppIcon)
             
-            for section in 0..<self.tableView.numberOfSections{
-                for row in 0..<self.tableView.numberOfRows(inSection: section){
-                    let cell = self.tableView.cellForRow(at: IndexPath(row: row, section: section))
-                    
-                    let noneView = UIImageView()
-                    noneView.frame = CGRect(x: 150, y: 20, width: 20, height: 20)
-                    noneView.image = UIImage(named: imageNameManager.noneMark)
-                    
-                    cell?.accessoryView = noneView
+            switch getIAPStatus() {
+            case .pro:
+                appIconService.changeAppIcon(to: .primaryAppIcon)
+                
+                for section in 0..<self.tableView.numberOfSections{
+                    for row in 0..<self.tableView.numberOfRows(inSection: section){
+                        let cell = self.tableView.cellForRow(at: IndexPath(row: row, section: section))
+                        
+                        let noneView = UIImageView()
+                        noneView.frame = CGRect(x: 150, y: 20, width: 20, height: 20)
+                        noneView.image = UIImage(named: imageNameManager.noneMark)
+                        
+                        cell?.accessoryView = noneView
+                    }
                 }
+                
+                tableView.cellForRow(at: IndexPath(row: 0, section: 0))?.accessoryView = imageView
+                
+                userDefaults?.set(0, forKey: userDefaultsKeyManager.appIconKey)
+            case .free:
+                let alert = presentAlertWithOneButton(AlertTitle: "Go Pro", Message: "Please upgrade to \"Gosio pro\" to use this feature", ActionBttnTitle: "OK")
+                self.present(alert, animated: true, completion: nil)
+            case .unidentified:
+                let alert = presentAlertWithOneButton(AlertTitle: "Go Pro", Message: "Please upgrade to \"Gosio Pro\" to use this feature.", ActionBttnTitle: "OK")
+                self.present(alert, animated: true, completion: nil)
             }
-            
-            tableView.cellForRow(at: IndexPath(row: 0, section: 0))?.accessoryView = imageView
-            
-            userDefaults?.set(0, forKey: userDefaultsKeyManager.appIconKey)
             
         case 1:
-            appIconService.changeAppIcon(to: .White)
             
-            for section in 0..<self.tableView.numberOfSections{
-                for row in 0..<self.tableView.numberOfRows(inSection: section){
-                    let cell = self.tableView.cellForRow(at: IndexPath(row: row, section: section))
-                    
-                    let noneView = UIImageView()
-                    noneView.frame = CGRect(x: 150, y: 20, width: 20, height: 20)
-                    noneView.image = UIImage(named: imageNameManager.noneMark)
-                    
-                    cell?.accessoryView = noneView
+            switch getIAPStatus() {
+            case .pro:
+                appIconService.changeAppIcon(to: .White)
+                
+                for section in 0..<self.tableView.numberOfSections{
+                    for row in 0..<self.tableView.numberOfRows(inSection: section){
+                        let cell = self.tableView.cellForRow(at: IndexPath(row: row, section: section))
+                        
+                        let noneView = UIImageView()
+                        noneView.frame = CGRect(x: 150, y: 20, width: 20, height: 20)
+                        noneView.image = UIImage(named: imageNameManager.noneMark)
+                        
+                        cell?.accessoryView = noneView
+                    }
                 }
+                
+                tableView.cellForRow(at: IndexPath(row: 1, section: 0))?.accessoryView = imageView
+                
+                userDefaults?.set(1, forKey: userDefaultsKeyManager.appIconKey)
+            case .free:
+                let alert = presentAlertWithOneButton(AlertTitle: "Go Pro", Message: "Please upgrade to \"Gosio Pro\" to use this feature.", ActionBttnTitle: "OK")
+                self.present(alert, animated: true, completion: nil)
+            case .unidentified:
+                let alert = presentAlertWithOneButton(AlertTitle: "Go Pro", Message: "Please upgrade to \"Gosio pro\" to use this feature", ActionBttnTitle: "OK")
+                self.present(alert, animated: true, completion: nil)
             }
             
-            tableView.cellForRow(at: IndexPath(row: 1, section: 0))?.accessoryView = imageView
-            
-            userDefaults?.set(1, forKey: userDefaultsKeyManager.appIconKey)
         default:
             break
         }

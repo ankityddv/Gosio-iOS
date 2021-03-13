@@ -111,18 +111,7 @@ class SettingsVC: UITableViewController {
                     }
                 }
             case 2:
-                switch getIAPStatus() {
-                case .pro:
-                    performSegue(withIdentifier: segueManager.appIconKey, sender: self)
-                case .free:
-                    let vc = storyboard?.instantiateViewController(withIdentifier: VCIdentifierManager.inAppPurchasesKey) as! InAppPurchasesVC
-                    vc.isHeroEnabledd = false
-                    self.present(vc, animated: true, completion: nil)
-                case .unidentified:
-                    let vc = storyboard?.instantiateViewController(withIdentifier: VCIdentifierManager.inAppPurchasesKey) as! InAppPurchasesVC
-                    vc.isHeroEnabledd = false
-                    self.present(vc, animated: true, completion: nil)
-                }
+                performSegue(withIdentifier: segueManager.appIconKey, sender: self)
             default:
                 break
             }

@@ -406,11 +406,11 @@
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0LW-rd-Ix0">
-                                            <rect key="frame" x="177" y="13" width="60" height="4"/>
+                                            <rect key="frame" x="187" y="13" width="40" height="4"/>
                                             <color key="backgroundColor" name="SubtitleTextColor"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="4" id="n6J-C9-szr"/>
-                                                <constraint firstAttribute="width" constant="60" id="wES-0A-dQF"/>
+                                                <constraint firstAttribute="width" constant="40" id="wES-0A-dQF"/>
                                             </constraints>
                                         </view>
                                         <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="LKf-Qh-p7a" customClass="FadingCollectionView" customModule="Gosio" customModuleProvider="target">
@@ -602,27 +602,20 @@
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eKb-9O-Rsk">
                                                     <rect key="frame" x="24" y="11" width="366" height="93"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="🏎" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="euT-Qy-0lZ">
-                                                            <rect key="frame" x="25" y="30" width="49" height="34"/>
-                                                            <constraints>
-                                                                <constraint firstAttribute="height" constant="34" id="gUN-OC-rzd"/>
-                                                                <constraint firstAttribute="width" constant="49" id="vn5-xs-6WM"/>
-                                                            </constraints>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="♻️" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="euT-Qy-0lZ">
+                                                            <rect key="frame" x="25" y="29.5" width="40" height="34"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="35"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="House in Cali" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Mz-kq-Xpj">
-                                                            <rect key="frame" x="82" y="26" width="99.5" height="21"/>
-                                                            <constraints>
-                                                                <constraint firstAttribute="height" constant="21" id="pRf-t3-Jy8"/>
-                                                            </constraints>
+                                                            <rect key="frame" x="82" y="20" width="99.5" height="22.5"/>
                                                             <fontDescription key="fontDescription" name="AirbnbCerealApp-Book" family="Airbnb Cereal App" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Z00%" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hU6-Jp-Y1u">
-                                                            <rect key="frame" x="294.5" y="36" width="46.5" height="21"/>
+                                                            <rect key="frame" x="296.5" y="36" width="44.5" height="21"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="21" id="mPj-uX-UiB"/>
                                                             </constraints>
@@ -631,47 +624,47 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$ 100 000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pot-8u-LBe">
-                                                            <rect key="frame" x="99" y="47" width="62.5" height="17"/>
+                                                            <rect key="frame" x="102" y="43" width="62.5" height="18.5"/>
                                                             <constraints>
-                                                                <constraint firstAttribute="height" constant="17" id="7ni-mk-rBb"/>
+                                                                <constraint firstAttribute="height" constant="18.5" id="YUb-3b-H1o"/>
                                                             </constraints>
                                                             <fontDescription key="fontDescription" name="AirbnbCerealApp-Book" family="Airbnb Cereal App" pointSize="14"/>
                                                             <color key="textColor" name="SubtitleTextColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="jur-GS-Wn1">
-                                                            <rect key="frame" x="80" y="70" width="168" height="4"/>
+                                                            <rect key="frame" x="82" y="67" width="168" height="4"/>
                                                             <constraints>
-                                                                <constraint firstAttribute="height" constant="4" id="Fan-ZU-r22"/>
-                                                                <constraint firstAttribute="width" constant="168" id="cO6-1p-4Ru"/>
+                                                                <constraint firstAttribute="height" constant="4" id="SmG-IJ-uUC"/>
+                                                                <constraint firstAttribute="width" constant="168" id="YbZ-2i-Kws"/>
                                                             </constraints>
                                                         </progressView>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ahead" translatesAutoresizingMaskIntoConstraints="NO" id="faQ-7z-Mdw">
-                                                            <rect key="frame" x="79" y="48" width="14" height="14"/>
+                                                            <rect key="frame" x="82" y="45" width="14" height="14"/>
                                                             <constraints>
-                                                                <constraint firstAttribute="height" constant="14" id="LGx-Fb-3OH"/>
-                                                                <constraint firstAttribute="width" constant="14" id="YC2-uc-JX1"/>
+                                                                <constraint firstAttribute="height" constant="14" id="7ev-HC-fcL"/>
+                                                                <constraint firstAttribute="width" constant="14" id="lXK-bj-vso"/>
                                                             </constraints>
                                                         </imageView>
                                                     </subviews>
                                                     <color key="backgroundColor" name="SecondaryBgColor"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="bottom" secondItem="jur-GS-Wn1" secondAttribute="bottom" constant="19" id="02c-y7-48V"/>
-                                                        <constraint firstItem="faQ-7z-Mdw" firstAttribute="leading" secondItem="euT-Qy-0lZ" secondAttribute="trailing" constant="5" id="5pv-rq-YrL"/>
-                                                        <constraint firstItem="6Mz-kq-Xpj" firstAttribute="top" secondItem="eKb-9O-Rsk" secondAttribute="top" constant="26" id="6RQ-b1-2yc"/>
-                                                        <constraint firstItem="euT-Qy-0lZ" firstAttribute="leading" secondItem="eKb-9O-Rsk" secondAttribute="leading" constant="25" id="7tC-nj-dDP"/>
-                                                        <constraint firstItem="jur-GS-Wn1" firstAttribute="top" secondItem="pot-8u-LBe" secondAttribute="bottom" constant="6" id="A5i-Gn-LiF"/>
-                                                        <constraint firstItem="jur-GS-Wn1" firstAttribute="leading" secondItem="eKb-9O-Rsk" secondAttribute="leading" constant="80" id="Dg7-ak-NXp"/>
-                                                        <constraint firstItem="6Mz-kq-Xpj" firstAttribute="leading" secondItem="euT-Qy-0lZ" secondAttribute="trailing" constant="8" symbolic="YES" id="FOW-4z-yeX"/>
-                                                        <constraint firstItem="pot-8u-LBe" firstAttribute="leading" secondItem="faQ-7z-Mdw" secondAttribute="trailing" constant="6" id="ODK-KG-S0n"/>
+                                                        <constraint firstItem="jur-GS-Wn1" firstAttribute="top" secondItem="pot-8u-LBe" secondAttribute="bottom" constant="5.5" id="4YH-a9-JDd"/>
+                                                        <constraint firstItem="faQ-7z-Mdw" firstAttribute="leading" secondItem="euT-Qy-0lZ" secondAttribute="trailing" constant="17" id="7B7-OZ-HpS"/>
+                                                        <constraint firstItem="6Mz-kq-Xpj" firstAttribute="top" secondItem="eKb-9O-Rsk" secondAttribute="top" constant="20" id="BwY-uH-lVO"/>
+                                                        <constraint firstItem="euT-Qy-0lZ" firstAttribute="leading" secondItem="eKb-9O-Rsk" secondAttribute="leading" constant="25" id="EwA-Cp-0s3"/>
+                                                        <constraint firstItem="6Mz-kq-Xpj" firstAttribute="leading" secondItem="euT-Qy-0lZ" secondAttribute="trailing" constant="17" id="FYp-8a-AhG"/>
+                                                        <constraint firstAttribute="bottom" secondItem="euT-Qy-0lZ" secondAttribute="bottom" constant="29.5" id="MbX-mt-Cph"/>
                                                         <constraint firstAttribute="bottom" secondItem="hU6-Jp-Y1u" secondAttribute="bottom" constant="36" id="OVW-O3-dU0"/>
                                                         <constraint firstAttribute="width" relation="lessThanOrEqual" constant="366" id="R3r-Sw-Gps"/>
-                                                        <constraint firstItem="euT-Qy-0lZ" firstAttribute="top" secondItem="eKb-9O-Rsk" secondAttribute="top" constant="30" id="Wya-FG-RDg"/>
+                                                        <constraint firstItem="pot-8u-LBe" firstAttribute="leading" secondItem="faQ-7z-Mdw" secondAttribute="trailing" constant="6" id="R76-xM-oKO"/>
                                                         <constraint firstItem="hU6-Jp-Y1u" firstAttribute="top" secondItem="eKb-9O-Rsk" secondAttribute="top" constant="36" id="aTB-zR-sA3"/>
+                                                        <constraint firstItem="faQ-7z-Mdw" firstAttribute="top" secondItem="6Mz-kq-Xpj" secondAttribute="bottom" constant="2.5" id="dPw-7R-DH6"/>
                                                         <constraint firstAttribute="trailing" secondItem="hU6-Jp-Y1u" secondAttribute="trailing" constant="25" id="iCU-oT-eiC"/>
-                                                        <constraint firstItem="faQ-7z-Mdw" firstAttribute="top" secondItem="6Mz-kq-Xpj" secondAttribute="bottom" constant="1" id="llJ-T5-e8D"/>
                                                         <constraint firstAttribute="height" constant="93" id="nmY-IM-z1Y"/>
-                                                        <constraint firstItem="pot-8u-LBe" firstAttribute="top" secondItem="6Mz-kq-Xpj" secondAttribute="bottom" id="zb8-ss-amp"/>
+                                                        <constraint firstItem="euT-Qy-0lZ" firstAttribute="top" secondItem="eKb-9O-Rsk" secondAttribute="top" constant="29.5" id="odP-Eo-MZJ"/>
+                                                        <constraint firstItem="jur-GS-Wn1" firstAttribute="leading" secondItem="eKb-9O-Rsk" secondAttribute="leading" constant="82" id="pxv-r9-2Xg"/>
+                                                        <constraint firstItem="pot-8u-LBe" firstAttribute="top" secondItem="6Mz-kq-Xpj" secondAttribute="bottom" constant="0.5" id="t3g-zx-gex"/>
                                                     </constraints>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -871,7 +864,7 @@
                                 <fontDescription key="fontDescription" name="AirbnbCerealApp-Book" family="Airbnb Cereal App" pointSize="52"/>
                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                             </textField>
-                            <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="🏎" placeholder="$ 569 000" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gnR-Mk-LI5">
+                            <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="♻️" placeholder="$ 569 000" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gnR-Mk-LI5">
                                 <rect key="frame" x="158.5" y="276" width="97" height="63"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="63" id="Ds7-oj-z4q"/>
@@ -1016,7 +1009,7 @@
                                         <color key="textColor" name="SubtitleTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="🏎" placeholder="$ 569 000" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LA8-sR-ad0">
+                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="♻️" placeholder="$ 569 000" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LA8-sR-ad0">
                                         <rect key="frame" x="82" y="5" width="97" height="63"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="52"/>
