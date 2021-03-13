@@ -26,7 +26,8 @@ class LoginVC: UIViewController {
     @IBOutlet weak var appleButtonView: UIView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var subtitleLabel: UILabel!
-    @IBOutlet weak var privacyPolicyLabel: UILabel!
+    @IBOutlet weak var privacyPolicyLabel: UITextView!
+    
     
     
     override func viewDidLoad() {
@@ -148,6 +149,7 @@ extension LoginVC {
             .inAppPurchaseBottom(" and ")
             .inAppPurchaseLinkBottom("Terms of Use", url: URL(string: urlManager.termsOfUseUrl)!)
             .inAppPurchaseBottom(" .")
+        privacyPolicyLabel.textAlignment = .center
     }
     
     @objc

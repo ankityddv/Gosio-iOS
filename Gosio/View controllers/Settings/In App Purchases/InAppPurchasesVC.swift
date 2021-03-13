@@ -83,7 +83,7 @@ extension InAppPurchasesVC {
             
         }
         
-        bgView.roundCorners([.allCorners], radius: 30)
+//        bgView.roundCorners([.allCorners], radius: 30)
         
         bottomLegalLabel.attributedText = NSMutableAttributedString()
             .inAppPurchaseBottom("Payment will be charged to your iTunes account at confirmation of purchase. Your subscription will be valid for lifetime. You can manage your subscription by accessing your iTunes & App Store Account Settings after purchase. All personal data is handled under the terms and conditions of Gosio’s privacy policy. More details can be found here: ")
@@ -99,6 +99,7 @@ extension InAppPurchasesVC {
             gosioProLabel.hero.id = HeroIDs.goProLabelKey
             goProBttn.hero.id = HeroIDs.goProBttnKey
             dismissBttn.hero.id = HeroIDs.dismissButtonKey
+            bgView.hero.id = HeroIDs.goProAdBgViewKey
             self.hero.isEnabled = true
         }
     }
@@ -135,12 +136,17 @@ extension InAppPurchasesVC: UITableViewDataSource,UITableViewDelegate {
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
         return proFeaturesArr.count
+        
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        
         let cell: GosioProFeaturesCell = tableView.dequeueReusableCell(withIdentifier: TableViewCellIdentifierManager.gosioProCell) as! GosioProFeaturesCell
         cell.titleLabel.text = proFeaturesArr[indexPath.row]
         return cell
+        
     }
     
     

@@ -63,6 +63,7 @@ struct HeroIDs {
     static let totalGoalAmountKey = "totalAmountLabel"
     static let emojiInDashboardKey = "emojiInDashboard"
     static let goalAccomplishmentDateKey = "goalAccomplishmentDate"
+    static let goProAdBgViewKey = "goProAdBgView"
     
 }
 
@@ -94,11 +95,16 @@ struct imageNameManager {
 struct urlManager {
     
     static let appUrl = "https://apps.apple.com/us/app/gosio-achieve-your-goals/id1555987291"
-    static let faqUrl = "https://ankityddv.github.io/Gosio-BetaRegistration/faq"
+//    static let faqUrl = "https://ankityddv.github.io/Gosio-BetaRegistration/faq"
     static let betaUrl = "https://ankityddv.github.io/Gosio-BetaRegistration/"
     static let dineroUrl = "https://apps.apple.com/us/app/dinero-subscription-manager/id1545370811"
-    static let privacyPolicyUrl = "https://ankityddv.github.io/Gosio/privacyPolicy"
-    static let termsOfUseUrl = "https://ankityddv.github.io/Gosio/termsOfUse"
+//    static let privacyPolicyUrl = "https://ankityddv.github.io/Gosio/privacyPolicy"
+//    static let termsOfUseUrl = "https://ankityddv.github.io/Gosio/termsOfUse"
+    
+    static let privacyPolicyUrl = "https://www.notion.so/Privacy-Policy-f9d90586453d4822b9e7b732f85b175a"
+    static let termsOfUseUrl = "https://www.notion.so/Terms-Of-Use-cc3b4711cbea4cea8157bcf8d3acbaba"
+    static let faqUrl = "https://www.notion.so/FAQ-def6aebcc05949138598ca5bc0258141"
+    static let releaseNotesUrl = "https://www.notion.so/Release-Notes-5a6e19ffff2541d8bdeb88c13df26908"
     
 }
 

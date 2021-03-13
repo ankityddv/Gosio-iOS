@@ -23,6 +23,7 @@ class SettingsVC: UITableViewController {
     @IBOutlet weak var goProIllustration: UIImageView!
     @IBOutlet weak var goProLabel: UILabel!
     @IBOutlet weak var goProBttn: UIButton!
+    @IBOutlet weak var goProAdBgView: AnimatedView!
     
     
     @IBAction func goProBttnDidTap(_ sender: Any) {
@@ -70,7 +71,7 @@ class SettingsVC: UITableViewController {
         case 4:
             return 2
         case 5:
-            return 4
+            return 5
         case 6:
             return 1
         default:
@@ -142,11 +143,13 @@ class SettingsVC: UITableViewController {
         case 5:
             switch indexPath.row {
             case 0:
-                openSafari(url: urlManager.privacyPolicyUrl)
+                openSafari(url: urlManager.faqUrl)
             case 1:
                 openSafari(url: urlManager.termsOfUseUrl)
             case 2:
-                openSafari(url: urlManager.faqUrl)
+                openSafari(url: urlManager.privacyPolicyUrl)
+            case 3:
+                openSafari(url: urlManager.releaseNotesUrl)
             default:
                 break
             }
@@ -189,6 +192,7 @@ extension SettingsVC {
         goProLabel.hero.id = HeroIDs.goProLabelKey
         goProBttn.hero.id = HeroIDs.goProBttnKey
         dismissBttn.hero.id = HeroIDs.dismissButtonKey
+        goProAdBgView.hero.id = HeroIDs.goProAdBgViewKey
     }
     
     func setUpUi(){

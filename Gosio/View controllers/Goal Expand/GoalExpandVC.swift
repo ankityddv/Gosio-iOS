@@ -220,7 +220,7 @@ extension GoalExpandVC {
         goProLabel.hero.id = HeroIDs.goProLabelKey
         goProBttn.hero.id = HeroIDs.goProBttnKey
         dismissBttn.hero.id = HeroIDs.dismissButtonKey
-        
+//        gotProAdView.hero.id = HeroIDs.goProAdBgViewKey
         self.hero.isEnabled = true
         
     }

@@ -122,7 +122,7 @@ class DashboardVC: UIViewController, LoginViewControllerDelegate {
     }
     override func viewDidAppear(_ animated: Bool) {
         
-        vaildateOnboarding()
+//        vaildateOnboarding()
     
     }
     override func viewWillAppear(_ animated: Bool) {
