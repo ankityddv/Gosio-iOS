@@ -51,7 +51,7 @@ class SettingsVC: UITableViewController {
     
     // MARK: - 📀 Table view data source
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-            
+        
         switch section {
         case 0:
             switch getIAPStatus() {
@@ -184,10 +184,12 @@ extension SettingsVC {
     
     
     @objc func dismissView(){
+        
         self.dismiss(animated: true, completion: nil)
     }
     
-    func setUpHeroAnimations() {
+    func setUpHeroAnimations(){
+        
         goProIllustration.hero.id = HeroIDs.IAPIllustrationKey
         goProLabel.hero.id = HeroIDs.goProLabelKey
         goProBttn.hero.id = HeroIDs.goProBttnKey
@@ -196,17 +198,20 @@ extension SettingsVC {
     }
     
     func setUpUi(){
+        
         versionLabel.text = "Version \(appVersion ?? "") (\(buildVersion))"
         tableView.separatorColor = UIColor.clear
     }
     
     func setUpEdgeGesture(){
+        
         let screenEdgeRecognizer = UIScreenEdgePanGestureRecognizer(target: self,action: #selector(dismissView))
         screenEdgeRecognizer.edges = .left
         view.addGestureRecognizer(screenEdgeRecognizer)
     }
     
     func setUpNavBar(){
+        
         self.navigationController?.navigationBar.setValue(true, forKey: "hidesShadow")
         self.navigationController?.navigationBar.barTintColor = UIColor(named: "BgColor")
         self.navigationController?.navigationBar.layer.masksToBounds = false
@@ -218,6 +223,7 @@ extension SettingsVC {
     }
     
     func showMailComposer(){
+        
         guard MFMailComposeViewController.canSendMail() else {
             return
         }
@@ -229,7 +235,7 @@ extension SettingsVC {
         present(composer, animated: true)
     }
     
-    @objc func shareWithFriends() {
+    @objc func shareWithFriends(){
         
         //let message1 = "Download Dinero App to manage your online subscriptions."
         //let image = UIImage(named: "default")
@@ -242,6 +248,7 @@ extension SettingsVC {
     }
     
     func reviewTheApp(){
+        
         let url = URL(string: urlManager.appUrl)
             
         var components = URLComponents(url: url!, resolvingAgainstBaseURL: false)
@@ -256,6 +263,7 @@ extension SettingsVC {
     }
     
     func openSafari(url: String) {
+        
         if let url = URL(string: url) {
             let config = SFSafariViewController.Configuration()
             config.entersReaderIfAvailable = true
@@ -274,6 +282,7 @@ extension SettingsVC: MFMailComposeViewControllerDelegate {
     
     
     func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
+        
         if let _ = error {
             controller.dismiss(animated: true)
         }

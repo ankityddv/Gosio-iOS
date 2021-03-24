@@ -54,6 +54,7 @@ func selectionChangedHeptic(){
 extension UIApplication {
     
     class func topViewController(base: UIViewController? = UIApplication.shared.keyWindow?.rootViewController) -> UIViewController? {
+        
         if let nav = base as? UINavigationController {
             return topViewController(base: nav.visibleViewController)
         }
