@@ -8,5 +8,5 @@
 import Foundation
 
 enum IAPProduct: String {
-    case GosioPro  = "com.gosiopro.1.0.0"
+    case GosioPro  = "IAPID" // available in your app store connect IAP section
 }

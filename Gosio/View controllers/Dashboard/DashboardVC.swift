@@ -18,7 +18,6 @@ class DashboardVC: UIViewController, LoginViewControllerDelegate {
     func didFinishAuth() {
         
         label.text = "User identified: \(String(describing: userDefaults?.string(forKey: SignInWithAppleManager.userIdentifierKey)!))"
-        
     }
     
     
@@ -69,12 +68,10 @@ class DashboardVC: UIViewController, LoginViewControllerDelegate {
         slideVC.modalPresentationStyle = .custom
         slideVC.transitioningDelegate = self
         self.present(slideVC, animated: true, completion: nil)
-
     }
     @IBAction func addNewGoalDidTap(_ sender: Any) {
         
         addNewGoal()
-    
     }
     @objc func addNewGoal(){
         
@@ -104,7 +101,6 @@ class DashboardVC: UIViewController, LoginViewControllerDelegate {
                 createUSerActivity()
             }
         }
-        
     }
     
     
@@ -118,18 +114,15 @@ class DashboardVC: UIViewController, LoginViewControllerDelegate {
         initialiseCurrency()
         vaildateInAppPurchases()
         self.navigationController?.isNavigationBarHidden = true
-        
     }
     override func viewDidAppear(_ animated: Bool) {
         
-//        vaildateOnboarding()
-    
+        vaildateOnboarding()
     }
     override func viewWillAppear(_ animated: Bool) {
         
         updateTotalAmount()
         tableVieww.reloadData()
-        
     }
    
     
@@ -143,7 +136,6 @@ extension DashboardVC: UITableViewDelegate,UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         return nonDeletedGoals().count
-        
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
@@ -163,20 +155,12 @@ extension DashboardVC: UITableViewDelegate,UITableViewDataSource {
         cell.goalEmoji.text = emoji
         cell.goalName.text = goalName
         
-        switch userDefaults?.object(forKey: userDefaultsKeyManager.currencyCodeKey) as? String {
-            case nil:
-                cell.goalAmount.text = String("$ \(goalAchieved) / \(goalTotalAmount) ")
-            default:
-                cell.goalAmount.text = String("\(getDefaultCurrency().currencySign) \(goalAchieved) / \(goalTotalAmount) ")
-            break
-        }
-        
+        cell.goalAmount.text = String("\(getDefaultCurrency().currencySign) \(goalAchieved) / \(goalTotalAmount)")
         cell.goalStatusIndicator.image = UIImage(named: goalStatus)
         cell.progressBar.setProgress(progressBar as! Float, animated: true)
         cell.goalPercentage.text = String("\(goalPercentage) %")
         
         return cell
-        
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
@@ -189,7 +173,6 @@ extension DashboardVC: UITableViewDelegate,UITableViewDataSource {
         self.present(vc, animated: true, completion: nil)
         
         tableView.deselectRow(at: indexPath, animated: true)
-    
     }
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         
@@ -228,7 +211,6 @@ extension DashboardVC: UITableViewDelegate,UITableViewDataSource {
 //            }
             
         }
-        
     }
     func tableView(_ tableView: UITableView, contextMenuConfigurationForRowAt indexPath: IndexPath, point: CGPoint) -> UIContextMenuConfiguration? {
 
@@ -261,7 +243,6 @@ extension DashboardVC: UITableViewDelegate,UITableViewDataSource {
                 actionSheetController.view.tintColor = UIColor(named: "AccentColor")
                 
                 present(actionSheetController, animated: true, completion: nil)
-
             }
             
             let edit = UIAction(title: "Edit goal",image: UIImage(systemName: "pencil")) { [self] _ in
@@ -277,7 +258,6 @@ extension DashboardVC: UITableViewDelegate,UITableViewDataSource {
                     self.present(vc, animated: true, completion: nil)
                     
                 }
-                
             }
 
             let menu = UIMenu(title: "", image: nil, identifier: nil, options: [], children: [edit,delete])
@@ -292,13 +272,11 @@ extension DashboardVC: UITableViewDelegate,UITableViewDataSource {
     func tableView(_ tableView: UITableView, previewForHighlightingContextMenuWithConfiguration configuration: UIContextMenuConfiguration) -> UITargetedPreview? {
         
         return makeTargetedPreview(for: configuration)
-    
     }
     @available(iOS 13.0, *)
     func tableView(_ tableView: UITableView, previewForDismissingContextMenuWithConfiguration configuration: UIContextMenuConfiguration) -> UITargetedPreview? {
         
         return makeTargetedPreview(for: configuration)
-        
     }
     @available(iOS 13.0, *)
     private func makeTargetedPreview(for configuration: UIContextMenuConfiguration) -> UITargetedPreview? {
@@ -311,7 +289,6 @@ extension DashboardVC: UITableViewDelegate,UITableViewDataSource {
         parameters.visiblePath = UIBezierPath(roundedRect: cell.roundedBgView.bounds, byRoundingCorners: .allCorners, cornerRadii: CGSize(width: 30, height: 30))
         
         return UITargetedPreview(view: cell.roundedBgView, parameters: parameters)
-        
     }
     
     
@@ -330,7 +307,6 @@ extension DashboardVC {
         menuBttn.hero.id = HeroIDs.dismissButtonKey
         totalAmountSavedStaticLabel.hero.id = HeroIDs.goalAccomplishmentDateKey
         self.hero.isEnabled = true
-        
     }
     
     func vaildateOnboarding(){
@@ -346,7 +322,6 @@ extension DashboardVC {
             self.present(vc, animated: false, completion: nil)
             break
         }
-        
     }
     
     func vaidateAuth() {
@@ -366,7 +341,6 @@ extension DashboardVC {
                 break
             }
         }
-        
     }
     
     func vaildateInAppPurchases(){
@@ -384,7 +358,6 @@ extension DashboardVC {
 //            print("free")
             break
         }
-        
     }
     
     func createUSerActivity(){
@@ -396,7 +369,6 @@ extension DashboardVC {
         
         self.userActivity = activity
         self.userActivity?.becomeCurrent()
-        
     }
     
     func initialiseCurrency() {
@@ -406,7 +378,6 @@ extension DashboardVC {
 //            print("currency initialised")
             updateDefaultCurrency(name: "US Dollar", countryCode: "USD", sign: "$")
         }
-        
     }
     
     func initialiseAppIcon() {
@@ -422,13 +393,7 @@ extension DashboardVC {
         
         let sum = nonDeletedGoals().map({$0.goalAchievedAmount! as! Float}).reduce(0, +)
         
-        switch userDefaults?.object(forKey: userDefaultsKeyManager.currencySignKey) as? String {
-        case nil:
-            totalGoalAmount.text = "$ \(Int(sum))"
-        default:
-            totalGoalAmount.text = "\(getDefaultCurrency().currencySign) \(Int(sum))"
-        }
-        
+        totalGoalAmount.text = "\(getDefaultCurrency().currencySign) \(Int(sum))"
     }
     
     func initialiseAppTheme() {
@@ -474,7 +439,6 @@ extension DashboardVC {
             reviewInteger! += 1
             userDefaults?.set(reviewInteger!, forKey: userDefaultsKeyManager.requestReviewKey)
         }
-        
     }
     
     func fetchData() {
@@ -505,6 +469,7 @@ extension DashboardVC {
         }
         return noDeleteGoalList
     }
+    
     
     
 }

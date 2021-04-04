@@ -234,7 +234,6 @@ extension GoalExpandVC {
         picker.value = Double(truncating: selectedGoal!.goalAchievedAmount!)
         picker.tintColor = UIColor(named: "AccentColor")
         valueChanged()
-        
     }
 
     @IBAction func valueChanged() {
@@ -248,7 +247,6 @@ extension GoalExpandVC {
         goalAccomplishmentDate.text = String("\(getDefaultCurrency().currencySign) \(goalToAchieve) by \(goalAccomplishmentDatee)")
         
         progressBar.setProgress(progress, animated: true)
-        
     }
     
     

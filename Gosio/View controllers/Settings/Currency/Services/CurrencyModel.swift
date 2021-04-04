@@ -399,6 +399,7 @@ func updateDefaultCurrency(name: String, countryCode: String, sign: String) {
      }
     
 }
+
 func getDefaultCurrency() -> CurrencyModel {
     
     let request = NSFetchRequest<NSFetchRequestResult>(entityName: coreDataIdentifierManager.currency)
@@ -420,5 +421,4 @@ func getDefaultCurrency() -> CurrencyModel {
     }
     
     return CurrencyModel(currencyName: name, currencyCode: code, currencySign: sign)
-    
 }

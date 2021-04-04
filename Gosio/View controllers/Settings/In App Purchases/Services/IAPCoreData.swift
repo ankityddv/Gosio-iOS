@@ -46,9 +46,11 @@ func getIAPStatus() -> subscriptionType {
     if boole == true {
         return .pro
     } else if boole == false {
-        return .free
+//        return .free
+        return .pro // because in app purchases support is disabled.
     } else {
-        return .unidentified
+//        return .unidentified
+        return .pro // because in app purchases support is disabled.
     }
     
 }
