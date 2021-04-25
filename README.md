@@ -4,7 +4,7 @@
 
 # Gosio-iOS
 
-### Author: [@ankiyddv](https://twitter.com/ankityddv)
+### Author: [@ankityddv](https://twitter.com/ankityddv)
 
 Gosio is a free, open source app for keeping track of your financial goals. 
 
