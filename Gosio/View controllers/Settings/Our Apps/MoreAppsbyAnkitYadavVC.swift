@@ -37,19 +37,20 @@ class MoreAppsbyAnkitYadavVC: UITableViewController {
         cell.appImage.image = UIImage(named: appIconArr[indexPath.row])
         cell.getAppButton.addTarget(self, action: #selector(buttonInCellDidTap(sender:)), for: .touchUpInside)
         cell.getAppButton.tag = indexPath.row
+        
+        ///check if app is installed or not
+        if (UIApplication.shared.canOpenURL(URL(string: "Dinero://app")!)) {
+            cell.getAppButton.layer.backgroundColor = UIColor.darkGray.cgColor
+            cell.getAppButton.setTitle("Open", for: .normal)
+        }
         return cell
     }
     @objc func buttonInCellDidTap(sender: UIButton) {
         let buttonTag = sender.tag
         if buttonTag == 0 {
-            print("Dinero")
-            if let url = URL(string: urlManager.dineroUrl) {
-                UIApplication.shared.open(url)
-            }
+            openMyApp("Dinero")
         }
     }
-    
-    
 }
 
 //MARK:- 🤡 functions()
@@ -63,7 +64,21 @@ extension MoreAppsbyAnkitYadavVC {
             .boldBlueHighlight("Ankit Yadav")
         subtitleLabel.text = "Self promotion is also important :)"
     }
-    
+    func openMyApp(_ appName: String) {
+        
+        let appScheme = "\(appName)://app"
+        let appUrl = URL(string: appScheme)
+
+        if UIApplication.shared.canOpenURL(appUrl! as URL) {
+            UIApplication.shared.open(appUrl!)
+//            print("App found")
+        } else {
+//            print("App not installed")
+            if let url = URL(string: "https://apps.apple.com/us/app/gosio/id1555987291") {
+                UIApplication.shared.open(url)
+            }
+        }
+    }
     
 }
 
@@ -115,5 +130,4 @@ class OurAppsCell: UITableViewCell {
             }, completion: completion)
         }
     }
-    
 }
